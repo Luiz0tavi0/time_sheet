@@ -1,73 +1,6 @@
 Designar_colaborador_empresa As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(237, 237, 237, 1)
-        Height: =68
-        Items: =Filter(tbl_contracts,ID=CONST_CURRENT_USER.ID)
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =95
-        Width: =530
-        X: =100
-        Y: =379
-        ZIndex: =1
-
-        NextArrow6 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(0, 120, 212, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =60
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            TabIndex: =0
-            Tooltip: ="Exibir detalhes do item"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =3
-
-        Separator6 As rectangle:
-            BorderColor: =RGBA(153, 207, 236, 1)
-            BorderStyle: =BorderStyle.None
-            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =0.1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =4
-
-        Subtitle4_1 As label:
-            AutoHeight: =true
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            Height: =29
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =$" {ThisItem.ID} {ThisItem.description}"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =347
-            ZIndex: =5
-
     TitlePage_Choose As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -718,13 +651,15 @@ Designar_colaborador_empresa As screen:
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
-                Items: =Choices([@tbl_contract_projects].contracts_id_x003a__x0020_descri)
+                Items: |-
+                    =Choices([@tbl_contract_projects].'contracts_id: description')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(tbl_contract_projects.contracts_id_x003a__x0020_descri,DataCardValue46.SearchText)
+                SearchItems: |-
+                    =Choices(tbl_contract_projects.'contracts_id: description',DataCardValue46.SearchText)
                 SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -837,13 +772,15 @@ Designar_colaborador_empresa As screen:
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
-                Items: =Choices([@tbl_contract_projects].projects_id_x003a__x0020_name)
+                Items: |-
+                    =Choices([@tbl_contract_projects].'projects_id: name')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(tbl_contract_projects.projects_id_x003a__x0020_name,DataCardValue47.SearchText)
+                SearchItems: |-
+                    =Choices(tbl_contract_projects.'projects_id: name',DataCardValue47.SearchText)
                 SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -956,13 +893,15 @@ Designar_colaborador_empresa As screen:
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
-                Items: =Choices([@tbl_contract_projects].projects_id_x003a__x0020_status)
+                Items: |-
+                    =Choices([@tbl_contract_projects].'projects_id: status')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(tbl_contract_projects.projects_id_x003a__x0020_status,DataCardValue48.SearchText)
+                SearchItems: |-
+                    =Choices(tbl_contract_projects.'projects_id: status',DataCardValue48.SearchText)
                 SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =21
@@ -1045,86 +984,143 @@ Designar_colaborador_empresa As screen:
         Y: =25
         ZIndex: =32
 
-    inputSearchProjectByName As text:
-        BorderColor: =
-        Clear: =true
+    Dropdown2 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
-        Default: =
-        DelayOutput: =true
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =34
-        HintText: ="nome do projeto"
+        Height: =70
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        OnChange: |-
-            =//ClearCollect(
-            //    colContratoEmpresaLogada;
-            //    AddColumns(tbl_companies;"contract_id";Filter(tbl_contracts;ID=CONST_CURRENT_USER.ID; id_contrato)));;
-                
-             //Filter(
-                  //  tbl_contracts;
-                    //companies_id.Id = CONST_CURRENT_USER.ID
-                //)
-            
-            ForAll( tbl_contracts,
-                If( tbl_contracts.ID=CONST_CURRENT_USER.ID,
-                    {
-                        Product: Product,
-                        'Quantity To Order': 'Quantity Requested' - 'Quantity Available'
-                    }
-                )
-            )
-        PaddingLeft: =5
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Tooltip: =
-        VirtualKeyboardMode: =VirtualKeyboardMode.Text
-        Width: =Gallery3.Width
-        X: =52
-        Y: =345
-        ZIndex: =33
-
-    DataTable2 As dataTable.datatable:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(127, 178, 57, 1)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(0, 120, 212, 1)
-        HeadingFont: =Font.'Segoe UI'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =10
-        Height: =500
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
-        InputFill: =RGBA(255, 255, 255, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =colContratoEmpresaLogada
-        LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
-        Size: =14
-        Width: =640
-        X: =0
-        Y: =600
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Search(tbl_projects,inputSearchProjectByName.Text, "name")
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        Size: =21
+        Width: =575
+        X: =40
+        Y: =40
         ZIndex: =34
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        "Gallery3 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =74
+            Items: =Search(tbl_projects,inputSearchProjectByName.Text, "name")
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =73
+            Width: =530
+            X: =38
+            Y: =449
+            ZIndex: =1
+
+            NextArrow6 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(166, 166, 166, 1)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =60
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =0
+                Tooltip: ="Exibir detalhes do item"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =3
+
+            Separator6 As rectangle:
+                BorderColor: =RGBA(153, 207, 236, 1)
+                BorderStyle: =BorderStyle.None
+                Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                Height: =0.1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =4
+
+            Subtitle4_1 As label:
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                Height: =55
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =$" {ThisItem.name}"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =347
+                Y: =11
+                ZIndex: =5
+
+        inputSearchProjectByName As text:
+            BorderColor: =
+            Clear: =true
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =
+            DelayOutput: =true
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =34
+            HintText: ="nome do projeto"
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            OnChange: = 
+            PaddingLeft: =5
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Tooltip: =
+            VirtualKeyboardMode: =VirtualKeyboardMode.Text
+            Width: =Gallery3.Width
+            X: =38
+            Y: =415
+            ZIndex: =33
 
     Group7 As group:
         Height: =5

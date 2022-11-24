@@ -508,41 +508,9 @@ cadastro_empresa As screen:
         Y: =1016
         ZIndex: =3
 
-    HeaderRegistrationCompany As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =50
-
-        Rectangle20308_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(2, 4, 48, 1)
-            FocusedBorderThickness: =4
-            Height: =120
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =640
-            ZIndex: =4
-
-        Icon8 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Cancel
-            OnSelect: =Back()
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            X: =529
-            Y: =28
-            ZIndex: =5
+    HeaderCompany_cad_empresa As HeaderCompany:
+        background_color: =CONST_BACKGROUND_COLOR_EMPRESA
+        current_user_name: =CONST_CURRENT_USER
+        Width: =Parent.Width
+        ZIndex: =4
 

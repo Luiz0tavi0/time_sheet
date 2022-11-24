@@ -4,7 +4,7 @@ Buscar_por_projeto_empresa As screen:
     "GalleryProject As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =533
-        Items: =Filter(tbl_projects,StartsWith(name, SearchBox.Text))
+        Items: =Filter(tbl_projects,(ID=CONST_CURRENT_USER.ID And SearchBox.Text in name))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =126
@@ -190,6 +190,7 @@ Buscar_por_projeto_empresa As screen:
         ZIndex: =7
 
     HeaderCompany_13 As HeaderCompany:
+        current_user_name: =CONST_CURRENT_USER
         Visible: =true
         ZIndex: =8
 

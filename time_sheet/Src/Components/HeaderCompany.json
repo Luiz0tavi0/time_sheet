@@ -484,7 +484,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.has_left_icon",
+            "InvariantScript": "Parent.has_left_icon And Parent.is_logged_screen",
             "Property": "Visible",
             "RuleProviderType": "Unknown"
           }
@@ -1252,7 +1252,7 @@
       },
       "has_right_icon"
     ],
-    "LastModifiedTimestamp": "638048719439816497",
+    "LastModifiedTimestamp": "638048726668458771",
     "Name": "HeaderCompany",
     "Rules": [
       {
@@ -1393,7 +1393,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638048719439816497",
+  "LastModifiedTimestamp": "638048726668458771",
   "Name": "faecc12050bb4c9ca744ac80084ea13a",
   "OverridableProperties": {},
   "Version": "638045030137339720"

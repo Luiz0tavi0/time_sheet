@@ -235,15 +235,28 @@ login As screen:
         HoverBorderColor: =RGBA(0, 120, 212, 1)
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         HoverFill: =RGBA(255, 255, 255, 1)
-        OnSelect: |-
-            =UpdateContext({TimerGoFase1: false}); UpdateContext({TimerGoFase2: false}); UpdateContext({TimerGoFailFase1: false});
-            UpdateContext({visibleTransitionFase1: false}); UpdateContext({visibleTransitionFase2: false}); UpdateContext({visibleTransitionFailFase1: false});
-            
-            Set(
-                currentUser,
-                LookUp(
-                    tbl_collaborators,
-                    (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+        OnSelect: |
+            =UpdateContext({TimerGoFase1: false});
+            UpdateContext({TimerGoFase2: false});
+            UpdateContext({TimerGoFailFase1: false});
+            UpdateContext({visibleTransitionFase1: false});
+            UpdateContext({visibleTransitionFase2: false});
+            UpdateContext({visibleTransitionFailFase1: false});
+            If(
+                togglePosition,
+                Set(
+                    currentUser,
+                    LookUp(
+                        tbl_companies,
+                        (cnpj = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                    )
+                ),
+                Set(
+                    currentUser,
+                    LookUp(
+                        tbl_collaborators,
+                        (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                    )
                 )
             );
             If(
@@ -252,7 +265,6 @@ login As screen:
                 UpdateContext({TimerGoFailFase1: true});
                 
             );
-            //Label2.Text = "Login não realizado.";
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -357,10 +369,10 @@ login As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =33
+        Height: =43
         Size: =21
-        Text: ="ID " & currentUser.ID & "estado = " & rect.DisplayMode
-        Width: =269
+        Text: ="ID " & currentUser.ID & " estado = " & rect.DisplayMode
+        Width: =604
         X: =1
         Y: =924
         ZIndex: =12

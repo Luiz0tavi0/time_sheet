@@ -82,7 +82,7 @@ HeaderCompany As CanvasComponent:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =Parent.has_left_icon
+        Visible: =Parent.has_left_icon And Parent.is_logged_screen
         Width: =40
         X: =20
         Y: =40

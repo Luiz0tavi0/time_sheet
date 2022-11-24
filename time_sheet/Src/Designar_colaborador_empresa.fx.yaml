@@ -1061,8 +1061,24 @@ Designar_colaborador_empresa As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        OnChange: |
-            =ClearCollect(colContratoEmpresaLogada,Filter(tbl_contracts,companies_id.Id=CONST_CURRENT_USER.ID))
+        OnChange: |-
+            =//ClearCollect(
+            //    colContratoEmpresaLogada;
+            //    AddColumns(tbl_companies;"contract_id";Filter(tbl_contracts;ID=CONST_CURRENT_USER.ID; id_contrato)));;
+                
+             //Filter(
+                  //  tbl_contracts;
+                    //companies_id.Id = CONST_CURRENT_USER.ID
+                //)
+            
+            ForAll( tbl_contracts,
+                If( tbl_contracts.ID=CONST_CURRENT_USER.ID,
+                    {
+                        Product: Product,
+                        'Quantity To Order': 'Quantity Requested' - 'Quantity Available'
+                    }
+                )
+            )
         PaddingLeft: =5
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
@@ -1097,7 +1113,7 @@ Designar_colaborador_empresa As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =ForAll(Filter(tbl_contracts,companies_id.Id=CONST_CURRENT_USER.ID).ID, Filter(tbl_contract_projects,contracts_id.ID=companies_id.))
+        Items: =colContratoEmpresaLogada
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
         PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1109,36 +1125,6 @@ Designar_colaborador_empresa As screen:
         X: =0
         Y: =600
         ZIndex: =34
-
-        description_Column2 As dataTableColumn.textualColumn:
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="description"
-            FieldName: ="description"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.description
-            Width: =89
-            X: =869
-            Y: =0
-            ZIndex: =72
-
-        companies_id_Column3 As dataTableColumn.textualColumn:
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="companies_id"
-            FieldName: ="companies_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =9
-            Text: =ThisItem.companies_id.Value
-            Width: =358
-            X: =123
-            Y: =0
-            ZIndex: =73
 
     Group7 As group:
         Height: =5

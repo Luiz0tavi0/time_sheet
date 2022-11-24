@@ -64,7 +64,7 @@ visualizar_atividades_colaborador As screen:
             PaddingTop: =0
             Size: =16
             Text: |-
-                =ThisItem.'tasks_id: hours'.Value
+                =Trunc(ThisItem.'tasks_id: hours'.Value)/1.00000000000000
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

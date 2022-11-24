@@ -1,6 +1,93 @@
 Visualizar_Projeto_empresa As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
+    "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Height: =470
+        Items: =tbl_tasks
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(104, Self.Height - 60)
+        Width: =507
+        X: =53
+        Y: =316
+        ZIndex: =1
+
+        Title8 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: |-
+                =ThisItem.'collaborator_id:name'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle5 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.hours
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title8.Y + Title8.Height + 4
+            ZIndex: =2
+
+        NextArrow8 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(2, 4, 48, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =60
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(252, 252, 252, 1), -30%)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =4
+
     TotalHoursProjectLabel As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -188,325 +275,6 @@ Visualizar_Projeto_empresa As screen:
     HeaderCompany_3 As HeaderCompany:
         ZIndex: =30
 
-    Paraapagar As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =40
-
-        Label20246_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(39.3125, 39.3125, 39.3125, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="   Contratados "
-            VerticalAlign: =VerticalAlign.Top
-            Width: =124
-            X: =127
-            Y: =349
-            ZIndex: =13
-
-        Label20288_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(39.3125, 39.3125, 39.3125, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Horas trabalhadas (HT)"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =178
-            X: =250
-            Y: =349
-            ZIndex: =14
-
-        Rectangle20253_2 As rectangle:
-            BorderColor: =RGBA(226.5648, 226.5648, 226.5648, 1)
-            BorderThickness: =1
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =36
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =276
-            X: =127
-            Y: =483
-            ZIndex: =15
-
-        Label20254_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Colaborador  4"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =113
-            X: =141
-            Y: =492
-            ZIndex: =16
-
-        Label20296_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="444"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =101.168579101563
-            X: =285
-            Y: =492
-            ZIndex: =17
-
-        Rectangle20260_2 As rectangle:
-            BorderColor: =RGBA(226.5648, 226.5648, 226.5648, 1)
-            BorderThickness: =1
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =36
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =276
-            X: =127
-            Y: =447
-            ZIndex: =18
-
-        Label20261_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Colaborador  3"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =113
-            X: =141
-            Y: =456
-            ZIndex: =19
-
-        Label20295_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="333"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =101.168579101563
-            X: =285
-            Y: =456
-            ZIndex: =20
-
-        Rectangle20267_2 As rectangle:
-            BorderColor: =RGBA(226.5648, 226.5648, 226.5648, 1)
-            BorderThickness: =1
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =36
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =276
-            X: =127
-            Y: =411
-            ZIndex: =21
-
-        Label20268_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Colaborador  2"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =113
-            X: =141
-            Y: =420
-            ZIndex: =22
-
-        Label20294_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="222"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =101.168579101563
-            X: =285
-            Y: =420
-            ZIndex: =23
-
-        Rectangle20274_2 As rectangle:
-            BorderColor: =RGBA(226.5648, 226.5648, 226.5648, 1)
-            BorderThickness: =1
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =36
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =276
-            X: =127
-            Y: =375
-            ZIndex: =24
-
-        Label20275_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Colaborador  1"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =113
-            X: =141
-            Y: =384
-            ZIndex: =25
-
-        Label20293_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(2, 4, 48, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =19
-            LineHeight: =1.171875
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="111"
-            VerticalAlign: =VerticalAlign.Top
-            Width: =101.168579101563
-            X: =285
-            Y: =384
-            ZIndex: =26
-
-        Rectangle20291_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(242.25, 242.25, 242.25, 1)
-            FocusedBorderThickness: =4
-            Height: =38
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =22
-            X: =408
-            Y: =373
-            ZIndex: =27
-
-        Image20290_2 As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =19.99951171875
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =image20290
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =10
-            X: =412
-            Y: =382
-            ZIndex: =28
-
     HoursProjectCard As group:
         Height: =5
         Width: =5
@@ -543,7 +311,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: ="111 horas"
+            Text: ="somar as horas de todos"
             Width: =145
             X: =409
             Y: =816

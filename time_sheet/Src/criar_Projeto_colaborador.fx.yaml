@@ -305,7 +305,7 @@ criar_Projeto_colaborador As screen:
                 Height: =DataCardKey16_2.Height
                 PaddingLeft: =0
                 Size: =21
-                Text: ="*"
+                Text: =""
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false

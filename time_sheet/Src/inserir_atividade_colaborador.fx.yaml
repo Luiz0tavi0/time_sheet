@@ -569,7 +569,7 @@ inserir_atividade_colaborador As screen:
                 PaddingLeft: =0
                 PaddingTop: =0
                 Size: =21
-                Text: ="*"
+                Text: =""
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
@@ -689,7 +689,7 @@ inserir_atividade_colaborador As screen:
                 PaddingLeft: =0
                 PaddingTop: =0
                 Size: =21
-                Text: ="*"
+                Text: =""
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false

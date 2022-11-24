@@ -1,4 +1,5 @@
 HeaderCompany As CanvasComponent:
+    background_color: =RGBA(0, 0, 0, 1)
     current_user_name: ="Nome do Usuário Logado"
     Fill: =RGBA(0, 0, 0, 0)
     Height: =120
@@ -11,12 +12,12 @@ HeaderCompany As CanvasComponent:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(2, 4, 48, 1)
+        Fill: =Parent.background_color
         FocusedBorderThickness: =4
         Height: =120
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =640
+        Width: =Parent.Width
         ZIndex: =3
 
     NameLogin_2 As label:
@@ -57,7 +58,7 @@ HeaderCompany As CanvasComponent:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =40
-        X: =553
+        X: =600
         Y: =40
         ZIndex: =5
 

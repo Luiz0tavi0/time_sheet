@@ -11,7 +11,14 @@
           "AccessibleLabel",
           "Tooltip",
           "ContentLanguage",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(2, 4, 48, 1)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           "HoverFill",
@@ -25,7 +32,14 @@
           "TabIndex",
           "X",
           "Y",
-          "Width",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "640",
+            "InvariantPropertyName": "Width",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -155,7 +169,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "640",
+            "InvariantScript": "Parent.Width",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -167,7 +181,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(2, 4, 48, 1)",
+            "InvariantScript": "Parent.background_color",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -377,7 +391,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "553",
+            "InvariantScript": "600",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -907,15 +921,22 @@
         "InvariantPropertyName": "current_user_name",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
-      }
+      },
+      "background_color"
     ],
-    "LastModifiedTimestamp": "638048698362555850",
+    "LastModifiedTimestamp": "638048699630839232",
     "Name": "HeaderCompany",
     "Rules": [
       {
         "Category": "Data",
         "InvariantScript": "\"Nome do Usuário Logado\"",
         "Property": "current_user_name",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "RGBA(0, 0, 0, 1)",
+        "Property": "background_color",
         "RuleProviderType": "System"
       },
       {
@@ -974,6 +995,15 @@
       "PropertyDataTypeKey": "String",
       "Tooltip": "current_user_name",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "background_color",
+      "Hidden": false,
+      "Name": "background_color",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "background_color",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -984,7 +1014,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638048698362555850",
+  "LastModifiedTimestamp": "638048699630839232",
   "Name": "faecc12050bb4c9ca744ac80084ea13a",
   "OverridableProperties": {},
   "Version": "638045030137339720"

@@ -260,7 +260,7 @@ login As screen:
                 )
             );
             If(
-                Not(IsBlank(currentUser.name)),
+                Not(IsBlank(CONST_CURRENT_USER.name)),
                 UpdateContext({TimerGoFase1: true}),
                 UpdateContext({TimerGoFailFase1: true});
                 
@@ -373,7 +373,7 @@ login As screen:
         Font: =Font.'Segoe UI'
         Height: =43
         Size: =21
-        Text: ="ID " & currentUser.ID & " estado = " & rect.DisplayMode
+        Text: ="ID " & CONST_CURRENT_USER.ID & " estado = " & rect.DisplayMode
         Width: =604
         X: =1
         Y: =924

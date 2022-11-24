@@ -44,8 +44,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: |-
-                =ThisItem.'tasks_id: name'.Value
+            Text: =ThisItem.ID
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -58,13 +57,14 @@ visualizar_atividades_colaborador As screen:
             Font: =Font.'Segoe UI'
             Height: =39
             OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
             Text: |-
-                =Trunc(ThisItem.'tasks_id: hours'.Value)/1.00000000000000
+                =ThisItem.'tasks_id: hours'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

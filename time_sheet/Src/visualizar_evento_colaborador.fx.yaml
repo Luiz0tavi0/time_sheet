@@ -81,7 +81,13 @@ visualizar_evento_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =EditForm(FormViewerTasks);
+        OnSelect: |-
+            =
+            If(
+                FormViewerTasks.Mode=FormMode.View,
+                EditForm(FormViewerTasks),
+                ViewForm(FormViewerTasks)
+            );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -252,7 +258,7 @@ visualizar_evento_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"name")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =111
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
             Required: =true
             Update: =DataCardValue35.Text
@@ -311,7 +317,7 @@ visualizar_evento_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey35.Y + DataCardKey35.Height + 5
+                Y: =45
                 ZIndex: =2
 
             ErrorMessage26 As label:
@@ -410,7 +416,7 @@ visualizar_evento_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =46
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -427,7 +433,7 @@ visualizar_evento_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey36.Y + DataCardKey36.Height + 5
+                Y: =58
                 ZIndex: =2
 
             ErrorMessage27 As label:
@@ -484,7 +490,7 @@ visualizar_evento_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"status")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =125
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "status")
             Required: =false
             Update: =DataCardValue37.Text
@@ -510,8 +516,7 @@ visualizar_evento_colaborador As screen:
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =28
                 ZIndex: =1
 
             DataCardValue37 As text:

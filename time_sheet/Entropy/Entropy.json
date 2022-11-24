@@ -1,10 +1,10 @@
 {
   "ComponentIndexes": {
-    "cmpLoginFail": 36,
+    "cmpLoginFail": 35,
     "cmpLoginFail_1": 40,
-    "cmpScreenSuccess": 38,
+    "cmpScreenSuccess": 37,
     "cmpScreenSuccess_1": 43,
-    "cmpTransitionLoad": 37,
+    "cmpTransitionLoad": 36,
     "cmpTransitionLoadLogin": 42,
     "FooterCompany": 31,
     "FooterWorker": 32,
@@ -14,10 +14,10 @@
     "HeaderCompany_14": 33,
     "HeaderCompany_cad_empresa": 33,
     "HeaderCompany_cad_empresa_1": 33,
-    "HeaderWorker": 34,
-    "SuccessModalOnlyOKButton": 35,
+    "HeaderWorker": 39,
+    "SuccessModalOnlyOKButton": 34,
     "SuccessModalOnlyOKButton_1": 35,
-    "testGlobalVariables": 39
+    "testGlobalVariables": 38
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
@@ -30,7 +30,7 @@
     "BackgroundFooterDark": 29,
     "BackgroundFooterLight": 12,
     "BackgroundHeaderDark": 25,
-    "BackgroundHeaderDark_1": 639,
+    "BackgroundHeaderDark_2": 880,
     "BackImage": 46,
     "Body1": 560,
     "BodyToEmailTextInput": 168,
@@ -333,7 +333,7 @@
     "HeaderCompany_9": 92,
     "HeaderCompany_cad_empresa": 643,
     "HeaderCompany_cad_empresa_1": 672,
-    "HeaderWorker": 638,
+    "HeaderWorker": 879,
     "Horas_por_Colaborador_empresa": 548,
     "hours_DataCard1": 406,
     "hours_DataCard1_1": 539,
@@ -375,11 +375,11 @@
     "IconDownload_1": 243,
     "IconDownload_2": 199,
     "IconLeft": 637,
-    "IconLeft_1": 640,
+    "IconLeft_2": 881,
     "iconMidlleScreen": 22,
     "IconProjects": 592,
     "IconRight": 26,
-    "IconRight_1": 642,
+    "IconRight_2": 883,
     "IconSearch1": 316,
     "IconSearch1_1": 303,
     "IconUserCompany": 596,
@@ -509,7 +509,7 @@
     "name_DataCard5": 386,
     "name_DataCard5_1": 519,
     "NameLogin_2": 27,
-    "NameLogin_4": 641,
+    "NameLogin_3": 882,
     "NextArrow2": 320,
     "NextArrow4": 559,
     "NextArrow5": 306,
@@ -670,7 +670,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "11/24/2022 11:47:42",
+  "HeaderLastSavedDateTimeUTC": "11/24/2022 11:56:47",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0231a2ce-81a0-4ca3-abe3-d1a85fafc381": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/c77198d0-0185-4d36-b043-768262e218b6\"",
@@ -960,9 +960,9 @@
   },
   "OldLogoFileName": "logo.jpg",
   "OrderComponentMetadata": {
+    "347fbc906fcc4827a384a06fc53242d5": 8,
     "3b02a9f7681e4ebe8a0ed199a55799c5": 3,
     "621de0cc4b9444b2909c35573e5077f6": 7,
-    "6fdce2442e814e2e9388c9acc0f2078f": 8,
     "8fcf01ef466b4b9e8b209f504771e604": 1,
     "956fd0c79bbe4571aaae7899200e6c6c": 0,
     "9a83575689f34468870fdfb0440f83df": 5,
@@ -971,9 +971,9 @@
     "faecc12050bb4c9ca744ac80084ea13a": 4
   },
   "OrderComponentTemplate": {
+    "347fbc906fcc4827a384a06fc53242d5": 8,
     "3b02a9f7681e4ebe8a0ed199a55799c5": 3,
     "621de0cc4b9444b2909c35573e5077f6": 7,
-    "6fdce2442e814e2e9388c9acc0f2078f": 8,
     "8fcf01ef466b4b9e8b209f504771e604": 1,
     "956fd0c79bbe4571aaae7899200e6c6c": 0,
     "9a83575689f34468870fdfb0440f83df": 5,
@@ -982,6 +982,7 @@
     "faecc12050bb4c9ca744ac80084ea13a": 4
   },
   "OrderDataSource": {
+    "colContratoEmpresaLogada": 13,
     "ComboBoxSample": 1,
     "CustomGallerySample": 2,
     "Documentos": 3,
@@ -1154,7 +1155,7 @@
     "BackgroundFooterDark": 572,
     "BackgroundFooterLight": 570,
     "BackgroundHeaderDark": 574,
-    "BackgroundHeaderDark_1": 578,
+    "BackgroundHeaderDark_2": 574,
     "BackImage": 2,
     "Body1": 212,
     "BodyToEmailTextInput": 567,
@@ -1499,11 +1500,11 @@
     "IconDownload_1": 137,
     "IconDownload_2": 459,
     "IconLeft": 575,
-    "IconLeft_1": 579,
+    "IconLeft_2": 575,
     "iconMidlleScreen": 588,
     "IconProjects": 87,
     "IconRight": 577,
-    "IconRight_1": 581,
+    "IconRight_2": 577,
     "IconSearch1": 100,
     "IconSearch1_1": 190,
     "IconUserCompany": 91,
@@ -1633,7 +1634,7 @@
     "name_DataCard5": 398,
     "name_DataCard5_1": 472,
     "NameLogin_2": 576,
-    "NameLogin_4": 580,
+    "NameLogin_3": 576,
     "NextArrow2": 104,
     "NextArrow4": 211,
     "NextArrow5": 193,
@@ -1938,6 +1939,7 @@
   "VolatileProperties": {
     "AnalysisLoadTime": 3.8709147,
     "ControlCount": {
+      "347fbc906fcc4827a384a06fc53242d5": 1,
       "3b02a9f7681e4ebe8a0ed199a55799c5": 2,
       "621de0cc4b9444b2909c35573e5077f6": 2,
       "6fdce2442e814e2e9388c9acc0f2078f": 1,
@@ -1957,10 +1959,10 @@
       "galleryTemplate": 3,
       "group": 11,
       "groupContainer": 7,
-      "icon": 51,
+      "icon": 53,
       "image": 32,
-      "label": 219,
-      "rectangle": 63,
+      "label": 220,
+      "rectangle": 64,
       "screen": 33,
       "slider": 1,
       "text": 48,
@@ -1969,7 +1971,7 @@
       "typedDataCard": 39
     },
     "DeserializationLoadTime": 15.2466519,
-    "ErrorCount": 17
+    "ErrorCount": 19
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

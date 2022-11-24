@@ -1,15 +1,18 @@
 HeaderWorker As CanvasComponent:
-    background_color: =RGBA(110, 164, 191, 1)
+    background_color: =RGBA(2, 4, 48, 1)
     current_user_name: ="Nome do Usuário Logado"
-    Fill: =RGBA(0, 0, 0, 0)
+    Fill: =RGBA(110, 164, 191, 1);
+    has_left_icon: =true
+    has_right_icon: =true
     Height: =120
     is_logged_screen: =true
+    Visible: =
     Width: =640
     X: =0
     Y: =0
     ZIndex: =1
 
-    BackgroundHeaderDark_1 As rectangle:
+    BackgroundHeaderDark_2 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledFill: =RGBA(166, 166, 166, 1)
@@ -21,7 +24,7 @@ HeaderWorker As CanvasComponent:
         Width: =Parent.Width
         ZIndex: =3
 
-    NameLogin_4 As label:
+    NameLogin_3 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -43,7 +46,7 @@ HeaderWorker As CanvasComponent:
         Y: =40
         ZIndex: =4
 
-    IconRight_1 As icon.Leave:
+    IconRight_2 As icon.Leave:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -58,12 +61,13 @@ HeaderWorker As CanvasComponent:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =Parent.has_right_icon
         Width: =40
         X: =580
         Y: =40
         ZIndex: =5
 
-    IconLeft_1 As icon.Leave:
+    IconLeft_2 As icon.Leave:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -78,6 +82,7 @@ HeaderWorker As CanvasComponent:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =Parent.has_left_icon And Parent.is_logged_screen
         Width: =40
         X: =20
         Y: =40

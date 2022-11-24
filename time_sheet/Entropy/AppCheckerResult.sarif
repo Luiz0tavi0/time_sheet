@@ -14,47 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.HeaderCompany_cad_empresa_1.current_user_name"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.HeaderCompany_cad_empresa_1.current_user_name",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "CONST_CURRENT_USER"
-                  }
-                }
-              },
-              "properties": {
-                "member": "current_user_name",
-                "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.HeaderCompany_cad_empresa_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text",
-              "Record"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items"
                 }
               ],
@@ -88,7 +47,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -129,7 +88,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 0
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -5056,19 +5015,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.email_confirmed_at_DataCard1.DataCardValue33.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.Title_DataCard4.DataCardValue42.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.email_confirmed_at_DataCard1.DataCardValue33.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.Title_DataCard4.DataCardValue42.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.email_confirmed_at_DataCard1.DataCardValue33"
+                "type": "Designar_colaborador_empresa.Form2.Title_DataCard4.DataCardValue42"
               }
             }
           ],
@@ -5086,19 +5045,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.password_DataCard3.DataCardValue32.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Gallery3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.password_DataCard3.DataCardValue32.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Gallery3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Designar_colaborador_empresa",
+                "type": "Designar_colaborador_empresa.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.projects_id_DataCard3.DataCardValue44.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.projects_id_DataCard3.DataCardValue44.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.password_DataCard3.DataCardValue32"
+                "type": "Designar_colaborador_empresa.Form2.projects_id_DataCard3.DataCardValue44"
               }
             }
           ],
@@ -5116,49 +5105,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.active_DataCard1.DataCardValue31.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.contracts_id_DataCard1.DataCardValue45.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.active_DataCard1.DataCardValue31.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.contracts_id_DataCard1.DataCardValue45.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.active_DataCard1.DataCardValue31"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.email_DataCard1.DataCardValue30.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.email_DataCard1.DataCardValue30.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.email_DataCard1.DataCardValue30"
+                "type": "Designar_colaborador_empresa.Form2.contracts_id_DataCard1.DataCardValue45"
               }
             }
           ],
@@ -5566,19 +5525,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.name_DataCard1.DataCardValue28.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.'projects_id: name_DataCard3'.DataCardValue47.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.name_DataCard1.DataCardValue28.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.'projects_id: name_DataCard3'.DataCardValue47.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.name_DataCard1.DataCardValue28"
+                "type": "Designar_colaborador_empresa.Form2.'projects_id: name_DataCard3'.DataCardValue47"
               }
             }
           ],
@@ -5596,19 +5555,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.username_DataCard2.DataCardValue29.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.'contracts_id: description_DataCard1'.DataCardValue46.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.username_DataCard2.DataCardValue29.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.'contracts_id: description_DataCard1'.DataCardValue46.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.username_DataCard2.DataCardValue29"
+                "type": "Designar_colaborador_empresa.Form2.'contracts_id: description_DataCard1'.DataCardValue46"
               }
             }
           ],
@@ -7246,19 +7205,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.Title_DataCard2.DataCardValue26.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Gallery3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.Title_DataCard2.DataCardValue26.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Gallery3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.Title_DataCard2.DataCardValue26"
+                "type": "Designar_colaborador_empresa.Gallery3"
               }
             }
           ],
@@ -7276,19 +7235,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.cpf_DataCard1.DataCardValue27.AccessibleLabel"
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.'projects_id: status_DataCard1'.DataCardValue48.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.cpf_DataCard1.DataCardValue27.AccessibleLabel",
+                  "fullyQualifiedName": "Designar_colaborador_empresa.Form2.'projects_id: status_DataCard1'.DataCardValue48.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Designar_colaborador_empresa",
-                "type": "Designar_colaborador_empresa.FormEmpresaDesignaProjetoColaborador.cpf_DataCard1.DataCardValue27"
+                "type": "Designar_colaborador_empresa.Form2.'projects_id: status_DataCard1'.DataCardValue48"
               }
             }
           ],
@@ -12978,23 +12937,6 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-              "messageStrings": {
-                "issue": {
-                  "text": "Expected {0} value."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Change the rule to produce a {0} value."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-SuggestRemoteExecutionHint",
               "messageStrings": {
                 "issue": {
@@ -13009,6 +12951,23 @@
                   "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
+              "messageStrings": {
+                "issue": {
+                  "text": "Expected {0} value."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Change the rule to produce a {0} value."
+                ],
+                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }

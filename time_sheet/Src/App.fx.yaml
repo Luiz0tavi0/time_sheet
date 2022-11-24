@@ -3,12 +3,11 @@ App As appinfo:
     Formulas: |-
         =CONST_BACKGROUND_COLOR_EMPRESA = RGBA(2, 4, 48, 1);
         CONST_BACKGROUND_COLOR_COLABORADOR = RGBA(110, 164, 191, 1);
-        CONST_CURRENT_USER = 
-            LookUp(
-                tbl_collaborators,
-                (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
-            )
-        );
+        CONST_CURRENT_USER = Blank(();
+            //LookUp(
+             //   tbl_collaborators;
+            //    (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+            //)
     MinScreenHeight: =430
     MinScreenWidth: |
         =430

@@ -1,6 +1,109 @@
 visualizar_atividades_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
+    "Gallery7 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Items: =tbl_projects_tasks
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Width: =532
+        X: =52
+        Y: =305
+        ZIndex: =1
+
+        Title12 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.projects_id.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =16
+            ZIndex: =1
+
+        Subtitle9 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.projects_id.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Title12.Y + Title12.Height + 2
+            ZIndex: =2
+
+        Body3 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.tasks_id.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle9.Y + Subtitle9.Height + 4
+            ZIndex: =3
+
+        NextArrow12 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =60
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator12 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
+
     ButtonHomeWorker_5 As button:
         Align: =Align.Left
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -22,8 +125,8 @@ visualizar_atividades_colaborador As screen:
         Size: =24
         Text: ="          Início"
         Width: =230
-        X: =101
-        Y: =916
+        X: =78
+        Y: =924
         ZIndex: =23
 
     Icon19_12 As icon.Home:
@@ -42,8 +145,8 @@ visualizar_atividades_colaborador As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
-        X: =131
-        Y: =926
+        X: =108
+        Y: =934
         ZIndex: =24
 
     ButtonDownload_2 As button:
@@ -65,8 +168,8 @@ visualizar_atividades_colaborador As screen:
         Size: =24
         Text: =""
         Width: =232
-        X: =348
-        Y: =916
+        X: =325
+        Y: =924
         ZIndex: =25
 
     IconDownload_2 As icon.Download:
@@ -85,8 +188,8 @@ visualizar_atividades_colaborador As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =40
-        X: =441
-        Y: =931
+        X: =418
+        Y: =939
         ZIndex: =26
 
     TitleViewActivity As label:
@@ -132,8 +235,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =96
-            X: =369
-            Y: =667
+            X: =487
+            Y: =379
             ZIndex: =1
 
         Label28796 As label:
@@ -155,8 +258,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="111 horas"
             VerticalAlign: =VerticalAlign.Top
             Width: =77
-            X: =380
-            Y: =672
+            X: =498
+            Y: =384
             ZIndex: =2
 
         Label28797 As label:
@@ -178,8 +281,8 @@ visualizar_atividades_colaborador As screen:
                 ="Total de horas trabalhadas: "
             VerticalAlign: =VerticalAlign.Top
             Width: =200
-            X: =163
-            Y: =672
+            X: =281
+            Y: =384
             ZIndex: =3
 
         Rectangle28835 As rectangle:
@@ -192,8 +295,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =281
-            X: =163
-            Y: =619
+            X: =281
+            Y: =331
             ZIndex: =4
 
         Label28836 As label:
@@ -214,8 +317,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="  04  Projeto 10  Paisagismo            06"
             VerticalAlign: =VerticalAlign.Top
             Width: =285
-            X: =163
-            Y: =628
+            X: =281
+            Y: =340
             ZIndex: =5
 
         Rectangle28838 As rectangle:
@@ -228,8 +331,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =281
-            X: =163
-            Y: =583
+            X: =281
+            Y: =295
             ZIndex: =6
 
         Label28839 As label:
@@ -250,8 +353,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="  04  Projeto 2    Planta baixa           04"
             VerticalAlign: =VerticalAlign.Top
             Width: =285
-            X: =163
-            Y: =592
+            X: =281
+            Y: =304
             ZIndex: =7
 
         Rectangle28841 As rectangle:
@@ -264,8 +367,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =281
-            X: =163
-            Y: =547
+            X: =281
+            Y: =259
             ZIndex: =8
 
         Label28842 As label:
@@ -286,8 +389,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="  03  Projeto 9    desenvolvimento  06"
             VerticalAlign: =VerticalAlign.Top
             Width: =285
-            X: =163
-            Y: =556
+            X: =281
+            Y: =268
             ZIndex: =9
 
         Rectangle28844 As rectangle:
@@ -300,8 +403,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =281
-            X: =163
-            Y: =511
+            X: =281
+            Y: =223
             ZIndex: =10
 
         Label28845 As label:
@@ -322,8 +425,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="  02  Projeto 1    atestado                 10"
             VerticalAlign: =VerticalAlign.Top
             Width: =285
-            X: =163
-            Y: =520
+            X: =281
+            Y: =232
             ZIndex: =11
 
         Rectangle28847 As rectangle:
@@ -336,8 +439,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =281
-            X: =163
-            Y: =475
+            X: =281
+            Y: =187
             ZIndex: =12
 
         Label28848 As label:
@@ -358,8 +461,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="  01  Projeto 1    detalhamento        10"
             VerticalAlign: =VerticalAlign.Top
             Width: =285
-            X: =163
-            Y: =484
+            X: =281
+            Y: =196
             ZIndex: =13
 
         Rectangle28850 As rectangle:
@@ -372,8 +475,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =22
-            X: =444
-            Y: =473
+            X: =562
+            Y: =185
             ZIndex: =14
 
         Image28852 As image:
@@ -390,8 +493,8 @@ visualizar_atividades_colaborador As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
             Width: =10
-            X: =448
-            Y: =482
+            X: =566
+            Y: =194
             ZIndex: =15
 
         Label28853 As label:
@@ -412,8 +515,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="  Dia   Projeto         Atividade/Evento       HT"
             VerticalAlign: =VerticalAlign.Top
             Width: =286
-            X: =163
-            Y: =450
+            X: =281
+            Y: =162
             ZIndex: =16
 
         Label28823 As label:
@@ -435,8 +538,8 @@ visualizar_atividades_colaborador As screen:
                 ="Mês: "
             VerticalAlign: =VerticalAlign.Top
             Width: =36
-            X: =203
-            Y: =407
+            X: =321
+            Y: =119
             ZIndex: =17
 
         Rectangle28824 As rectangle:
@@ -449,8 +552,8 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =185
-            X: =247
-            Y: =398
+            X: =365
+            Y: =110
             ZIndex: =18
 
         Label28825 As label:
@@ -470,8 +573,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="Novembro de 2022"
             VerticalAlign: =VerticalAlign.Top
             Width: =141
-            X: =257
-            Y: =407
+            X: =375
+            Y: =119
             ZIndex: =19
 
         Label28820 As label:
@@ -492,8 +595,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="Empresa 1"
             VerticalAlign: =VerticalAlign.Top
             Width: =100
-            X: =163
-            Y: =368
+            X: =281
+            Y: =80
             ZIndex: =20
 
         Label28821 As label:
@@ -513,8 +616,8 @@ visualizar_atividades_colaborador As screen:
             Text: ="<setor> - <telefone>"
             VerticalAlign: =VerticalAlign.Top
             Width: =171
-            X: =341
-            Y: =368
+            X: =459
+            Y: =80
             ZIndex: =21
 
         Label361474 As label:
@@ -535,7 +638,7 @@ visualizar_atividades_colaborador As screen:
             Text: ="Visualizar Atividades"
             VerticalAlign: =VerticalAlign.Top
             Width: =196
-            X: =162
-            Y: =330
+            X: =280
+            Y: =42
             ZIndex: =22
 

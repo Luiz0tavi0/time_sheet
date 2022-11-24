@@ -1061,6 +1061,7 @@ Designar_colaborador_empresa As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        OnChange: =ClearCollect(
         PaddingLeft: =5
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
@@ -1072,8 +1073,8 @@ Designar_colaborador_empresa As screen:
         Tooltip: =
         VirtualKeyboardMode: =VirtualKeyboardMode.Text
         Width: =Gallery3.Width
-        X: =107
-        Y: =355
+        X: =52
+        Y: =345
         ZIndex: =33
 
     DataTable2 As dataTable.datatable:
@@ -1095,7 +1096,7 @@ Designar_colaborador_empresa As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Filter(tbl_contracts,companies_id.Id=CONST_CURRENT_USER.ID  )
+        Items: =ForAll(Filter(tbl_contracts,companies_id.Id=CONST_CURRENT_USER.ID).ID, Filter(tbl_contract_projects,contracts_id.ID=companies_id.))
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
         PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)

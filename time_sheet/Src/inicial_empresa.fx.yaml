@@ -88,8 +88,7 @@ inicial_empresa As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: |-
-            =Navigate(criar_Projeto_empresa, ScreenTransition.Fade, {locMostrarPopUpSuccess:false})
+        OnSelect: =Navigate(criar_Projeto_empresa, ScreenTransition.Fade)
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)

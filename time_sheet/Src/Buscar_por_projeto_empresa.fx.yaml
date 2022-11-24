@@ -7,7 +7,7 @@ Buscar_por_projeto_empresa As screen:
         Items: =Filter(tbl_projects,StartsWith(name, SearchBox.Text))
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(96, Self.Height - 60)
+        TemplateSize: =126
         Width: =529
         X: =52
         Y: =285
@@ -16,16 +16,17 @@ Buscar_por_projeto_empresa As screen:
         Title2 As label:
             Color: =RGBA(2, 4, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =31
+            Height: =46
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.Nome
+            Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
             Width: =521
             Y: =16
@@ -189,5 +190,6 @@ Buscar_por_projeto_empresa As screen:
         ZIndex: =7
 
     HeaderCompany_13 As HeaderCompany:
+        Visible: =true
         ZIndex: =8
 

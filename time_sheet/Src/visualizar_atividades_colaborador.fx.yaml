@@ -85,8 +85,7 @@ visualizar_atividades_colaborador As screen:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: |
-                =//ResetForm(FormViewerCompany);;
-                //ResetForm(FormViewerTasks);;
+                =ViewForm(FormViewerTasks);
                 Navigate(visualizar_evento_colaborador,ScreenTransition.Fade,{itemSelecionado: ThisItem})
             PaddingBottom: =10
             PaddingLeft: =10
@@ -98,7 +97,7 @@ visualizar_atividades_colaborador As screen:
             TabIndex: =0
             Tooltip: ="Exibir detalhes do item"
             Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
+            X: =460
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 

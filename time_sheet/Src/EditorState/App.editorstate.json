@@ -36,11 +36,12 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
+        "OnStart",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
-          "InvariantPropertyName": "OnStart",
+          "InvariantPropertyName": "StartScreen",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
@@ -48,7 +49,7 @@
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
-          "InvariantPropertyName": "StartScreen",
+          "InvariantPropertyName": "Formulas",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         }
@@ -98,6 +99,11 @@
         {
           "Category": "OnDemandData",
           "PropertyName": "StartScreen",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Formulas",
+          "PropertyName": "Formulas",
           "RuleProviderType": "Unknown"
         }
       ],

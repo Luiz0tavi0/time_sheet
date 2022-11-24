@@ -1,17 +1,18 @@
 App As appinfo:
     BackEnabled: =false
-    MinScreenHeight: =430
-    MinScreenWidth: |
-        =430
-    OnStart: |-
-        =Set(varColorDefauts, {empresa:RGBA(2, 4, 48, 1), colaborador:RGBA(110, 164, 191, 1)});
-        Set(
-            currentUser,
+    Formulas: |-
+        =CONST_BACKGROUND_COLOR_EMPRESA = RGBA(2, 4, 48, 1);
+        CONST_BACKGROUND_COLOR_COLABORADOR = RGBA(110, 164, 191, 1);
+        CONST_CURRENT_USER = 
             LookUp(
                 tbl_collaborators,
                 (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
             )
         );
+    MinScreenHeight: =430
+    MinScreenWidth: |
+        =430
+    OnStart: =
     SizeBreakpoints: =[430, 720, 2400]
     StartScreen: =splash
 

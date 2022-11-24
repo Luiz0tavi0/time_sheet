@@ -84,7 +84,10 @@ visualizar_atividades_colaborador As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: |
+                =//ResetForm(FormViewerCompany);;
+                //ResetForm(FormViewerTasks);;
+                Navigate(visualizar_evento_colaborador,ScreenTransition.Fade,{itemSelecionado: ThisItem})
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

@@ -123,7 +123,7 @@ Designar_colaborador_empresa As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Search(Filter(tbl_projects,ID=CONST_CURRENT_USER.ID),inputSearchProjectByName.Text, "name")
+        Items: =Filter([@tbl_contracts],(CONST_CURRENT_USER.ID = tbl_contracts[@ID]))
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
         PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -135,48 +135,6 @@ Designar_colaborador_empresa As screen:
         X: =0
         Y: =1001
         ZIndex: =34
-
-        name_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="name"
-            FieldName: ="name"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =ThisItem.name
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =66
-
-        manager_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="manager"
-            FieldName: ="manager"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.manager
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =67
-
-        status_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="status"
-            FieldName: ="status"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.status
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =70
 
     Group3 As group:
         Height: =5
@@ -320,13 +278,18 @@ Designar_colaborador_empresa As screen:
         Items: |-
             =//Filter(Filter([@tbl_contracts];(CONST_CURRENT_USER.ID = tbl_contracts[@ID]);));
             //Filter([@tbl_contracts];(CONST_CURRENT_USER.ID = tbl_contracts[@ID]))
-            Filter(Filter([@tbl_contracts],(CONST_CURRENT_USER.ID = tbl_contracts[@ID])),'collaborators_: cpf'.Value=)
+            //Filter([@tbl_contracts];(CONST_CURRENT_USER.ID = tbl_contracts[@ID]))
+            ShowColumns(
+                Filter(AddColumns(
+                tbl_collaborators,
+                "cpf_collaborator",
+                LookUp(tbl_contracts, collaborators_id.Id=tbl_collaborators[@ID], tbl_collaborators[@cpf])) As tb,tb.active=true),"cpf_collaborator","first_name")
         MultiValueDelimiter: =
         NoSelectionText: =
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["ComplianceAssetId"]
+        SearchFields: =["cpf_collaborator"]
         SearchItems: =[]
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false

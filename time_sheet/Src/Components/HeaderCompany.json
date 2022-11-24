@@ -319,7 +319,15 @@
           "FocusedBorderColor",
           "ZIndex",
           "BorderThickness",
-          "FocusedBorderThickness"
+          "FocusedBorderThickness",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "Visible",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          }
         ],
         "ControlUniqueId": "637",
         "HasDynamicProperties": false,
@@ -472,6 +480,12 @@
             "Category": "Design",
             "InvariantScript": "Icon.BackArrow",
             "Property": "Icon",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Parent.has_left_icon",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1009,7 +1023,15 @@
           "FocusedBorderColor",
           "ZIndex",
           "BorderThickness",
-          "FocusedBorderThickness"
+          "FocusedBorderThickness",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "Visible",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          }
         ],
         "ControlUniqueId": "26",
         "HasDynamicProperties": false,
@@ -1163,6 +1185,12 @@
             "InvariantScript": "Self.BorderColor",
             "Property": "FocusedBorderColor",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Parent.has_right_icon",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "defaultIconStyle",
@@ -1212,9 +1240,19 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "is_logged_screen"
+      "is_logged_screen",
+      "has_left_icon",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "true",
+        "InvariantPropertyName": "Visible",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
+      "has_right_icon"
     ],
-    "LastModifiedTimestamp": "638048708412800876",
+    "LastModifiedTimestamp": "638048717183460785",
     "Name": "HeaderCompany",
     "Rules": [
       {
@@ -1233,6 +1271,18 @@
         "Category": "Data",
         "InvariantScript": "true",
         "Property": "is_logged_screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "true",
+        "Property": "has_left_icon",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "true",
+        "Property": "has_right_icon",
         "RuleProviderType": "System"
       },
       {
@@ -1269,6 +1319,12 @@
         "Category": "Design",
         "InvariantScript": "RGBA(0, 0, 0, 0)",
         "Property": "Fill",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "",
+        "Property": "Visible",
         "RuleProviderType": "System"
       }
     ]
@@ -1309,6 +1365,24 @@
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "is_logged_screen",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": " has_left_icon",
+      "Hidden": false,
+      "Name": "has_left_icon",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": " has_left_icon",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": " has_right_icon",
+      "Hidden": false,
+      "Name": "has_right_icon",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": " has_right_icon",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -1319,7 +1393,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638048708412800876",
+  "LastModifiedTimestamp": "638048717183460785",
   "Name": "faecc12050bb4c9ca744ac80084ea13a",
   "OverridableProperties": {},
   "Version": "638045030137339720"

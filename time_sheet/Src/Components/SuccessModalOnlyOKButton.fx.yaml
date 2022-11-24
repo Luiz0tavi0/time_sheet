@@ -1,0 +1,62 @@
+SuccessModalOnlyOKButton As CanvasComponent:
+    AlturaTotal: =App.Height
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.AlturaTotal
+    LarguraTotal: =App.Width
+    textoModal: ="Projeto criado com sucesso!"
+    Width: =Self.LarguraTotal
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    modalSuccess As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.3)
+        Height: =1136
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Width: =640
+        ZIndex: =1
+
+        infCont As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =181
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =112
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            X: =75
+            Y: =457
+            ZIndex: =2
+
+            Label281087_6 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(2, 4, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =71
+                LayoutMinHeight: =70
+                LayoutMinWidth: =560
+                LineHeight: =1
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =SuccessModalOnlyOKButton.textoModal
+                Width: =450
+                X: =102
+                Y: =676
+                ZIndex: =2
+

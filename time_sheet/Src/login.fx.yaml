@@ -1,0 +1,489 @@
+login As screen:
+    Fill: =RGBA(234,247,251,1)
+    ImagePosition: =ImagePosition.Center
+    LoadingSpinner: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =
+
+    BackImage As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =553
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='business-people-rush-hour-walking-commuting-city-concept-cut'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Transparency: =0.3
+        Width: =640
+        ZIndex: =1
+
+    TxtInputLoginSenha As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HintText: ="Senha"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        MaxLength: =12
+        Mode: =TextMode.Password
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =480
+        X: =80
+        Y: =833
+        ZIndex: =2
+
+    TxtInputLoginCnpj_Cpf As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HintText: =If(togglePosition,"CNPJ","CPF")
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Italic: =true
+        MaxLength: =If(Toggle_Cpf_Or_Cnpj.Value,14,11)
+        OnChange: |-
+            =//1ª Condição
+            If(Toggle_Cpf_Or_Cnpj.Value,
+            //2ªCondição
+            If(IsNumeric(Self.Text) And Len(Self.Text)=14,
+                    //TRUE - 2ª Condição
+            UpdateContext({VarPrimeiroDigito:Mod((Mid(Self.Text,1,1)*5+Mid(Self.Text,2,1)*4+Mid(Self.Text,3,1)*3+Mid(Self.Text,4,1)*2+Mid(Self.Text,5,1)*9+Mid(Self.Text,6,1)*8+Mid(Self.Text,7,1)*7+Mid(Self.Text,8,1)*6+Mid(Self.Text,9,1)*5+Mid(Self.Text,10,1)*4+Mid(Self.Text,11,1)*3+Mid(Self.Text,12,1)*2),11)});
+            //Regra específica da validação do CNPJ
+            If(VarPrimeiroDigito<2,UpdateContext({VarPrimeiroDigito:0}),UpdateContext({VarPrimeiroDigito:11-VarPrimeiroDigito}));UpdateContext({VarSegundoDigito:Mod((Mid(Self.Text,1,1)*6+Mid(Self.Text,2,1)*5+Mid(Self.Text,3,1)*4+Mid(Self.Text,4,1)*3+Mid(Self.Text,5,1)*2+Mid(Self.Text,6,1)*9+Mid(Self.Text,7,1)*8+Mid(Self.Text,8,1)*7+Mid(Self.Text,9,1)*6+Mid(Self.Text,10,1)*5+Mid(Self.Text,11,1)*4+Mid(Self.Text,12,1)*3+Mid(Self.Text,13,1)*2),11)});
+            //Regra específica da validação do CNPJ
+            If(VarSegundoDigito<2,UpdateContext({VarSegundoDigito:0}),UpdateContext({VarSegundoDigito:11-VarSegundoDigito}));
+            //3ª Condição
+            If(VarPrimeiroDigito=Value(Mid(Self.Text,13,1)) And VarSegundoDigito=Value(Mid(Self.Text,14,1)),
+            //TRUE - 3ª Condição
+            UpdateContext({VarMascara:Left(Self.Text,2)&"."&Mid(Self.Text,3,3)&"."&Mid(Self.Text,6,3)&"/"&Mid(Self.Text,9,4)&"-"&Right(Self.Text,2)}),
+            //FALSE - 3ª Condição
+            UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self)),//FIM 3ª Condição
+            
+            //FALSE - 2ª Condição
+            Notify("Por favor inserir 14 números!",NotificationType.Error,1500);UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self)),//FIM 2ª Condição
+            
+            //4ª Condição
+            If(IsNumeric(Self.Text) And Len(Self.Text)=11,
+            //TRUE - 4ª Condição
+            UpdateContext({VarPrimeiroDigito:Mod(((Mid(Self.Text,1,1)*10+Mid(Self.Text,2,1)*9+Mid(Self.Text,3,1)*8+Mid(Self.Text,4,1)*7+Mid(Self.Text,5,1)*6+Mid(Self.Text,6,1)*5+Mid(Self.Text,7,1)*4+Mid(Self.Text,8,1)*3+Mid(Self.Text,9,1)*2)*10),11)});
+            //Regra específica da validação do CPF
+            If(VarPrimeiroDigito=10,UpdateContext({VarPrimeiroDigito:0}));UpdateContext({VarSegundoDigito:Mod(((Mid(Self.Text,1,1)*11+Mid(Self.Text,2,1)*10+Mid(Self.Text,3,1)*9+Mid(Self.Text,4,1)*8+Mid(Self.Text,5,1)*7+Mid(Self.Text,6,1)*6+Mid(Self.Text,7,1)*5+Mid(Self.Text,8,1)*4+Mid(Self.Text,9,1)*3+Mid(Self.Text,10,1)*2)*10),11)});
+            //Regra específica da validação do CPF
+            If(VarSegundoDigito=10,UpdateContext({VarSegundoDigito:0}));
+            //5ª Condição
+            If(VarPrimeiroDigito=Value(Mid(Self.Text,10,1)) And VarSegundoDigito=Value(Mid(Self.Text,11,1)),
+            //TRUE - 5ª Condição
+            UpdateContext({VarMascara:Left(Self.Text,3)&"."&Mid(Self.Text,4,3)&"."&Mid(Self.Text,7,3)&"-"&Right(Self.Text,2)}),
+            //FALSE - 5ª Condição
+            Notify("Por favor inserir um CPF válido!",NotificationType.Error,1500);UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self)),//FIM 5ª Condição
+            
+            //FALSE - 4ªCondição
+            Notify("Por favor inserir 11 números!",NotificationType.Error,1500);UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self))//FIM 4ª Condição
+            )//FIM 1ª Condição
+            ;
+            //If(Radio2.Selected.Value = "Pessoa jurídica"; 
+            If((CountA(Split(Self.Text,Left(Self.Text,1)))-1)=11,Notify("Por favor inserir um CPF válido!",NotificationType.Error,1500);Reset(Self);)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Tooltip: =
+        Width: =480
+        X: =80
+        Y: =709
+        ZIndex: =3
+
+    Toggle_Cpf_Or_Cnpj As toggleSwitch:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =togglePosition
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        FalseFill: =RGBA(110, 164, 191, 1)
+        FalseHoverFill: =RGBA(33, 33, 33, 1)
+        FalseText: ="Sou Colaborador"
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HandleFill: =RGBA(255, 255, 255, 1)
+        Height: =34
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        OnChange: |
+            =Reset(TxtInputLoginCnpj_Cpf);
+            Reset(TxtInputLoginSenha);
+            Set(currentUser, Blank());
+        OnCheck: |-
+            =UpdateContext({togglePosition:true})
+        OnUncheck: |-
+            =UpdateContext({togglePosition:false})
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =20
+        TextPosition: =TextPosition.Left
+        Tooltip: =
+        TrueFill: =RGBA(0, 120, 212, 1)
+        TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        TrueText: ="Sou Empresa"
+        Width: =320
+        X: =160
+        Y: =613
+        ZIndex: =4
+
+    AppTittle As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(1, 2, 44, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =109
+        LineHeight: =1.171875
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =30
+        Text: |-
+            ="Gestão de Horas 
+            Trabalhadas"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =550
+        X: =45
+        Y: =47
+        ZIndex: =5
+
+    ButtonRegistration As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(110, 164, 191, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: |-
+            =//ColorFade(RGBA(0; 120; 212; 1); -10%)
+            RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =//If(Toggle_Cpf_Or_Cnpj.Value;
+             //   Navigate(cadastro_empresa);; NewForm(FormWorkerReg);;
+            //);;
+            
+            //If(Not(Toggle_Cpf_Or_Cnpj.Value); Navigate(cadastro_colaborador);; NewForm(FormCompanyReg));;
+            
+            
+            If(
+                togglePosition, 
+                 Navigate(cadastro_empresa); NewForm(FormWorkerReg),
+                 Navigate(cadastro_colaborador); NewForm(FormCompanyReg)
+                 );
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =24
+        Text: ="Cadastro"
+        Width: =230
+        X: =81
+        Y: =967
+        ZIndex: =6
+
+    ButtonLogin As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(2, 4, 48, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =RGBA(0, 120, 212, 1)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        OnSelect: |-
+            =UpdateContext({TimerGoFase1: false}); UpdateContext({TimerGoFase2: false}); UpdateContext({TimerGoFailFase1: false});
+            UpdateContext({visibleTransitionFase1: false}); UpdateContext({visibleTransitionFase2: false}); UpdateContext({visibleTransitionFailFase1: false});
+            
+            Set(
+                currentUser,
+                LookUp(
+                    tbl_collaborators,
+                    (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                )
+            );
+            If(
+                Not(IsBlank(currentUser.name)),
+                UpdateContext({TimerGoFase1: true}),
+                UpdateContext({TimerGoFailFase1: true});
+                
+            );
+            //Label2.Text = "Login não realizado.";
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =24
+        Text: ="Login"
+        Width: =232
+        X: =328
+        Y: =967
+        ZIndex: =7
+
+    LabelLoginError As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        Text: |-
+            =If(
+                (IsBlank(TxtInputLoginCnpj_Cpf.Text) And togglePosition=false),
+                "CPF é obrigatório.",
+                (IsBlank(TxtInputLoginCnpj_Cpf.Text) And togglePosition=true),
+                "CNPJ é obrigatório"
+            )
+        Visible: =Not(Self.Text="")
+        Width: =480
+        X: =80
+        Y: =782
+        ZIndex: =8
+
+    LabelPasswordError As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        Text: |-
+            =If(
+                Len(TxtInputLoginSenha.Text) = 0,
+                $"Senha é obrigatório.", ""
+            
+            )
+            
+            //Len(TxtInputLoginSenha.Text) < 9;
+            //"Senha deve ser maior.";
+            //Len(TxtInputLoginSenha.Text) > 12;
+            //"Senha deve ser menor."
+        Visible: =Not(Self.Text="")
+        Width: =480
+        X: =81
+        Y: =903
+        ZIndex: =9
+
+    cmpLoginFail_1 As cmpLoginFail:
+        Height: = Max(App.Height, App.DesignHeight)
+        texto_falha: |-
+            ="Credenciais inválidas.
+            Tente novamente"
+        Visible: =visibleTransitionFailFase1
+        Width: = Max(App.Width, App.DesignWidth)
+        ZIndex: =10
+
+    rect As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisplayMode: |-
+            =If(
+                visibleTransitionFailFase1,
+                DisplayMode.Edit,
+                DisplayMode.Disabled
+            )
+        Fill: =RGBA(102, 182, 227, 1)
+        FocusedBorderThickness: =4
+        Height: = Max(App.Height, App.DesignHeight)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        OnSelect: |-
+            =UpdateContext({visibleTransitionFailFase1:false});
+            UpdateContext({TimerGoFailFase1:false});
+            Reset(tempScreenTransitionErrorFase);
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =visibleTransitionFailFase1
+        Width: = Max(App.Width, App.DesignWidth)
+        ZIndex: =11
+
+    Label2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =33
+        Size: =21
+        Text: ="ID " & currentUser.ID & "estado = " & rect.DisplayMode
+        Width: =269
+        X: =1
+        Y: =924
+        ZIndex: =12
+
+    tempScreenTransitionFase1 As timer:
+        AutoPause: =false
+        BorderColor: =RGBA(99, 139, 44, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =1450
+        Fill: =RGBA(99, 139, 44, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: |-
+            =UpdateContext({TimerGoFase2:false}); //precaução
+            UpdateContext({visibleTransitionFase1:false});
+            UpdateContext({TimerGoFase2:true});
+        OnTimerStart: |-
+            =UpdateContext({visibleTransitionFase1: true});
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =21
+        Start: =TimerGoFase1
+        Text: |-
+            =$"Timer loading {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
+        Width: =234
+        Y: =1066
+        ZIndex: =13
+
+    tempScreenTransitionFase2 As timer:
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =1234
+        Fill: =RGBA(187, 221, 140, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: |
+            =UpdateContext({visibleTransitionFase2: false});
+        OnTimerStart: |-
+            =UpdateContext({visibleTransitionFase2: true});
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =21
+        Start: =TimerGoFase2
+        Text: |-
+            =$"Timer success {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
+        Width: =215
+        X: =235
+        Y: =1066
+        ZIndex: =14
+
+    tempScreenTransitionErrorFase As timer:
+        AutoPause: =false
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Duration: =1234
+        Fill: =RGBA(255, 0, 0, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: |
+            =UpdateContext({visibleTransitionFailFase1: false});
+            Reset(Self);
+        OnTimerStart: |
+            =UpdateContext({visibleTransitionFailFase1: true});
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =21
+        Start: =TimerGoFailFase1
+        Text: |-
+            =$"Timer fail {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
+        Width: =215
+        X: =425
+        Y: =1066
+        ZIndex: =15
+
+    Label1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: ="Texto = " & visibleTransitionFailFase1
+        Width: =560
+        X: =45
+        ZIndex: =16
+
+    cmpTransitionLoadLogin As cmpTransitionLoad:
+        Visible: =visibleTransitionFase1
+        ZIndex: =17
+
+    cmpScreenSuccess_1 As cmpScreenSuccess:
+        exito_texto: |-
+            =If(
+                Not(IsBlank(currentUser.name)),
+                $"Welcome, {currentUser.name}",
+                $"Welcome, {currentUser.email}"    
+            )
+        Visible: =visibleTransitionFase1
+        ZIndex: =18
+

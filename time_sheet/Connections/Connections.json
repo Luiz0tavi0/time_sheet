@@ -1,0 +1,123 @@
+{
+  "0231a2ce-81a0-4ca3-abe3-d1a85fafc381": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-76.westus.logic.azure.com:443/workflows/bc58ca5c8b0a4e48b691733047abf86e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=z-8-IMldQmgp7tcU_2y5qYkXXdhRJ7k-o-OQKdmw3iw",
+      "workflowEndpoint": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/cf72e2bd7a2b4783bdeb39d57b07f76f-57519c2e09f94f7d99dcbab90ea5629c/providers/Microsoft.Logic/workflows/c77198d0-0185-4d36-b043-768262e218b6",
+      "workflowName": "c77198d0-0185-4d36-b043-768262e218b6",
+      "workflowPath": "/subscriptions/e9bc7b8d-bb95-4e7a-baf8-230462d93177/resourceGroups/cf72e2bd7a2b4783bdeb39d57b07f76f-57519c2e09f94f7d99dcbab90ea5629c/providers/Microsoft.Logic/workflows/c77198d0-0185-4d36-b043-768262e218b6"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Fluxos lógicos",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "e9312235-b10c-467c-b556-e87d7fdaa901": {
+          "value": "shared_office365"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "c77198d0-0185-4d36-b043-768262e218b6"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_office365": {
+          "value": "e9312235-b10c-467c-b556-e87d7fdaa901"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "c77198d0-0185-4d36-b043-768262e218b6"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "Send_an_email_invite"
+    ],
+    "dependencies": {
+      "shared_office365": "e9312235-b10c-467c-b556-e87d7fdaa901"
+    },
+    "dependents": [],
+    "id": "0231a2ce-81a0-4ca3-abe3-d1a85fafc381"
+  },
+  "3fa69c61-3796-4c93-9ef8-e4a01d17587d": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1610-greyhound-localization-RelayFix/1.0.1610.3091/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://fatecspgov.sharepoint.com/sites/sitebasetimesheet": {
+        "dataSources": {
+          "DL_imagensDoApp": {
+            "tableName": "f628fbd1-8f96-4199-98cb-b575b6bf81b1"
+          },
+          "Documentos": {
+            "tableName": "b46d278e-901b-413c-9dd2-09ce39319bc4"
+          },
+          "tbl_collaborators": {
+            "tableName": "4c08303f-46d4-4d66-9db8-77ce8e960041"
+          },
+          "tbl_companies": {
+            "tableName": "80104f60-c9ff-4a46-9e4e-3f50409aa3ee"
+          },
+          "tbl_contract_projects": {
+            "tableName": "c989798e-31a8-4f86-a617-21cdb160fe8f"
+          },
+          "tbl_contracts": {
+            "tableName": "d3f26694-4c50-40bc-a28d-33e5ac2052fc"
+          },
+          "tbl_projects": {
+            "tableName": "9f329be3-5055-4c67-af93-c8eceeb58d84"
+          },
+          "tbl_projects_tasks": {
+            "tableName": "32c2f175-fc14-4dc1-a178-b52858faa311"
+          },
+          "tbl_tasks": {
+            "tableName": "ea2b46b7-1cc0-4185-ab32-5abceec4cef7"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "tbl_tasks",
+      "DL_imagensDoApp",
+      "Documentos",
+      "tbl_collaborators",
+      "tbl_companies",
+      "tbl_contract_projects",
+      "tbl_contracts",
+      "tbl_projects",
+      "tbl_projects_tasks"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "3fa69c61-3796-4c93-9ef8-e4a01d17587d"
+  },
+  "e9312235-b10c-467c-b556-e87d7fdaa901": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1599/1.0.1599.3017/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "0231a2ce-81a0-4ca3-abe3-d1a85fafc381"
+    ],
+    "id": "e9312235-b10c-467c-b556-e87d7fdaa901"
+  }
+}

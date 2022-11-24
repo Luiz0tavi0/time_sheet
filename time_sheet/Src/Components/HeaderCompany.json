@@ -55,7 +55,7 @@
         "Name": "BackgroundHeaderDark",
         "Parent": "HeaderCompany",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 563,
+        "PublishOrderIndex": 548,
         "Rules": [
           {
             "Category": "Data",
@@ -313,7 +313,7 @@
         "Name": "IconLogoff_2",
         "Parent": "HeaderCompany",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 564,
+        "PublishOrderIndex": 549,
         "Rules": [
           {
             "Category": "Design",
@@ -560,7 +560,7 @@
         "Name": "NameLogin_2",
         "Parent": "HeaderCompany",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 565,
+        "PublishOrderIndex": 550,
         "Rules": [
           {
             "Category": "Data",
@@ -588,7 +588,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "User().FullName",
+            "InvariantScript": "HeaderCompany.current_user_name",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -899,11 +899,25 @@
       "Width",
       "X",
       "Y",
-      "ZIndex"
+      "ZIndex",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "\"Texto\"",
+        "InvariantPropertyName": "current_user_name",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      }
     ],
-    "LastModifiedTimestamp": "638048691471491180",
+    "LastModifiedTimestamp": "638048698362555850",
     "Name": "HeaderCompany",
     "Rules": [
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Nome do Usuário Logado\"",
+        "Property": "current_user_name",
+        "RuleProviderType": "System"
+      },
       {
         "Category": "Design",
         "InvariantScript": "1",
@@ -951,7 +965,17 @@
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
-  "CustomProperties": [],
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "current_user_name",
+      "Hidden": false,
+      "Name": "current_user_name",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "current_user_name",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
   "FirstParty": true,
   "Id": "http://microsoft.com/appmagic/Component",
   "IsComponentLocked": false,
@@ -960,7 +984,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638048691471491180",
+  "LastModifiedTimestamp": "638048698362555850",
   "Name": "faecc12050bb4c9ca744ac80084ea13a",
   "OverridableProperties": {},
   "Version": "638045030137339720"

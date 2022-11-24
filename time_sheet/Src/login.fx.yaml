@@ -245,14 +245,14 @@ login As screen:
             If(
                 togglePosition,
                 Set(
-                    currentUser,
+                    CONST_CURRENT_USER,
                     LookUp(
                         tbl_companies,
                         (cnpj = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
                     )
                 ),
                 Set(
-                    currentUser,
+                    CONST_CURRENT_USER,
                     LookUp(
                         tbl_collaborators,
                         (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
@@ -265,6 +265,8 @@ login As screen:
                 UpdateContext({TimerGoFailFase1: true});
                 
             );
+            
+            Navigate(inicial_empresa);
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

@@ -494,9 +494,9 @@ login As screen:
     cmpScreenSuccess_1 As cmpScreenSuccess:
         exito_texto: |-
             =If(
-                Not(IsBlank(currentUser.name)),
-                $"Welcome, {currentUser.name}",
-                $"Welcome, {currentUser.email}"    
+                Not(IsBlank(CONST_CURRENT_USER.name)),
+                $"Welcome, {CONST_CURRENT_USER.name}",
+                $"Welcome, {CONST_CURRENT_USER.email}"    
             )
         Visible: =visibleTransitionFase1
         ZIndex: =18

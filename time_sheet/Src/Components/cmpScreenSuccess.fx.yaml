@@ -8,8 +8,9 @@ cmpScreenSuccess As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    Container3 As groupContainer.manualLayoutContainer:
+    contBodyMessage As groupContainer.manualLayoutContainer:
         Height: =1136
+        Visible: =rectMaskSemiTransLucid.Visible
         Width: =639
         ZIndex: =1
 
@@ -69,16 +70,16 @@ cmpScreenSuccess As CanvasComponent:
             Y: =(Parent.Height/2 - Self.Height/2) * .9
             ZIndex: =4
 
-    Rectangle3 As rectangle:
+    rectMaskSemiTransLucid As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(99, 139, 44, 1)
+        Fill: =RGBA(0, 0, 0, 0.25)
         FocusedBorderThickness: =4
-        Height: =1136
+        Height: =Parent.Height
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =640
+        Width: =Parent.Width
         ZIndex: =2
 

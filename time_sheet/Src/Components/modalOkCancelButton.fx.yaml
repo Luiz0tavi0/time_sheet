@@ -2,11 +2,11 @@ modalOkCancelButton As CanvasComponent:
     CloseModal: ="Texto"
     Fill: =RGBA(0, 0, 0, 0)
     fundo_is_visible: =true
-    Height: =640
+    Height: =220
     muda_fundo_is_visible: ="Texto"
     OnCancelClick: ="Texto"
     OnOkClick: ="Texto"
-    Width: =640
+    Width: =400
     X: =0
     Y: =0
     ZIndex: =1
@@ -18,13 +18,11 @@ modalOkCancelButton As CanvasComponent:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(0, 120, 212, 1)
         FocusedBorderThickness: =4
-        Height: =218
+        Height: =Parent.Height
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Visible: =fundo_visivel
-        Width: =392
-        X: =128
-        Y: =168
+        Width: =Parent.Width
         ZIndex: =1
 
     Button3 As button:
@@ -51,8 +49,6 @@ modalOkCancelButton As CanvasComponent:
         Size: =24
         Text: ="Cancel"
         Width: =141
-        X: =128
-        Y: =168
         ZIndex: =2
 
     Button3_1 As button:
@@ -79,8 +75,7 @@ modalOkCancelButton As CanvasComponent:
         Size: =24
         Text: ="OK"
         Width: =141
-        X: =379
-        Y: =168
+        X: =259
         ZIndex: =3
 
     Button3_2 As button:
@@ -107,8 +102,8 @@ modalOkCancelButton As CanvasComponent:
         Size: =24
         Text: ="X"
         Width: =86
-        X: =281
-        Y: =211
+        X: =314
+        Y: =152
         ZIndex: =4
 
     Button3_3 As button:
@@ -135,7 +130,6 @@ modalOkCancelButton As CanvasComponent:
         Size: =24
         Text: ="X"
         Width: =86
-        X: =183
-        Y: =298
+        Y: =140
         ZIndex: =5
 

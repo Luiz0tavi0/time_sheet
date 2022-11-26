@@ -9866,6 +9866,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "login.varShowFailTransition"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "login.varShowFailTransition",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varShowFailTransition",
+                "module": "login",
+                "type": "login"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "login.varShowLoadingTransition"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "login.varShowLoadingTransition",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varShowLoadingTransition",
+                "module": "login",
+                "type": "login"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "login.varShowSuccessTransition"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "login.varShowSuccessTransition",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varShowSuccessTransition",
+                "module": "login",
+                "type": "login"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "login.varTimerRunLoadingTransition"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "login.varTimerRunLoadingTransition",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varTimerRunLoadingTransition",
+                "module": "login",
+                "type": "login"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "login.visibleTransitionFase2"
                 }
               ],

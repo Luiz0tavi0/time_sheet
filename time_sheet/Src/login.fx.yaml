@@ -239,30 +239,24 @@ login As screen:
             =UpdateContext({TimerGoFase1: false});
             UpdateContext({TimerGoFase2: false});
             UpdateContext({TimerGoFailFase1: false});
-            UpdateContext({visibleTransitionFase1: false});
-            UpdateContext({visibleTransitionFase2: false});
-            UpdateContext({visibleTransitionFailFase1: false});
+            UpdateContext({varShowLoadingTransition: false});
+            UpdateContext({varShowSuccessTransition: false});
+            UpdateContext({varShowFailTransition: false});
             If(
                 togglePosition,
-                Set(
-                    CONST_CURRENT_USER,
-                    LookUp(
-                        tbl_companies,
-                        (cnpj = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                Set(CONST_CURRENT_USER,
+                    LookUp(tbl_companies, (cnpj = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
                     )
                 ),
-                Set(
-                    CONST_CURRENT_USER,
-                    LookUp(
-                        tbl_collaborators,
-                        (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                Set(CONST_CURRENT_USER, 
+                    LookUp(tbl_collaborators, (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
                     )
                 )
             );
             If(
                 Not(IsBlank(CONST_CURRENT_USER.name)),
-                UpdateContext({TimerGoFase1: true}),
-                UpdateContext({TimerGoFailFase1: true});
+                UpdateContext({varShowLoadingTransition: true}),
+                UpdateContext({varTimerRunLoadingTransition: true});
                 
             );
             
@@ -488,7 +482,7 @@ login As screen:
         ZIndex: =16
 
     cmpTransitionLoadLogin As cmpTransitionLoad:
-        Visible: =visibleTransitionFase1
+        Visible: =
         ZIndex: =17
 
     cmpScreenSuccess_1 As cmpScreenSuccess:

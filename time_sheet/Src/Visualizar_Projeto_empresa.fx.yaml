@@ -25,7 +25,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.Title
+            Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -43,7 +43,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.houers
+            Text: =ThisItem.status
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

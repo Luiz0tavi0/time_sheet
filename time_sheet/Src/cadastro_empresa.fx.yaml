@@ -510,7 +510,7 @@ cadastro_empresa As screen:
 
     HeaderCompany_cad_empresa As HeaderCompany:
         background_color: =CONST_BACKGROUND_COLOR_EMPRESA
-        current_user_name: =CONST_CURRENT_USER
+        current_user_name: =
         Visible: =true
         Width: =Parent.Width
         ZIndex: =4

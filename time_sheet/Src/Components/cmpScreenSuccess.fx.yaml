@@ -8,72 +8,77 @@ cmpScreenSuccess As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    Container2 As groupContainer.horizontalAutoLayoutContainer:
-        Height: =Parent.Height
-        LayoutMode: =LayoutMode.Auto
-        Width: =Parent.Width
-        ZIndex: =4
+    Container3 As groupContainer.manualLayoutContainer:
+        Height: =1136
+        Width: =639
+        ZIndex: =1
 
-        Container3 As groupContainer.manualLayoutContainer:
-            Height: =100
-            LayoutMinHeight: =112
-            LayoutMinWidth: =250
-            Width: =100
-            X: =178
-            Y: =422
-            ZIndex: =1
+        Group2 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =3
 
-            Group2 As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =3
-
-                iconCircle1_4 As circle.Circle:
-                    BorderColor: =RGBA(166, 166, 166, 1)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(0, 120, 212, 1)
-                    Fill: =RGBA(0, 120, 212, 1)
-                    HoverFill: =RGBA(0, 120, 212, 1)
-                    PressedFill: =RGBA(0, 120, 212, 1)
-                    X: =Parent.Width/2 - Self.Width/2
-                    Y: =(Parent.Height/2 - Self.Height/2) * .7
-                    ZIndex: =2
-
-                iconCheck1_4 As icon.Check:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =RGBA(255, 255, 255, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(220, 220, 220, 1)
-                    Height: =iconCircle1_4.Height
-                    Icon: =Icon.Check
-                    PaddingBottom: =Self.PaddingTop
-                    PaddingLeft: =Self.PaddingTop
-                    PaddingRight: =Self.PaddingTop
-                    PaddingTop: =18
-                    PressedFill: =RGBA(0, 0, 0, 0)
-                    Width: =iconCircle1_4.Width
-                    X: =Parent.Width/2 - Self.Width/2
-                    Y: =(Parent.Height/2 - Self.Height/2) * .7
-                    ZIndex: =3
-
-            LblSuccessMsg1_4 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
+            iconCircle1_4 As circle.Circle:
+                BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                DisabledFill: =RGBA(0, 120, 212, 1)
+                Fill: =RGBA(0, 120, 212, 1)
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =cmpScreenSuccess.OnClickAnyLocationScreen();
+                PressedFill: =RGBA(0, 120, 212, 1)
+                X: =Parent.Width/2 - Self.Width/2
+                Y: =(Parent.Height/2 - Self.Height/2) * .7
+                ZIndex: =2
+
+            iconCheck1_4 As icon.Check:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =48
-                Size: =21
-                Text: =cmpScreenSuccess.exito_texto
-                Width: =Parent.Width * 0.75
-                X: =(Parent.Width/2 - Self.Width/2)
-                Y: =(Parent.Height/2 - Self.Height/2) * .9
-                ZIndex: =4
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                Height: =iconCircle1_4.Height
+                Icon: =Icon.Check
+                OnSelect: =cmpScreenSuccess.OnClickAnyLocationScreen();
+                PaddingBottom: =Self.PaddingTop
+                PaddingLeft: =Self.PaddingTop
+                PaddingRight: =Self.PaddingTop
+                PaddingTop: =18
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =iconCircle1_4.Width
+                X: =Parent.Width/2 - Self.Width/2
+                Y: =(Parent.Height/2 - Self.Height/2) * .7
+                ZIndex: =3
+
+        LblSuccessMsg1_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =48
+            Size: =21
+            Text: =cmpScreenSuccess.exito_texto
+            Width: =Parent.Width * 0.75
+            X: =(Parent.Width/2 - Self.Width/2)
+            Y: =(Parent.Height/2 - Self.Height/2) * .9
+            ZIndex: =4
+
+    Rectangle3 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(99, 139, 44, 1)
+        FocusedBorderThickness: =4
+        Height: =1136
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =640
+        ZIndex: =2
 

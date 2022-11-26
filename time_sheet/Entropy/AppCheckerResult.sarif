@@ -176,46 +176,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 70,
-                  "snippet": {
-                    "text": "\"name\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Buscar_por_projeto_empresa",
-                "type": "Buscar_por_projeto_empresa.GalleryProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.AccessibleLabel"
                 }
               ],
@@ -9829,6 +9789,36 @@
                 "member": "visibleTransitionFase2",
                 "module": "login",
                 "type": "login"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Scr_teste_envio_email.fundo_visivel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Scr_teste_envio_email.fundo_visivel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "fundo_visivel",
+                "module": "Scr_teste_envio_email",
+                "type": "Scr_teste_envio_email"
               }
             }
           ],

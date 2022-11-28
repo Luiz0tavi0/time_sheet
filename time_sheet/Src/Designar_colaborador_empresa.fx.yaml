@@ -276,9 +276,7 @@ Designar_colaborador_empresa As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         InputTextPlaceholder: ="cpf do colaborador"
-        Items: |
-            =//Filter(tbl_collaborators; Not(ID= 0)).cpf
-            tbl_collaborators
+        Items: =tbl_collaborators[@cpf]
         MultiValueDelimiter: =
         NoSelectionText: =
         OnSelect: =ClearCollect(colCpfs,tbl_collaborators);
@@ -286,10 +284,7 @@ Designar_colaborador_empresa As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["cpf"]
-        SearchItems: |-
-            =Search(//Filter(tbl_collaborators; Not(ID= 0)).cpf
-            tbl_collaborators
-            ,ComboBox1.SearchText,"cpf")
+        SearchItems: =Search(tbl_collaborators[@cpf],ComboBox1.SearchText,"cpf")
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =21

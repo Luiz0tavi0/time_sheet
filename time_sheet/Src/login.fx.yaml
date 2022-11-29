@@ -56,7 +56,6 @@ login As screen:
         AccessibleLabel: ="@"
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
-        Clear: =true
         Color: =RGBA(51, 51, 51, 1)
         Default: =
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -70,7 +69,16 @@ login As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Italic: =true
-        OnChange: =If(Len(Self.Text)>0,Icon2.)
+        OnChange: |-
+            =//UpdateContext({lenInputEmail:Len(Self.Text)});;
+            If(
+                IsMatch(
+                    TxtInputLogin.Text,
+                    "^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$"
+                ),
+                UpdateContext({varEmailIsOk:true}),
+                UpdateContext({varEmailIsOk:false})
+            )
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -461,32 +469,33 @@ login As screen:
         Y: =786
         ZIndex: =20
 
-    Icon1_2 As icon.Alarm:
+    iconFailSuccessInputEmail As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
+        Color: =RGBA(255, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(220, 220, 220, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =40
+        Height: =70
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: |-
             =If(
                 IsMatch(
-                    TxtInputLogin.Text,
+                    DataCardValue3.Text,
                     "^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$"
                 ),
-                Icon.Check,
-                Icon.Cancel
+                Icon.Cancel,
+                Icon.Check    
             )
+        OnSelect: =If(Not(varEmailIsOk),Reset(TxtInputLogin));
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =false
-        Width: =40
-        X: =582
-        Y: =659
+        Visible: =Len(TxtInputLogin.Text)>5
+        Width: =77
+        X: =560
+        Y: =644
         ZIndex: =21
 

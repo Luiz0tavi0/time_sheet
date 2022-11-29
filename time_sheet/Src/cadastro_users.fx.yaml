@@ -1,12 +1,15 @@
-cadastro_empresa As screen:
+cadastro_users As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =UpdateContext({varEmailISValid:false})
 
-    ButtonCreateUserCompany As button:
+    ButtonCreateUserWorker As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(2, 4, 48, 1)
+        DisplayMode: =If(FormWorkerReg.Valid,DisplayMode.Edit,DisplayMode.Disabled)
+        Fill: =RGBA(110, 164, 191, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
@@ -16,25 +19,26 @@ cadastro_empresa As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
+        PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
         Size: =24
         Text: ="Criar"
         Width: =480
         X: =78
-        Y: =858
+        Y: =906
         ZIndex: =1
 
-    FormCompanyReg As form:
+    FormWorkerReg As form:
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_users
-        Height: =588
-        Width: =535
-        X: =54
-        Y: =197
+        DefaultMode: =FormMode.New
+        Height: =715
+        Width: =526
+        X: =52
+        Y: =125
         ZIndex: =2
 
-        name_DataCard2 As typedDataCard.textualEditCard:
+        name_DataCard6 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="first_name"
@@ -45,14 +49,13 @@ cadastro_empresa As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "first_name")
             Required: =true
-            Update: =DataCardValue2.Text
-            Width: =535
+            Update: =DataCardValue29.Text
+            Width: =526
             X: =0
             Y: =0
             ZIndex: =3
 
-            DataCardKey2 As label:
-                AutoHeight: =true
+            DataCardKey29 As label:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -62,17 +65,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =Parent.Height*0.3
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Nome"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue2 As text:
+            DataCardValue29 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -84,7 +87,7 @@ cadastro_empresa As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =54
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -101,10 +104,10 @@ cadastro_empresa As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
                 ZIndex: =2
 
-            ErrorMessage2 As label:
+            ErrorMessage25 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -126,10 +129,10 @@ cadastro_empresa As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue2.Y + DataCardValue2.Height
+                Y: =DataCardValue29.Y + DataCardValue29.Height
                 ZIndex: =3
 
-            StarVisible2 As label:
+            StarVisible25 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -140,17 +143,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey2.Height
+                Height: =DataCardKey29.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey2.Y
+                Y: =DataCardKey29.Y
                 ZIndex: =4
 
-        email_DataCard1 As typedDataCard.textualEditCard:
+        email_DataCard3 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="email"
@@ -161,13 +164,13 @@ cadastro_empresa As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "email")
             Required: =true
-            Update: =DataCardValue3.Text
-            Width: =535
+            Update: =DataCardValueEmail.Text
+            Width: =526
             X: =0
             Y: =1
             ZIndex: =3
 
-            DataCardKey3 As label:
+            DataCardKey30 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -178,17 +181,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =Parent.Height*0.3
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Email"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue3 As text:
+            DataCardValueEmail As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -200,7 +203,7 @@ cadastro_empresa As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =55
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -217,10 +220,10 @@ cadastro_empresa As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
                 ZIndex: =2
 
-            ErrorMessage3 As label:
+            ErrorMessageEmailField As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -237,15 +240,15 @@ cadastro_empresa As screen:
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
+                Size: =18
+                Text: =If(IsBlank(Parent.Error),"O Email é requerido.")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue3.Y + DataCardValue3.Height
+                Y: =DataCardValueEmail.Y + DataCardValueEmail.Height
                 ZIndex: =3
 
-            StarVisible3 As label:
+            StarVisible30 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -256,17 +259,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey3.Height
+                Height: =DataCardKey30.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3.Y
+                Y: =DataCardKey30.Y
                 ZIndex: =4
 
-        password_DataCard1 As typedDataCard.textualEditCard:
+        password_DataCard3 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="password"
@@ -277,13 +280,13 @@ cadastro_empresa As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "password")
             Required: =false
-            Update: =DataCardValue7.Text
-            Width: =535
+            Update: =DataCardValue32.Text
+            Width: =526
             X: =0
             Y: =2
             ZIndex: =3
 
-            DataCardKey7 As label:
+            DataCardKey32 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -294,17 +297,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =Parent.Height*0.3
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Senha"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7 As text:
+            DataCardValue32 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -316,7 +319,7 @@ cadastro_empresa As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =55
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -333,10 +336,10 @@ cadastro_empresa As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
+                Y: =DataCardKey32.Y + DataCardKey32.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7 As label:
+            ErrorMessage32 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -358,10 +361,10 @@ cadastro_empresa As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
+                Y: =DataCardValue32.Y + DataCardValue32.Height
                 ZIndex: =3
 
-            StarVisible7 As label:
+            StarVisible32 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -372,17 +375,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey7.Height
+                Height: =DataCardKey32.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey7.Y
+                Y: =DataCardKey32.Y
                 ZIndex: =4
 
-        fone_DataCard1 As typedDataCard.textualEditCard:
+        fone_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="fone"
@@ -390,16 +393,16 @@ cadastro_empresa As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"fone")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =120
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "fone")
             Required: =false
-            Update: =DataCardValue22.Text
-            Width: =535
+            Update: =DataCardValue34.Text
+            Width: =526
             X: =0
             Y: =3
             ZIndex: =3
 
-            DataCardKey22 As label:
+            DataCardKey34 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -410,17 +413,17 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =Parent.Height*0.3
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Telefone"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue22 As text:
+            DataCardValue34 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -432,7 +435,7 @@ cadastro_empresa As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =55
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -449,10 +452,10 @@ cadastro_empresa As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey22.Y + DataCardKey22.Height + 5
+                Y: =DataCardKey34.Y + DataCardKey34.Height + 5
                 ZIndex: =2
 
-            ErrorMessage11 As label:
+            ErrorMessage35 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -474,10 +477,10 @@ cadastro_empresa As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue22.Y + DataCardValue22.Height
+                Y: =DataCardValue34.Y + DataCardValue34.Height
                 ZIndex: =3
 
-            StarVisible11 As label:
+            StarVisible35 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -488,24 +491,158 @@ cadastro_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey22.Height
+                Height: =DataCardKey34.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey22.Y
+                Y: =DataCardKey34.Y
                 ZIndex: =4
 
-    FooterCompany_15 As FooterCompany:
+        cpf_DataCard2 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cpf"
+            Default: =ThisItem.cpf
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"cpf")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =120
+            MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cpf")
+            Required: =true
+            Update: =DataCardValue39.Text
+            Width: =526
+            X: =0
+            Y: =4
+            ZIndex: =3
+
+            DataCardKey39 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =Parent.Height*0.3
+                PaddingLeft: =0
+                Size: =21
+                Text: ="CPF"
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue39 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =Parent.Height*0.4
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
+                ZIndex: =2
+
+            ErrorMessage36 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue39.Y + DataCardValue39.Height
+                ZIndex: =3
+
+            StarVisible36 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey39.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey39.Y
+                ZIndex: =4
+
+    FooterWorker_7 As FooterWorker:
+        Fill: =CONST_BACKGROUND_COLOR_EMPRESA
         Y: =1016
         ZIndex: =3
 
-    HeaderCompany_cad_empresa As HeaderCompany:
-        background_color: =CONST_BACKGROUND_COLOR_EMPRESA
-        current_user_name: =
+    HeaderWorker_2 As HeaderWorker:
+        current_user_name: ="User - Basic Info"
+        has_right_icon: =false
         Visible: =true
-        Width: =Parent.Width
         ZIndex: =4
+
+    iconToDetails As icon.Add:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.DockRight
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        X: =494
+        Y: =829
+        ZIndex: =5
 

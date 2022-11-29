@@ -1,7 +1,7 @@
-Conta_criada_empresa As screen:
+__Conta_criada_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Label381684 As label:
+    Label381684_1 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -23,10 +23,10 @@ Conta_criada_empresa As screen:
         VerticalAlign: =VerticalAlign.Top
         Width: =218
         X: =213
-        Y: =707
+        Y: =723
         ZIndex: =1
 
-    Image381685 As image:
+    Image381685_1 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -40,10 +40,10 @@ Conta_criada_empresa As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =475
         X: =84
-        Y: =213
+        Y: =229
         ZIndex: =2
 
-    ButtonRegistration_1 As button:
+    ButtonRegistration_2 As button:
         Align: =Align.Left
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(39, 39, 39, 1)
@@ -60,7 +60,7 @@ Conta_criada_empresa As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
+        PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
         Size: =24
         Text: ="          Início"
         Width: =230
@@ -68,7 +68,7 @@ Conta_criada_empresa As screen:
         Y: =881
         ZIndex: =3
 
-    Icon19 As icon.Home:
+    Icon19_1 As icon.Home:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(39, 39, 39, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -88,15 +88,19 @@ Conta_criada_empresa As screen:
         Y: =891
         ZIndex: =4
 
-    FooterCompany_5 As FooterCompany:
+    FooterWorker_4 As FooterWorker:
         Y: =1016
         ZIndex: =5
 
-    HeaderCompany_14 As HeaderCompany:
-        has_left_icon: =false
-        has_right_icon: =false
-        is_logged_screen: =false
-        Visible: =true
-        Width: =Parent.Width
+    Rectangle20308_4 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(110, 164, 191, 1)
+        FocusedBorderThickness: =4
+        Height: =120
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =640
         ZIndex: =6
 

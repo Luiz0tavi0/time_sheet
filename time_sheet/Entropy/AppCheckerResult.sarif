@@ -176,136 +176,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "login.Icon3.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "login.Icon3.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "cadastro_user"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "login",
-                "type": "login.Icon3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "cadastro_user"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "FooterWorker",
-                "type": "FooterWorker.BackgroundFooterDark"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "FooterWorker",
-                "type": "FooterWorker.BackgroundFooterDark"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "FooterWorker.Group_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "FooterWorker.Group_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "FooterWorker",
-                "type": "FooterWorker.Group_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.AccessibleLabel"
                 }
               ],
@@ -726,19 +596,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.cpf_DataCard2.DataCardValue39.AccessibleLabel"
+                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.cpf_DataCard2.DataCardValue39.AccessibleLabel",
+                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.cpf_DataCard2.DataCardValue39"
+                "module": "FooterWorker",
+                "type": "FooterWorker.BackgroundFooterDark"
               }
             }
           ],
@@ -756,49 +626,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.AccessibleLabel"
+                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.Gallery5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.TabIndex",
+                  "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.Gallery5"
+                "module": "FooterWorker",
+                "type": "FooterWorker.BackgroundFooterDark"
               }
             }
           ],
@@ -816,109 +656,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProjectLabel.TabIndex"
+                  "fullyQualifiedName": "FooterWorker.Group_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProjectLabel.TabIndex",
+                  "fullyQualifiedName": "FooterWorker.Group_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.TotalHoursProjectLabel"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.Rectangle20322_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.Rectangle20322_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProject.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProject.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.TotalHoursProject"
+                "module": "FooterWorker",
+                "type": "FooterWorker.Group_1"
               }
             }
           ],
@@ -1776,19 +1526,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.fone_DataCard2.DataCardValue34.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValueNome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.fone_DataCard2.DataCardValue34.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValueNome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.fone_DataCard2.DataCardValue34"
+                "type": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValueNome"
               }
             }
           ],
@@ -1806,19 +1556,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard3.DataCardValue32.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.email_DataCard.DataCardValueEmail.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard3.DataCardValue32.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.email_DataCard.DataCardValueEmail.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.password_DataCard3.DataCardValue32"
+                "type": "cadastro_users.FormWorkerReg.email_DataCard.DataCardValueEmail"
               }
             }
           ],
@@ -1836,19 +1586,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.email_DataCard3.DataCardValueEmail.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePassword.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.email_DataCard3.DataCardValueEmail.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePassword.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.email_DataCard3.DataCardValueEmail"
+                "type": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePassword"
               }
             }
           ],
@@ -1866,19 +1616,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValue29.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.fone_DataCard.DataCardValueFone.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValue29.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.fone_DataCard.DataCardValueFone.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValue29"
+                "type": "cadastro_users.FormWorkerReg.fone_DataCard.DataCardValueFone"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.cpf_DataCard.DataCardValueCpf.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.cpf_DataCard.DataCardValueCpf.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cadastro_users",
+                "type": "cadastro_users.FormWorkerReg.cpf_DataCard.DataCardValueCpf"
               }
             }
           ],
@@ -2166,19 +1946,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel"
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel",
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Conta_criada_colaborador",
-                "type": "Conta_criada_colaborador.Rectangle20308_4"
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Rectangle20308_4"
               }
             }
           ],
@@ -2196,19 +1976,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Rectangle20308_4.TabIndex"
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Rectangle20308_4.TabIndex",
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Conta_criada_colaborador",
-                "type": "Conta_criada_colaborador.Rectangle20308_4"
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Rectangle20308_4"
               }
             }
           ],
@@ -2226,19 +2006,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Image381685_1.AccessibleLabel"
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Image381685_1.AccessibleLabel",
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Conta_criada_colaborador",
-                "type": "Conta_criada_colaborador.Image381685_1"
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Image381685_1"
               }
             }
           ],
@@ -2256,19 +2036,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Image381685_1.TabIndex"
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Image381685_1.TabIndex",
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Conta_criada_colaborador",
-                "type": "Conta_criada_colaborador.Image381685_1"
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Image381685_1"
               }
             }
           ],
@@ -2286,19 +2066,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Label381684_1.TabIndex"
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Label381684_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_colaborador.Label381684_1.TabIndex",
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Label381684_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Conta_criada_colaborador",
-                "type": "Conta_criada_colaborador.Label381684_1"
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Label381684_1"
               }
             }
           ],
@@ -2316,19 +2096,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_empresa.Image381685.AccessibleLabel"
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_empresa.Image381685.AccessibleLabel",
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Conta_criada_empresa",
-                "type": "Conta_criada_empresa.Image381685"
+                "module": "__Conta_criada_empresa",
+                "type": "__Conta_criada_empresa.Image381685"
               }
             }
           ],
@@ -2346,19 +2126,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_empresa.Image381685.TabIndex"
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_empresa.Image381685.TabIndex",
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Conta_criada_empresa",
-                "type": "Conta_criada_empresa.Image381685"
+                "module": "__Conta_criada_empresa",
+                "type": "__Conta_criada_empresa.Image381685"
               }
             }
           ],
@@ -2376,19 +2156,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Conta_criada_empresa.Label381684.TabIndex"
+                  "fullyQualifiedName": "__Conta_criada_empresa.Label381684.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Conta_criada_empresa.Label381684.TabIndex",
+                  "fullyQualifiedName": "__Conta_criada_empresa.Label381684.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Conta_criada_empresa",
-                "type": "Conta_criada_empresa.Label381684"
+                "module": "__Conta_criada_empresa",
+                "type": "__Conta_criada_empresa.Label381684"
               }
             }
           ],
@@ -4896,66 +4676,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "login.Icon3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "login.Icon3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "login",
-                "type": "login.Icon3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "login.Icon3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "login.Icon3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "login",
-                "type": "login.Icon3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "inserir_atividade_colaborador.TitleCreateActivity.TabIndex"
                 }
               ],
@@ -6150,6 +5870,276 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProjectLabel.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProjectLabel.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.TotalHoursProjectLabel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.Rectangle20322_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Rectangle20322_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.Rectangle20322_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProject.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.TotalHoursProject.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.TotalHoursProject"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePasswordConfirm.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePasswordConfirm.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cadastro_users",
+                "type": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePasswordConfirm"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "login.Icon3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "login.Icon3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "login",
+                "type": "login.Icon3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "login.Icon3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "login.Icon3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "login",
+                "type": "login.Icon3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
         },
         {
           "locations": [

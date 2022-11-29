@@ -576,6 +576,7 @@ cadastro_users As screen:
     HeaderWorker_2 As HeaderWorker:
         current_user_name: ="User - Basic Info"
         has_right_icon: =false
+        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormWorkerReg);
         Visible: =true
         ZIndex: =4
 

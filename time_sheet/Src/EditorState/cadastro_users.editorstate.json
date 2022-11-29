@@ -5062,7 +5062,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "OnClickLeftIcon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Texto\"",
+          "InvariantPropertyName": "OnClickLeftIcon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "OnClickRightIcon"
       ],
       "HasDynamicProperties": false,
@@ -5146,7 +5153,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnClickLeftIcon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Behavior",

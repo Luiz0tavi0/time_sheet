@@ -24,6 +24,7 @@ login As screen:
     TxtInputLoginSenha As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
+        Clear: =true
         Color: =RGBA(51, 51, 51, 1)
         Default: =
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -48,12 +49,14 @@ login As screen:
         Size: =21
         Width: =480
         X: =80
-        Y: =833
+        Y: =768
         ZIndex: =2
 
-    TxtInputLoginCnpj_Cpf As text:
+    TxtInputLogin As text:
+        AccessibleLabel: ="@"
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
+        Clear: =true
         Color: =RGBA(51, 51, 51, 1)
         Default: =
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -62,54 +65,12 @@ login As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =70
-        HintText: =If(togglePosition,"CNPJ","CPF")
+        HintText: ="Email"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Italic: =true
-        MaxLength: =If(Toggle_Cpf_Or_Cnpj.Value,14,11)
-        OnChange: |-
-            =//1ª Condição
-            If(Toggle_Cpf_Or_Cnpj.Value,
-            //2ªCondição
-            If(IsNumeric(Self.Text) And Len(Self.Text)=14,
-                    //TRUE - 2ª Condição
-            UpdateContext({VarPrimeiroDigito:Mod((Mid(Self.Text,1,1)*5+Mid(Self.Text,2,1)*4+Mid(Self.Text,3,1)*3+Mid(Self.Text,4,1)*2+Mid(Self.Text,5,1)*9+Mid(Self.Text,6,1)*8+Mid(Self.Text,7,1)*7+Mid(Self.Text,8,1)*6+Mid(Self.Text,9,1)*5+Mid(Self.Text,10,1)*4+Mid(Self.Text,11,1)*3+Mid(Self.Text,12,1)*2),11)});
-            //Regra específica da validação do CNPJ
-            If(VarPrimeiroDigito<2,UpdateContext({VarPrimeiroDigito:0}),UpdateContext({VarPrimeiroDigito:11-VarPrimeiroDigito}));UpdateContext({VarSegundoDigito:Mod((Mid(Self.Text,1,1)*6+Mid(Self.Text,2,1)*5+Mid(Self.Text,3,1)*4+Mid(Self.Text,4,1)*3+Mid(Self.Text,5,1)*2+Mid(Self.Text,6,1)*9+Mid(Self.Text,7,1)*8+Mid(Self.Text,8,1)*7+Mid(Self.Text,9,1)*6+Mid(Self.Text,10,1)*5+Mid(Self.Text,11,1)*4+Mid(Self.Text,12,1)*3+Mid(Self.Text,13,1)*2),11)});
-            //Regra específica da validação do CNPJ
-            If(VarSegundoDigito<2,UpdateContext({VarSegundoDigito:0}),UpdateContext({VarSegundoDigito:11-VarSegundoDigito}));
-            //3ª Condição
-            If(VarPrimeiroDigito=Value(Mid(Self.Text,13,1)) And VarSegundoDigito=Value(Mid(Self.Text,14,1)),
-            //TRUE - 3ª Condição
-            UpdateContext({VarMascara:Left(Self.Text,2)&"."&Mid(Self.Text,3,3)&"."&Mid(Self.Text,6,3)&"/"&Mid(Self.Text,9,4)&"-"&Right(Self.Text,2)}),
-            //FALSE - 3ª Condição
-            UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self)),//FIM 3ª Condição
-            
-            //FALSE - 2ª Condição
-            Notify("Por favor inserir 14 números!",NotificationType.Error,1500);UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self)),//FIM 2ª Condição
-            
-            //4ª Condição
-            If(IsNumeric(Self.Text) And Len(Self.Text)=11,
-            //TRUE - 4ª Condição
-            UpdateContext({VarPrimeiroDigito:Mod(((Mid(Self.Text,1,1)*10+Mid(Self.Text,2,1)*9+Mid(Self.Text,3,1)*8+Mid(Self.Text,4,1)*7+Mid(Self.Text,5,1)*6+Mid(Self.Text,6,1)*5+Mid(Self.Text,7,1)*4+Mid(Self.Text,8,1)*3+Mid(Self.Text,9,1)*2)*10),11)});
-            //Regra específica da validação do CPF
-            If(VarPrimeiroDigito=10,UpdateContext({VarPrimeiroDigito:0}));UpdateContext({VarSegundoDigito:Mod(((Mid(Self.Text,1,1)*11+Mid(Self.Text,2,1)*10+Mid(Self.Text,3,1)*9+Mid(Self.Text,4,1)*8+Mid(Self.Text,5,1)*7+Mid(Self.Text,6,1)*6+Mid(Self.Text,7,1)*5+Mid(Self.Text,8,1)*4+Mid(Self.Text,9,1)*3+Mid(Self.Text,10,1)*2)*10),11)});
-            //Regra específica da validação do CPF
-            If(VarSegundoDigito=10,UpdateContext({VarSegundoDigito:0}));
-            //5ª Condição
-            If(VarPrimeiroDigito=Value(Mid(Self.Text,10,1)) And VarSegundoDigito=Value(Mid(Self.Text,11,1)),
-            //TRUE - 5ª Condição
-            UpdateContext({VarMascara:Left(Self.Text,3)&"."&Mid(Self.Text,4,3)&"."&Mid(Self.Text,7,3)&"-"&Right(Self.Text,2)}),
-            //FALSE - 5ª Condição
-            Notify("Por favor inserir um CPF válido!",NotificationType.Error,1500);UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self)),//FIM 5ª Condição
-            
-            //FALSE - 4ªCondição
-            Notify("Por favor inserir 11 números!",NotificationType.Error,1500);UpdateContext({VarPrimeiroDigito:Blank(),VarSegundoDigito:Blank(),VarMascara:Blank()});Reset(Self))//FIM 4ª Condição
-            )//FIM 1ª Condição
-            ;
-            //If(Radio2.Selected.Value = "Pessoa jurídica"; 
-            If((CountA(Split(Self.Text,Left(Self.Text,1)))-1)=11,Notify("Por favor inserir um CPF válido!",NotificationType.Error,1500);Reset(Self);)
+        OnChange: =If(Len(Self.Text)>0,Icon2.)
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -121,43 +82,8 @@ login As screen:
         Tooltip: =
         Width: =480
         X: =80
-        Y: =709
+        Y: =644
         ZIndex: =3
-
-    Toggle_Cpf_Or_Cnpj As toggleSwitch:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =togglePosition
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        FalseFill: =RGBA(110, 164, 191, 1)
-        FalseHoverFill: =RGBA(33, 33, 33, 1)
-        FalseText: ="Sou Colaborador"
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        HandleFill: =RGBA(255, 255, 255, 1)
-        Height: =34
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        OnChange: |
-            =Reset(TxtInputLoginCnpj_Cpf);
-            Reset(TxtInputLoginSenha);
-            Set(currentUser, Blank());
-        OnCheck: |-
-            =UpdateContext({togglePosition:true})
-        OnUncheck: |-
-            =UpdateContext({togglePosition:false})
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        Size: =20
-        TextPosition: =TextPosition.Left
-        Tooltip: =
-        TrueFill: =RGBA(0, 120, 212, 1)
-        TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        TrueText: ="Sou Empresa"
-        Width: =320
-        X: =160
-        Y: =613
-        ZIndex: =4
 
     AppTittle As label:
         Align: =Align.Center
@@ -245,11 +171,11 @@ login As screen:
             If(
                 togglePosition,
                 Set(CONST_CURRENT_USER,
-                    LookUp(tbl_companies, (cnpj = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                    LookUp(tbl_companies, (cnpj = TxtInputLogin.Text And password = TxtInputLoginSenha.Text)
                     )
                 ),
                 Set(CONST_CURRENT_USER, 
-                    LookUp(tbl_collaborators, (cpf = TxtInputLoginCnpj_Cpf.Text And password = TxtInputLoginSenha.Text)
+                    LookUp(tbl_collaborators, (cpf = TxtInputLogin.Text And password = TxtInputLoginSenha.Text)
                     )
                 )
             );
@@ -284,15 +210,15 @@ login As screen:
         Height: =21
         Text: |-
             =If(
-                (IsBlank(TxtInputLoginCnpj_Cpf.Text) And togglePosition=false),
+                (IsBlank(TxtInputLogin.Text) And togglePosition=false),
                 "CPF é obrigatório.",
-                (IsBlank(TxtInputLoginCnpj_Cpf.Text) And togglePosition=true),
+                (IsBlank(TxtInputLogin.Text) And togglePosition=true),
                 "CNPJ é obrigatório"
             )
         Visible: =Not(Self.Text="")
         Width: =480
         X: =80
-        Y: =782
+        Y: =717
         ZIndex: =8
 
     LabelPasswordError As label:
@@ -320,7 +246,7 @@ login As screen:
         Visible: =Not(Self.Text="")
         Width: =480
         X: =81
-        Y: =903
+        Y: =838
         ZIndex: =9
 
     cmpLoginFail_1 As cmpLoginFail:
@@ -369,8 +295,8 @@ login As screen:
         Size: =21
         Text: ="ID " & CONST_CURRENT_USER.ID & " estado = " & rect.DisplayMode
         Width: =604
-        X: =1
-        Y: =924
+        X: =18
+        Y: =891
         ZIndex: =12
 
     tempScreenTransitionFase1 As timer:
@@ -494,4 +420,73 @@ login As screen:
             )
         Visible: =visibleTransitionFase1
         ZIndex: =18
+
+    Icon1 As icon.Alarm:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =40
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Mail
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =40
+        X: =24
+        Y: =659
+        ZIndex: =19
+
+    Icon1_1 As icon.Alarm:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =40
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Lock
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =40
+        X: =24
+        Y: =786
+        ZIndex: =20
+
+    Icon1_2 As icon.Alarm:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =40
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: |-
+            =If(
+                IsMatch(
+                    TxtInputLogin.Text,
+                    "^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$"
+                ),
+                Icon.Check,
+                Icon.Cancel
+            )
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =false
+        Width: =40
+        X: =582
+        Y: =659
+        ZIndex: =21
 

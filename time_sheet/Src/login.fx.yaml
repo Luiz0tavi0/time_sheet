@@ -24,7 +24,6 @@ login As screen:
     TxtInputLoginSenha As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
-        Clear: =true
         Color: =RGBA(51, 51, 51, 1)
         Default: =
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -39,6 +38,12 @@ login As screen:
         HoverFill: =RGBA(255, 255, 255, 1)
         MaxLength: =12
         Mode: =TextMode.Password
+        OnChange: |-
+            =UpdateContext({lenInputPasword:Len(TxtInputLoginSenha.Text)});
+            If(lenInputPasword > 7,
+                UpdateContext({varPasswordIsOk:true}),
+                UpdateContext({varPasswordIsOk:false})
+            )
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -74,7 +79,7 @@ login As screen:
             If(
                 IsMatch(
                     TxtInputLogin.Text,
-                    "^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$"
+                    "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"        
                 ),
                 UpdateContext({varEmailIsOk:true}),
                 UpdateContext({varEmailIsOk:false})
@@ -117,44 +122,6 @@ login As screen:
         X: =45
         Y: =47
         ZIndex: =5
-
-    ButtonRegistration As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(110, 164, 191, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =70
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        HoverFill: |-
-            =//ColorFade(RGBA(0; 120; 212; 1); -10%)
-            RGBA(255, 255, 255, 1)
-        OnSelect: |-
-            =//If(Toggle_Cpf_Or_Cnpj.Value;
-             //   Navigate(cadastro_empresa);; NewForm(FormWorkerReg);;
-            //);;
-            
-            //If(Not(Toggle_Cpf_Or_Cnpj.Value); Navigate(cadastro_colaborador);; NewForm(FormCompanyReg));;
-            
-            
-            If(
-                togglePosition, 
-                 Navigate(cadastro_empresa); NewForm(FormWorkerReg),
-                 Navigate(cadastro_colaborador); NewForm(FormCompanyReg)
-                 );
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =24
-        Text: ="Cadastro"
-        Width: =230
-        X: =81
-        Y: =967
-        ZIndex: =6
 
     ButtonLogin As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -201,8 +168,8 @@ login As screen:
         Size: =24
         Text: ="Login"
         Width: =232
-        X: =328
-        Y: =967
+        X: =(Max(App.DesignWidth,App.Width)/2) - Self.Width/2
+        Y: =893
         ZIndex: =7
 
     LabelLoginError As label:
@@ -471,31 +438,95 @@ login As screen:
 
     iconFailSuccessInputEmail As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(255, 0, 0, 1)
+        Color: |-
+            =//If(varEmailIsOk;RGBA(54; 176; 75; 1); RGBA(254; 0; 0; 1))
+            CONST_BACKGROUND_COLOR_COLABORADOR
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(220, 220, 220, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =70
+        Height: =50
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: |-
             =If(
                 IsMatch(
-                    DataCardValue3.Text,
+                    TxtInputLogin.Text,
                     "^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$"
                 ),
-                Icon.Cancel,
-                Icon.Check    
+                Icon.Check,   
+                Icon.Cancel
             )
         OnSelect: =If(Not(varEmailIsOk),Reset(TxtInputLogin));
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =Len(TxtInputLogin.Text)>5
-        Width: =77
-        X: =560
-        Y: =644
+        Width: =50
+        X: =572
+        Y: =651
         ZIndex: =21
+
+    iconFailSuccessInputPassword As icon.Alarm:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: |-
+            =//If(varEmailIsOk;RGBA(54; 176; 75; 1); RGBA(254; 0; 0; 1))
+            CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =If(varPasswordIsOk, Icon.Check,Icon.Cancel)
+        OnSelect: =If(Not(varPasswordIsOk),Reset(TxtInputLoginSenha));
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =lenInputPasword>0
+        Width: =50
+        X: =572
+        Y: =774
+        ZIndex: =22
+
+    lblNewUser As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(102, 174, 229, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(153, 201, 238, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =28
+        Text: ="New user? Sign Up"
+        Width: =180
+        X: =230
+        Y: =986
+        ZIndex: =23
+
+    Icon3 As icon.Link:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(255, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =28
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =
+        OnSelect: =Navigate(cadastro_empresa)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =74
+        X: =324
+        Y: =986
+        ZIndex: =24
 

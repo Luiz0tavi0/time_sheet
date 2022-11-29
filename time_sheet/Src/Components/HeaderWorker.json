@@ -327,6 +327,14 @@
             "InvariantPropertyName": "Visible",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "false",
+            "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
           }
         ],
         "ControlUniqueId": "30",
@@ -486,6 +494,12 @@
             "Category": "Design",
             "InvariantScript": "Parent.has_left_icon And Parent.is_logged_screen",
             "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Behavior",
+            "InvariantScript": "Parent.OnClickLeftIcon();",
+            "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1031,6 +1045,14 @@
             "InvariantPropertyName": "Visible",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "false",
+            "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
           }
         ],
         "ControlUniqueId": "32",
@@ -1191,6 +1213,12 @@
             "InvariantScript": "If(Parent.is_logged_screen, Icon.Leave,Icon.Cancel)  ",
             "Property": "Icon",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Behavior",
+            "InvariantScript": "Parent.OnClickRightIcon();",
+            "Property": "OnSelect",
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "defaultIconStyle",
@@ -1257,9 +1285,11 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "has_right_icon"
+      "has_right_icon",
+      "OnClickLeftIcon",
+      "OnClickRightIcon"
     ],
-    "LastModifiedTimestamp": "638053386445652553",
+    "LastModifiedTimestamp": "638053460578394534",
     "Name": "HeaderWorker",
     "Rules": [
       {
@@ -1333,6 +1363,18 @@
         "InvariantScript": "1",
         "Property": "ZIndex",
         "RuleProviderType": "Unknown"
+      },
+      {
+        "Category": "Behavior",
+        "InvariantScript": "\"Texto\"",
+        "Property": "OnClickLeftIcon",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Behavior",
+        "InvariantScript": "\"Texto\"",
+        "Property": "OnClickRightIcon",
+        "RuleProviderType": "System"
       }
     ]
   },
@@ -1390,6 +1432,24 @@
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": " has_right_icon",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 2,
+      "DisplayName": "OnClickLeftIcon",
+      "Hidden": false,
+      "Name": "OnClickLeftIcon",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Função que executa ao clicar no ícone da esquerda do cabeçalho",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 2,
+      "DisplayName": "OnClickRightIcon",
+      "Hidden": false,
+      "Name": "OnClickRightIcon",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Função que executa ao clicar no ícone da direita do cabeçalho",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -1400,7 +1460,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638053386445652553",
+  "LastModifiedTimestamp": "638053460578394534",
   "Name": "347fbc906fcc4827a384a06fc53242d5",
   "OverridableProperties": {},
   "TemplateOriginalName": "faecc12050bb4c9ca744ac80084ea13a",

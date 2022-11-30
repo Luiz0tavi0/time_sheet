@@ -308,7 +308,8 @@ cadastro_users As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =18
-                Text: =If(Not(IsBlank(Parent.Error)),"O Email é requerido.")
+                Text: |
+                    =If(Not(IsBlank(Parent.Error)),"O Email é requerido.")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30

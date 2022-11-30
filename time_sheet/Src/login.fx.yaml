@@ -84,12 +84,12 @@ login As screen:
                 ),
                 UpdateContext(
                     {
-                        isEmailValid:true
+                        varEmailIsOk:true
                     }
                 ),
                 UpdateContext(
                     {
-                        isEmailValid:false
+                        varEmailIsOk:false
                     }
                 )
             );
@@ -137,6 +137,7 @@ login As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(And(varEmailIsOk,varPasswordIsOk), DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(2, 4, 48, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
@@ -280,7 +281,7 @@ login As screen:
         Text: ="ID " & CONST_CURRENT_USER.ID & " estado = " & rect.DisplayMode & " " & IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase)
         Width: =604
         X: =18
-        Y: =971
+        Y: =1014
         ZIndex: =12
 
     tempScreenTransitionFase1 As timer:

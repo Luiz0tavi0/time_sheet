@@ -309,7 +309,10 @@ cadastro_users As screen:
                 PaddingTop: =0
                 Size: =18
                 Text: |
-                    =If(Not(IsBlank(Parent.Error)),"O Email é requerido.")
+                    =If(
+                        Not(IsBlank(Parent.Error)),"O Email é requerido.",
+                        Not(IsMatch(DataCardValueEmail.Text,Email,MatchOptions.IgnoreCase)),"Email inválido."
+                    )
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
@@ -545,7 +548,6 @@ cadastro_users As screen:
                 ZIndex: =5
 
             ErrorMessageEmailField_1 As label:
-                AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -555,7 +557,7 @@ cadastro_users As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =10
+                Height: =20
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0

@@ -10016,36 +10016,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "login.isEmailValid"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "login.isEmailValid",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "isEmailValid",
-                "module": "login",
-                "type": "login"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "login.varShowFailTransition"
                 }
               ],

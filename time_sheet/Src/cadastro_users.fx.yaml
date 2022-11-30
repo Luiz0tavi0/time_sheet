@@ -564,7 +564,7 @@ cadastro_users As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =18
-                Text: =If(Not(IsBlank(Parent.Error)),"A senha é requerida.",Not(passwordIsEqual),"A confirmação da senha não corresponde.")
+                Text: =If(Not(IsBlank(Parent.Error)),"A senha é requerida.",And(Not(passwordIsEqual),DataCardValuePassword.Text <> ""),"A confirmação da senha não corresponde.")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30

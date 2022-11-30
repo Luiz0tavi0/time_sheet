@@ -1,0 +1,13 @@
+cmpFunctValidaCPF As CanvasComponent:
+    calcStateValid(strCPF As String):
+        strCPF:
+            Default: ="Texto"
+        ThisProperty:
+            Default: =Len(strCPF)=11
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =20
+    Width: =20
+    X: =0
+    Y: =0
+    ZIndex: =1
+

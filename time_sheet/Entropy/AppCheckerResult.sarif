@@ -6325,19 +6325,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard1.DataCardValue2.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard.DataCardValueCnpj.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard1.DataCardValue2.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard.DataCardValueCnpj.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users_details",
-                "type": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard1.DataCardValue2"
+                "type": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard.DataCardValueCnpj"
               }
             }
           ],
@@ -10375,6 +10375,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "cadastro_users_details.varCnpjIsValid"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.varCnpjIsValid",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varCnpjIsValid",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "cadastro_users_details.varEmailISValid"
                 }
               ],
@@ -10386,6 +10416,96 @@
               },
               "properties": {
                 "member": "varEmailISValid",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.varFirstDV"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.varFirstDV",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varFirstDV",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.varFirstDVCalculated"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.varFirstDVCalculated",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varFirstDVCalculated",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.varSecondDV"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.varSecondDV",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varSecondDV",
                 "module": "cadastro_users_details",
                 "type": "cadastro_users_details"
               }

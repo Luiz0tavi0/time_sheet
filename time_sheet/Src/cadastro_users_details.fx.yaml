@@ -18,8 +18,31 @@ cadastro_users_details As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =If(FormUserDetails.Valid, SubmitForm(FormUserDetails),Notify("Erro",NotificationType));
+            =//If(FormUserDetails.Valid; SubmitForm(FormUserDetails);Notify("Erro";NotificationType));;
             //SubmitForm(FormWorkerReg)
+            UpdateContext({varCnpjIsValid:false});
+            If((Len(DataCardValueCnpj.Text)=14),
+                UpdateContext({varDig1:Int(Left(DataCardValueCnpj.Text,1))});
+                UpdateContext({varDig2:Int(Mid(DataCardValueCnpj.Text,2,1))});
+                UpdateContext({varDig3:Int(Mid(DataCardValueCnpj.Text,3,1))});
+                UpdateContext({varDig4:Int(Mid(DataCardValueCnpj.Text,4,1))});
+                UpdateContext({varDig5:Int(Mid(DataCardValueCnpj.Text,5,1))});
+                UpdateContext({varDig6:Int(Mid(DataCardValueCnpj.Text,6,1))});
+                UpdateContext({varDig7:Int(Mid(DataCardValueCnpj.Text,7,1))});
+                UpdateContext({varDig8:Int(Mid(DataCardValueCnpj.Text,8,1))});
+                UpdateContext({varDig9:Int(Mid(DataCardValueCnpj.Text,9,1))});
+                UpdateContext({varDig10:Int(Mid(DataCardValueCnpj.Text,10,1))});
+                UpdateContext({varDig11:Int(Mid(DataCardValueCnpj.Text,11,1))});
+                UpdateContext({varDig12:Int(Mid(DataCardValueCnpj.Text,12,1))});
+                UpdateContext({varFirstDV:Int(Mid(DataCardValueCnpj.Text,13,1))});
+                UpdateContext({varSecondDV:Int(Right(DataCardValueCnpj.Text,1))});
+                UpdateContext(
+                    {varSum1To12Dig: 
+                        (varDig1*5+varDig2*4+varDig3*3+varDig4*2+varDig5*9+varDig6*8+varDig7*7+varDig8*6+varDig9*5+varDig10*4+varDig11*3+varDig12*2)
+                    }
+                );
+                UpdateContext({varFirstDVCalculated:Mod(varSum1To12Dig*10,11)});
+            )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -66,7 +89,7 @@ cadastro_users_details As screen:
             Y: =(Parent.Height/2)-Self.Height/2
             ZIndex: =1
 
-            cnpj_DataCard1 As typedDataCard.textualEditCard:
+            cnpj_DataCard As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="cnpj"
@@ -77,13 +100,13 @@ cadastro_users_details As screen:
                 Height: =Parent.Height/4
                 MaxLength: =DataSourceInfo([@tbl_details], DataSourceInfo.MaxLength, "cnpj")
                 Required: =false
-                Update: =DataCardValue2.Text
+                Update: =DataCardValueCnpj.Text
                 Width: =526
                 X: =0
                 Y: =0
                 ZIndex: =3
 
-                DataCardValue2 As text:
+                DataCardValueCnpj As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
@@ -138,7 +161,7 @@ cadastro_users_details As screen:
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValue2.Y + DataCardValue2.Height
+                    Y: =DataCardValueCnpj.Y + DataCardValueCnpj.Height
                     ZIndex: =3
 
                 StarVisible2 As label:

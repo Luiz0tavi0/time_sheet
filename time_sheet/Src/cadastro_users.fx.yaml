@@ -177,52 +177,29 @@ cadastro_users As screen:
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
-                OnChange: |-
-                    =ClearCollect(cpfBase,Split(Self.Text,""));
-                    
-                    UpdateContext({varFirstDGInputed:Int(Mid(Self.Text,10,1))});
-                    UpdateContext({varSecondDGInputed:Int(Right(Self.Text,1))});
-                    
-                    UpdateContext({varSecondDGIsOk: false });
-                    UpdateContext({varFirstDGIsOk: false });
-                    
-                    //UpdateContext({varCountDgRepeted:CountIf(cpfBase;Result = First(Split(Self.Text;"")).Result)});;
-                    UpdateContext({varCountDgRepeted:CountIf(Split(Self.Text,""),Result = Index(Split(Self.Text,""),1).Result)});
-                    
-                    
-                    If(varCountDgRepeted=Len(Self.Text),UpdateContext({varAllDigitsIsSame:true}), UpdateContext({varAllDigitsIsSame:false}));
-                    
-                    If(Not(varAllDigitsIsSame),
-                        // If(Not(varAllDigitsIsSame) TRUE;
-                        //RenameColumns(cpfBase;"Result";"digito");;
-                        //UpdateContext({n_rows:10});;//CountRows(cpfBase)});;
-                    
-                        // Gera cada digito do cpf do 1º ao 9º multiplicado por range de 10..2
+                OnChange: |
+                    =UpdateContext({varCpfIsValid:false});
+                    If((Len(Self.Text)=11),
+                        UpdateContext({varDig1:Int(Left(Self.Text,1))});UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
+                        UpdateContext({varDig6:Int(Mid(Self.Text,6,1))});UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});UpdateContext({varDig9:Int(Mid(Self.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(Self.Text,10,1))});
+                        UpdateContext({varSecondDV:Int(Right(Self.Text,1))}); 
+                        UpdateContext({varSum1To9Dig: (varDig1+varDig2+varDig3+varDig4+varDig5+varDig6+varDig7+varDig8+varDig9)});
+                        UpdateContext({varFirstDVCalculated:Mod(varSum1To9Dig*10,11)});
+                        UpdateContext({varFirstDVCalculated:If(varFirstDVCalculated=10, 0)});
                         
-                        ClearCollect(
-                            colT, 
-                            ForAll(Sequence(9, 10, -1) As idx,Index(Split(Self.Text,""), 11-idx.Value).Result*(idx.Value)
-                        ));
-                        UpdateContext({varFirstDGCalculado:Mod(Sum(prodCpfsByIndex, Value)*10,11)});
-                        If(varFirstDGCalculado=10, UpdateContext({varFirstDGCalculado:0}));
-                        If(varFirstDGInputed=varFirstDGCalculado, UpdateContext({varFirstDGIsOk: true }), UpdateContext({varFirstDGIsOk: false }));
-                        If(varFirstDGIsOk, UpdateContext({varCpfValid:true}), UpdateContext({varCpfValid:false}));
+                        //Teste do primeiro digito verificador
+                        If(varFirstDVCalculated=varFirstDV,
+                            UpdateContext({varSum1To10Dig: (varDig1+varDig2+varDig3+varDig4+varDig5+varDig6+varDig7+varDig8+varDig9+varFirstDV)});
+                            UpdateContext({varSecondDVCalculated:Mod(varSum1To10Dig*10,11)});
+                            UpdateContext({varSecondDVCalculated:If(varSecondDVCalculated=10, 0)});
+                            , // ELSE
+                            UpdateContext({varCpfIsValid:false}));
                     
-                        If(false,//If(varFirstDGIsOk;
-                            ClearCollect(cpfBase,Split(Self.Text,""));
-                            UpdateContext({n_rows:CountRows(cpfBase)});
-                            // Gera cada digito do cpf do 1º ao 9º multiplicado por range de 10..2
-                            ClearCollect(prodCpfsByIndex,ForAll(Sequence(n_rows,n_rows,-1) As idx,Index(cpfBase,(n_rows+1)-idx.Value).Result*(idx.Value+1)));
-                            UpdateContext({varSecondDGCalculado:Mod(Sum(prodCpfsByIndex, Value)*10, 11)});
-                            If(varSecondDGCalculado=10,UpdateContext({varSecondDGCalculado:0}));
-                            If(varSecondDGInputed=varSecondDGCalculado,UpdateContext({varSecondDGIsOk: true }),UpdateContext({varSecondDGIsOk: false }));
-                            If(varSecondDGIsOk, UpdateContext({varCpfValid:true}), UpdateContext({varCpfValid:false}));
-                        );
                     
-                    // If(Not(varAllDigitsIsSame) FALSE;
-                    UpdateContext({varCpfValid:false});
                     
-                    )
+                        , // ELSE
+                        UpdateContext({varCpfIsValid:false});
+                    );
                 PaddingLeft: =5
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
@@ -656,11 +633,11 @@ cadastro_users As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =70
+        Height: =110
         Size: =21
-        Text: =varAllDigitsIsSame & " " & varCountDgRepeted
-        Width: =560
-        X: =34
-        Y: =799
+        Text: =varSum1To9Dig
+        Width: =260
+        X: =97
+        Y: =763
         ZIndex: =6
 

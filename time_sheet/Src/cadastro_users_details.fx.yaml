@@ -62,13 +62,12 @@ cadastro_users_details As screen:
                     If(varSecondDVCalculated<2,
                         UpdateContext({varSecondDVCalculated:0}),UpdateContext({varSecondDVCalculated:11-varSecondDVCalculated})
                     );
-            
+                    If(varSecondDV=varSecondDVCalculated,
+                        UpdateContext({varCnpjIsValid: true});)
+                        ;
                     ,
-                    ""
+                    UpdateContext({varCnpjIsValid:false});
                 );
-                    
-            
-            
             )
             
             

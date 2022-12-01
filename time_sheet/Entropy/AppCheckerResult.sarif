@@ -806,426 +806,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.TitleEditAccount.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.TitleEditAccount.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.TitleEditAccount"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.TitleEditActivity.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.TitleEditActivity.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.TitleEditActivity"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.DropdownCompany_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownProject_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownProject_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.DropdownProject_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.name_DataCard5_1.DataCardValue17_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.name_DataCard5_1.DataCardValue17_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.FormActivity_1.name_DataCard5_1.DataCardValue17_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.description_DataCard1_1.DataCardValue18_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.description_DataCard1_1.DataCardValue18_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.FormActivity_1.description_DataCard1_1.DataCardValue18_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.DataCardValue19_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.DataCardValue19_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.DataCardValue19_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.date_DataCard1_1.DataCardValue20_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.date_DataCard1_1.DataCardValue20_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.FormActivity_1.date_DataCard1_1.DataCardValue20_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.hours_DataCard1_1.DataCardValue21_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.hours_DataCard1_1.DataCardValue21_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.FormActivity_1.hours_DataCard1_1.DataCardValue21_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness"
                 }
               ],
@@ -4286,19 +3866,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValueNome.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.name_DataCard6.DataCardValueNome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValueNome.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.name_DataCard6.DataCardValueNome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.name_DataCard6.DataCardValueNome"
+                "type": "cadastro_users.FormUsersCreate.name_DataCard6.DataCardValueNome"
               }
             }
           ],
@@ -4316,19 +3896,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.cpf_DataCard.DataCardValueCpf.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.cpf_DataCard.DataCardValueCpf.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.cpf_DataCard.DataCardValueCpf.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.cpf_DataCard.DataCardValueCpf.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.cpf_DataCard.DataCardValueCpf"
+                "type": "cadastro_users.FormUsersCreate.cpf_DataCard.DataCardValueCpf"
               }
             }
           ],
@@ -4346,19 +3926,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.email_DataCard.DataCardValueEmail.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.email_DataCard.DataCardValueEmail.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.email_DataCard.DataCardValueEmail.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.email_DataCard.DataCardValueEmail.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.email_DataCard.DataCardValueEmail"
+                "type": "cadastro_users.FormUsersCreate.email_DataCard.DataCardValueEmail"
               }
             }
           ],
@@ -4376,19 +3956,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.fone_DataCard.DataCardValueFone.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.fone_DataCard.DataCardValueFone.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.fone_DataCard.DataCardValueFone.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.fone_DataCard.DataCardValueFone.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.fone_DataCard.DataCardValueFone"
+                "type": "cadastro_users.FormUsersCreate.fone_DataCard.DataCardValueFone"
               }
             }
           ],
@@ -4406,19 +3986,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePassword.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.password_DataCard.DataCardValuePassword.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePassword.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.password_DataCard.DataCardValuePassword.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePassword"
+                "type": "cadastro_users.FormUsersCreate.password_DataCard.DataCardValuePassword"
               }
             }
           ],
@@ -4436,19 +4016,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePasswordConfirm.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.password_DataCard.DataCardValuePasswordConfirm.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePasswordConfirm.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users.FormUsersCreate.password_DataCard.DataCardValuePasswordConfirm.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users",
-                "type": "cadastro_users.FormWorkerReg.password_DataCard.DataCardValuePasswordConfirm"
+                "type": "cadastro_users.FormUsersCreate.password_DataCard.DataCardValuePasswordConfirm"
               }
             }
           ],
@@ -6319,6 +5899,516 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.TitleEditAccount.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.TitleEditAccount.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.TitleEditAccount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.TitleEditActivity.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.TitleEditActivity.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.TitleEditActivity"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.DropdownCompany_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownProject_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownProject_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.DropdownProject_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.name_DataCard5_1.DataCardValue17_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.name_DataCard5_1.DataCardValue17_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.FormActivity_1.name_DataCard5_1.DataCardValue17_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.description_DataCard1_1.DataCardValue18_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.description_DataCard1_1.DataCardValue18_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.FormActivity_1.description_DataCard1_1.DataCardValue18_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.DataCardValue19_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.DataCardValue19_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.DataCardValue19_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.date_DataCard1_1.DataCardValue20_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.date_DataCard1_1.DataCardValue20_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.FormActivity_1.date_DataCard1_1.DataCardValue20_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.hours_DataCard1_1.DataCardValue21_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.hours_DataCard1_1.DataCardValue21_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_atividade_colaborador_1",
+                "type": "editar_atividade_colaborador_1.FormActivity_1.hours_DataCard1_1.DataCardValue21_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard1.DataCardValue2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard1.DataCardValue2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard1.DataCardValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.sector_DataCard1.DataCardValue5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.sector_DataCard1.DataCardValue5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details.contForm.FormUserDetails.sector_DataCard1.DataCardValue5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.DataCardValue3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.DataCardValue3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.DataCardValue3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -10279,6 +10369,66 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.varEmailISValid"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.varEmailISValid",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varEmailISValid",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.StarVisible3.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.StarVisible3.Y",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.StarVisible3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 10
         }
       ],
       "tool": {
@@ -10457,6 +10607,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Essa variável está declarada, mas não é referenciada por nenhum controle, portanto não é necessária."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Carregamento de atraso ineficiente"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Ao invés disso, use variáveis, coleções e contexto de navegação para compartilhar o estado nas telas."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Os controles que referenciam controles em outras telas podem deixar o carregamento do aplicativo e a navegação mais lentos. Isso força o aplicativo a carregar as outras telas imediatamente, em vez de aguardar até que o usuário navegue para elas."
               }
             }
           ],

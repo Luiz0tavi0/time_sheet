@@ -8,7 +8,7 @@ cadastro_users As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(FormWorkerReg.Valid,DisplayMode.Edit,DisplayMode.Disabled)
+        DisplayMode: =If(FormUsersCreate.Valid,DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(110, 164, 191, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
@@ -18,7 +18,7 @@ cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =If(FormWorkerReg.Valid, SubmitForm(FormWorkerReg),Notify("Erro",NotificationType));
+            =If(FormUsersCreate.Valid, SubmitForm(FormUsersCreate),Notify("Erro",NotificationType));
             //SubmitForm(FormWorkerReg)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -30,15 +30,15 @@ cadastro_users As screen:
         Y: =906
         ZIndex: =1
 
-    FormWorkerReg As form:
+    FormUsersCreate As form:
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_users
         DefaultMode: =FormMode.New
         Height: =592
         Width: =526
-        X: =68
-        Y: =171
+        X: =57
+        Y: =165
         ZIndex: =2
 
         name_DataCard6 As typedDataCard.textualEditCard:
@@ -179,10 +179,10 @@ cadastro_users As screen:
                 MaxLength: =Parent.MaxLength
                 OnChange: |-
                     =UpdateContext({varCpfIsValid:false});
-                    If((Len(DataCardValueCpf.Text)=11),
-                        UpdateContext({varDig1:Int(Left(DataCardValueCpf.Text,1))});UpdateContext({varDig2:Int(Mid(DataCardValueCpf.Text,2,1))});UpdateContext({varDig3:Int(Mid(DataCardValueCpf.Text,3,1))});UpdateContext({varDig4:Int(Mid(DataCardValueCpf.Text,4,1))});UpdateContext({varDig5:Int(Mid(DataCardValueCpf.Text,5,1))});
-                        UpdateContext({varDig6:Int(Mid(DataCardValueCpf.Text,6,1))});UpdateContext({varDig7:Int(Mid(DataCardValueCpf.Text,7,1))});UpdateContext({varDig8:Int(Mid(DataCardValueCpf.Text,8,1))});UpdateContext({varDig9:Int(Mid(DataCardValueCpf.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(DataCardValueCpf.Text,10,1))});
-                        UpdateContext({varSecondDV:Int(Right(DataCardValueCpf.Text,1))}); 
+                    If((Len(Self.Text)=11),
+                        UpdateContext({varDig1:Int(Left(Self.Text,1))});UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
+                        UpdateContext({varDig6:Int(Mid(Self.Text,6,1))});UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});UpdateContext({varDig9:Int(Mid(Self.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(Self.Text,10,1))});
+                        UpdateContext({varSecondDV:Int(Right(Self.Text,1))}); 
                         UpdateContext({varSum1To9Dig: (varDig1*10+varDig2*9+varDig3*8+varDig4*7+varDig5*6+varDig6*5+varDig7*4+varDig8*3+varDig9*2)});
                         UpdateContext({varFirstDVCalculated:Mod(varSum1To9Dig*10,11)});
                         If(varFirstDVCalculated=10, UpdateContext({varFirstDVCalculated:0}));
@@ -192,7 +192,7 @@ cadastro_users As screen:
                         If(varFirstDVCalculated=varFirstDV,
                             // TRUE
                             //UpdateContext({varSum1To10Dig: (varDig1+varDig2+varDig3+varDig4+varDig5+varDig6+varDig7+varDig8+varDig9+varFirstDV)});;
-                            UpdateContext({varSplitedTex:Split(Mid(DataCardValueCpf.Text, 1, 10),"")});
+                            UpdateContext({varSplitedTex:Split(Mid(Self.Text, 1, 10),"")});
                             UpdateContext(
                                 {varSum1To10Dig:Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)}
                             );
@@ -602,9 +602,9 @@ cadastro_users As screen:
         ZIndex: =3
 
     HeaderWorker_2 As HeaderWorker:
-        current_user_name: ="User - Basic Info"
+        current_user_name: ="Usuários - Informações Básicas"
         has_right_icon: =false
-        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormWorkerReg);
+        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);
         Visible: =true
         ZIndex: =4
 

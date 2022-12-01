@@ -17,9 +17,10 @@ cadastro_users_details As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
+        OnSelect: |+
             =//If(FormUserDetails.Valid; SubmitForm(FormUserDetails);Notify("Erro";NotificationType));;
             //SubmitForm(FormWorkerReg)
+            
             UpdateContext({varCnpjIsValid:false});
             If((Len(DataCardValueCnpj.Text)=14),
                 UpdateContext({varDig1:Int(Left(DataCardValueCnpj.Text,1))});
@@ -36,13 +37,51 @@ cadastro_users_details As screen:
                 UpdateContext({varDig12:Int(Mid(DataCardValueCnpj.Text,12,1))});
                 UpdateContext({varFirstDV:Int(Mid(DataCardValueCnpj.Text,13,1))});
                 UpdateContext({varSecondDV:Int(Right(DataCardValueCnpj.Text,1))});
+                // Calculando o Primeiro Dígito Verificador
+            
                 UpdateContext(
                     {varSum1To12Dig: 
                         (varDig1*5+varDig2*4+varDig3*3+varDig4*2+varDig5*9+varDig6*8+varDig7*7+varDig8*6+varDig9*5+varDig10*4+varDig11*3+varDig12*2)
                     }
                 );
-                UpdateContext({varFirstDVCalculated:Mod(varSum1To12Dig*10,11)});
+                UpdateContext({varFirstDVCalculated:Mod(varSum1To12Dig,11)});
+                If(varFirstDVCalculated<2,
+                    UpdateContext({varFirstDVCalculated:0}),UpdateContext({varFirstDVCalculated:11-varFirstDVCalculated})
+                );
+                If(varFirstDV=varFirstDVCalculated,
+                    // Calculando o Segundo Dígito Verificador
+                    UpdateContext(
+                        {varSum1To13Dig: (
+                            varDig1*6+varDig2*5+varDig3*4+varDig4*3+varDig5*2+varDig6*9+varDig7*8+
+                            varDig8*7+varDig9*6+varDig10*5+varDig11*4+varDig12*3 + varFirstDV*2)
+                        }
+                    );
+            
+                    ,
+                    ""
+                );
+                    
+            
+            
             )
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -375,4 +414,26 @@ cadastro_users_details As screen:
                     Width: =30
                     Wrap: =false
                     ZIndex: =4
+
+    Label6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Lighter
+        Height: =176
+        Size: =21
+        Text: |-
+            = $"Minimo pra validar: {Len(DataCardValueCnpj.Text)=14} | " &
+             $"Digito verificador 1 = {varFirstDV} | " &
+             $"Digito verificador 1 calculado = {varFirstDVCalculated} | " &
+            $"varSum1To13Dig = {varSum1To13Dig} | " 
+        Width: =560
+        X: =38
+        Y: =720
+        ZIndex: =6
 

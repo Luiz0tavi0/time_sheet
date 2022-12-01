@@ -51,10 +51,16 @@ cadastro_users_details As screen:
                 If(varFirstDV=varFirstDVCalculated,
                     // Calculando o Segundo Dígito Verificador
                     UpdateContext(
-                        {varSum1To13Dig: (
-                            varDig1*6+varDig2*5+varDig3*4+varDig4*3+varDig5*2+varDig6*9+varDig7*8+
-                            varDig8*7+varDig9*6+varDig10*5+varDig11*4+varDig12*3 + varFirstDV*2)
+                        {varSum1To13Dig: 
+                            (
+                                varDig1*6+varDig2*5+varDig3*4+varDig4*3+varDig5*2+varDig6*9+varDig7*8+
+                                varDig8*7+varDig9*6+varDig10*5+varDig11*4+varDig12*3 + varFirstDV*2
+                            )
                         }
+                    );
+                    UpdateContext({varSecondDVCalculated:Mod(varSum1To13Dig,11)});
+                    If(varSecondDVCalculated<2,
+                        UpdateContext({varSecondDVCalculated:0}),UpdateContext({varSecondDVCalculated:11-varSecondDVCalculated})
                     );
             
                     ,
@@ -425,15 +431,17 @@ cadastro_users_details As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Lighter
-        Height: =176
+        Height: =250
         Size: =21
         Text: |-
-            = $"Minimo pra validar: {Len(DataCardValueCnpj.Text)=14} | " &
-             $"Digito verificador 1 = {varFirstDV} | " &
-             $"Digito verificador 1 calculado = {varFirstDVCalculated} | " &
-            $"varSum1To13Dig = {varSum1To13Dig} | " 
+            =$"Minimo pra validar: {Len(DataCardValueCnpj.Text)=14} | " &
+            $"Digito verificador 1 = {varFirstDV} | " &
+            $"Digito verificador 1 calculado = {varFirstDVCalculated} | " &
+            $"varSum1To13Dig = {varSum1To13Dig} | " & 
+            $"varFirstDVCalculated = {varFirstDVCalculated} | " &
+            $"varSecondDVCalculated = {varSecondDVCalculated} | "
         Width: =560
         X: =38
-        Y: =720
+        Y: =645
         ZIndex: =6
 

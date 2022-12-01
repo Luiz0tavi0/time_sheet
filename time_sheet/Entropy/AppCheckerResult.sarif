@@ -10345,19 +10345,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.varCpfValid"
+                  "fullyQualifiedName": "cadastro_users.varEmailIsValid"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.varCpfValid",
+                  "fullyQualifiedName": "cadastro_users.varEmailIsValid",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varCpfValid",
-                "module": "Screen1",
-                "type": "Screen1"
+                "member": "varEmailIsValid",
+                "module": "cadastro_users",
+                "type": "cadastro_users"
               }
             }
           ],
@@ -10375,19 +10375,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users_details.varCnpjIsValid"
+                  "fullyQualifiedName": "Screen1.varCpfValid"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users_details.varCnpjIsValid",
+                  "fullyQualifiedName": "Screen1.varCpfValid",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "varCnpjIsValid",
-                "module": "cadastro_users_details",
-                "type": "cadastro_users_details"
+                "member": "varCpfValid",
+                "module": "Screen1",
+                "type": "Screen1"
               }
             }
           ],

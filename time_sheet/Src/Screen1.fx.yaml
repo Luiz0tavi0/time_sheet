@@ -11,6 +11,7 @@ Screen1 As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
         Height: =70
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -42,12 +43,47 @@ Screen1 As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =ClearCollect(cpfBase,Split(input.Text,""));
-            //RenameColumns(cpfBase;"Result";"digito");;
-            ForAll(
-                Sequence(10,10,-1) As idx,
-                Index(cpfBase,1)
-            );
+            =
+            
+            ClearCollect(cpfBase,Split(Left(input.Text,9),""));
+            UpdateContext({varFirstDGInputed:Int(Mid(input.Text,10,1))});
+            UpdateContext({varSecondDGInputed:Int(Right(input.Text,1))});
+            
+            UpdateContext({varSecondDGIsOk: false });
+            UpdateContext({varFirstDGIsOk: false });
+            
+            UpdateContext({distinct_number:First(Len(Distinct(cpfBase,Result)))});
+            
+            If(distinct_number.Result=Int(First(cpfBase).Result),UpdateContext({varAllDigitsIsSame:true}), UpdateContext({varAllDigitsIsSame:false}));
+            
+            If(Not(varAllDigitsIsSame),
+                // If(Not(varAllDigitsIsSame) TRUE;
+                //RenameColumns(cpfBase;"Result";"digito");;
+                UpdateContext({n_rows:CountRows(cpfBase)});
+            
+                // Gera cada digito do cpf do 1º ao 9º multiplicado por range de 10..2
+                
+                ClearCollect(prodCpfsByIndex, ForAll(Sequence(n_rows, n_rows, -1) As idx, Index(cpfBase, (n_rows+1)-idx.Value).Result*(idx.Value+1)));
+                UpdateContext({varFirstDGCalculado:Mod(Sum(prodCpfsByIndex, Value)*10,11)});
+                If(varFirstDGCalculado=10, UpdateContext({varFirstDGCalculado:0}));
+                If(varFirstDGInputed=varFirstDGCalculado, UpdateContext({varFirstDGIsOk: true }), UpdateContext({varFirstDGIsOk: false }));
+                If(varFirstDGIsOk, UpdateContext({varCpfValid:true}), UpdateContext({varCpfValid:false}));
+            
+                If(varFirstDGIsOk,
+                    ClearCollect(cpfBase,Split(Left(input.Text,10),""));
+                    UpdateContext({n_rows:CountRows(cpfBase)});
+                    // Gera cada digito do cpf do 1º ao 9º multiplicado por range de 10..2
+                    ClearCollect(prodCpfsByIndex,ForAll(Sequence(n_rows,n_rows,-1) As idx,Index(cpfBase,(n_rows+1)-idx.Value).Result*(idx.Value+1)));
+                    UpdateContext({varSecondDGCalculado:Mod(Sum(prodCpfsByIndex, Value)*10, 11)});
+                    If(varSecondDGCalculado=10,UpdateContext({varSecondDGCalculado:0}));
+                    If(varSecondDGInputed=varSecondDGCalculado,UpdateContext({varSecondDGIsOk: true }),UpdateContext({varSecondDGIsOk: false }));
+                    If(varSecondDGIsOk, UpdateContext({varCpfValid:true}), UpdateContext({varCpfValid:false}));
+                );
+            
+            // If(Not(varAllDigitsIsSame) FALSE;
+            UpdateContext({varCpfValid:false});
+            
+            )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -131,7 +167,7 @@ Screen1 As screen:
             Height: =460
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.Result
+            Text: =ThisItem.Value
             Width: =150
             X: =2
             Y: =136

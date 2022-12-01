@@ -1,93 +1,6 @@
 {
   "ComponentAllowCustomization": true,
   "ComponentChangedSinceFileImport": true,
-  "ComponentDefinitionInfo": {
-    "AllowAccessToGlobals": false,
-    "Children": [],
-    "ControlPropertyState": [
-      "Fill",
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "",
-        "InvariantPropertyName": "Height",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      },
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "",
-        "InvariantPropertyName": "Width",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      },
-      "X",
-      "Y",
-      "ZIndex",
-      "calcStateValid_strCPF",
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "true",
-        "InvariantPropertyName": "calcStateValid",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      }
-    ],
-    "LastModifiedTimestamp": "638054258506598063",
-    "Name": "cmpFunctValidaCPF",
-    "Rules": [
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Texto\"",
-        "Property": "calcStateValid_strCPF",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "Len(strCPF)=11",
-        "Property": "calcStateValid",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "20",
-        "Property": "Width",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "20",
-        "Property": "Height",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
-        "RuleProviderType": "System"
-      }
-    ]
-  },
   "ComponentManifest": {
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
@@ -105,7 +18,7 @@
       "Name": "calcStateValid",
       "PropertyDataTypeKey": "Boolean",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "575",
+        "PropertyScopeRuleNamespaceKey": "50",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "calcStateValid_strCPF",
@@ -136,7 +49,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638054258506598063",
+  "LastModifiedTimestamp": "638054693886570502",
   "Name": "03ba4aad4b224b1bb35347f051dbee4e",
   "OverridableProperties": {},
   "Version": "638054255360158820"

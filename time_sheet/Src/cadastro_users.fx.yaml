@@ -177,7 +177,52 @@ cadastro_users As screen:
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
                 MaxLength: =Parent.MaxLength
-                OnChange: =
+                OnChange: |-
+                    =ClearCollect(cpfBase,Split(Self.Text,""));
+                    
+                    UpdateContext({varFirstDGInputed:Int(Mid(Self.Text,10,1))});
+                    UpdateContext({varSecondDGInputed:Int(Right(Self.Text,1))});
+                    
+                    UpdateContext({varSecondDGIsOk: false });
+                    UpdateContext({varFirstDGIsOk: false });
+                    
+                    //UpdateContext({varCountDgRepeted:CountIf(cpfBase;Result = First(Split(Self.Text;"")).Result)});;
+                    UpdateContext({varCountDgRepeted:CountIf(Split(Self.Text,""),Result = Index(Split(Self.Text,""),1).Result)});
+                    
+                    
+                    If(varCountDgRepeted=Len(Self.Text),UpdateContext({varAllDigitsIsSame:true}), UpdateContext({varAllDigitsIsSame:false}));
+                    
+                    If(Not(varAllDigitsIsSame),
+                        // If(Not(varAllDigitsIsSame) TRUE;
+                        //RenameColumns(cpfBase;"Result";"digito");;
+                        //UpdateContext({n_rows:10});;//CountRows(cpfBase)});;
+                    
+                        // Gera cada digito do cpf do 1º ao 9º multiplicado por range de 10..2
+                        
+                        ClearCollect(
+                            colT, 
+                            ForAll(Sequence(9, 10, -1) As idx,Index(Split(Self.Text,""), 11-idx.Value).Result*(idx.Value)
+                        ));
+                        UpdateContext({varFirstDGCalculado:Mod(Sum(prodCpfsByIndex, Value)*10,11)});
+                        If(varFirstDGCalculado=10, UpdateContext({varFirstDGCalculado:0}));
+                        If(varFirstDGInputed=varFirstDGCalculado, UpdateContext({varFirstDGIsOk: true }), UpdateContext({varFirstDGIsOk: false }));
+                        If(varFirstDGIsOk, UpdateContext({varCpfValid:true}), UpdateContext({varCpfValid:false}));
+                    
+                        If(false,//If(varFirstDGIsOk;
+                            ClearCollect(cpfBase,Split(Self.Text,""));
+                            UpdateContext({n_rows:CountRows(cpfBase)});
+                            // Gera cada digito do cpf do 1º ao 9º multiplicado por range de 10..2
+                            ClearCollect(prodCpfsByIndex,ForAll(Sequence(n_rows,n_rows,-1) As idx,Index(cpfBase,(n_rows+1)-idx.Value).Result*(idx.Value+1)));
+                            UpdateContext({varSecondDGCalculado:Mod(Sum(prodCpfsByIndex, Value)*10, 11)});
+                            If(varSecondDGCalculado=10,UpdateContext({varSecondDGCalculado:0}));
+                            If(varSecondDGInputed=varSecondDGCalculado,UpdateContext({varSecondDGIsOk: true }),UpdateContext({varSecondDGIsOk: false }));
+                            If(varSecondDGIsOk, UpdateContext({varCpfValid:true}), UpdateContext({varCpfValid:false}));
+                        );
+                    
+                    // If(Not(varAllDigitsIsSame) FALSE;
+                    UpdateContext({varCpfValid:false});
+                    
+                    )
                 PaddingLeft: =5
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
                 PressedColor: =RGBA(51, 51, 51, 1)
@@ -212,8 +257,9 @@ cadastro_users As screen:
                 PaddingTop: =0
                 Size: =18
                 Text: |-
-                    =If(Not(IsBlank(Parent.Error)),"O CPF é requerido.")
-                    //Parent.Error
+                    =If(
+                        Not(IsBlank(Parent.Error)),
+                        "O CPF é requerido.",Not(varCpfValid),"CPF inválido.")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
@@ -601,13 +647,7 @@ cadastro_users As screen:
         Y: =829
         ZIndex: =5
 
-    cmpFunctValidaCPF_1 As cmpFunctValidaCPF:
-        calcStateValid: =Len(strCPF)=11
-        Fill: =RGBA(9, 33, 98, 1)
-        Y: =308
-        ZIndex: =6
-
-    Label6 As label:
+    Label8 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -618,9 +658,9 @@ cadastro_users As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: =cmpFunctValidaCPF_1.calcStateValid(DataCardValueCpf.Text)
+        Text: =varAllDigitsIsSame & " " & varCountDgRepeted
         Width: =560
-        X: =20
-        Y: =344
-        ZIndex: =7
+        X: =34
+        Y: =799
+        ZIndex: =6
 

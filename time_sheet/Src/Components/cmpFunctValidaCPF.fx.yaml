@@ -3,7 +3,7 @@ cmpFunctValidaCPF As CanvasComponent:
         strCPF:
             Default: ="Texto"
         ThisProperty:
-            Default: =Len(strCPF)=11
+            Default: =
     Fill: =RGBA(0, 0, 0, 0)
     Height: =20
     Width: =20

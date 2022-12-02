@@ -52,7 +52,7 @@ cadastro_users As screen:
             Height: =DataCardValueNome.Height+ErrorMessage25.Height
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "first_name")
             Required: =true
-            Update: =Trim(DataCardValueNome.Text)
+            Update: =Upper(Trim(DataCardValueNome.Text))
             Width: =526
             WidthFit: =false
             X: =0
@@ -152,7 +152,7 @@ cadastro_users As screen:
             Height: =105
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cpf")
             Required: =true
-            Update: =DataCardValueCpf.Text
+            Update: =Lower(Trim(DataCardValueCpf.Text))
             Width: =526
             X: =0
             Y: =1
@@ -278,7 +278,7 @@ cadastro_users As screen:
             Height: =105
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "email")
             Required: =true
-            Update: =Trim(DataCardValueEmail.Text)
+            Update: =Lower(Trim(DataCardValueEmail.Text))
             Width: =526
             X: =0
             Y: =2
@@ -304,6 +304,7 @@ cadastro_users As screen:
                 MaxLength: =Parent.MaxLength
                 OnChange: |-
                     =// VAlida Email
+                    UpdateContext({varEmailIsValid:false});
                     If(
                         IsMatch(DataCardValueEmail.Text,Email,MatchOptions.IgnoreCase),UpdateContext({varEmailIsValid:true}),UpdateContext({varEmailIsValid:false})
                         );
@@ -342,7 +343,7 @@ cadastro_users As screen:
                 Text: |
                     =If(
                         Not(IsBlank(Parent.Error)),"O Email é requerido.",
-                        Not(IsMatch(DataCardValueEmail.Text,Email,MatchOptions.IgnoreCase)),"Email inválido."
+                        Not(varEmailIsValid),"Email inválido."
                     )
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
@@ -400,6 +401,7 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
+                Format: =TextFormat.Number
                 Height: =55
                 HintText: ="Telefone"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)

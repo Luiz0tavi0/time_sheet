@@ -181,9 +181,16 @@ cadastro_users As screen:
                     =// Valida CPF
                     UpdateContext({varCpfIsValid:false});
                     If((Len(Self.Text)=11),
-                        UpdateContext({varDig1:Int(Left(Self.Text,1))});UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
-                        UpdateContext({varDig6:Int(Mid(Self.Text,6,1))});UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});UpdateContext({varDig9:Int(Mid(Self.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(Self.Text,10,1))});
+                        UpdateContext({varDig1:Int(Left(Self.Text,1))});
+                        UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});
+                        UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});
+                        UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});
+                        UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});
+                        UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});
+                        UpdateContext({varDig9:Int(Mid(Self.Text,9,1))}); 
+                        UpdateContext({varFirstDV:Int(Mid(Self.Text,10,1))});
                         UpdateContext({varSecondDV:Int(Right(Self.Text,1))}); 
+                        
                         UpdateContext({varSum1To9Dig: (varDig1*10+varDig2*9+varDig3*8+varDig4*7+varDig5*6+varDig6*5+varDig7*4+varDig8*3+varDig9*2)});
                         UpdateContext({varFirstDVCalculated:Mod(varSum1To9Dig*10,11)});
                         If(varFirstDVCalculated=10, UpdateContext({varFirstDVCalculated:0}));
@@ -192,16 +199,21 @@ cadastro_users As screen:
                         //Teste do primeiro digito verificador
                         If(varFirstDVCalculated=varFirstDV,
                             // TRUE
-                            //UpdateContext({varSum1To10Dig: (varDig1+varDig2+varDig3+varDig4+varDig5+varDig6+varDig7+varDig8+varDig9+varFirstDV)});;
                             UpdateContext({varSplitedTex:Split(Mid(Self.Text, 1, 10),"")});
                             UpdateContext(
                                 {varSum1To10Dig:Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)}
                             );
                             UpdateContext({varSecondDVCalculated:Mod(varSum1To10Dig*10,11)});
-                            If(varSecondDVCalculated=10,UpdateContext({varSecondDVCalculated: 0}));
-                            If(varSecondDVCalculated=varSecondDV, UpdateContext({varCpfIsValid:true}));)
-                            //; // ELSE
-                            //UpdateContext({varCpfIsValid:false}));;
+                            If(varSecondDVCalculated=10,
+                                UpdateContext({varSecondDVCalculated: 0})
+                            );
+                            If(varSecondDVCalculated=varSecondDV,
+                                If(CountRows(Distinct(Split(Self.Text,""),Result))<>1,
+                                    // Verifica se todos os digitos são iguais
+                                    UpdateContext({varCpfIsValid:true})
+                                );
+                            );
+                        )
                     );
                 PaddingLeft: =5
                 PressedBorderColor: =RGBA(0, 120, 212, 1)
@@ -645,12 +657,13 @@ cadastro_users As screen:
         Font: =Font.'Segoe UI'
         Height: =103
         Size: =21
-        Text: |-
+        Text: |+
             =$"First dv calc {varFirstDVCalculated} Second dv calc {
                 Mod(Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)*10,11)
                 }
                 
-                validade do cpf {varCpfIsValid}"
+                validade do cpf {varCpfIsValid}           " 
+            
         Width: =616
         Y: =682
         ZIndex: =6
@@ -669,7 +682,8 @@ cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =UpdateContext({varCpfIsValid:false});
+            =// Valida CPF
+            UpdateContext({varCpfIsValid:false});
             If((Len(DataCardValueCpf.Text)=11),
                 UpdateContext({varDig1:Int(Left(DataCardValueCpf.Text,1))});UpdateContext({varDig2:Int(Mid(DataCardValueCpf.Text,2,1))});UpdateContext({varDig3:Int(Mid(DataCardValueCpf.Text,3,1))});UpdateContext({varDig4:Int(Mid(DataCardValueCpf.Text,4,1))});UpdateContext({varDig5:Int(Mid(DataCardValueCpf.Text,5,1))});
                 UpdateContext({varDig6:Int(Mid(DataCardValueCpf.Text,6,1))});UpdateContext({varDig7:Int(Mid(DataCardValueCpf.Text,7,1))});UpdateContext({varDig8:Int(Mid(DataCardValueCpf.Text,8,1))});UpdateContext({varDig9:Int(Mid(DataCardValueCpf.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(DataCardValueCpf.Text,10,1))});
@@ -689,9 +703,14 @@ cadastro_users As screen:
                     );
                     UpdateContext({varSecondDVCalculated:Mod(varSum1To10Dig*10,11)});
                     If(varSecondDVCalculated=10,UpdateContext({varSecondDVCalculated: 0}));
-                    If(varSecondDVCalculated=varSecondDV, UpdateContext({varCpfIsValid:true}));)
-                    //; // ELSE
-                    //UpdateContext({varCpfIsValid:false}));;
+                    If(varSecondDVCalculated=varSecondDV,
+                        If(CountRows(Distinct(Split(DataCardValueCpf.Text,""),Result))<>1,
+                            // Verifica se todos os digitos são iguais
+                            UpdateContext({varCpfIsValid:true});
+                        );
+                    );
+                    
+                )
             );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)

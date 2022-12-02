@@ -109,22 +109,24 @@ cadastro_users_details As screen:
         Visible: =true
         ZIndex: =4
 
-    contForm As groupContainer.verticalAutoLayoutContainer:
+    contFormDetails As groupContainer.verticalAutoLayoutContainer:
         Height: =497
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
-        LayoutJustifyContent: =LayoutJustifyContent.End
+        LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
         X: =(Parent.Width/2)-Self.Width/2
-        Y: =210
+        Y: =150
         ZIndex: =5
 
         FormUserDetails As form:
-            AlignInContainer: =AlignInContainer.SetByContainer
+            AlignInContainer: =AlignInContainer.Center
             BorderColor: =RGBA(255, 255, 255, 1)
             BorderStyle: =BorderStyle.None
             DataSource: =tbl_details
             DefaultMode: =FormMode.New
+            FillPortions: =0
             Height: =Parent.Height
             LayoutMinHeight: =250
             LayoutMinWidth: =320
@@ -141,7 +143,7 @@ cadastro_users_details As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_details],DataSourceInfo.DisplayName,"cnpj")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =Parent.Height/4
+                Height: =105 
                 MaxLength: =DataSourceInfo([@tbl_details], DataSourceInfo.MaxLength, "cnpj")
                 Required: =false
                 Update: =DataCardValueCnpj.Text
@@ -162,7 +164,7 @@ cadastro_users_details As screen:
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =70
+                    Height: =50
                     HintText: ="CNP"
                     HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
@@ -229,11 +231,10 @@ cadastro_users_details As screen:
                     Tooltip: ="CNPJ"
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =(Parent.Height/2)-Self.Height/2
+                    Y: =(Parent.Height/3)-Self.Height/2
                     ZIndex: =2
 
                 ErrorMessage2 As label:
-                    AutoHeight: =true
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -243,21 +244,22 @@ cadastro_users_details As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =10
+                    Height: =30
                     Live: =Live.Assertive
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Size: =21
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Size: =18
+                    Text: |-
+                        =If(Not(varCnpjIsValid),"CNPJ inválido.")
+                        //varCnpjIsValid
                     Width: =Parent.Width - 60
                     X: =30
                     Y: =DataCardValueCnpj.Y + DataCardValueCnpj.Height
                     ZIndex: =3
 
-                StarVisible2 As label:
+                StarVisible30_2 As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -265,18 +267,20 @@ cadastro_users_details As screen:
                     Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(118, 0, 0, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =0
+                    Height: =DataCardValueCnpj.Height
                     PaddingLeft: =0
                     Size: =21
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    Y: =Parent.X
-                    ZIndex: =4
+                    X: =DataCardValueNome.X - Self.Width
+                    Y: =DataCardValueNome.Y
+                    ZIndex: =5
 
             occupation_DataCard1 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
@@ -286,7 +290,7 @@ cadastro_users_details As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_details],DataSourceInfo.DisplayName,"occupation")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =Parent.Height/4
+                Height: =105
                 MaxLength: =DataSourceInfo([@tbl_details], DataSourceInfo.MaxLength, "occupation")
                 Required: =false
                 Update: =DataCardValue3.Text
@@ -307,7 +311,7 @@ cadastro_users_details As screen:
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =70
+                    Height: =50
                     HintText: ="Cargo/Ocupação"
                     HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
@@ -325,11 +329,10 @@ cadastro_users_details As screen:
                     Tooltip: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =(Parent.Height/2)-Self.Height/2
+                    Y: =(Parent.Height/3)-Self.Height/2
                     ZIndex: =2
 
                 ErrorMessage3 As label:
-                    AutoHeight: =true
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -339,13 +342,13 @@ cadastro_users_details As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =10
+                    Height: =30
                     Live: =Live.Assertive
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Size: =21
+                    Size: =18
                     Text: =Parent.Error
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
@@ -382,7 +385,7 @@ cadastro_users_details As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_details],DataSourceInfo.DisplayName,"sector")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =Parent.Height/4
+                Height: =105
                 MaxLength: =DataSourceInfo([@tbl_details], DataSourceInfo.MaxLength, "sector")
                 Required: =false
                 Update: =DataCardValue5.Text
@@ -403,7 +406,7 @@ cadastro_users_details As screen:
                     DisplayMode: =Parent.DisplayMode
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    Height: =70
+                    Height: =50
                     HintText: ="Setor"
                     HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                     HoverColor: =RGBA(51, 51, 51, 1)
@@ -421,7 +424,7 @@ cadastro_users_details As screen:
                     Tooltip: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =(Parent.Height/2)-Self.Height/2
+                    Y: =(Parent.Height/3)-Self.Height/2
                     ZIndex: =2
 
                 ErrorMessage5 As label:

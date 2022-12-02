@@ -5785,19 +5785,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard.DataCardValueCnpj.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.DataCardValueCnpj.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard.DataCardValueCnpj.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.DataCardValueCnpj.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users_details",
-                "type": "cadastro_users_details.contForm.FormUserDetails.cnpj_DataCard.DataCardValueCnpj"
+                "type": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.DataCardValueCnpj"
               }
             }
           ],
@@ -5815,19 +5815,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.DataCardValue3.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.occupation_DataCard1.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.DataCardValue3.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.occupation_DataCard1.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users_details",
-                "type": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.DataCardValue3"
+                "type": "cadastro_users_details.contFormDetails.FormUserDetails.occupation_DataCard1.DataCardValue3"
               }
             }
           ],
@@ -5845,19 +5845,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.sector_DataCard1.DataCardValue5.AccessibleLabel"
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.sector_DataCard1.DataCardValue5.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.sector_DataCard1.DataCardValue5.AccessibleLabel",
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.sector_DataCard1.DataCardValue5.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "cadastro_users_details",
-                "type": "cadastro_users_details.contForm.FormUserDetails.sector_DataCard1.DataCardValue5"
+                "type": "cadastro_users_details.contFormDetails.FormUserDetails.sector_DataCard1.DataCardValue5"
               }
             }
           ],
@@ -10405,19 +10405,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.StarVisible3.Y"
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.occupation_DataCard1.StarVisible3.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.StarVisible3.Y",
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.occupation_DataCard1.StarVisible3.Y",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Y",
                 "module": "cadastro_users_details",
-                "type": "cadastro_users_details.contForm.FormUserDetails.occupation_DataCard1.StarVisible3"
+                "type": "cadastro_users_details.contFormDetails.FormUserDetails.occupation_DataCard1.StarVisible3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.StarVisible30_2.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.StarVisible30_2.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.StarVisible30_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.StarVisible30_2.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.StarVisible30_2.Y",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "cadastro_users_details",
+                "type": "cadastro_users_details.contFormDetails.FormUserDetails.cnpj_DataCard.StarVisible30_2"
               }
             }
           ],

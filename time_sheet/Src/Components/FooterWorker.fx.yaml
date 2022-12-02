@@ -1,6 +1,6 @@
 FooterWorker As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    Height: =120
+    Height: =100
     Width: =640
     X: =0
     Y: =0
@@ -12,10 +12,9 @@ FooterWorker As CanvasComponent:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(2, 4, 48, 1)
         FocusedBorderThickness: =4
-        Height: =120
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =640
+        Width: =Parent.Width
         ZIndex: =1
 
     Group_1 As label:

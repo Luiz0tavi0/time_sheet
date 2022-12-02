@@ -32,7 +32,14 @@
           "TabIndex",
           "X",
           "Y",
-          "Width",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Width",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -162,13 +169,13 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "640",
+            "InvariantScript": "Parent.Width",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "120",
+            "InvariantScript": "100",
             "Property": "Height",
             "RuleProviderType": "Unknown"
           },
@@ -661,7 +668,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638055987447684625",
+    "LastModifiedTimestamp": "638056107458407607",
     "Name": "FooterWorker",
     "Rules": [
       {
@@ -672,15 +679,15 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "120",
+        "InvariantScript": "100",
         "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
         "InvariantScript": "640",
         "Property": "Width",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -720,7 +727,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638055987447684625",
+  "LastModifiedTimestamp": "638056107458407607",
   "Name": "9a83575689f34468870fdfb0440f83df",
   "OverridableProperties": {},
   "TemplateOriginalName": "8fcf01ef466b4b9e8b209f504771e604",

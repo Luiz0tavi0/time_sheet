@@ -32,7 +32,7 @@ cadastro_users As screen:
 
     FooterWorker_7 As FooterWorker:
         Fill: =CONST_BACKGROUND_COLOR_EMPRESA
-        Y: =1016
+        Y: =Parent.Height-Self.Height
         ZIndex: =3
 
     HeaderWorker_2 As HeaderWorker:

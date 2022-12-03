@@ -299,7 +299,7 @@ cadastro_users As screen:
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
-                    OnChange: |-
+                    OnChange: |+
                         =// Valida CPF
                         UpdateContext({varCpfIsValid:false});
                         If((Len(Self.Text)=11),
@@ -328,8 +328,10 @@ cadastro_users As screen:
                                     );
                                 );
                                 
-                            )
+                            );
+                            UpdateContext({user:LookUp(tbl_users, cpf=Self.Text)});
                         );
+                        
                     PaddingLeft: =5
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
@@ -364,10 +366,18 @@ cadastro_users As screen:
                     PaddingTop: =0
                     Size: =18
                     Text: |-
-                        =If(
-                            Not(IsBlank(Parent.Error)),
-                            "O CPF é requerido.",Not(varCpfIsValid),"CPF inválido.")
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit && Len(DataCardValueCpf)>=9
+                        =If(varCpfIsValid,
+                            If(Not(IsBlank(user)),
+                                "Usuário já cadastrado.")
+                                ,
+                                ""
+                        )
+                        
+                        If(
+                            IsBlank(DataCardValueCpf.Text),
+                            "O CPF é requerido.",
+                                Not(varCpfIsValid),"CPF inválido.")
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
                     Y: =DataCardValueCpf.Y + DataCardValueCpf.Height
@@ -468,11 +478,10 @@ cadastro_users As screen:
                     PaddingTop: =0
                     Size: =18
                     Text: |
-                        =//If(
-                        //    Not(IsBlank(Parent.Error));"O Email é requerido.";
-                        //    Not(varEmailIsValid);"Email inválido."
-                        //)
-                        Parent.Error
+                        =If(Len(DataCardValueEmail.Text)=0,"O Email é requerido.",
+                            Not(varEmailIsValid),"Email inválido."
+                        )
+                        //Parent.Error
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30

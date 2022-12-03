@@ -62,7 +62,12 @@ login As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =Black
-        Default: =
+        Default: |-
+            =If(
+                IsBlank(userHasBeenCreated),
+                ""
+                ,
+                userHasBeenCreated.email)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -193,13 +198,7 @@ login As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =21
-        Text: |-
-            =If(
-                (IsBlank(TxtInputLogin.Text) And togglePosition=false),
-                "CPF é obrigatório.",
-                (IsBlank(TxtInputLogin.Text) And togglePosition=true),
-                "CNPJ é obrigatório"
-            )
+        Text: =If(IsBlank(TxtInputLogin.Text),"Email é obrigatório.")
         Visible: =Not(Self.Text="")
         Width: =480
         X: =80
@@ -222,12 +221,7 @@ login As screen:
                 Len(TxtInputLoginSenha.Text) = 0,
                 $"Senha é obrigatório.", ""
             
-            )
-            
-            //Len(TxtInputLoginSenha.Text) < 9;
-            //"Senha deve ser maior.";
-            //Len(TxtInputLoginSenha.Text) > 12;
-            //"Senha deve ser menor."
+            ))
         Visible: =Not(Self.Text="")
         Width: =480
         X: =81
@@ -449,13 +443,12 @@ login As screen:
     iconFailSuccessInputEmail As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: |-
-            =If(IsMatch(
-                    TxtInputLogin.Text,
-                    Email,
-                    MatchOptions.IgnoreCase
-                ),
-                RGBA(54, 176, 75, 1),        
-                RGBA(255, 0, 0, 1))
+            =If(Not(IsMatch(TxtInputLogin.Text,Email,MatchOptions.Complete&IgnoreCase)),
+                RGBA(54, 176, 75, 1),
+                RGBA(255, 0, 0, 1)
+            )
+            
+                
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(220, 220, 220, 1)
         DisabledFill: =RGBA(0, 0, 0, 0)
@@ -470,8 +463,8 @@ login As screen:
                     TxtInputLogin.Text,
                    Email
                 ),
-                Icon.Check,   
-                Icon.Cancel
+                Icon.Cancel,
+                Icon.Check
             )
         OnSelect: =If(Not(IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase)),Reset(TxtInputLogin));
         PressedBorderColor: =RGBA(0, 0, 0, 0)

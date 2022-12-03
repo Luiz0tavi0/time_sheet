@@ -3,15 +3,17 @@ cadastro_users As screen:
     OnHidden: |-
         =UpdateContext({user: Blank()});
         UpdateContext({emailNewUserLogin: Blank()});
-    OnVisible: |-
+    OnVisible: |
         =// UpdateContext({varEmailISValid:false});;
         If(IsBlank(mailNewUserLogin),
             UpdateContext({varEmailISValid:false})
             ,
-            ""
+            If(IsMatch(mailNewUserLogin,Email,MatchOptions.IgnoreCase),
+                ""
+                ,
+                ""
             )
-        
-        emailNewUserLogin
+        )
 
     ButtonCreateUserWorker As button:
         BorderColor: =RGBA(0, 0, 0, 0)

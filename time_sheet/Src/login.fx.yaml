@@ -180,7 +180,7 @@ login As screen:
         Text: ="Fazer Login"
         Width: =232
         X: =(Max(App.DesignWidth,App.Width)/2) - Self.Width/2
-        Y: =893
+        Y: =873
         ZIndex: =7
 
     LabelLoginError As label:
@@ -268,10 +268,10 @@ login As screen:
         Font: =Font.'Segoe UI'
         Height: =43
         Size: =21
-        Text: ="ID " & CONST_CURRENT_USER.ID & " estado = " & rect.DisplayMode & " " & IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase)
+        Text: =" | estado = " & rect.DisplayMode & " | " & IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase)
         Width: =604
         X: =18
-        Y: =1014
+        Y: =838
         ZIndex: =12
 
     tempScreenTransitionFase1 As timer:
@@ -508,13 +508,18 @@ login As screen:
         Font: =Font.'Segoe UI'
         Height: =28
         OnSelect: |-
-            =Navigate(cadastro_users,ScreenTransition.Fade,{emailNewUserLogin:TxtInputLogin.Text});
+            =If(IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase),
+                Navigate(cadastro_users,ScreenTransition.Fade,{emailNewUserLogin:TxtInputLogin.Text});
+                ,
+                Navigate(cadastro_users,ScreenTransition.Fade,{emailNewUserLogin:Blank()});
+            );
+            
             Reset(TxtInputLogin);Reset(TxtInputLoginSenha);
         Size: =18
         Text: ="Criar uma conta"
         Width: =180
         X: =230
-        Y: =986
+        Y: =976
         ZIndex: =23
 
     lblNewUser_1 As label:

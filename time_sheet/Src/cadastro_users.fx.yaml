@@ -360,6 +360,7 @@ cadastro_users As screen:
                     FontWeight: =FontWeight.Semibold
                     Height: =30
                     Live: =Live.Assertive
+                    OnSelect: =If(Not(IsBlank(user)),Navigate(login,Fade));
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0

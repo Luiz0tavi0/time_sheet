@@ -6698,6 +6698,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "cadastro_users.contFormUsers.FormUsersCreate.cpf_DataCard.ErrorMessageCpf.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "cadastro_users.contFormUsers.FormUsersCreate.cpf_DataCard.ErrorMessageCpf.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "cadastro_users",
+                "type": "cadastro_users.contFormUsers.FormUsersCreate.cpf_DataCard.ErrorMessageCpf"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.business-people-rush-hour-walking-commuting-city-concept"
                 }
               ],

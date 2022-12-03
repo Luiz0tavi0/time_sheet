@@ -33,11 +33,13 @@ login As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Lighter
         Height: =70
         HintText: ="Senha"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        Italic: =true
         MaxLength: =12
         Mode: =TextMode.Password
         OnChange: |-
@@ -54,9 +56,9 @@ login As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =21
-        Width: =480
-        X: =80
-        Y: =768
+        Width: =TxtInputLogin.Width
+        X: =TxtInputLogin.X
+        Y: =748
         ZIndex: =2
 
     TxtInputLogin As text:
@@ -173,9 +175,9 @@ login As screen:
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =24
         Text: ="Fazer Login"
-        Width: =232
-        X: =(Max(App.DesignWidth,App.Width)/2) - Self.Width/2
-        Y: =873
+        Width: =TxtInputLogin.Width
+        X: =TxtInputLogin.X
+        Y: =839
         ZIndex: =7
 
     LabelLoginError As label:
@@ -216,7 +218,7 @@ login As screen:
         Visible: =varShowErrors
         Width: =480
         X: =81
-        Y: =838
+        Y: =818
         ZIndex: =9
 
     cmpLoginFail_1 As cmpLoginFail:
@@ -265,8 +267,7 @@ login As screen:
         Size: =21
         Text: =" | estado = " & rect.DisplayMode & " | " & IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase)
         Width: =604
-        X: =18
-        Y: =838
+        Y: =1023
         ZIndex: =12
 
     tempScreenTransitionFase1 As timer:
@@ -428,7 +429,7 @@ login As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =40
         X: =24
-        Y: =786
+        Y: =766
         ZIndex: =20
 
     iconFailSuccessInputEmail As icon.Alarm:
@@ -488,7 +489,7 @@ login As screen:
         Visible: =lenInputPasword>0
         Width: =50
         X: =572
-        Y: =774
+        Y: =754
         ZIndex: =22
 
     lblNewUser As label:
@@ -530,8 +531,8 @@ login As screen:
         Font: =Font.'Segoe UI'
         Height: =35
         Size: =21
-        Text: ="Faça Login com seu Email e Senha"
+        Text: ="Faça Login com Email e Senha"
         Width: =Parent.Width
-        Y: =567
+        Y: =581
         ZIndex: =25
 

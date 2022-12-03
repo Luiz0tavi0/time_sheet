@@ -3,6 +3,9 @@ login As screen:
     ImagePosition: =ImagePosition.Center
     LoadingSpinner: =
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: |-
+        =UpdateContext({varShowErrors:false});
+        UpdateContext({lenInputPasword:0});
     OnVisible: |-
         =UpdateContext({varShowErrors:false});
         UpdateContext({lenInputPasword:0});
@@ -79,7 +82,7 @@ login As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Italic: =true
-        OnChange: |
+        OnChange: |-
             =If(
                 IsMatch(
                     TxtInputLogin.Text,
@@ -97,6 +100,7 @@ login As screen:
                     }
                 )
             );
+            UpdateContext({varShowErrors:true});
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -471,7 +475,7 @@ login As screen:
     iconFailSuccessInputPassword As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: |-
-            =If(varEmailIsOk,RGBA(54, 176, 75, 1), RGBA(254, 0, 0, 1))
+            =If(varPasswordIsOk,RGBA(54, 176, 75, 1), RGBA(254, 0, 0, 1))
             //CONST_BACKGROUND_COLOR_COLABORADOR
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(220, 220, 220, 1)
@@ -486,39 +490,14 @@ login As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: =If(Not(varPasswordIsOk),"A senha deve conter no mínimo 8 digitos.")
         Visible: =lenInputPasword>0
         Width: =50
         X: =572
         Y: =754
         ZIndex: =22
 
-    lblNewUser As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(102, 174, 229, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(153, 201, 238, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =28
-        OnSelect: |-
-            =If(IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase),
-                Navigate(cadastro_users,ScreenTransition.Fade,{emailNewUserLogin:TxtInputLogin.Text});
-                ,
-                Navigate(cadastro_users,ScreenTransition.Fade,{emailNewUserLogin:Blank()});
-            );
-            
-            Reset(TxtInputLogin);Reset(TxtInputLoginSenha);
-        Size: =18
-        Text: ="Criar uma conta"
-        Width: =180
-        X: =230
-        Y: =976
-        ZIndex: =23
-
-    lblNewUser_1 As label:
+    lblInformaIntuitoTela As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -566,4 +545,32 @@ login As screen:
         X: =411
         Y: =826
         ZIndex: =27
+
+    btnNewUser As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(102, 174, 229, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 120, 212, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(0, 120, 212, 1)
+        HoverFill: =
+        Italic: =true
+        PressedBorderColor: =
+        PressedColor: =RGBA(0, 120, 212, 1)
+        PressedFill: =    
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =20
+        Text: ="Criar uma conta"
+        Width: =222
+        X: =209
+        Y: =985
+        ZIndex: =28
 

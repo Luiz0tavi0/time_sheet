@@ -6,9 +6,12 @@ login As screen:
     OnHidden: |-
         =UpdateContext({varShowErrors:false});
         UpdateContext({lenInputPasword:0});
-    OnVisible: |-
-        =UpdateContext({varShowErrors:false});
+        UpdateContext({varEmailIsOk:false});
+    OnVisible: |
+        =UpdateContext({fromLoginValidEmail: TxtInputLogin.Text});
+        UpdateContext({varShowErrors:false});
         UpdateContext({lenInputPasword:0});
+        UpdateContext({varEmailIsOk:false});
 
     BackImage As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -560,6 +563,14 @@ login As screen:
         HoverColor: =RGBA(0, 120, 212, 1)
         HoverFill: =
         Italic: =true
+        OnSelect: |-
+            =If(varEmailIsOk,
+                Navigate(cadastro_users, ScreenTransition.Fade,{fromLoginValidEmail: TxtInputLogin.Text});
+                ,
+                Navigate(cadastro_users, ScreenTransition.Fade);
+            );
+            
+            Reset(TxtInputLogin);Reset(TxtInputLoginSenha);
         PressedBorderColor: =
         PressedColor: =RGBA(0, 120, 212, 1)
         PressedFill: =    
@@ -571,6 +582,6 @@ login As screen:
         Text: ="Criar uma conta"
         Width: =222
         X: =209
-        Y: =985
+        Y: =975
         ZIndex: =28
 

@@ -1,17 +1,18 @@
 cadastro_users As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
-        =UpdateContext({user: Blank()});
-        UpdateContext({emailNewUserLogin: Blank()});
-    OnVisible: |
-        =// UpdateContext({varEmailISValid:false});;
-        If(IsBlank(mailNewUserLogin),
-            UpdateContext({varEmailISValid:false})
-            ,
-            If(IsMatch(mailNewUserLogin,Email,MatchOptions.IgnoreCase),
-                UpdateContext({varEmailISValid:false});
-            )
-        )
+        =UpdateContext({varShowCpfError: false});
+        UpdateContext({varShowEmailError: false});
+        UpdateContext({fromLoginValidEmail: Blank()});
+    OnVisible: |+
+        =UpdateContext({varShowCpfError: false});
+        UpdateContext({varShowEmailError: false});
+        //If(IsBlank(fromLoginValidEmail);
+        //    UpdateContext({varEmailIsValid:true})
+         //   ;
+            UpdateContext({varEmailIsValid:false})
+        //);;
+        
 
     ButtonCreateUserWorker As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -78,16 +79,15 @@ cadastro_users As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =103
+        Height: =147
         Size: =21
         Text: |+
             =$"First dv calc {varFirstDVCalculated} Second dv calc {
                 Mod(Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)*10,11)
-                }
-                
-                validade do cpf {varCpfIsValid}           " 
+                }    
+                validade do cpf = {varCpfIsValid} | validade do email = {varEmailIsValid}" 
             
-        Width: =132
+        Width: =378
         Y: =889
         ZIndex: =6
 
@@ -312,6 +312,8 @@ cadastro_users As screen:
                     OnChange: |+
                         =// Valida CPF
                         UpdateContext({varCpfIsValid:false});
+                        UpdateContext({varShowCpfError: true});
+                        
                         If((Len(Self.Text)=11),
                             UpdateContext({varDig1:Int(Left(Self.Text,1))});UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
                             UpdateContext({varDig6:Int(Mid(Self.Text,6,1))});UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});UpdateContext({varDig9:Int(Mid(Self.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(Self.Text,10,1))});
@@ -383,12 +385,7 @@ cadastro_users As screen:
                                 "Usuário já cadastrado.")),
                             If(IsBlank(DataCardValueCpf),"O CPF é requerido.","CPF inválido.")
                         )
-                        
-                        //If(
-                        //    IsBlank(DataCardValueCpf.Text);
-                        //    "O CPF é requerido.";
-                        //        Not(varCpfIsValid);"CPF inválido.")
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Visible: =varShowCpfError
                     Width: =Parent.Width - 60
                     X: =30
                     Y: =DataCardValueCpf.Y + DataCardValueCpf.Height
@@ -436,7 +433,7 @@ cadastro_users As screen:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
-                    Default: =If(Not(IsBlank(emailNewUserLogin)),emailNewUserLogin,"")
+                    Default: =If(IsBlank(fromLoginValidEmail),"",fromLoginValidEmail)
                     DelayOutput: =true
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -450,13 +447,15 @@ cadastro_users As screen:
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
-                    OnChange: |-
+                    OnChange: |+
                         =// Valida Email
                         UpdateContext({varEmailIsValid:false});
-                        
+                        UpdateContext({fromLoginValidEmail:Self.Text});
+                        UpdateContext({varShowEmailError: true});
                         If(IsMatch(Self.Text,Email,MatchOptions.IgnoreCase),
-                            UpdateContext({varEmailIsValid:true}), UpdateContext({varEmailIsValid:false});
+                            UpdateContext({varEmailIsValid:true});//Notify("entrou in ismatch true");;
                         );
+                        
                     PaddingLeft: =5
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
@@ -489,12 +488,16 @@ cadastro_users As screen:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =18
-                    Text: |
+                    Text: |-
                         =If(Len(DataCardValueEmail.Text)=0,"O Email é requerido.",
-                            Not(varEmailIsValid),"Email inválido."
+                            If(Not(IsBlank(fromLoginValidEmail)),
+                                If(IsMatch(fromLoginValidEmail,Email,MatchOptions.IgnoreCase),""
+                                ,
+                                If(Not(varEmailIsValid),"Email inválido.","")
+                                )
+                            )
                         )
-                        //Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Visible: =varShowEmailError
                     Width: =Parent.Width - 60
                     X: =30
                     Y: =DataCardValueEmail.Y + DataCardValueEmail.Height

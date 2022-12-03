@@ -63,6 +63,8 @@ cadastro_users As screen:
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.DockRight
+        OnSelect: |-
+            =Navigate(cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)

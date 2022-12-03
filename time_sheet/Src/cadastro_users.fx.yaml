@@ -46,8 +46,8 @@ cadastro_users As screen:
         ZIndex: =3
 
     HeaderWorker_2 As HeaderWorker:
-        current_user_name: ="Usuários - Informações Básicas"
         has_right_icon: =false
+        header_title: ="Usuários - Informações Básicas"
         OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);
         Visible: =true
         ZIndex: =4
@@ -79,7 +79,7 @@ cadastro_users As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =147
+        Height: =285
         Size: =21
         Text: |+
             =$"First dv calc {varFirstDVCalculated} Second dv calc {
@@ -87,8 +87,9 @@ cadastro_users As screen:
                 }    
                 validade do cpf = {varCpfIsValid} | validade do email = {varEmailIsValid}" 
             
-        Width: =378
-        Y: =889
+        Width: =307
+        X: =Parent.Width
+        Y: =63
         ZIndex: =6
 
     Button7 As button:
@@ -145,8 +146,8 @@ cadastro_users As screen:
         Size: =24
         Text: ="Botão"
         Width: =280
-        X: =214
-        Y: =803
+        X: =-400
+        Y: =783
         ZIndex: =8
 
     contFormUsers As groupContainer.verticalAutoLayoutContainer:
@@ -756,80 +757,4 @@ cadastro_users As screen:
                     X: =30
                     Y: =141
                     ZIndex: =6
-
-    DataTable3 As dataTable.datatable:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(0, 120, 212, 1)
-        HeadingFont: =Font.'Segoe UI'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =21
-        Height: =165
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
-        InputFill: =RGBA(255, 255, 255, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =Errors(tbl_users)
-        LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
-        Size: =21
-        Width: =640
-        X: =0
-        Y: =724
-        ZIndex: =10
-
-        Error_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Error"
-            FieldName: ="Error"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =ThisItem.Error
-            Width: =83
-            X: =0
-            Y: =0
-            ZIndex: =8
-
-        Message_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Message"
-            FieldName: ="Message"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.Message
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =9
-
-        Record_Column1 As dataTableColumn.textualColumn:
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Record"
-            FieldName: ="Record"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.Column
-            Width: =59
-            X: =574
-            Y: =0
-            ZIndex: =10
 

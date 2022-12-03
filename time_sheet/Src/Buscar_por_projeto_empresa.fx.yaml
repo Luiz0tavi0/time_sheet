@@ -217,7 +217,7 @@ Buscar_por_projeto_empresa As screen:
         ZIndex: =7
 
     HeaderCompany_13 As HeaderCompany:
-        current_user_name: =CONST_CURRENT_USER.name
+        header_title: =CONST_CURRENT_USER.name
         Visible: =true
         ZIndex: =8
 

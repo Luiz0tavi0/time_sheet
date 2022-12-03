@@ -104,8 +104,8 @@ cadastro_users_details As screen:
         ZIndex: =3
 
     HeaderWorker_3 As HeaderWorker:
-        current_user_name: ="Usuários - Detalhes"
         has_right_icon: =false
+        header_title: ="Usuários - Detalhes"
         OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUserDetails);
         Visible: =true
         ZIndex: =4

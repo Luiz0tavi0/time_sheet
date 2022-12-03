@@ -101,7 +101,7 @@ Designar_colaborador_empresa As screen:
 
     HeaderCompany_cad_empresa_1 As HeaderCompany:
         background_color: =CONST_BACKGROUND_COLOR_EMPRESA
-        current_user_name: =CONST_CURRENT_USER.name
+        header_title: =CONST_CURRENT_USER.name
         Visible: =true
         Width: =Parent.Width
         ZIndex: =30

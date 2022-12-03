@@ -69,7 +69,7 @@
         "Name": "BackgroundHeaderDark_2",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 544,
+        "PublishOrderIndex": 553,
         "Rules": [
           {
             "Category": "Data",
@@ -350,7 +350,7 @@
         "Name": "IconLeft_2",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 545,
+        "PublishOrderIndex": 554,
         "Rules": [
           {
             "Category": "Design",
@@ -637,7 +637,7 @@
         "Name": "NameLogin_3",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 546,
+        "PublishOrderIndex": 555,
         "Rules": [
           {
             "Category": "Data",
@@ -665,7 +665,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "HeaderWorker.current_user_name",
+            "InvariantScript": "HeaderWorker.header_title",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -1068,7 +1068,7 @@
         "Name": "IconRight_2",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 547,
+        "PublishOrderIndex": 556,
         "Rules": [
           {
             "Category": "Design",
@@ -1259,14 +1259,7 @@
       "X",
       "Y",
       "ZIndex",
-      {
-        "AFDDataSourceName": "",
-        "AutoRuleBindingEnabled": false,
-        "AutoRuleBindingString": "\"Texto\"",
-        "InvariantPropertyName": "current_user_name",
-        "IsLockable": false,
-        "NameMapSourceSchema": "?"
-      },
+      "header_title",
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
@@ -1289,7 +1282,7 @@
       "OnClickLeftIcon",
       "OnClickRightIcon"
     ],
-    "LastModifiedTimestamp": "638056896545745925",
+    "LastModifiedTimestamp": "638056986871753154",
     "Name": "HeaderWorker",
     "Rules": [
       {
@@ -1319,7 +1312,7 @@
       {
         "Category": "Data",
         "InvariantScript": "\"Nome do Usuário Logado\"",
-        "Property": "current_user_name",
+        "Property": "header_title",
         "RuleProviderType": "System"
       },
       {
@@ -1390,11 +1383,11 @@
   "CustomProperties": [
     {
       "Category": 0,
-      "DisplayName": "current_user_name",
+      "DisplayName": "header_title",
       "Hidden": false,
-      "Name": "current_user_name",
+      "Name": "header_title",
       "PropertyDataTypeKey": "String",
-      "Tooltip": "current_user_name",
+      "Tooltip": "texto de cabeçalho",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
@@ -1460,7 +1453,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638056896545745925",
+  "LastModifiedTimestamp": "638056986871753154",
   "Name": "347fbc906fcc4827a384a06fc53242d5",
   "OverridableProperties": {},
   "TemplateOriginalName": "faecc12050bb4c9ca744ac80084ea13a",

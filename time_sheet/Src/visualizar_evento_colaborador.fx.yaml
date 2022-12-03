@@ -122,7 +122,7 @@ visualizar_evento_colaborador As screen:
         ZIndex: =10
 
     HeaderWorker_1 As HeaderWorker:
-        current_user_name: =CONST_CURRENT_USER.name
+        header_title: =CONST_CURRENT_USER.name
         Visible: =true
         ZIndex: =13
 

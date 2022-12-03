@@ -1,9 +1,9 @@
 HeaderWorker As CanvasComponent:
     background_color: =RGBA(110, 164, 191, 1)
-    current_user_name: ="Nome do Usuário Logado"
     Fill: =RGBA(110, 164, 191, 1)
     has_left_icon: =true
     has_right_icon: =true
+    header_title: ="Nome do Usuário Logado"
     Height: =120
     is_logged_screen: =true
     OnClickLeftIcon: ="Texto"
@@ -41,7 +41,7 @@ HeaderWorker As CanvasComponent:
         PaddingRight: =0
         PaddingTop: =0
         Size: =20
-        Text: =HeaderWorker.current_user_name
+        Text: =HeaderWorker.header_title
         Visible: =Parent.is_logged_screen
         Width: =520
         X: =60

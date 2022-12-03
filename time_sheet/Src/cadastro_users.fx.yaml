@@ -9,9 +9,7 @@ cadastro_users As screen:
             UpdateContext({varEmailISValid:false})
             ,
             If(IsMatch(mailNewUserLogin,Email,MatchOptions.IgnoreCase),
-                ""
-                ,
-                ""
+                UpdateContext({varEmailISValid:false});
             )
         )
 
@@ -30,7 +28,7 @@ cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =If(FormUsersCreate.Valid,UpdateContext(varErrors,Errors(SubmitForm(FormUsersCreate),Notify("Erro",NotificationType));
+            =If(FormUsersCreate.Valid,SubmitForm(FormUsersCreate),Notify("Erro",NotificationType));
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)

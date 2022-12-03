@@ -1,7 +1,10 @@
 cadastro_users As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: |-
+        =UpdateContext({user: Blank()});
     OnVisible: |-
-        =UpdateContext({varEmailISValid:false})
+        =UpdateContext({varEmailISValid:false});
+        If(Not(IsBlank(mailNewUserLogin)),UpdateContext({varEmailISValid:true}),UpdateContext({varEmailISValid:false}));
 
     ButtonCreateUserWorker As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -426,7 +429,7 @@ cadastro_users As screen:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
-                    Default: =Parent.Default
+                    Default: =If(Not(IsBlank(emailNewUserLogin)),emailNewUserLogin,"")
                     DelayOutput: =true
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(166, 166, 166, 1)
@@ -441,10 +444,11 @@ cadastro_users As screen:
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     OnChange: |-
-                        =// VAlida Email
+                        =// Valida Email
                         UpdateContext({varEmailIsValid:false});
-                        If(
-                            IsMatch(DataCardValueEmail.Text,Email,MatchOptions.IgnoreCase),UpdateContext({varEmailIsValid:true}),UpdateContext({varEmailIsValid:false})
+                        
+                        If(IsMatch(Self.Text,Email,MatchOptions.IgnoreCase),
+                            UpdateContext({varEmailIsValid:true}), UpdateContext({varEmailIsValid:false});
                             );
                     PaddingLeft: =5
                     PressedBorderColor: =RGBA(0, 120, 212, 1)

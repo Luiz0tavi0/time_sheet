@@ -177,7 +177,7 @@ login As screen:
         Text: ="Fazer Login"
         Width: =TxtInputLogin.Width
         X: =TxtInputLogin.X
-        Y: =839
+        Y: =860
         ZIndex: =7
 
     LabelLoginError As label:
@@ -535,4 +535,35 @@ login As screen:
         Width: =Parent.Width
         Y: =581
         ZIndex: =25
+
+    btnEsqueciASenha As button:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(0, 120, 212, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =23
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(0, 120, 212, 1)
+        HoverFill: =
+        Italic: =true
+        PressedBorderColor: =
+        PressedColor: =RGBA(0, 120, 212, 1)
+        PressedFill: =    
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =10
+        Text: ="Esqueci minha senha"
+        Underline: =true
+        Width: =150
+        X: =411
+        Y: =826
+        ZIndex: =27
 

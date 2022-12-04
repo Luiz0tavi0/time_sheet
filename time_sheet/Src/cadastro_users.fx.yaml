@@ -98,7 +98,7 @@ cadastro_users As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =UpdateContext({formIsValid:false});
-            If(And(FormUsersCreate.Valid=true,varCpfIsValid=true,varEmailIsValid=true),UpdateContext({formIsValid:true}));
+            If(And(FormUsersCreate.Valid=true,varCpfIsValid=true,varEmailIsValid=true,passwordIsEqual=true),UpdateContext({formIsValid:true}));
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -208,7 +208,7 @@ cadastro_users As screen:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =18
-                    Text: =If(Not(IsBlank(Parent.Error)),"Nome de usuário é requerido.")
+                    Text: =If(IsBlank(DataCardValueNome),"Nome de usuário é requerido.")
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
@@ -573,9 +573,9 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"password")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =186
+                Height: =206
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "password")
-                Required: =false
+                Required: =true
                 Update: =DataCardValuePassword.Text
                 Width: =526
                 X: =0
@@ -616,7 +616,6 @@ cadastro_users As screen:
                     ZIndex: =2
 
                 ErrorMessage32 As label:
-                    AutoHeight: =true
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -626,18 +625,23 @@ cadastro_users As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =10
+                    Height: =28
                     Live: =Live.Assertive
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Size: =21
-                    Text: =Parent.Error
+                    Size: =18
+                    Text: |
+                        =If(IsBlank(DataCardValuePassword),
+                            "Defina uma senha."
+                            ,
+                            If(Not(passwordIsEqual),"A confirmação da senha não corresponde.")
+                        )
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValuePassword.Y + DataCardValuePassword.Height
+                    Y: =158
                     ZIndex: =3
 
                 StarVisible32 As label:
@@ -694,32 +698,27 @@ cadastro_users As screen:
                     Tooltip: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValuePassword.Height+DataCardValuePassword.Height/2
+                    Y: =92
                     ZIndex: =5
 
-                ErrorMessageEmailField_1 As label:
+                StarVisible32_1 As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
-                    Color: =RGBA(168, 0, 0, 1)
+                    Color: =RGBA(51, 51, 51, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(168, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =30
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
+                    Height: =DataCardValuePassword.Height
                     PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =18
-                    Text: |-
-                        =If(Not(IsBlank(Parent.Error)),"A senha é requerida.",And(Not(passwordIsEqual),DataCardValuePassword.Text <> ""),"A confirmação da senha não corresponde.")
-                        // Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =141
-                    ZIndex: =6
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardValuePasswordConfirm.Y
+                    ZIndex: =7
 

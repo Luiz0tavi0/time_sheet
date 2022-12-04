@@ -46,7 +46,7 @@ login As screen:
             If(IsBlank(CONST_CURRENT_USER),
                 UpdateContext({TimerGoFailFase1:true});
                 ,
-                UpdateContext({TimerGoFase2:true});
+                UpdateContext({TimerGoFase2:true});Navigate(user_home, Fade);
             );
             
             // UpdateContext({visibleTransitionFase1: true});;
@@ -159,12 +159,10 @@ login As screen:
                     (email = Upper(TxtInputLogin.Text) And password = TxtInputLoginSenha.Text)
                 )
             );
-            If(IsBlank(CONST_CURRENT_USER),
-                ""
-                ,
+            If(Not(IsBlank(CONST_CURRENT_USER)),
                 UpdateContext({varShowLoadingTransition: true}),
                 UpdateContext({varTimerRunLoadingTransition: true});
-                //Navigate(user_home; Fade);;
+                
             );
             
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)

@@ -1,4 +1,5 @@
 cmpScreenSuccess As CanvasComponent:
+    BackgroundColor: =RGBA(0, 0, 0, 0.5)
     exito_texto: ="Concluído com exito"
     Fill: =RGBA(0, 0, 0, 0)
     Height: =App.Height
@@ -22,6 +23,7 @@ cmpScreenSuccess As CanvasComponent:
         ZIndex: =1
 
     contBodyMessage As groupContainer.manualLayoutContainer:
+        Fill: =Parent.BackgroundColor
         Height: =1136
         Visible: =rectMaskSemiTransLucid.Visible
         Width: =639
@@ -70,7 +72,7 @@ cmpScreenSuccess As CanvasComponent:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(179, 179, 179, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4

@@ -623,7 +623,14 @@
               "Live",
               "Overflow",
               "Role",
-              "Color",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Color",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "DisabledColor",
               "PressedColor",
               "HoverColor",
@@ -729,7 +736,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(51, 51, 51, 1)",
+                "InvariantScript": "RGBA(179, 179, 179, 1)",
                 "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
@@ -1040,7 +1047,14 @@
         "ControlPropertyState": [
           "BorderColor",
           "BorderStyle",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "X",
           "Y",
           {
@@ -1185,7 +1199,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "InvariantScript": "Parent.BackgroundColor",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1248,15 +1262,29 @@
         "IsLockable": false,
         "NameMapSourceSchema": "?"
       },
-      "OnClickAnyLocationScreen"
+      "OnClickAnyLocationScreen",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
+        "InvariantPropertyName": "BackgroundColor",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      }
     ],
-    "LastModifiedTimestamp": "638057884250597371",
+    "LastModifiedTimestamp": "638057890846402650",
     "Name": "cmpScreenSuccess",
     "Rules": [
       {
         "Category": "Data",
         "InvariantScript": "\"Concluído com exito\"",
         "Property": "exito_texto",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "RGBA(0, 0, 0, 0.5)",
+        "Property": "BackgroundColor",
         "RuleProviderType": "System"
       },
       {
@@ -1330,6 +1358,15 @@
       "PropertyDataTypeKey": "String",
       "Tooltip": "Função disparada ao tocar qualquer ponto da tela",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "BackgroundColor",
+      "Hidden": false,
+      "Name": "BackgroundColor",
+      "PropertyDataTypeKey": "Color",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -1340,7 +1377,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638057884250597371",
+  "LastModifiedTimestamp": "638057890846402650",
   "Name": "621de0cc4b9444b2909c35573e5077f6",
   "OverridableProperties": {},
   "TemplateOriginalName": "a7e4976df95341fea6b6fdca9e07ac48",

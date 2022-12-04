@@ -9,6 +9,7 @@ HeaderWorker As CanvasComponent:
     left_icon: =Icon.BackArrow
     OnClickLeftIcon: ="Texto"
     OnClickRightIcon: ="Texto"
+    right_icon: =Icon.NextArrow
     Visible: =
     Width: =640
     X: =0
@@ -60,7 +61,7 @@ HeaderWorker As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Icon: =If(Parent.is_logged_screen, Icon.Leave,Icon.Cancel)  
+        Icon: =Parent.right_icon
         OnSelect: =Parent.OnClickRightIcon();
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)

@@ -1210,7 +1210,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Parent.is_logged_screen, Icon.Leave,Icon.Cancel)  ",
+            "InvariantScript": "Parent.right_icon",
             "Property": "Icon",
             "RuleProviderType": "Unknown"
           },
@@ -1288,9 +1288,17 @@
         "InvariantPropertyName": "left_icon",
         "IsLockable": false,
         "NameMapSourceSchema": "?"
+      },
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "SampleImage",
+        "InvariantPropertyName": "right_icon",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638057129128734460",
+    "LastModifiedTimestamp": "638057133322386871",
     "Name": "HeaderWorker",
     "Rules": [
       {
@@ -1327,6 +1335,12 @@
         "Category": "Data",
         "InvariantScript": "Icon.BackArrow",
         "Property": "left_icon",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "Icon.NextArrow",
+        "Property": "right_icon",
         "RuleProviderType": "System"
       },
       {
@@ -1466,6 +1480,15 @@
       "PropertyDataTypeKey": "Image",
       "Tooltip": "Uma propriedade personalizada",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "right_icon",
+      "Hidden": false,
+      "Name": "right_icon",
+      "PropertyDataTypeKey": "Image",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -1476,7 +1499,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638057129128734460",
+  "LastModifiedTimestamp": "638057133322386871",
   "Name": "347fbc906fcc4827a384a06fc53242d5",
   "OverridableProperties": {},
   "TemplateOriginalName": "faecc12050bb4c9ca744ac80084ea13a",

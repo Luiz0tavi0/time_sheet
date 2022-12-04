@@ -3,7 +3,7 @@ HeaderWorker As CanvasComponent:
     Fill: =RGBA(110, 164, 191, 1)
     has_left_icon: =true
     has_right_icon: =true
-    header_title: ="Nome do Usuário Logado"
+    header_title: ="Nome da tela"
     Height: =120
     is_logged_screen: =true
     left_icon: =Icon.BackArrow
@@ -50,69 +50,49 @@ HeaderWorker As CanvasComponent:
         Y: =40
         ZIndex: =3
 
-    IconLeft_h As icon.Leave:
-        BorderColor: =RGBA(166, 166, 166, 1)
+    IconRight_h As icon.Leave:
+        AutoDisableOnSelect: =false
+        BorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
         Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledFill: =RGBA(118, 0, 0, 1)
         FocusedBorderThickness: =4
         Height: =40
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Icon: =Parent.left_icon
-        OnSelect: =Parent.OnClickLeftIcon();
+        HoverBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        HoverColor: =CONST_BACKGROUND_COLOR_EMPRESA
+        HoverFill: =CONST_BACKGROUND_COLOR_COLABORADOR
+        Icon: =HeaderWorker.right_icon
+        OnSelect: =HeaderWorker.OnClickRightIcon();
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =Parent.has_left_icon And Parent.is_logged_screen
+        Visible: =HeaderWorker.has_right_icon
+        Width: =40
+        X: =Parent.Width-Self.Width-20
+        Y: =40
+        ZIndex: =7
+
+    IconLeft_h As icon.Leave:
+        AutoDisableOnSelect: =false
+        BorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledFill: =RGBA(118, 0, 0, 1)
+        FocusedBorderThickness: =4
+        Height: =40
+        HoverBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        HoverColor: =CONST_BACKGROUND_COLOR_EMPRESA
+        HoverFill: =CONST_BACKGROUND_COLOR_COLABORADOR
+        Icon: =HeaderWorker.left_icon
+        OnSelect: =HeaderWorker.OnClickRightIcon();
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =HeaderWorker.has_right_icon
         Width: =40
         X: =20
         Y: =40
-        ZIndex: =4
-
-    Container2 As groupContainer.manualLayoutContainer:
-        Height: =94
-        Width: =134
-        X: =505
-        Y: =26
-        ZIndex: =6
-
-        Circle2 As circle:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(0, 120, 212, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =40
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =40
-            X: =10
-            Y: =30
-            ZIndex: =1
-
-        IconRight_h As icon.Leave:
-            AutoDisableOnSelect: =false
-            BorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
-            DisabledColor: =CONST_BACKGROUND_COLOR_COLABORADOR
-            DisabledFill: =RGBA(118, 0, 0, 1)
-            FocusedBorderThickness: =4
-            Height: =40
-            HoverBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
-            HoverColor: =CONST_BACKGROUND_COLOR_EMPRESA
-            HoverFill: =CONST_BACKGROUND_COLOR_COLABORADOR
-            Icon: =HeaderWorker.right_icon
-            OnSelect: =HeaderWorker.OnClickRightIcon();
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =HeaderWorker.has_right_icon
-            Width: =40
-            X: =50
-            Y: =30
-            ZIndex: =2
+        ZIndex: =8
 

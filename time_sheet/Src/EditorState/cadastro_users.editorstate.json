@@ -5353,7 +5353,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "left_icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Icon.BackArrow",
+          "InvariantPropertyName": "left_icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "right_icon"
       ],
       "HasDynamicProperties": false,
@@ -5402,7 +5409,7 @@
         {
           "Category": "Data",
           "PropertyName": "left_icon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",

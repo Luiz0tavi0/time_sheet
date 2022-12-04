@@ -8,7 +8,7 @@ cadastro_users_details As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(FormUserDetails.Valid,DisplayMode.Edit,DisplayMode.Disabled)
+        DisplayMode: =If(And(FormUserDetails.Valid,varCnpjIsValid),DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(110, 164, 191, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
@@ -500,8 +500,11 @@ cadastro_users_details As screen:
         ZIndex: =6
 
     HeaderWorker_4 As HeaderWorker:
+        has_right_icon: =false
         header_title: ="Usuários - Detalhes"
-        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);
+        OnClickLeftIcon: |-
+            =Notify("clicou icone esquerdio",NotificationType.Information);
+            Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);
         Visible: =true
         Width: =Parent.Width
         ZIndex: =7

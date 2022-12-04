@@ -4,19 +4,21 @@ login As screen:
     LoadingSpinner: =
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
-        =UpdateContext({varShowErrors:false});
-        UpdateContext({lenInputPasword:0});
-        UpdateContext({varEmailIsOk:false});
+        =Concurrent(
+            UpdateContext({varShowErrors:false}),
+            UpdateContext({lenInputPasword:0}),
+            UpdateContext({varEmailIsOk:false}),
+            UpdateContext({userFromCadastroHasCreated:Blank()})
+        )
     OnVisible: |-
-        =//UpdateContext({fromLoginValidEmail: TxtInputLogin.Text});;
-        
-        UpdateContext({varShowErrors:false});
-        UpdateContext({lenInputPasword:0});
-        
-        If(IsBlank(userFromCadastroHasCreated),
-            UpdateContext({varEmailIsOk:false});Reset(TxtInputLogin);Reset(TxtInputLoginSenha);
-            ,
-            UpdateContext({varEmailIsOk:true});
+        =Concurrent(
+            UpdateContext({varShowErrors:false}),
+            UpdateContext({lenInputPasword:0}),
+            If(IsBlank(userFromCadastroHasCreated),
+                UpdateContext({varEmailIsOk:false});Reset(TxtInputLogin);Reset(TxtInputLoginSenha)
+                ,
+                UpdateContext({varEmailIsOk:true});
+            )
         );
 
     BackImage As image:
@@ -164,24 +166,27 @@ login As screen:
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |
-            =UpdateContext({TimerGoFase1: false});
-            UpdateContext({TimerGoFase2: false});
-            UpdateContext({TimerGoFailFase1: false});
-            UpdateContext({varShowLoadingTransition: false});
-            UpdateContext({varShowSuccessTransition: false});
-            UpdateContext({varShowFailTransition: false});
-            
-                
-            Set(CONST_CURRENT_USER,LookUp(tbl_users,(email = Upper(TxtInputLogin.Text) And password = TxtInputLoginSenha.Text)));
-            
-            
+            =Concurrent(
+                UpdateContext({TimerGoFase1: false}),
+                UpdateContext({TimerGoFase2: false}),
+                UpdateContext({TimerGoFailFase1: false}),
+                UpdateContext({varShowLoadingTransition: false}),
+                UpdateContext({varShowSuccessTransition: false}),
+                UpdateContext({varShowFailTransition: false})
+            );
+            Set(
+                CONST_CURRENT_USER,
+                LookUp(
+                    tbl_users,
+                    (email = Upper(TxtInputLogin.Text) And password = TxtInputLoginSenha.Text)
+                )
+            );
             If(
                 Not(IsBlank(CONST_CURRENT_USER)),
                 UpdateContext({varShowLoadingTransition: true}),
                 UpdateContext({varTimerRunLoadingTransition: true});
                 
             );
-            
             //Navigate(inicial_empresa);;
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -294,7 +299,7 @@ login As screen:
             =$"Timer loading {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
         Width: =234
         Y: =1066
-        ZIndex: =11
+        ZIndex: =10
 
     tempScreenTransitionFase2 As timer:
         BorderColor: =RGBA(0, 120, 212, 1)
@@ -323,7 +328,7 @@ login As screen:
         Width: =215
         X: =235
         Y: =1066
-        ZIndex: =12
+        ZIndex: =11
 
     tempScreenTransitionErrorFase As timer:
         AutoPause: =false
@@ -355,28 +360,11 @@ login As screen:
         Width: =215
         X: =425
         Y: =1066
-        ZIndex: =13
-
-    Label1 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =240
-        Size: =21
-        Text: =$"Usuario já cadastrado vindo de Cadastro = {userFromCadastroHasCreated}"
-        Width: =560
-        X: =Parent.Width
-        Y: =365
-        ZIndex: =14
+        ZIndex: =12
 
     cmpTransitionLoadLogin As cmpTransitionLoad:
         Visible: =
-        ZIndex: =15
+        ZIndex: =13
 
     cmpScreenSuccess_1 As cmpScreenSuccess:
         exito_texto: |-
@@ -386,7 +374,7 @@ login As screen:
                 $"Welcome, {CONST_CURRENT_USER.email}"    
             )
         Visible: =visibleTransitionFase1
-        ZIndex: =16
+        ZIndex: =14
 
     Icon1 As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -406,7 +394,7 @@ login As screen:
         Width: =40
         X: =24
         Y: =659
-        ZIndex: =17
+        ZIndex: =15
 
     Icon1_1 As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -426,7 +414,7 @@ login As screen:
         Width: =40
         X: =24
         Y: =766
-        ZIndex: =18
+        ZIndex: =16
 
     iconFailSuccessInputEmail As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -462,7 +450,7 @@ login As screen:
         Width: =50
         X: =572
         Y: =651
-        ZIndex: =19
+        ZIndex: =17
 
     iconFailSuccessInputPassword As icon.Alarm:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -487,7 +475,7 @@ login As screen:
         Width: =50
         X: =572
         Y: =754
-        ZIndex: =20
+        ZIndex: =18
 
     lblInformaIntuitoTela As label:
         Align: =Align.Center
@@ -505,7 +493,7 @@ login As screen:
         Text: ="Faça Login com Email e Senha"
         Width: =Parent.Width
         Y: =581
-        ZIndex: =21
+        ZIndex: =19
 
     btnEsqueciASenha As button:
         Align: =Align.Right
@@ -536,7 +524,7 @@ login As screen:
         Width: =250
         X: =310
         Y: =826
-        ZIndex: =22
+        ZIndex: =20
 
     btnNewUser As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -574,5 +562,25 @@ login As screen:
         Width: =222
         X: =209
         Y: =975
-        ZIndex: =23
+        ZIndex: =21
+
+    lblOutput_login As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =240
+        Size: =21
+        Text: |-
+            =$"Usuario já cadastrado vindo de Cadastro = {userFromCadastroHasCreated}
+            Useuário logado = {CONST_CURRENT_USER.name} |
+            "
+        Width: =560
+        X: =Parent.Width
+        Y: =365
+        ZIndex: =22
 

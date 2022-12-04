@@ -86,7 +86,7 @@ HeaderWorker As CanvasComponent:
         HoverColor: =CONST_BACKGROUND_COLOR_EMPRESA
         HoverFill: =CONST_BACKGROUND_COLOR_COLABORADOR
         Icon: =HeaderWorker.left_icon
-        OnSelect: =HeaderWorker.OnClickRightIcon();
+        OnSelect: =HeaderWorker.OnClickLeftIcon();
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)

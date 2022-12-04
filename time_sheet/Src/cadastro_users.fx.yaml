@@ -35,7 +35,7 @@ cadastro_users As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
         Size: =24
-        Text: ="Criar perfil comum"
+        Text: ="Criar perfil"
         Width: =480
         X: =78
         Y: =906
@@ -47,7 +47,9 @@ cadastro_users As screen:
         ZIndex: =3
 
     HeaderWorker_2 As HeaderWorker:
+        has_right_icon: =false
         header_title: ="Usuários - Informações Básicas"
+        left_icon: =Icon.Home
         OnClickLeftIcon: |-
             =//ResetForm(FormUsersCreate);;ResetForm(FormUserDetails);;Reset(TxtInputLoginSenha);;
             If(IsBlank(userHasBeenCreated),

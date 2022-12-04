@@ -267,26 +267,6 @@ login As screen:
         Width: = Max(App.Width, App.DesignWidth)
         ZIndex: =9
 
-    Label2 As label:
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(0, 0, 0, 1)
-        DisabledFill: =RGBA(0, 0, 0, 1)
-        Fill: =RGBA(255, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =145
-        Size: =21
-        Text: |-
-            ="estado = " & rect.DisplayMode & " | " & IsMatch(TxtInputLogin.Text,Email,MatchOptions.IgnoreCase) &
-            $"Usuario já cadastrado vindo de Cadastro = {userFromCadastroHasCreated}"
-        Width: =604
-        X: =36
-        Y: =321
-        ZIndex: =10
-
     tempScreenTransitionFase1 As timer:
         AutoPause: =false
         BorderColor: =RGBA(99, 139, 44, 1)
@@ -390,9 +370,10 @@ login As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: ="Texto = " & visibleTransitionFailFase1
+        Text: =$"Usuario já cadastrado vindo de Cadastro = {userFromCadastroHasCreated}"
         Width: =560
-        X: =45
+        X: =24
+        Y: =365
         ZIndex: =14
 
     cmpTransitionLoadLogin As cmpTransitionLoad:

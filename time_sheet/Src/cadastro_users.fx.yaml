@@ -35,7 +35,7 @@ cadastro_users As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
         Size: =24
-        Text: ="Criar"
+        Text: ="Criar perfil comum"
         Width: =480
         X: =78
         Y: =906
@@ -55,30 +55,12 @@ cadastro_users As screen:
                 ,
                 Navigate(login,Fade,{userFromCadastroHasCreated:userHasBeenCreated});
             );
+        OnClickRightIcon: |-
+            =Navigate(cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
         Visible: =true
         ZIndex: =4
 
-    iconToDetails As icon.Add:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.NextArrow
-        OnSelect: |-
-            =Navigate(cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        X: =494
-        Y: =786
-        ZIndex: =5
-
-    Label8 As label:
+    lblOutPut As label:
         Align: =Align.Justify
         AutoHeight: =true
         BorderThickness: =2
@@ -87,20 +69,21 @@ cadastro_users As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =641
+        Height: =500
         Size: =21
         Text: |+
             =$"First dv calc {varFirstDVCalculated} 
             Second dv calc {Mod(Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)*10,11)}    
             validade do cpf = {varCpfIsValid}
-            validade do email = {varEmailIsValid}" 
+            validade do email = {varEmailIsValid}
+            Fomulário is valido = {formIsValid}" 
             
         Width: =500
         X: =Parent.Width
-        Y: =63
+        Y: =650
         ZIndex: =6
 
-    Button7 As button:
+    funcValidacaoForm As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -114,36 +97,8 @@ cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =// Valida CPF
-            UpdateContext({varCpfIsValid:false});
-            If((Len(DataCardValueCpf.Text)=11),
-                UpdateContext({varDig1:Int(Left(DataCardValueCpf.Text,1))});UpdateContext({varDig2:Int(Mid(DataCardValueCpf.Text,2,1))});UpdateContext({varDig3:Int(Mid(DataCardValueCpf.Text,3,1))});UpdateContext({varDig4:Int(Mid(DataCardValueCpf.Text,4,1))});UpdateContext({varDig5:Int(Mid(DataCardValueCpf.Text,5,1))});
-                UpdateContext({varDig6:Int(Mid(DataCardValueCpf.Text,6,1))});UpdateContext({varDig7:Int(Mid(DataCardValueCpf.Text,7,1))});UpdateContext({varDig8:Int(Mid(DataCardValueCpf.Text,8,1))});UpdateContext({varDig9:Int(Mid(DataCardValueCpf.Text,9,1))}); UpdateContext({varFirstDV:Int(Mid(DataCardValueCpf.Text,10,1))});
-                UpdateContext({varSecondDV:Int(Right(DataCardValueCpf.Text,1))}); 
-                UpdateContext({varSum1To9Dig: (varDig1*10+varDig2*9+varDig3*8+varDig4*7+varDig5*6+varDig6*5+varDig7*4+varDig8*3+varDig9*2)});
-                UpdateContext({varFirstDVCalculated:Mod(varSum1To9Dig*10,11)});
-                If(varFirstDVCalculated=10, UpdateContext({varFirstDVCalculated:0}));
-                
-            
-                //Teste do primeiro digito verificador
-                If(varFirstDVCalculated=varFirstDV,
-                    // TRUE
-                    //UpdateContext({varSum1To10Dig: (varDig1+varDig2+varDig3+varDig4+varDig5+varDig6+varDig7+varDig8+varDig9+varFirstDV)});;
-                    UpdateContext({varSplitedTex:Split(Mid(DataCardValueCpf.Text, 1, 10),"")});
-                    UpdateContext(
-                        {varSum1To10Dig:Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)}
-                    );
-                    UpdateContext({varSecondDVCalculated:Mod(varSum1To10Dig*10,11)});
-                    If(varSecondDVCalculated=10,UpdateContext({varSecondDVCalculated: 0}));
-                    If(varSecondDVCalculated=varSecondDV,
-                        If(CountRows(Distinct(Split(DataCardValueCpf.Text,""),Result))<>1,
-                            // Verifica se todos os digitos são iguais
-                            UpdateContext({varCpfIsValid:true});
-                        );
-                    );
-                    
-                )
-            );
+            =UpdateContext({formIsValid:false});
+            If(And(FormUsersCreate.Valid=true,varCpfIsValid=true,varEmailIsValid=true),UpdateContext({formIsValid:true}));
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -152,14 +107,14 @@ cadastro_users As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =24
-        Text: ="Botão"
-        Width: =280
+        Text: ="funcValidacaoForm"
+        Width: =300
         X: =-400
         Y: =783
         ZIndex: =8
 
     contFormUsers As groupContainer.verticalAutoLayoutContainer:
-        Height: =619
+        Height: =681
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -319,9 +274,11 @@ cadastro_users As screen:
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     OnChange: |+
-                        =// Valida CPF
+                        =
                         UpdateContext({varCpfIsValid:false});
                         UpdateContext({varShowCpfError: true});
+                        
+                        // Valida CPF
                         
                         If((Len(Self.Text)=11),
                             UpdateContext({varDig1:Int(Left(Self.Text,1))});UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
@@ -758,8 +715,8 @@ cadastro_users As screen:
                     PaddingTop: =0
                     Size: =18
                     Text: |-
-                        =//If(Not(IsBlank(Parent.Error));"A senha é requerida.";And(Not(passwordIsEqual);DataCardValuePassword.Text <> "");"A confirmação da senha não corresponde.")
-                        Parent.Error
+                        =If(Not(IsBlank(Parent.Error)),"A senha é requerida.",And(Not(passwordIsEqual),DataCardValuePassword.Text <> ""),"A confirmação da senha não corresponde.")
+                        // Parent.Error
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30

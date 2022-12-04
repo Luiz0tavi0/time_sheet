@@ -1916,66 +1916,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "cadastro_users.iconToDetails.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cadastro_users.iconToDetails.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "cadastro_users",
-                "type": "cadastro_users.iconToDetails"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "cadastro_users.iconToDetails.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cadastro_users.iconToDetails.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "cadastro_users",
-                "type": "cadastro_users.iconToDetails"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Buscar_por_projeto_empresa.ProjectsLabel.TabIndex"
                 }
               ],
@@ -10358,36 +10298,6 @@
                 "member": "colab_selecionado",
                 "module": "Designar_colaborador_empresa",
                 "type": "Designar_colaborador_empresa"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "cadastro_users.passwordIsEqual"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cadastro_users.passwordIsEqual",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "passwordIsEqual",
-                "module": "cadastro_users",
-                "type": "cadastro_users"
               }
             }
           ],

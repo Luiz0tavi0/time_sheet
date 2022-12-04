@@ -51,7 +51,7 @@ cadastro_users As screen:
         header_title: ="Usuários - Informações Básicas"
         OnClickLeftIcon: |-
             =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);ResetForm(FormUserDetails);Reset(TxtInputLoginSenha);
-            If(IsBlank(userHasBeenCreated);)
+            If(IsBlank(userHasBeenCreated),Reset(TxtInputLogin));
         Visible: =true
         ZIndex: =4
 

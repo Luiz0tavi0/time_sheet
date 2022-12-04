@@ -6,6 +6,7 @@ HeaderWorker As CanvasComponent:
     header_title: ="Nome do Usuário Logado"
     Height: =120
     is_logged_screen: =true
+    left_icon: =Icon.BackArrow
     OnClickLeftIcon: ="Texto"
     OnClickRightIcon: ="Texto"
     Visible: =
@@ -81,7 +82,7 @@ HeaderWorker As CanvasComponent:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Icon: =Icon.BackArrow
+        Icon: =Parent.left_icon
         OnSelect: =Parent.OnClickLeftIcon();
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)

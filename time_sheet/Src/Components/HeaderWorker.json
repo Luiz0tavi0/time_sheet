@@ -69,7 +69,7 @@
         "Name": "BackgroundHeaderDark_2",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 554,
+        "PublishOrderIndex": 552,
         "Rules": [
           {
             "Category": "Data",
@@ -350,7 +350,7 @@
         "Name": "IconLeft_2",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 555,
+        "PublishOrderIndex": 553,
         "Rules": [
           {
             "Category": "Design",
@@ -486,7 +486,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Icon.BackArrow",
+            "InvariantScript": "Parent.left_icon",
             "Property": "Icon",
             "RuleProviderType": "Unknown"
           },
@@ -637,7 +637,7 @@
         "Name": "NameLogin_3",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 556,
+        "PublishOrderIndex": 554,
         "Rules": [
           {
             "Category": "Data",
@@ -1068,7 +1068,7 @@
         "Name": "IconRight_2",
         "Parent": "HeaderWorker",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 557,
+        "PublishOrderIndex": 555,
         "Rules": [
           {
             "Category": "Design",
@@ -1280,9 +1280,17 @@
       },
       "has_right_icon",
       "OnClickLeftIcon",
-      "OnClickRightIcon"
+      "OnClickRightIcon",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "Icon.Lef",
+        "InvariantPropertyName": "left_icon",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      }
     ],
-    "LastModifiedTimestamp": "638057108552555777",
+    "LastModifiedTimestamp": "638057129128734460",
     "Name": "HeaderWorker",
     "Rules": [
       {
@@ -1313,6 +1321,12 @@
         "Category": "Data",
         "InvariantScript": "\"Nome do Usuário Logado\"",
         "Property": "header_title",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "Icon.BackArrow",
+        "Property": "left_icon",
         "RuleProviderType": "System"
       },
       {
@@ -1443,6 +1457,15 @@
       "PropertyDataTypeKey": "String",
       "Tooltip": "Função que executa ao clicar no ícone da direita do cabeçalho",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "left_icon",
+      "Hidden": false,
+      "Name": "left_icon",
+      "PropertyDataTypeKey": "Image",
+      "Tooltip": "Uma propriedade personalizada",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -1453,7 +1476,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638057108552555777",
+  "LastModifiedTimestamp": "638057129128734460",
   "Name": "347fbc906fcc4827a384a06fc53242d5",
   "OverridableProperties": {},
   "TemplateOriginalName": "faecc12050bb4c9ca744ac80084ea13a",

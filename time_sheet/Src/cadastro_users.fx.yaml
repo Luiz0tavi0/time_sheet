@@ -47,11 +47,14 @@ cadastro_users As screen:
         ZIndex: =3
 
     HeaderWorker_2 As HeaderWorker:
-        has_right_icon: =false
         header_title: ="Usuários - Informações Básicas"
         OnClickLeftIcon: |-
             =//ResetForm(FormUsersCreate);;ResetForm(FormUserDetails);;Reset(TxtInputLoginSenha);;
-            If(Not(IsBlank(userHasBeenCreated)),Navigate(login,Fade,{userFromCadastroHasCreated:Blank()}));
+            If(IsBlank(userHasBeenCreated),
+                Navigate(login,Fade,{userFromCadastroHasCreated:Blank()});
+                ,
+                Navigate(login,Fade,{userFromCadastroHasCreated:userHasBeenCreated});
+            );
         Visible: =true
         ZIndex: =4
 
@@ -65,14 +68,14 @@ cadastro_users As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.DockRight
+        Icon: =Icon.NextArrow
         OnSelect: |-
             =Navigate(cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        X: =552
-        Y: =825
+        X: =494
+        Y: =786
         ZIndex: =5
 
     Label8 As label:

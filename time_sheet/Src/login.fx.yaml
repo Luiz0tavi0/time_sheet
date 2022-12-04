@@ -221,12 +221,10 @@ login As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =21
+        Height: =30
         Text: |-
-            =If(
-                Len(TxtInputLoginSenha.Text) = 0,
+            =If(IsBlank(TxtInputLoginSenha),
                 $"Senha é obrigatório.", ""
-            
             )
         Visible: =varShowErrors
         Width: =480
@@ -532,11 +530,11 @@ login As screen:
         RadiusBottomRight: =0
         RadiusTopLeft: =0
         RadiusTopRight: =0
-        Size: =10
+        Size: =15
         Text: ="Esqueci minha senha"
         Underline: =true
-        Width: =150
-        X: =411
+        Width: =250
+        X: =310
         Y: =826
         ZIndex: =22
 

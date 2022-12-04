@@ -19,12 +19,12 @@ HeaderWorker As CanvasComponent:
     BackgroundHeaderDark_2 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        DisabledFill: =CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledFill: =    
         Fill: =Parent.background_color
         FocusedBorderThickness: =4
         Height: =120
-        HoverFill: =CONST_BACKGROUND_COLOR_COLABORADOR
-        PressedFill: =CONST_BACKGROUND_COLOR_COLABORADOR
+        HoverFill: =    
+        PressedFill: =
         Width: =Parent.Width
         ZIndex: =1
 
@@ -52,16 +52,16 @@ HeaderWorker As CanvasComponent:
 
     IconRight_h As icon.Leave:
         AutoDisableOnSelect: =false
-        BorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        BorderColor: =
         Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
-        DisabledColor: =CONST_BACKGROUND_COLOR_COLABORADOR
+        DisabledBorderColor: =
+        DisabledColor: =
         DisabledFill: =RGBA(118, 0, 0, 1)
         FocusedBorderThickness: =4
         Height: =40
-        HoverBorderColor: =CONST_BACKGROUND_COLOR_COLABORADOR
-        HoverColor: =CONST_BACKGROUND_COLOR_EMPRESA
-        HoverFill: =CONST_BACKGROUND_COLOR_COLABORADOR
+        HoverBorderColor: =
+        HoverColor: =
+        HoverFill: =
         Icon: =HeaderWorker.right_icon
         OnSelect: =HeaderWorker.OnClickRightIcon();
         PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -90,7 +90,7 @@ HeaderWorker As CanvasComponent:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =HeaderWorker.has_right_icon
+        Visible: =HeaderWorker.has_left_icon
         Width: =40
         X: =20
         Y: =40

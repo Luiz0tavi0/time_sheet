@@ -98,17 +98,10 @@ cadastro_users_details As screen:
         ZIndex: =1
 
     FooterWorker_14 As FooterWorker:
-        Fill: =CONST_BACKGROUND_COLOR_EMPRESA
+        Fill: =    
         Height: =106
         Y: =1030
         ZIndex: =3
-
-    HeaderWorker_3 As HeaderWorker:
-        has_right_icon: =false
-        header_title: ="Usuários - Detalhes"
-        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUserDetails);
-        Visible: =true
-        ZIndex: =4
 
     contFormDetails As groupContainer.verticalAutoLayoutContainer:
         Height: =497
@@ -505,4 +498,11 @@ cadastro_users_details As screen:
         X: =Parent.Width
         Y: =135
         ZIndex: =6
+
+    HeaderWorker_4 As HeaderWorker:
+        header_title: ="Usuários - Detalhes"
+        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);
+        Visible: =true
+        Width: =Parent.Width
+        ZIndex: =7
 

@@ -7,11 +7,17 @@ login As screen:
         =UpdateContext({varShowErrors:false});
         UpdateContext({lenInputPasword:0});
         UpdateContext({varEmailIsOk:false});
-    OnVisible: |
+    OnVisible: |-
         =UpdateContext({fromLoginValidEmail: TxtInputLogin.Text});
+        
         UpdateContext({varShowErrors:false});
         UpdateContext({lenInputPasword:0});
-        UpdateContext({varEmailIsOk:false});
+        
+        If(IsBlank(userFromCadastroHasCreated),
+            UpdateContext({varEmailIsOk:false});Reset(TxtInputLogin);Reset(TxtInputLoginSenha);
+            ,
+            UpdateContext({varEmailIsOk:true});
+        );
 
     BackImage As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -72,7 +78,7 @@ login As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =Black
-        Default: =If(IsBlank(userHasBeenCreated), "", userHasBeenCreated)
+        Default: =If(IsBlank(userFromCadastroHasCreated), "", userFromCadastroHasCreated)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -564,7 +570,9 @@ login As screen:
         HoverFill: =
         Italic: =true
         OnSelect: |-
-            =If(varEmailIsOk,
+            =ResetForm(FormUsersCreate);ResetForm(FormUserDetails);
+            
+            If(varEmailIsOk,
                 Navigate(cadastro_users, ScreenTransition.Fade,{fromLoginValidEmail: TxtInputLogin.Text});
                 ,
                 Navigate(cadastro_users, ScreenTransition.Fade);

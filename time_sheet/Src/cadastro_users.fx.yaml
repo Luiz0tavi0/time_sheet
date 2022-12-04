@@ -7,6 +7,7 @@ cadastro_users As screen:
     OnVisible: |+
         =UpdateContext({varShowCpfError: false});
         UpdateContext({varShowEmailError: false});
+        UpdateContext({userHasBeenCreated: Blank()});
         //If(IsBlank(fromLoginValidEmail);
         //    UpdateContext({varEmailIsValid:true})
          //   ;
@@ -48,7 +49,9 @@ cadastro_users As screen:
     HeaderWorker_2 As HeaderWorker:
         has_right_icon: =false
         header_title: ="Usuários - Informações Básicas"
-        OnClickLeftIcon: =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);
+        OnClickLeftIcon: |-
+            =Back(ScreenTransition.Fade);ResetForm(FormUsersCreate);ResetForm(FormUserDetails);Reset(TxtInputLoginSenha);
+            If(IsBlank(userHasBeenCreated);)
         Visible: =true
         ZIndex: =4
 
@@ -73,23 +76,23 @@ cadastro_users As screen:
         ZIndex: =5
 
     Label8 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
+        Align: =Align.Justify
+        AutoHeight: =true
         BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =285
+        Height: =641
         Size: =21
         Text: |+
-            =$"First dv calc {varFirstDVCalculated} Second dv calc {
-                Mod(Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)*10,11)
-                }    
-                validade do cpf = {varCpfIsValid} | validade do email = {varEmailIsValid}" 
+            =$"First dv calc {varFirstDVCalculated} 
+            Second dv calc {Mod(Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)*10,11)}    
+            validade do cpf = {varCpfIsValid}
+            validade do email = {varEmailIsValid}" 
             
-        Width: =307
+        Width: =500
         X: =Parent.Width
         Y: =63
         ZIndex: =6
@@ -344,7 +347,7 @@ cadastro_users As screen:
                                 );
                                 
                             );
-                            UpdateContext({user:LookUp(tbl_users, cpf=Self.Text,email)});
+                            UpdateContext({userHasBeenCreated:LookUp(tbl_users, cpf=Self.Text,email)});
                         );
                         
                     PaddingLeft: =5
@@ -376,7 +379,7 @@ cadastro_users As screen:
                     Height: =30
                     Live: =Live.Assertive
                     OnSelect: |-
-                        =If(Not(IsBlank(user)),Navigate(login,Fade,{userHasBeenCreated:user}));
+                        =If(Not(IsBlank(userHasBeenCreated)),Navigate(login,Fade,{userFromCadastroHasCreated:userHasBeenCreated}));
                     PaddingBottom: =0
                     PaddingLeft: =0
                     PaddingRight: =0
@@ -384,7 +387,7 @@ cadastro_users As screen:
                     Size: =18
                     Text: |-
                         =If(varCpfIsValid,
-                            (If(Not(IsBlank(user)),
+                            (If(Not(IsBlank(userHasBeenCreated)),
                                 "Usuário já cadastrado.")),
                             If(IsBlank(DataCardValueCpf),"O CPF é requerido.","CPF inválido.")
                         )

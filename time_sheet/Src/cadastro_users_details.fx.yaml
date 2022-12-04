@@ -1,7 +1,7 @@
 cadastro_users_details As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
-        =UpdateContext({varEmailISValid:false})
+        =//UpdateContext({varEmailISValid:false})
 
     ButtonCreateUserWorker_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -491,7 +491,7 @@ cadastro_users_details As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Lighter
-        Height: =250
+        Height: =512
         Size: =21
         Text: |-
             =$"Minimo pra validar: {Len(DataCardValueCnpj.Text)=14} | " &
@@ -502,7 +502,7 @@ cadastro_users_details As screen:
             $"varSecondDVCalculated = {varSecondDVCalculated} | " &
             $"CNPJ é Válido = {varCnpjIsValid} | "
         Width: =560
-        X: =38
-        Y: =645
+        X: =Parent.Width
+        Y: =135
         ZIndex: =6
 

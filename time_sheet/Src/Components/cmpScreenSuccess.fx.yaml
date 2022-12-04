@@ -8,11 +8,24 @@ cmpScreenSuccess As CanvasComponent:
     Y: =0
     ZIndex: =1
 
+    rectMaskSemiTransLucid As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(0, 0, 0, 0.500000000)
+        Fill: =RGBA(0, 0, 0, 0.500000000)
+        FocusedBorderThickness: =4
+        Height: =Parent.Height
+        HoverFill: =RGBA(0, 0, 0, 0.500000000)
+        PressedFill: =RGBA(0, 0, 0, 0.500000000)
+        Width: =Parent.Width
+        ZIndex: =1
+
     contBodyMessage As groupContainer.manualLayoutContainer:
         Height: =1136
         Visible: =rectMaskSemiTransLucid.Visible
         Width: =639
-        ZIndex: =1
+        ZIndex: =2
 
         Group2 As group:
             Height: =5
@@ -69,17 +82,4 @@ cmpScreenSuccess As CanvasComponent:
             X: =(Parent.Width/2 - Self.Width/2)
             Y: =(Parent.Height/2 - Self.Height/2) * .9
             ZIndex: =4
-
-    rectMaskSemiTransLucid As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 0, 0, 0.25)
-        FocusedBorderThickness: =4
-        Height: =Parent.Height
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =Parent.Width
-        ZIndex: =2
 

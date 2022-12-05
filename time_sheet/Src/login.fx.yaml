@@ -240,7 +240,7 @@ login As screen:
         HoverFill: =
         Italic: =true
         OnSelect: |-
-            =ResetForm(FormUsersCreate);ResetForm(FormUserDetails);
+            =ResetForm(FormUsersCreate);
             
             If(varEmailIsOk,
                 Navigate(cadastro_users, ScreenTransition.Fade,{fromLoginValidEmail: TxtInputLogin.Text});

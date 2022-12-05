@@ -103,7 +103,7 @@ inserir_atividade_colaborador As screen:
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_tasks
         DefaultMode: =FormMode.New
-        Height: =571
+        Height: =529
         OnSuccess: |-
             =//Patch(tbl_projects_tasks; {tasks_id:FormActivity.LastSubmit.ID;projects_id:2})
             ClearCollect( lastTask, {last_task:LookUp( tbl_tasks, ID = FormActivity.LastSubmit.ID)});
@@ -112,7 +112,7 @@ inserir_atividade_colaborador As screen:
             Patch(tbl_projects_tasks, {tasks_id:1})
         Width: =570
         X: =32
-        Y: =331
+        Y: =373
         ZIndex: =5
 
         name_DataCard5 As typedDataCard.textualEditCard:
@@ -181,7 +181,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey39.Y + DataCardKey39.Height + 5
+                Y: =64
                 ZIndex: =2
 
             ErrorMessage39 As label:
@@ -468,7 +468,7 @@ inserir_atividade_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"date")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =70
             Required: =true
             Update: =DataCardValue39.SelectedDate
             Width: =570
@@ -487,28 +487,27 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =48
+                Height: =50
                 PaddingLeft: =0
                 Size: =21
                 Text: ="Data"
-                Width: =204
+                Width: =81
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =240
                 ZIndex: =1
 
             DataCardValue39 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultDate: =Parent.Default
+                DefaultDate: =Now()
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Font: =Font.'Segoe UI'
-                Height: =60
+                Height: =50
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(0, 120, 212, 1)
                 IsEditable: =true
@@ -519,34 +518,8 @@ inserir_atividade_colaborador As screen:
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 350
-                X: =20
-                Y: =57
+                X: =321
                 ZIndex: =2
-
-            ErrorMessage42 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue39.Y + DataCardValue39.Height
-                ZIndex: =3
 
             StarVisible44 As label:
                 Align: =Align.Center
@@ -559,14 +532,14 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey43.Height
+                Height: =50
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey43.Y
+                X: =210
                 ZIndex: =4
 
         hours_DataCard4 As typedDataCard.numberEditCard:
@@ -580,9 +553,9 @@ inserir_atividade_colaborador As screen:
             Height: =100
             Required: =true
             Update: =Value(DataCardValue40.Text)
-            Width: =150
+            Width: =570
             X: =0
-            Y: =450
+            Y: =4
             ZIndex: =6
 
             DataCardKey44 As label:
@@ -602,7 +575,6 @@ inserir_atividade_colaborador As screen:
                 Width: =101
                 Wrap: =false
                 X: =30
-                Y: =10
                 ZIndex: =1
 
             DataCardValue40 As text:
@@ -697,7 +669,7 @@ inserir_atividade_colaborador As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Font: =Font.'Segoe UI'
-        Height: =60
+        Height: =50
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
@@ -712,8 +684,8 @@ inserir_atividade_colaborador As screen:
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =21
         Width: =512
-        X: =63
-        Y: =236
+        X: =66
+        Y: =323
         ZIndex: =7
 
     LabelProjectName As label:
@@ -726,12 +698,12 @@ inserir_atividade_colaborador As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =45
+        Height: =35
         Size: =21
         Text: ="Nome do Projeto"
-        Width: =560
+        Width: =515
         X: =63
-        Y: =188
+        Y: =286
         ZIndex: =9
 
     FooterWorker_8 As FooterWorker:

@@ -16,7 +16,7 @@ visualizar_evento_colaborador As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =24
-        Text: ="Nome da Atividade"
+        Text: ="Atividade"
         VerticalAlign: =VerticalAlign.Top
         Width: =323
         X: =52
@@ -112,13 +112,13 @@ visualizar_evento_colaborador As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =45
+        Height: =58
         Size: =21
         Text: |-
             ="Projeto: " & itemSelecionado.'projects_id: name'.Value
-        Width: =560
-        X: =60
-        Y: =221
+        Width: =568
+        X: =52
+        Y: =208
         ZIndex: =10
 
     HeaderWorker_1 As HeaderWorker:
@@ -132,7 +132,8 @@ visualizar_evento_colaborador As screen:
         DefaultMode: =FormMode.View
         Height: =630
         Item: =LookUp(tbl_tasks,ID=itemSelecionado.ID)
-        Width: =640
+        Width: =626
+        X: =12
         Y: =266
         ZIndex: =14
 
@@ -147,7 +148,7 @@ visualizar_evento_colaborador As screen:
             Height: =50
             Required: =true
             Update: =Value(DataCardValue42.Text)
-            Width: =640
+            Width: =628
             X: =0
             Y: =4
             ZIndex: =1
@@ -262,7 +263,7 @@ visualizar_evento_colaborador As screen:
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
             Required: =true
             Update: =DataCardValue35.Text
-            Width: =640
+            Width: =628
             X: =0
             Y: =0
             ZIndex: =15
@@ -378,7 +379,7 @@ visualizar_evento_colaborador As screen:
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "description")
             Required: =false
             Update: =DataCardValue36.Text
-            Width: =640
+            Width: =628
             X: =0
             Y: =1
             ZIndex: =15
@@ -494,7 +495,7 @@ visualizar_evento_colaborador As screen:
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "status")
             Required: =false
             Update: =DataCardValue37.Text
-            Width: =640
+            Width: =628
             X: =0
             Y: =2
             ZIndex: =15
@@ -608,7 +609,7 @@ visualizar_evento_colaborador As screen:
             Height: =50
             Required: =true
             Update: =DataCardValue38.SelectedDate
-            Width: =640
+            Width: =628
             X: =0
             Y: =3
             ZIndex: =15

@@ -1,6 +1,24 @@
 user_home As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
+    Image2_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =577
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='time-is-money-sandglass-investment-countdown-measure-concept'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Transparency: =0.4
+        Width: =577
+        X: =31
+        Y: =469
+        ZIndex: =1
+
     Image381796_1 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -16,7 +34,7 @@ user_home As screen:
         Width: =512
         X: =64
         Y: =534
-        ZIndex: =1
+        ZIndex: =2
 
     ButtonDirectWorker_1 As button:
         Align: =Align.Left
@@ -50,7 +68,7 @@ user_home As screen:
         Width: =280
         X: =33
         Y: =446
-        ZIndex: =2
+        ZIndex: =3
 
     IconDirectWorker_1 As icon.ExpandView:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -70,7 +88,7 @@ user_home As screen:
         Width: =50
         X: =52
         Y: =472
-        ZIndex: =3
+        ZIndex: =4
 
     ButtonCreateProjectCompany_1 As button:
         Align: =Align.Left
@@ -104,7 +122,7 @@ user_home As screen:
         Width: =280
         X: =326
         Y: =310
-        ZIndex: =4
+        ZIndex: =5
 
     IconAddProjectCompany_1 As icon.Add:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -124,7 +142,7 @@ user_home As screen:
         Width: =50
         X: =347
         Y: =337
-        ZIndex: =5
+        ZIndex: =6
 
     ButtonEditUserCompany_1 As button:
         Align: =Align.Left
@@ -157,7 +175,7 @@ user_home As screen:
         Width: =280
         X: =33
         Y: =310
-        ZIndex: =6
+        ZIndex: =7
 
     IconUserCompany_1 As icon.Person:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -177,7 +195,7 @@ user_home As screen:
         Width: =50
         X: =52
         Y: =337
-        ZIndex: =7
+        ZIndex: =8
 
     ButtonWorkers_1 As button:
         Align: =Align.Right
@@ -208,7 +226,7 @@ user_home As screen:
         Width: =280
         X: =326
         Y: =174
-        ZIndex: =8
+        ZIndex: =9
 
     IconWorkers_1 As icon.People:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -228,7 +246,7 @@ user_home As screen:
         Width: =50
         X: =347
         Y: =200
-        ZIndex: =9
+        ZIndex: =10
 
     ButtonProjects_1 As button:
         Align: =Align.Left
@@ -261,7 +279,7 @@ user_home As screen:
         Width: =280
         X: =33
         Y: =174
-        ZIndex: =10
+        ZIndex: =11
 
     IconProjects_1 As icon.DocumentwithContent:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -281,13 +299,118 @@ user_home As screen:
         Width: =50
         X: =52
         Y: =197
-        ZIndex: =11
+        ZIndex: =12
 
     FooterCompany_15 As FooterCompany:
         Y: =1016
-        ZIndex: =12
+        ZIndex: =13
+
+    ButtonCreateActivityWorker_1 As button:
+        Align: =Align.Left
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(39, 39, 39, 1)
+        DisabledFill: =RGBA(204, 204, 204, 1)
+        Fill: =RGBA(110, 164, 191, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FocusedBorderThickness: =0
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =102
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =24
+        Text: |-
+            ="        Registrar 
+                    Atividade"
+        Width: =280
+        X: =33
+        Y: =595
+        ZIndex: =14
+
+    IconAddActivity_1 As icon.AddDocument:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.AddDocument
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =50
+        X: =50
+        Y: =619
+        ZIndex: =15
+
+    ButtonActivitiesWorker_1 As button:
+        Align: =Align.Left
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        Color: =RGBA(39, 39, 39, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(39, 39, 39, 1)
+        DisabledFill: =RGBA(204, 204, 204, 1)
+        Fill: =RGBA(230, 230, 230, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FocusedBorderThickness: =0
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =102
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
+        PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
+        RadiusBottomLeft: =12
+        RadiusBottomRight: =12
+        RadiusTopLeft: =12
+        RadiusTopRight: =12
+        Size: =24
+        Text: |-
+            ="        Visualizar 
+                    Atividade"
+        Width: =280
+        X: =326
+        Y: =446
+        ZIndex: =16
+
+    IconActivities_1 As icon.LevelsLayersItems:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(39, 39, 39, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =50
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.LevelsLayersItems
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =50
+        X: =337
+        Y: =470
+        ZIndex: =17
 
     HeaderCompany_15 As HeaderCompany:
         Visible: =true
-        ZIndex: =13
+        ZIndex: =18
 

@@ -43,7 +43,7 @@ Horas_por_Colaborador_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.hours
+            Text: =ThisItem.hours & "h"
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -81,7 +81,8 @@ Horas_por_Colaborador_empresa As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Navigate(visualizar_evento_colaborador,ScreenTransition.Fade,{itemSelecionado: ThisItem})
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

@@ -1,4 +1,4 @@
-cadastro_users_details As screen:
+_cadastro_users_details As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =//UpdateContext({varEmailISValid:false})

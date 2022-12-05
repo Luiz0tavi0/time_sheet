@@ -38,7 +38,7 @@ cadastro_users As screen:
         Text: ="Criar perfil"
         Width: =480
         X: =80
-        Y: =956
+        Y: =926
         ZIndex: =1
 
     FooterWorker_7 As FooterWorker:
@@ -58,7 +58,7 @@ cadastro_users As screen:
                 Navigate(login,Fade,{userFromCadastroHasCreated:userHasBeenCreated});
             );
         OnClickRightIcon: |-
-            =Navigate(cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
+            =Navigate(_cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
         Visible: =true
         ZIndex: =4
 
@@ -117,13 +117,13 @@ cadastro_users As screen:
         ZIndex: =8
 
     contFormUsers As groupContainer.verticalAutoLayoutContainer:
-        Height: =806
+        Height: =770
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        Y: =150
+        Y: =160
         ZIndex: =9
 
         FormUsersCreate As form:

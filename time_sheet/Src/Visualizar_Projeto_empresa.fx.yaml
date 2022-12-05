@@ -484,6 +484,7 @@ Visualizar_Projeto_empresa As screen:
             ZIndex: =1
 
         TotalHoursProject As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(2, 4, 48, 1)
@@ -498,7 +499,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: ="somar as horas de todos"
+            Text: =Sum(Gallery5.AllItems,hours)
             Width: =145
             X: =409
             Y: =816

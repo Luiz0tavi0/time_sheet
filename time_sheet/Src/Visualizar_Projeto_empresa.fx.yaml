@@ -43,8 +43,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: |-
-                =ThisItem.'collaborator_id:name'.Value
+            Text: =ThisItem.collaborator_id_x003a_name.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

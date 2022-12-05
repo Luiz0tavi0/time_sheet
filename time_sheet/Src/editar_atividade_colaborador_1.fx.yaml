@@ -29,8 +29,8 @@ editar_atividade_colaborador_1 As screen:
         DataSource: =tbl_tasks
         Height: =496
         Width: =570
-        X: =32
-        Y: =406
+        X: =33
+        Y: =351
         ZIndex: =2
 
         name_DataCard5_1 As typedDataCard.textualEditCard:
@@ -628,38 +628,6 @@ editar_atividade_colaborador_1 As screen:
                 Y: =DataCardKey21_1.Y
                 ZIndex: =4
 
-    DropdownCompany_1 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =60
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =tbl_companies
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        Size: =21
-        Width: =512
-        X: =63
-        Y: =229
-        ZIndex: =3
-
     DropdownProject_1 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -689,26 +657,8 @@ editar_atividade_colaborador_1 As screen:
         Size: =21
         Width: =512
         X: =63
-        Y: =344
+        Y: =263
         ZIndex: =4
-
-    LabelCompanyName_1 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =45
-        Size: =21
-        Text: ="Nome da Empresa"
-        Width: =560
-        X: =63
-        Y: =184
-        ZIndex: =5
 
     LabelProjectName_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -725,7 +675,7 @@ editar_atividade_colaborador_1 As screen:
         Text: ="Nome do Projeto"
         Width: =560
         X: =63
-        Y: =296
+        Y: =215
         ZIndex: =6
 
     ButtonBack_4 As button:

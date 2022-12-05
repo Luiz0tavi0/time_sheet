@@ -1,7 +1,7 @@
-colaborador_alocado_empresa As screen:
+_Projeto_alterado_empresa As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Label281068 As label:
+    Label341365 As label:
         Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -10,46 +10,41 @@ colaborador_alocado_empresa As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Bold
-        Height: =126
+        Height: =84
         LineHeight: =1.171875
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         Size: =24
-        Text: ="Colaborador alocado com sucesso!"
+        Text: |-
+            ="Projeto alterado
+             com sucesso!"
         VerticalAlign: =VerticalAlign.Top
-        Width: =343
-        X: =148
+        Width: =270
+        X: =185
         Y: =678
-        ZIndex: =14
+        ZIndex: =1
 
-    Image371667 As image:
+    Image371668 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =369
+        Height: =422
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image371667
+        Image: =image371668
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Transparency: =0.3
-        Width: =548
+        Width: =539
         X: =52
-        Y: =279
-        ZIndex: =15
+        Y: =256
+        ZIndex: =2
 
-    FooterCompany_8 As FooterCompany:
-        Y: =1016
-        ZIndex: =16
-
-    HeaderCompany_7 As HeaderCompany:
-        ZIndex: =17
-
-    ButtonHome_6 As button:
+    ButtonHome_2 As button:
         Align: =Align.Left
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(39, 39, 39, 1)
@@ -72,9 +67,9 @@ colaborador_alocado_empresa As screen:
         Width: =230
         X: =52
         Y: =881
-        ZIndex: =18
+        ZIndex: =3
 
-    Icon19_8 As icon.Home:
+    Icon19_4 As icon.Home:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(39, 39, 39, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -92,5 +87,12 @@ colaborador_alocado_empresa As screen:
         Width: =50
         X: =82
         Y: =891
-        ZIndex: =19
+        ZIndex: =4
+
+    FooterCompany_6 As FooterCompany:
+        Y: =1016
+        ZIndex: =5
+
+    HeaderCompany_5 As HeaderCompany:
+        ZIndex: =6
 

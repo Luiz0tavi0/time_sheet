@@ -1479,46 +1479,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.DropdownCompany.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.DropdownCompany.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.DropdownCompany"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "login.btnNewUser.OnSelect"
                 }
               ],
@@ -5102,19 +5062,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.DropdownCompany.AccessibleLabel"
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddContract.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.DropdownCompany.AccessibleLabel",
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddContract.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.DropdownCompany"
+                "type": "inserir_atividade_colaborador.ddContract"
               }
             }
           ],
@@ -12572,36 +12532,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.DropdownProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.DropdownProject.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.DropdownProject"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "login.varShowFailTransition"
                 }
               ],
@@ -13025,23 +12955,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Essa variável está declarada, mas não é referenciada por nenhum controle, portanto não é necessária."
-              }
-            },
-            {
-              "id": "app-InefficientDelayLoading",
-              "messageStrings": {
-                "issue": {
-                  "text": "Carregamento de atraso ineficiente"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Ao invés disso, use variáveis, coleções e contexto de navegação para compartilhar o estado nas telas."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Os controles que referenciam controles em outras telas podem deixar o carregamento do aplicativo e a navegação mais lentos. Isso força o aplicativo a carregar as outras telas imediatamente, em vez de aguardar até que o usuário navegue para elas."
               }
             }
           ],

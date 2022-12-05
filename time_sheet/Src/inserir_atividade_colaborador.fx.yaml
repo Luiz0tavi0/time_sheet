@@ -696,7 +696,7 @@ inserir_atividade_colaborador As screen:
                 Y: =DataCardKey21.Y
                 ZIndex: =4
 
-    DropdownCompany As dropdown:
+    ddContract As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -713,7 +713,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =tbl_companies
+        Items: =Filter(tbl_contracts, user_id.Value=Text(CONST_CURRENT_USER.ID))
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -745,7 +745,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Filter(tbl_projects, name = ddTaskByUser.Selected.'Caminho Completo')
+        Items: =tbl_projects
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

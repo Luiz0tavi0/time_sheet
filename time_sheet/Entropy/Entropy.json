@@ -215,13 +215,13 @@
     "date_DataCard1": 145,
     "date_DataCard1_1": 577,
     "date_DataCard3": 264,
+    "ddContract": 126,
     "ddTaskByUser": 225,
     "description_Column1": 592,
     "description_DataCard1": 135,
     "description_DataCard1_1": 567,
     "description_DataCard3": 254,
     "Designar_colaborador_empresa": 535,
-    "DropdownCompany": 126,
     "DropdownCompany_1": 558,
     "DropdownMonth": 93,
     "DropdownMonth_1": 227,
@@ -593,7 +593,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/05/2022 05:11:24",
+  "HeaderLastSavedDateTimeUTC": "12/05/2022 05:40:44",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0231a2ce-81a0-4ca3-abe3-d1a85fafc381": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/910cbb6c8d084f46b68f5356cd61e53f\"",
@@ -909,19 +909,18 @@
     "faecc12050bb4c9ca744ac80084ea13a": 4
   },
   "OrderDataSource": {
-    "colCpfs": 12,
+    "colCpfs": 11,
     "ComboBoxSample": 1,
     "CustomGallerySample": 2,
     "Documentos": 3,
     "DropDownSample": 4,
     "ListboxSample": 5,
     "Send_an_email_invite": 0,
-    "tbl_contract_projects": 7,
     "tbl_contracts": 6,
-    "tbl_projects": 8,
-    "tbl_projects_tasks": 9,
-    "tbl_tasks": 10,
-    "tbl_users": 11
+    "tbl_projects": 7,
+    "tbl_projects_tasks": 8,
+    "tbl_tasks": 9,
+    "tbl_users": 10
   },
   "OrderGroupControls": {
     "Group1": {
@@ -1191,13 +1190,13 @@
     "date_DataCard1": 300,
     "date_DataCard1_1": 210,
     "date_DataCard3": 408,
+    "ddContract": 281,
     "ddTaskByUser": 369,
     "description_Column1": 180,
     "description_DataCard1": 290,
     "description_DataCard1_1": 200,
     "description_DataCard3": 398,
     "Designar_colaborador_empresa": 230,
-    "DropdownCompany": 281,
     "DropdownCompany_1": 191,
     "DropdownMonth": 262,
     "DropdownMonth_1": 371,
@@ -1747,7 +1746,7 @@
       "typedDataCard": 49
     },
     "DeserializationLoadTime": 12.0003957,
-    "ErrorCount": 96
+    "ErrorCount": 95
   },
   "WasLocalDatabaseReferencesEmpty": true
 }

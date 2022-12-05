@@ -61,7 +61,7 @@ Horas_por_Colaborador_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
-            Text: =ThisItem.description
+            Text: =ThisItem.date
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -344,6 +344,7 @@ Horas_por_Colaborador_empresa As screen:
             ZIndex: =1
 
         Label20323 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(2, 4, 48, 1)
@@ -358,7 +359,7 @@ Horas_por_Colaborador_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: ="111 horas"
+            Text: =Sum(Gallery2.AllItems,hours)
             Width: =129
             X: =426
             Y: =832

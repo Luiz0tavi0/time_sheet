@@ -267,9 +267,7 @@ visualizar_atividades_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |-
-            =// ajustar tabela com colunas calculaveis no sharepoint
-            tbl_tasks
+        Items: =tbl_tasks
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -323,7 +321,7 @@ visualizar_atividades_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Filter(tbl_tasks,user_id.Value=Text(CONST_CURRENT_USER.ID))
+        Items: =Filter(tbl_projects,user_id.Value=Text(CONST_CURRENT_USER.ID))
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

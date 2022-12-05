@@ -371,8 +371,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: |-
-                =Sum(Gallery7.AllItems,'tasks_id: hours')
+            Text: =Sum(tbl_tasks,hours)
             Width: =129
             X: =417
             Y: =859

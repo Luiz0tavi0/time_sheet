@@ -320,7 +320,7 @@ visualizar_atividades_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =tbl_companies
+        Items: =tbl_projects
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -371,7 +371,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =Sum(tbl_tasks,hours)
+            Text: =Gallery7.Selected.ID
             Width: =129
             X: =417
             Y: =859

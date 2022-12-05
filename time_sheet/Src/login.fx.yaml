@@ -70,7 +70,7 @@ login As screen:
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Duration: =1234
+        Duration: =5000
         Fill: =RGBA(187, 221, 140, 1)
         Font: =Font.'Segoe UI'
         Height: =70
@@ -159,11 +159,12 @@ login As screen:
                     (email = Upper(TxtInputLogin.Text) And password = TxtInputLoginSenha.Text)
                 )
             );
+            
             If(Not(IsBlank(CONST_CURRENT_USER)),
                 UpdateContext({varShowLoadingTransition: true}),
                 UpdateContext({varTimerRunLoadingTransition: true});
-                
             );
+                
             
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)

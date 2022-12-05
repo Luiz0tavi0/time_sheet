@@ -1,4 +1,4 @@
-cadastro_users As screen:
+bck_cadastro_users As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =UpdateContext({varShowCpfError: false});
@@ -15,12 +15,12 @@ cadastro_users As screen:
         //);;
         
 
-    ButtonCreateUserWorker As button:
+    ButtonCreateUserWorker_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(FormUsersCreate.Valid,DisplayMode.Edit,DisplayMode.Disabled)
+        DisplayMode: =If(FormUsersCreate_1.Valid,DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(110, 164, 191, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
@@ -30,23 +30,23 @@ cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =If(FormUsersCreate.Valid,SubmitForm(FormUsersCreate),Notify("Erro",NotificationType));
+            =If(FormUsersCreate_1.Valid,SubmitForm(FormUsersCreate_1),Notify("Erro",NotificationType));
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
         Size: =24
         Text: ="Criar perfil"
         Width: =480
-        X: =80
-        Y: =956
+        X: =78
+        Y: =906
         ZIndex: =1
 
-    FooterWorker_7 As FooterWorker:
+    FooterWorker_13 As FooterWorker:
         Fill: =
         Y: =Parent.Height-Self.Height
         ZIndex: =3
 
-    HeaderWorker_2 As HeaderWorker:
+    HeaderWorker_3 As HeaderWorker:
         has_right_icon: =false
         header_title: ="Usuários - Informações Básicas"
         left_icon: =Icon.Home
@@ -62,7 +62,7 @@ cadastro_users As screen:
         Visible: =true
         ZIndex: =4
 
-    lblOutPut As label:
+    lblOutPut_1 As label:
         Align: =Align.Justify
         AutoHeight: =true
         BorderThickness: =2
@@ -78,15 +78,14 @@ cadastro_users As screen:
             Second dv calc {Mod(Sum(ForAll(Sequence(10, 11, -1) As idx, Index(varSplitedTex, (12-idx.Value)).Result*(idx.Value)),Value)*10,11)}    
             validade do cpf = {varCpfIsValid}
             validade do email = {varEmailIsValid}
-            Fomulário is valido = {formIsValid}
-            validade do cnpj = {varCnpjIsValid}"
+            Fomulário is valido = {formIsValid}" 
             
         Width: =500
         X: =Parent.Width
-        Y: =650
+        Y: =636
         ZIndex: =6
 
-    funcValidacaoForm As button:
+    funcValidacaoForm_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -101,7 +100,7 @@ cadastro_users As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =UpdateContext({formIsValid:false});
-            If(And(FormUsersCreate.Valid=true,varCpfIsValid=true,varEmailIsValid=true,passwordIsEqual=true),UpdateContext({formIsValid:true}));
+            If(And(FormUsersCreate_1.Valid=true,varCpfIsValid=true,varEmailIsValid=true,passwordIsEqual=true),UpdateContext({formIsValid:true}));
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -112,12 +111,11 @@ cadastro_users As screen:
         Size: =24
         Text: ="funcValidacaoForm"
         Width: =300
-        X: =-400
         Y: =783
         ZIndex: =8
 
-    contFormUsers As groupContainer.verticalAutoLayoutContainer:
-        Height: =806
+    contFormUsers_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =681
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -126,7 +124,7 @@ cadastro_users As screen:
         Y: =150
         ZIndex: =9
 
-        FormUsersCreate As form:
+        FormUsersCreate_1 As form:
             AlignInContainer: =AlignInContainer.SetByContainer
             BorderColor: =RGBA(255, 255, 255, 1)
             BorderStyle: =BorderStyle.None
@@ -140,253 +138,7 @@ cadastro_users As screen:
             Y: =165
             ZIndex: =1
 
-            cnpj_DataCard1 As typedDataCard.textualEditCard:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="cnpj"
-                Default: =ThisItem.cnpj
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"cnpj")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =DataCardValueCnpj.Height+ErrorMessageCnpj.Height+20
-                MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cnpj")
-                Required: =false
-                Update: =DataCardValue1cnpj.Text
-                Width: =526
-                X: =0
-                Y: =5
-                ZIndex: =1
-
-                DataCardValue1cnpj As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =Parent.DisplayMode
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    Height: =55
-                    HintText: ="CNP"
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    MaxLength: =Parent.MaxLength
-                    OnChange: |
-                        =UpdateContext({varCnpjIsValid:false});
-                        UpdateContext({varShowCnpjError:true});
-                        
-                        If((Len(Self.Text)=14),
-                            UpdateContext({varDig1:Int(Left(Self.Text,1))});
-                            UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});
-                            UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});
-                            UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});
-                            UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
-                            UpdateContext({varDig6:Int(Mid(Self.Text,6,1))});
-                            UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});
-                            UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});
-                            UpdateContext({varDig9:Int(Mid(Self.Text,9,1))});
-                            UpdateContext({varDig10:Int(Mid(Self.Text,10,1))});
-                            UpdateContext({varDig11:Int(Mid(Self.Text,11,1))});
-                            UpdateContext({varDig12:Int(Mid(Self.Text,12,1))});
-                            UpdateContext({varFirstDV:Int(Mid(Self.Text,13,1))});
-                            UpdateContext({varSecondDV:Int(Right(Self.Text,1))});
-                            // Calculando o Primeiro Dígito Verificador
-                        
-                            UpdateContext(
-                                {varSum1To12Dig: 
-                                    (varDig1*5+varDig2*4+varDig3*3+varDig4*2+varDig5*9+varDig6*8+varDig7*7+varDig8*6+varDig9*5+varDig10*4+varDig11*3+varDig12*2)
-                                }
-                            );
-                            UpdateContext({varFirstDVCalculated:Mod(varSum1To12Dig,11)});
-                            If(varFirstDVCalculated<2,
-                                UpdateContext({varFirstDVCalculated:0}),UpdateContext({varFirstDVCalculated:11-varFirstDVCalculated})
-                            );
-                            If(varFirstDV=varFirstDVCalculated,
-                                // Calculando o Segundo Dígito Verificador
-                                UpdateContext(
-                                    {varSum1To13Dig: 
-                                        (
-                                            varDig1*6+varDig2*5+varDig3*4+varDig4*3+varDig5*2+varDig6*9+varDig7*8+
-                                            varDig8*7+varDig9*6+varDig10*5+varDig11*4+varDig12*3 + varFirstDV*2
-                                        )
-                                    }
-                                );
-                                UpdateContext({varSecondDVCalculated:Mod(varSum1To13Dig,11)});
-                                If(varSecondDVCalculated<2,
-                                    UpdateContext({varSecondDVCalculated:0}),UpdateContext({varSecondDVCalculated:11-varSecondDVCalculated})
-                                );
-                                If(varSecondDV=varSecondDVCalculated,
-                                    UpdateContext({varCnpjIsValid: true});)
-                                    ;
-                                ,
-                                UpdateContext({varCnpjIsValid:false});
-                            );
-                        );
-                        If(IsBlank(Self.Text), UpdateContext({varCnpjIsValid:true}));
-                    PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
-                    PressedColor: =RGBA(51, 51, 51, 1)
-                    PressedFill: =RGBA(255, 255, 255, 1)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =21
-                    Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =Parent.Width/2-(Self.Width/2)
-                    Y: =10
-                    ZIndex: =2
-
-                ErrorMessageCnpj As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(168, 0, 0, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(168, 0, 0, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =25
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =18
-                    Text: |-
-                        =If(Not(varCnpjIsValid),"CNPJ inválido.",
-                            If(Not(varShowCnpjError),"")
-                        )
-                    Visible: =varShowCnpjError
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue1cnpj.Y + DataCardValue1cnpj.Height
-                    ZIndex: =3
-
-                StarVisible1 As label:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =
-                    PaddingLeft: =0
-                    Size: =21
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =
-                    ZIndex: =4
-
-            occupation_DataCard2 As typedDataCard.textualEditCard:
-                BorderColor: =RGBA(166, 166, 166, 1)
-                BorderStyle: =BorderStyle.Solid
-                DataField: ="occupation"
-                Default: =ThisItem.occupation
-                DisplayMode: =Parent.DisplayMode
-                DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"occupation")
-                Fill: =RGBA(0, 0, 0, 0)
-                Height: =50
-                MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "occupation")
-                Required: =false
-                Update: =DataCardValue2.Text
-                Width: =526
-                X: =0
-                Y: =700
-                ZIndex: =1
-
-                DataCardValue2 As text:
-                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    Default: =Parent.Default
-                    DelayOutput: =true
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =Parent.DisplayMode
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    Height: =55
-                    HintText: ="Cargo/Ocupação"
-                    HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                    HoverColor: =RGBA(51, 51, 51, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    MaxLength: =Parent.MaxLength
-                    PaddingLeft: =5
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
-                    PressedColor: =RGBA(51, 51, 51, 1)
-                    PressedFill: =RGBA(255, 255, 255, 1)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =21
-                    Tooltip: =Parent.DisplayName
-                    Width: =Parent.Width - 60
-                    X: =Parent.Width/2-(Self.Width/2)
-                    Y: =Parent.Height/2-(Self.Height/2)
-                    ZIndex: =2
-
-                ErrorMessage4 As label:
-                    AutoHeight: =true
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(168, 0, 0, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(168, 0, 0, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =10
-                    Live: =Live.Assertive
-                    PaddingBottom: =0
-                    PaddingLeft: =0
-                    PaddingRight: =0
-                    PaddingTop: =0
-                    Size: =21
-                    Text: =Parent.Error
-                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                    Width: =Parent.Width - 60
-                    X: =30
-                    Y: =DataCardValue2.Y + DataCardValue2.Height
-                    ZIndex: =3
-
-                StarVisible2 As label:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(51, 51, 51, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =
-                    PaddingLeft: =0
-                    Size: =21
-                    Text: ="*"
-                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                    Width: =30
-                    Wrap: =false
-                    Y: =
-                    ZIndex: =4
-
-            name_DataCard6 As typedDataCard.textualEditCard:
+            name_DataCard6_1 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="first_name"
@@ -394,17 +146,17 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"first_name")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =DataCardValueNome.Height+ErrorMessage25.Height+25
+                Height: =DataCardValueNome_1.Height+ErrorMessage25_1.Height+25
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "first_name")
                 Required: =true
-                Update: =Upper(Trim(DataCardValueNome.Text))
+                Update: =Upper(Trim(DataCardValueNome_1.Text))
                 Width: =526
                 WidthFit: =false
                 X: =0
                 Y: =0
                 ZIndex: =3
 
-                DataCardValueNome As text:
+                DataCardValueNome_1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
@@ -440,7 +192,7 @@ cadastro_users As screen:
                     Y: =(Parent.Height/3)-Self.Height/2
                     ZIndex: =2
 
-                ErrorMessage25 As label:
+                ErrorMessage25_1 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -457,14 +209,14 @@ cadastro_users As screen:
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =18
-                    Text: =If(IsBlank(DataCardValueNome),"Nome de usuário é requerido.")
+                    Text: =If(IsBlank(DataCardValueNome_1),"Nome de usuário é requerido.")
                     Visible: =Parent.DisplayMode=DisplayMode.Edit
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValueNome.Y + DataCardValueNome.Height
+                    Y: =DataCardValueNome_1.Y + DataCardValueNome_1.Height
                     ZIndex: =3
 
-                StarVisible30_1 As label:
+                StarVisible30_3 As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -475,18 +227,18 @@ cadastro_users As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =DataCardValueEmail.Height
+                    Height: =DataCardValueEmail_1.Height
                     PaddingLeft: =0
                     Size: =21
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    X: =DataCardValueNome.X - Self.Width
-                    Y: =DataCardValueNome.Y
+                    X: =DataCardValueNome_1.X - Self.Width
+                    Y: =DataCardValueNome_1.Y
                     ZIndex: =5
 
-            cpf_DataCard As typedDataCard.textualEditCard:
+            cpf_DataCard_1 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="cpf"
@@ -494,16 +246,16 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"cpf")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =DataCardValueCpf.Height+ErrorMessageCpf.Height+14
+                Height: =105
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cpf")
                 Required: =true
-                Update: =Lower(Trim(DataCardValueCpf.Text))
+                Update: =Lower(Trim(DataCardValueCpf_1.Text))
                 Width: =526
                 X: =0
                 Y: =1
                 ZIndex: =3
 
-                DataCardValueCpf As text:
+                DataCardValueCpf_1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
@@ -575,7 +327,7 @@ cadastro_users As screen:
                     Y: =Parent.Height/3-(Self.Height/2)
                     ZIndex: =2
 
-                ErrorMessageCpf As label:
+                ErrorMessageCpf_1 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -598,15 +350,15 @@ cadastro_users As screen:
                         =If(varCpfIsValid,
                             (If(Not(IsBlank(userHasBeenCreated)),
                                 "Usuário já cadastrado.")),
-                            If(IsBlank(DataCardValueCpf),"O CPF é requerido.","CPF inválido.")
+                            If(IsBlank(DataCardValueCpf_1),"O CPF é requerido.","CPF inválido.")
                         )
                     Visible: =varShowCpfError
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValueCpf.Y + DataCardValueCpf.Height
+                    Y: =DataCardValueCpf_1.Y + DataCardValueCpf_1.Height
                     ZIndex: =3
 
-                StarVisible36 As label:
+                StarVisible36_1 As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -617,17 +369,17 @@ cadastro_users As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =DataCardValueCpf.Height
+                    Height: =DataCardValueCpf_1.Height
                     PaddingLeft: =0
                     Size: =21
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    Y: =DataCardValueCpf.Y
+                    Y: =DataCardValueCpf_1.Y
                     ZIndex: =4
 
-            email_DataCard As typedDataCard.textualEditCard:
+            email_DataCard_1 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="email"
@@ -635,16 +387,16 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"email")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =DataCardValueEmail.Height+ErrorMessageEmailField.Height+10
+                Height: =105
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "email")
                 Required: =true
-                Update: =Lower(Trim(DataCardValueEmail.Text))
+                Update: =Lower(Trim(DataCardValueEmail_1.Text))
                 Width: =526
                 X: =0
                 Y: =2
                 ZIndex: =3
 
-                DataCardValueEmail As text:
+                DataCardValueEmail_1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
@@ -686,7 +438,7 @@ cadastro_users As screen:
                     Y: =Parent.Height/3-(Self.Height/2)
                     ZIndex: =2
 
-                ErrorMessageEmailField As label:
+                ErrorMessageEmailField_1 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -704,7 +456,7 @@ cadastro_users As screen:
                     PaddingTop: =0
                     Size: =18
                     Text: |-
-                        =If(Len(DataCardValueEmail.Text)=0,"O Email é requerido.",
+                        =If(Len(DataCardValueEmail_1.Text)=0,"O Email é requerido.",
                             If(Not(IsBlank(fromLoginValidEmail)),
                                 If(IsMatch(fromLoginValidEmail,Email,MatchOptions.IgnoreCase),""
                                 ,
@@ -715,10 +467,10 @@ cadastro_users As screen:
                     Visible: =varShowEmailError
                     Width: =Parent.Width - 60
                     X: =30
-                    Y: =DataCardValueEmail.Y + DataCardValueEmail.Height
+                    Y: =DataCardValueEmail_1.Y + DataCardValueEmail_1.Height
                     ZIndex: =3
 
-                StarVisible30 As label:
+                StarVisible30_4 As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -729,17 +481,17 @@ cadastro_users As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =DataCardValueEmail.Height
+                    Height: =DataCardValueEmail_1.Height
                     PaddingLeft: =0
                     Size: =21
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    Y: =DataCardValueEmail.Y
+                    Y: =DataCardValueEmail_1.Y
                     ZIndex: =4
 
-            fone_DataCard As typedDataCard.textualEditCard:
+            fone_DataCard_1 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="fone"
@@ -747,16 +499,16 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"fone")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =DataCardValueFone.Height+14
+                Height: =105
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "fone")
                 Required: =false
-                Update: =Trim(DataCardValueFone.Text)
+                Update: =Trim(DataCardValueFone_1.Text)
                 Width: =526
                 X: =0
                 Y: =3
                 ZIndex: =3
 
-                DataCardValueFone As text:
+                DataCardValueFone_1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
@@ -787,10 +539,34 @@ cadastro_users As screen:
                     Tooltip: =Parent.DisplayName
                     Width: =Parent.Width - 60
                     X: =Parent.Width/2-(Self.Width/2)   
-                    Y: =Parent.Height/2-(Self.Height/2)
+                    Y: =Parent.Height/3-(Self.Height/2)
                     ZIndex: =2
 
-            password_DataCard As typedDataCard.textualEditCard:
+                ErrorMessage35_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(168, 0, 0, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(168, 0, 0, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =21
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValueFone_1.Y + DataCardValueFone_1.Height
+                    ZIndex: =3
+
+            password_DataCard_1 As typedDataCard.textualEditCard:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 BorderStyle: =BorderStyle.Solid
                 DataField: ="password"
@@ -801,13 +577,13 @@ cadastro_users As screen:
                 Height: =206
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "password")
                 Required: =true
-                Update: =DataCardValuePassword.Text
+                Update: =DataCardValuePassword_1.Text
                 Width: =526
                 X: =0
                 Y: =4
                 ZIndex: =3
 
-                DataCardValuePassword As text:
+                DataCardValuePassword_1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Color: =RGBA(51, 51, 51, 1)
@@ -840,7 +616,7 @@ cadastro_users As screen:
                     Y: =Parent.Height/4-(Self.Height/2)
                     ZIndex: =2
 
-                ErrorMessage32 As label:
+                ErrorMessage32_1 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -858,7 +634,7 @@ cadastro_users As screen:
                     PaddingTop: =0
                     Size: =18
                     Text: |
-                        =If(IsBlank(DataCardValuePassword),
+                        =If(IsBlank(DataCardValuePassword_1),
                             "Defina uma senha."
                             ,
                             If(Not(passwordIsEqual),"A confirmação da senha não corresponde.")
@@ -869,7 +645,7 @@ cadastro_users As screen:
                     Y: =158
                     ZIndex: =3
 
-                StarVisible32 As label:
+                StarVisible32_2 As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -880,17 +656,17 @@ cadastro_users As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =DataCardValuePassword.Height
+                    Height: =DataCardValuePassword_1.Height
                     PaddingLeft: =0
                     Size: =21
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    Y: =DataCardValuePassword.Y
+                    Y: =DataCardValuePassword_1.Y
                     ZIndex: =4
 
-                DataCardValuePasswordConfirm As text:
+                DataCardValuePasswordConfirm_1 As text:
                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                     BorderThickness: =2
                     Clear: =true
@@ -910,7 +686,7 @@ cadastro_users As screen:
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
                     OnChange: |-
-                        =UpdateContext({passwordIsEqual: DataCardValuePassword.Text =DataCardValuePasswordConfirm.Text});
+                        =UpdateContext({passwordIsEqual: DataCardValuePassword_1.Text =DataCardValuePasswordConfirm_1.Text});
                     PaddingLeft: =5
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
@@ -926,7 +702,7 @@ cadastro_users As screen:
                     Y: =92
                     ZIndex: =5
 
-                StarVisible32_1 As label:
+                StarVisible32_3 As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -937,13 +713,13 @@ cadastro_users As screen:
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
-                    Height: =DataCardValuePassword.Height
+                    Height: =DataCardValuePassword_1.Height
                     PaddingLeft: =0
                     Size: =21
                     Text: ="*"
                     Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                     Width: =30
                     Wrap: =false
-                    Y: =DataCardValuePasswordConfirm.Y
+                    Y: =DataCardValuePasswordConfirm_1.Y
                     ZIndex: =7
 

@@ -10,16 +10,16 @@ user_home As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =577
+        Height: =533
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='time-is-money-sandglass-investment-countdown-measure-concept'
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Transparency: =0.4
-        Width: =577
-        X: =31
-        Y: =469
+        Width: =516
+        X: =62
+        Y: =548
         ZIndex: =1
 
     ButtonDirectWorker_1 As button:
@@ -52,8 +52,8 @@ user_home As screen:
             ="         Designar 
                      Colaborador"
         Width: =280
-        X: =33
-        Y: =446
+        X: =326
+        Y: =394
         ZIndex: =3
 
     IconDirectWorker_1 As icon.ExpandView:
@@ -72,8 +72,8 @@ user_home As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
-        X: =52
-        Y: =472
+        X: =345
+        Y: =420
         ZIndex: =4
 
     ButtonCreateProjectCompany_1 As button:
@@ -107,7 +107,7 @@ user_home As screen:
                      Projeto"
         Width: =280
         X: =326
-        Y: =310
+        Y: =274
         ZIndex: =5
 
     IconAddProjectCompany_1 As icon.Add:
@@ -127,7 +127,7 @@ user_home As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
         X: =347
-        Y: =337
+        Y: =301
         ZIndex: =6
 
     ButtonEditUserCompany_1 As button:
@@ -147,6 +147,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
+        OnSelect: =Navigate(editar_cadastro_colaborador);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -159,8 +160,8 @@ user_home As screen:
             ="         Atualizar 
                      Dados"
         Width: =280
-        X: =33
-        Y: =310
+        X: =326
+        Y: =150
         ZIndex: =7
 
     IconUserCompany_1 As icon.Person:
@@ -179,8 +180,8 @@ user_home As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
-        X: =52
-        Y: =337
+        X: =345
+        Y: =177
         ZIndex: =8
 
     ButtonWorkers_1 As button:
@@ -200,6 +201,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
+        OnSelect: =Navigate(Buscar_por_colaboradores_empresa);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -210,8 +212,8 @@ user_home As screen:
         Size: =22
         Text: =" Colaboradores "
         Width: =280
-        X: =326
-        Y: =174
+        X: =31
+        Y: =513
         ZIndex: =9
 
     IconWorkers_1 As icon.People:
@@ -230,8 +232,8 @@ user_home As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
-        X: =347
-        Y: =200
+        X: =52
+        Y: =548
         ZIndex: =10
 
     ButtonProjects_1 As button:
@@ -263,8 +265,8 @@ user_home As screen:
             ="         Projetos 
             "
         Width: =280
-        X: =33
-        Y: =174
+        X: =31
+        Y: =394
         ZIndex: =11
 
     IconProjects_1 As icon.DocumentwithContent:
@@ -283,8 +285,8 @@ user_home As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
-        X: =52
-        Y: =197
+        X: =50
+        Y: =417
         ZIndex: =12
 
     FooterCompany_15 As FooterCompany:
@@ -307,6 +309,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
+        OnSelect: =Navigate(inserir_atividade_colaborador);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -320,7 +323,7 @@ user_home As screen:
                     Atividade"
         Width: =280
         X: =33
-        Y: =595
+        Y: =150
         ZIndex: =14
 
     IconAddActivity_1 As icon.AddDocument:
@@ -340,7 +343,7 @@ user_home As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
         X: =50
-        Y: =619
+        Y: =174
         ZIndex: =15
 
     ButtonActivitiesWorker_1 As button:
@@ -360,6 +363,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
+        OnSelect: =Navigate(visualizar_atividades_colaborador);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
@@ -370,10 +374,10 @@ user_home As screen:
         Size: =24
         Text: |-
             ="        Visualizar 
-                    Atividade"
+                    Atividades"
         Width: =280
-        X: =326
-        Y: =446
+        X: =31
+        Y: =273
         ZIndex: =16
 
     IconActivities_1 As icon.LevelsLayersItems:
@@ -392,8 +396,8 @@ user_home As screen:
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
-        X: =337
-        Y: =470
+        X: =42
+        Y: =297
         ZIndex: =17
 
     HeaderCompany_15 As HeaderCompany:

@@ -254,88 +254,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 39,
-                  "charOffset": 263,
-                  "snippet": {
-                    "text": "Patch(tbl_projects_tasks; {tasks_id:1})"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSuccess",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Patch"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 12,
-                  "charOffset": 289,
-                  "snippet": {
-                    "text": "{tasks_id:1}"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSuccess",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tasks_id",
-              "Record",
-              "Number"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "login.btnNewUser.OnSelect"
                 }
               ],
@@ -486,7 +404,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -527,7 +445,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -684,7 +602,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -725,7 +643,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -802,7 +720,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -843,7 +761,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrArgNotApplicableToColumnArg2-Arg1-Arg2",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -924,7 +842,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1121,7 +1039,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1358,7 +1276,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1595,7 +1513,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1832,7 +1750,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2069,7 +1987,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2110,7 +2028,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -2151,7 +2069,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrArgNotApplicableToColumnArg2-Arg1-Arg2",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -2308,7 +2226,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2428,7 +2346,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 7
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2505,7 +2423,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2586,7 +2504,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2627,7 +2545,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2668,1264 +2586,39 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.DataSource"
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.DataSource",
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 17,
-                  "charOffset": 0,
+                  "charLength": 10,
+                  "charOffset": 29,
                   "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DataSource",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 69,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators]; DataSourceInfo.MaxLength; \"cpf\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 4,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".cpf"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 69,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators];DataSourceInfo.DisplayName;\"cpf\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 76,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators];DataSourceInfo.DisplayName;\"first_name\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".name"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 76,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators]; DataSourceInfo.MaxLength; \"first_name\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 74,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators]; DataSourceInfo.MaxLength; \"username\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".username"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 74,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators];DataSourceInfo.DisplayName;\"username\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 71,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators]; DataSourceInfo.MaxLength; \"email\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".email"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 71,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators];DataSourceInfo.DisplayName;\"email\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 74,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators];DataSourceInfo.DisplayName;\"password\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".password"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 17,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_collaborators"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_collaborators"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 74,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_collaborators]; DataSourceInfo.MaxLength; \"password\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "tbl_companies"
+                    "text": "ddContract"
                   }
                 }
               },
               "properties": {
                 "member": "Items",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.DropdownCompany_1"
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
               }
             }
           ],
           "message": {
             "arguments": [
-              "tbl_companies"
+              "ddContract"
             ],
             "id": "issue"
           },
@@ -3940,19 +2633,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.AccessibleLabel"
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.AccessibleLabel",
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": ".Selected"
+                  }
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "FooterCompany",
-                "type": "FooterCompany.BackgroundFooterLight"
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
               }
             }
           ],
@@ -3960,29 +2660,36 @@
             "id": "issue"
           },
           "properties": {
-            "level": "Medium"
+            "level": "High"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.TabIndex"
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.TabIndex",
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 48,
+                  "snippet": {
+                    "text": ".project_id"
+                  }
                 }
               },
               "properties": {
-                "member": "TabIndex",
-                "module": "FooterCompany",
-                "type": "FooterCompany.BackgroundFooterLight"
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
               }
             }
           ],
@@ -3990,29 +2697,36 @@
             "id": "issue"
           },
           "properties": {
-            "level": "Medium"
+            "level": "High"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "FooterCompany.Group.TabIndex"
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "FooterCompany.Group.TabIndex",
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
                   "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 59,
+                  "snippet": {
+                    "text": ".Value"
+                  }
                 }
               },
               "properties": {
-                "member": "TabIndex",
-                "module": "FooterCompany",
-                "type": "FooterCompany.Group"
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
               }
             }
           ],
@@ -4020,10 +2734,212 @@
             "id": "issue"
           },
           "properties": {
-            "level": "Medium"
+            "level": "High"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 43,
+                  "charOffset": 23,
+                  "snippet": {
+                    "text": "Value(ddContract.Selected.project_id.Value)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 39,
+                  "charOffset": 263,
+                  "snippet": {
+                    "text": "Patch(tbl_projects_tasks; {tasks_id:1})"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSuccess",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.OnSuccess",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 289,
+                  "snippet": {
+                    "text": "{tasks_id:1}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSuccess",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tasks_id",
+              "Record",
+              "Number"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ButtonSaveWorker_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ButtonSaveWorker_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 44,
+                  "snippet": {
+                    "text": "ddContract"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ButtonSaveWorker_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ddContract"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ButtonSaveWorker_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ButtonSaveWorker_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": "IsBlank(ddContract)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ButtonSaveWorker_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlank"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -4570,19 +3486,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness"
+                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness",
+                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonCreateActivityWorker"
+                "member": "AccessibleLabel",
+                "module": "FooterCompany",
+                "type": "FooterCompany.BackgroundFooterLight"
               }
             }
           ],
@@ -4592,117 +3508,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 10
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness"
+                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonActivitiesWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonEditUserWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonCreateProjectWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.TitleCreateActivity.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.TitleCreateActivity.TabIndex",
+                  "fullyQualifiedName": "FooterCompany.BackgroundFooterLight.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.TitleCreateActivity"
+                "module": "FooterCompany",
+                "type": "FooterCompany.BackgroundFooterLight"
               }
             }
           ],
@@ -4720,19 +3546,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddContract.AccessibleLabel"
+                  "fullyQualifiedName": "FooterCompany.Group.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddContract.AccessibleLabel",
+                  "fullyQualifiedName": "FooterCompany.Group.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddContract"
+                "member": "TabIndex",
+                "module": "FooterCompany",
+                "type": "FooterCompany.Group"
               }
             }
           ],
@@ -4742,188 +3568,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.name_DataCard5.DataCardValue32.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.name_DataCard5.DataCardValue32.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity.name_DataCard5.DataCardValue32"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.description_DataCard5.DataCardValue33.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.description_DataCard5.DataCardValue33.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity.description_DataCard5.DataCardValue33"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.status_DataCard6.DataCardValue34.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.status_DataCard6.DataCardValue34.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity.status_DataCard6.DataCardValue34"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.date_DataCard5.DataCardValue39.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.date_DataCard5.DataCardValue39.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity.date_DataCard5.DataCardValue39"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.hours_DataCard4.DataCardValue40.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.hours_DataCard4.DataCardValue40.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.FormActivity.hours_DataCard4.DataCardValue40"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7960,19 +6606,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.cpf_DataCard2_1.DataCardValue5_1"
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2"
               }
             }
           ],
@@ -7990,19 +6636,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.name_DataCard3_1.DataCardValue6_1"
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2"
               }
             }
           ],
@@ -8020,19 +6666,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.username_DataCard1_1.DataCardValue8_1"
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2"
               }
             }
           ],
@@ -8050,19 +6696,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.email_DataCard3_1.DataCardValue12_1"
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2"
               }
             }
           ],
@@ -8072,27 +6718,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.FormWorkerEdit.password_DataCard2_1.DataCardValue15_1"
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2"
               }
             }
           ],
@@ -8140,19 +6786,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_atividade_colaborador_1.DropdownCompany_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "editar_atividade_colaborador_1",
-                "type": "editar_atividade_colaborador_1.DropdownCompany_1"
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2"
               }
             }
           ],
@@ -8344,6 +6990,126 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonCreateActivityWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonActivitiesWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonEditUserWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonCreateProjectWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -8674,6 +7440,306 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.TitleCreateActivity.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.TitleCreateActivity.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.TitleCreateActivity"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.name_DataCard5.DataCardValue32.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.name_DataCard5.DataCardValue32.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity.name_DataCard5.DataCardValue32"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.description_DataCard5.DataCardValue33.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.description_DataCard5.DataCardValue33.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity.description_DataCard5.DataCardValue33"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.status_DataCard6.DataCardValue34.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.status_DataCard6.DataCardValue34.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity.status_DataCard6.DataCardValue34"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.date_DataCard5.DataCardValue39.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.date_DataCard5.DataCardValue39.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity.date_DataCard5.DataCardValue39"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.hours_DataCard4.DataCardValue40.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.hours_DataCard4.DataCardValue40.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.FormActivity.hours_DataCard4.DataCardValue40"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.DataCardValue6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.DataCardValue6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.DataCardValue6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -12973,20 +12039,6 @@
               }
             },
             {
-              "id": "app-ErrTypeError-Arg-Expected-Found",
-              "messageStrings": {
-                "issue": {
-                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrInvalidDot",
               "messageStrings": {
                 "issue": {
@@ -13064,6 +12116,20 @@
                   "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrTypeError-Arg-Expected-Found",
+              "messageStrings": {
+                "issue": {
+                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }

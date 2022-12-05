@@ -1,4 +1,4 @@
-bck_cadastro_users As screen:
+_bck_cadastro_users As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =UpdateContext({varShowCpfError: false});

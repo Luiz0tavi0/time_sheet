@@ -8,7 +8,6 @@ Buscar_por_projeto_empresa As screen:
             =//Search(Filter(tbl_projects;ID=CONST_CURRENT_USER.ID); SearchBox.Text; "name")
             //Filter(tbl_collaborators;StartsWith(name; SearchBox_1.Text))
             //Search(tb_filtered_by_id; SearchBox.Text; "name")
-            
             With(
                     {
                         tb_filtered_by_id: Filter(tbl_projects,ID=CONST_CURRENT_USER.ID)

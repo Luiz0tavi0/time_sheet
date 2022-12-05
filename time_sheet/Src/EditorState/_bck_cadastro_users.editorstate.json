@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "bck_cadastro_users": {
+    "_bck_cadastro_users": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -36,10 +36,15 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "bck_cadastro_users",
+      "Name": "_bck_cadastro_users",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "Unknown"
+        },
         {
           "Category": "Design",
           "PropertyName": "Height",
@@ -47,7 +52,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinnerColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -68,16 +78,6 @@
         {
           "Category": "Design",
           "PropertyName": "ImagePosition",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "LoadingSpinnerColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -214,7 +214,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ButtonCreateUserWorker_2",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -635,7 +635,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "contFormUsers_1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6754,7 +6754,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "FooterWorker_13",
-      "ParentIndex": 5,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7050,7 +7050,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "funcValidacaoForm_1",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7335,7 +7335,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "HeaderWorker_3",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7539,7 +7539,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblOutPut_1",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10298,5 +10298,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "bck_cadastro_users"
+  "TopParentName": "_bck_cadastro_users"
 }

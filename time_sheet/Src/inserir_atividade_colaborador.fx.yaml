@@ -95,6 +95,7 @@ inserir_atividade_colaborador As screen:
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_tasks
+        DefaultMode: =FormMode.New
         Height: =496
         Width: =570
         X: =32
@@ -111,8 +112,8 @@ inserir_atividade_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =120
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
-            Required: =false
-            Update: =DataCardValueTaskName.Text
+            Required: =true
+            Update: =Trim(DataCardValueTaskName.Text)
             Width: =570
             X: =0
             Y: =0
@@ -375,7 +376,7 @@ inserir_atividade_colaborador As screen:
                 PaddingLeft: =0
                 PaddingTop: =0
                 Size: =21
-                Text: ="Stat"
+                Text: ="Status"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -468,7 +469,7 @@ inserir_atividade_colaborador As screen:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="date"
-            Default: =ThisItem.date
+            Default: =If(Parent.DisplayMode=DisplayMode.Edit,Now(),ThisItem.date)
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"date")
             Fill: =RGBA(0, 0, 0, 0)
@@ -569,7 +570,7 @@ inserir_atividade_colaborador As screen:
                 PaddingLeft: =0
                 PaddingTop: =0
                 Size: =21
-                Text: =""
+                Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
@@ -713,7 +714,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Filter(tbl_contracts, user_id.Value=Text(CONST_CURRENT_USER.ID))
+        Items: =ShowColumns(Filter(tbl_contracts, user_id.Value=Text(CONST_CURRENT_USER.ID)),"project_id","description")
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -745,7 +746,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =tbl_projects
+        Items: =Filter(tbl_projects,ID=Value(ddContract.Selected.project_id.Value))
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

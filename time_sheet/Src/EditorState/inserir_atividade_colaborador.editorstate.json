@@ -1184,7 +1184,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Parent.DisplayName",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Text",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -3979,8 +3979,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ThisItem.date",
           "InvariantPropertyName": "Default",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -4612,7 +4612,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"ID\"}",
+          "NameMap": "{\"Value\":\"name\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -6304,7 +6304,14 @@
     "FormActivity": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "DefaultMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
         {
           "AFDDataSourceName": "",
@@ -7216,8 +7223,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
           "InvariantPropertyName": "Required",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -7240,8 +7247,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataCardValueTaskName.Text",
           "InvariantPropertyName": "Update",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -8252,8 +8259,8 @@
       "ControlPropertyState": [
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"\"",
           "InvariantPropertyName": "Text",
           "IsLockable": true,
           "NameMapSourceSchema": "?"

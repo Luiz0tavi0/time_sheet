@@ -1,50 +1,7 @@
-Atividade_criada_colaborador As screen:
+_Projeto_criado_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    Label341255 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(2, 4, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =77
-        LineHeight: =1.171875
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =24
-        Text: |-
-            ="Atividade criada
-             com sucesso!"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =324
-        X: =157
-        Y: =690
-        ZIndex: =1
-
-    Image341256 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =380
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image341256
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Transparency: =0.3
-        Width: =555
-        X: =42
-        Y: =294
-        ZIndex: =2
-
-    ButtonHomeWorker_4 As button:
+    ButtonHomeWorker_9 As button:
         Align: =Align.Left
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(39, 39, 39, 1)
@@ -67,9 +24,9 @@ Atividade_criada_colaborador As screen:
         Width: =230
         X: =52
         Y: =905
-        ZIndex: =3
+        ZIndex: =1
 
-    Icon19_9 As icon.Home:
+    Icon19_16 As icon.Home:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(39, 39, 39, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -87,9 +44,27 @@ Atividade_criada_colaborador As screen:
         Width: =50
         X: =82
         Y: =915
+        ZIndex: =2
+
+    Image371666_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =374
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =image371666
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Transparency: =0.3
+        Width: =533
+        X: =53
+        Y: =300
         ZIndex: =4
 
-    FooterWorker_5 As FooterWorker:
+    FooterWorker_6 As FooterWorker:
         Y: =1016
         ZIndex: =5
 

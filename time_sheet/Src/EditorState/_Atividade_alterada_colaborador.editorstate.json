@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "Atividade_criada_colaborador": {
+    "_Atividade_alterada_colaborador": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -20,18 +20,13 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Atividade_criada_colaborador",
+      "Name": "_Atividade_alterada_colaborador",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
+          "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -41,17 +36,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
+          "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ImagePosition",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
@@ -63,12 +53,22 @@
           "Category": "Design",
           "PropertyName": "Orientation",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinner",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ImagePosition",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "ButtonHomeWorker_4": {
+    "ButtonHomeWorker_8": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -179,7 +179,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "ButtonHomeWorker_4",
+      "Name": "ButtonHomeWorker_8",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -362,7 +362,7 @@
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
-    "FooterWorker_5": {
+    "FooterWorker_3": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -400,7 +400,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "FooterWorker_5",
+      "Name": "FooterWorker_3",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -438,7 +438,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Icon19_9": {
+    "Icon19_15": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -495,7 +495,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon19_9",
+      "Name": "Icon19_15",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -618,7 +618,7 @@
       "StyleName": "defaultIconStyle",
       "Type": "ControlInfo"
     },
-    "Image341256": {
+    "Image371669": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Image",
@@ -676,7 +676,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Image341256",
+      "Name": "Image371669",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -909,7 +909,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "Label341255": {
+    "Label341271": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -973,7 +973,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label341255",
+      "Name": "Label341271",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1237,5 +1237,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Atividade_criada_colaborador"
+  "TopParentName": "_Atividade_alterada_colaborador"
 }

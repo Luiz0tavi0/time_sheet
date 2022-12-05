@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "Atividade_alterada_colaborador": {
+    "_Conta_Alterada_colaborador": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -20,18 +20,13 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Atividade_alterada_colaborador",
+      "Name": "_Conta_Alterada_colaborador",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
+          "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -41,17 +36,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
+          "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "LoadingSpinner",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ImagePosition",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
@@ -63,12 +53,22 @@
           "Category": "Design",
           "PropertyName": "Orientation",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "LoadingSpinner",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ImagePosition",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultScreenStyle",
       "Type": "ControlInfo"
     },
-    "ButtonHomeWorker_8": {
+    "ButtonHomeWorker_7": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -179,7 +179,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "ButtonHomeWorker_8",
+      "Name": "ButtonHomeWorker_7",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -362,7 +362,7 @@
       "StyleName": "defaultButtonStyle",
       "Type": "ControlInfo"
     },
-    "FooterWorker_3": {
+    "FooterWorker_2": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -400,7 +400,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "FooterWorker_3",
+      "Name": "FooterWorker_2",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -438,7 +438,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "Icon19_15": {
+    "Icon19_14": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
@@ -495,7 +495,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon19_15",
+      "Name": "Icon19_14",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -618,11 +618,18 @@
       "StyleName": "defaultIconStyle",
       "Type": "ControlInfo"
     },
-    "Image371669": {
+    "Image341381_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Image",
-        "Transparency",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Transparency",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ImagePosition",
         "CalculateOriginalDimensions",
         "ImageRotation",
@@ -676,7 +683,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Image371669",
+      "Name": "Image341381_1",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -909,7 +916,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "Label341271": {
+    "Label341380_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Live",
@@ -918,7 +925,14 @@
         "AutoHeight",
         "Wrap",
         "IsErrorMessage",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Tooltip",
         "Role",
         "ContentLanguage",
@@ -939,7 +953,14 @@
         "PressedFill",
         "HoverFill",
         "Font",
-        "Size",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Size",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "FontWeight",
         "Italic",
         "Underline",
@@ -973,7 +994,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Label341271",
+      "Name": "Label341380_1",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1237,5 +1258,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Atividade_alterada_colaborador"
+  "TopParentName": "_Conta_Alterada_colaborador"
 }

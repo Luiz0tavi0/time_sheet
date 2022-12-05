@@ -1,7 +1,54 @@
-Conta_Alterada_colaborador As screen:
+_Atividade_alterada_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    ButtonHomeWorker_7 As button:
+    Label341271 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(2, 4, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =96
+        LineHeight: =1.171875
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =24
+        Text: |-
+            ="Atividade alterada
+             com sucesso!"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =316
+        X: =162
+        Y: =683
+        ZIndex: =14
+
+    Image371669 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =373
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =image371669
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Transparency: =0.3
+        Width: =562
+        X: =39
+        Y: =294
+        ZIndex: =15
+
+    FooterWorker_3 As FooterWorker:
+        Y: =1016
+        ZIndex: =16
+
+    ButtonHomeWorker_8 As button:
         Align: =Align.Left
         BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(39, 39, 39, 1)
@@ -24,9 +71,9 @@ Conta_Alterada_colaborador As screen:
         Width: =230
         X: =52
         Y: =905
-        ZIndex: =1
+        ZIndex: =18
 
-    Icon19_14 As icon.Home:
+    Icon19_15 As icon.Home:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(39, 39, 39, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -44,52 +91,5 @@ Conta_Alterada_colaborador As screen:
         Width: =50
         X: =82
         Y: =915
-        ZIndex: =2
-
-    Label341380_1 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(2, 4, 48, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =86
-        LineHeight: =1.171875
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =24
-        Text: |-
-            ="Conta alterada
-             com sucesso!"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =289
-        X: =178
-        Y: =737
-        ZIndex: =3
-
-    Image341381_1 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =446
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =image341381
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Transparency: =0.3
-        Width: =530
-        X: =55
-        Y: =264
-        ZIndex: =4
-
-    FooterWorker_2 As FooterWorker:
-        Y: =1016
-        ZIndex: =5
+        ZIndex: =19
 

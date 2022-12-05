@@ -1170,7 +1170,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"ComplianceAssetId\"}",
+          "NameMap": "{\"Value\":\"date\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -2091,7 +2091,14 @@
         "AutoHeight",
         "Wrap",
         "IsErrorMessage",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"111 horas\"",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Tooltip",
         "Role",
         "ContentLanguage",

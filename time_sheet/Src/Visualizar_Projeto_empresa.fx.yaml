@@ -1,19 +1,19 @@
 Visualizar_Projeto_empresa As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+    "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =314
-        Items: =tbl_projects
+        Items: =tbl_tasks
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(104, Self.Height - 60)
+        TemplateSize: =Min(168, Self.Height - 60)
         Width: =522
         X: =38
         Y: =472
-        ZIndex: =2
+        ZIndex: =1
 
-        Title8 As label:
+        Title2 As label:
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -32,7 +32,7 @@ Visualizar_Projeto_empresa As screen:
             Y: =16
             ZIndex: =1
 
-        Subtitle5 As label:
+        Subtitle2 As label:
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -43,14 +43,33 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.status
+            Text: |-
+                =ThisItem.'collaborator_id:name'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
-            Y: =Title8.Y + Title8.Height + 4
+            Y: =Title2.Y + Title2.Height + 2
             ZIndex: =2
 
-        NextArrow8 As icon.ChevronRight:
+        Body2 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =Self.Size * 4
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.hours
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 104
+            X: =32
+            Y: =Subtitle2.Y + Subtitle2.Height + 4
+            ZIndex: =3
+
+        NextArrow2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(2, 4, 48, 1)
@@ -76,16 +95,16 @@ Visualizar_Projeto_empresa As screen:
             Width: =60
             X: =Parent.TemplateWidth - Self.Width - 5
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =3
+            ZIndex: =4
 
-        Separator8 As rectangle:
+        Separator2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(252, 252, 252, 1), -30%)
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
-            ZIndex: =4
+            ZIndex: =5
 
     TotalHoursProjectLabel As label:
         BorderColor: =RGBA(0, 0, 0, 0)

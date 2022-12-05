@@ -6,12 +6,16 @@ Buscar_por_projeto_empresa As screen:
         Height: =533
         Items: |-
             =//Search(Filter(tbl_projects;ID=CONST_CURRENT_USER.ID); SearchBox.Text; "name")
+            //Filter(tbl_collaborators;StartsWith(name; SearchBox_1.Text))
+            //Search(tb_filtered_by_id; SearchBox.Text; "name")
+            
             With(
-                {
-                    tb_filtered_by_id: Filter(tbl_projects,ID=CONST_CURRENT_USER.ID)
-                },
-                Search(tb_filtered_by_id, SearchBox.Text, "name")
-            )
+                    {
+                        tb_filtered_by_id: Filter(tbl_projects,ID=CONST_CURRENT_USER.ID)
+                    },
+                    Filter(tb_filtered_by_id,StartsWith("name",SearchBox.Text))
+                )
+            //If (App.ActiveScreen.Name = Buscar_por_projeto_empresa.Name; tb_filter_projects)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)

@@ -4,7 +4,16 @@ Buscar_por_colaboradores_empresa As screen:
     "GalleryCollaborators As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =519
-        Items: =Filter(tbl_collaborators,StartsWith(name, SearchBox_1.Text))
+        Items: |-
+            =//If (App.ActiveScreen.Name = Buscar_por_colaborador_empresa.Name; tb_filter_users)
+            //Filter(tbl_collaborators;StartsWith(name; SearchBox_1.Text))
+            // filtrar primeiro pelo contrato
+            With(
+                    {
+                        tb_filtered_by_id: Filter(tbl_users,ID=CONST_CURRENT_USER.ID)
+                    },
+                    Filter(tbl_users,StartsWith(name, SearchBox_1.Text))
+                )
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(96, Self.Height - 60)

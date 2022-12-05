@@ -304,7 +304,7 @@ visualizar_atividades_colaborador As screen:
         Y: =858
         ZIndex: =35
 
-    DropdownCompany_3 As dropdown:
+    ddTaskByUser As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -384,4 +384,21 @@ visualizar_atividades_colaborador As screen:
         header_title: =If(IsBlank(CONST_CURRENT_USER.name),"Atividades")
         Visible: =true
         ZIndex: =37
+
+    Label1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =ddTaskByUser.Selected.ID
+        Width: =560
+        X: =24
+        Y: =368
+        ZIndex: =38
 

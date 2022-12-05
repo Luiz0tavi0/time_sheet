@@ -112,7 +112,7 @@ inserir_atividade_colaborador As screen:
             Height: =120
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
             Required: =false
-            Update: =DataCardValue17.Text
+            Update: =DataCardValueTaskName.Text
             Width: =570
             X: =0
             Y: =0
@@ -140,7 +140,7 @@ inserir_atividade_colaborador As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue17 As text:
+            DataCardValueTaskName As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -196,7 +196,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue17.Y + DataCardValue17.Height
+                Y: =DataCardValueTaskName.Y + DataCardValueTaskName.Height
                 ZIndex: =3
 
             StarVisible17 As label:
@@ -233,7 +233,7 @@ inserir_atividade_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "description")
             Required: =false
-            Update: =DataCardValue18.Text
+            Update: =DataCardValueTaskDescription.Text
             Width: =570
             X: =0
             Y: =1
@@ -261,7 +261,7 @@ inserir_atividade_colaborador As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue18 As text:
+            DataCardValueTaskDescription As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -317,7 +317,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue18.Y + DataCardValue18.Height
+                Y: =DataCardValueTaskDescription.Y + DataCardValueTaskDescription.Height
                 ZIndex: =3
 
             StarVisible18 As label:
@@ -354,7 +354,7 @@ inserir_atividade_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "status")
             Required: =false
-            Update: =DataCardValue19.Text
+            Update: =DataCardValueTaskStatus.Text
             Width: =257
             X: =0
             Y: =2
@@ -382,7 +382,7 @@ inserir_atividade_colaborador As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue19 As text:
+            DataCardValueTaskStatus As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -438,7 +438,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue19.Y + DataCardValue19.Height
+                Y: =DataCardValueTaskStatus.Y + DataCardValueTaskStatus.Height
                 ZIndex: =3
 
             StarVisible19 As label:
@@ -474,7 +474,7 @@ inserir_atividade_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
-            Update: =DataCardValue20.SelectedDate
+            Update: =DataCardValueTaskDate.SelectedDate
             Width: =288
             X: =0
             Y: =2
@@ -502,7 +502,7 @@ inserir_atividade_colaborador As screen:
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue20 As datepicker:
+            DataCardValueTaskDate As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
@@ -550,7 +550,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue20.Y + DataCardValue20.Height
+                Y: =DataCardValueTaskDate.Y + DataCardValueTaskDate.Height
                 ZIndex: =3
 
             StarVisible20 As label:
@@ -576,7 +576,7 @@ inserir_atividade_colaborador As screen:
                 Y: =DataCardKey20.Y
                 ZIndex: =4
 
-        hours_DataCard1 As typedDataCard.numberEditCard:
+        DataCardValueTaskHours As typedDataCard.numberEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="hours"
@@ -745,7 +745,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =tbl_projects
+        Items: =Filter(tbl_projects, name = ddTaskByUser.Selected.'Caminho Completo')
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

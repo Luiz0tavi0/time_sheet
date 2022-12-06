@@ -95,18 +95,8 @@ Designar_colaborador_empresa As screen:
         ZIndex: =26
 
     FooterCompany_9 As FooterCompany:
-        Y: =1016
+        Y: =1036
         ZIndex: =27
-
-    HeaderCompany_8 As HeaderCompany:
-        ZIndex: =28
-
-    HeaderCompany_cad_empresa_1 As HeaderCompany:
-        background_color: =CONST_BACKGROUND_COLOR_EMPRESA
-        header_title: =CONST_CURRENT_USER.name
-        Visible: =true
-        Width: =Parent.Width
-        ZIndex: =30
 
     Group3 As group:
         Height: =5
@@ -254,9 +244,7 @@ Designar_colaborador_empresa As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["first_name"]
-        SearchItems: |-
-            =Search(Search(colUsers,ComboBox1.SearchText,"email")
-            ,ComboBox1.SearchText,"first_name")
+        SearchItems: =Search(Search(colUsers,ComboBox1.SearchText,"email"),ComboBox1.SearchText,"first_name")
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =21
@@ -353,4 +341,9 @@ Designar_colaborador_empresa As screen:
         X: =38
         Y: =811
         ZIndex: =40
+
+    HeaderWorker_8 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        Visible: =true
+        ZIndex: =41
 

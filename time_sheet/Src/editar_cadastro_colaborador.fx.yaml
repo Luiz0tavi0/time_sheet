@@ -948,3 +948,8 @@ editar_cadastro_colaborador As screen:
                     Y: =DataCardValuePasswordConfirm_2.Y
                     ZIndex: =7
 
+    HeaderWorker_10 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        Visible: =true
+        ZIndex: =8
+

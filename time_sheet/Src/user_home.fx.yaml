@@ -10,16 +10,17 @@ user_home As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =533
+        Height: =If(IsBlank(CONST_CURRENT_USER.cnpj),590, 366)
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: ='time-is-money-sandglass-investment-countdown-measure-concept'
+        ImagePosition: =ImagePosition.Fill
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Transparency: =0.4
-        Width: =516
-        X: =62
-        Y: =548
+        Width: =568
+        X: =38
+        Y: =If(IsBlank(CONST_CURRENT_USER.cnpj),417, 642)
         ZIndex: =1
 
     ButtonDirectWorker_1 As button:
@@ -51,6 +52,7 @@ user_home As screen:
         Text: |-
             ="         Designar 
                      Colaborador"
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =280
         X: =326
         Y: =394
@@ -71,6 +73,7 @@ user_home As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =50
         X: =345
         Y: =420
@@ -105,6 +108,7 @@ user_home As screen:
         Text: |-
             ="         Criar 
                      Projeto"
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =280
         X: =326
         Y: =274
@@ -125,6 +129,7 @@ user_home As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =50
         X: =347
         Y: =301
@@ -211,6 +216,7 @@ user_home As screen:
         RadiusTopRight: =12
         Size: =22
         Text: =" Colaboradores "
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =280
         X: =31
         Y: =513
@@ -231,6 +237,7 @@ user_home As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =50
         X: =52
         Y: =548
@@ -264,6 +271,7 @@ user_home As screen:
         Text: |-
             ="         Projetos 
             "
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =280
         X: =31
         Y: =394
@@ -284,13 +292,14 @@ user_home As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =If(IsBlank(CONST_CURRENT_USER.cnpj),false, true)
         Width: =50
         X: =50
         Y: =417
         ZIndex: =12
 
     FooterCompany_15 As FooterCompany:
-        Y: =1016
+        Y: =1036
         ZIndex: =13
 
     ButtonCreateActivityWorker_1 As button:
@@ -400,7 +409,13 @@ user_home As screen:
         Y: =297
         ZIndex: =17
 
-    HeaderCompany_15 As HeaderCompany:
+    HeaderWorker_12 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        header_title: =CONST_CURRENT_USER.name
+        OnClickLeftIcon: =Back()
+        OnClickRightIcon: |-
+            =Set(CONST_CURRENT_USER, Blank());
+            Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =18
 

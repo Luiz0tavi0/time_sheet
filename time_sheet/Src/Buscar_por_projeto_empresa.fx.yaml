@@ -219,11 +219,11 @@ Buscar_por_projeto_empresa As screen:
         ZIndex: =6
 
     FooterCompany_14 As FooterCompany:
-        Y: =1016
+        Y: =1036
         ZIndex: =7
 
-    HeaderCompany_13 As HeaderCompany:
-        header_title: =CONST_CURRENT_USER.name
+    HeaderWorker_6 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         Visible: =true
         ZIndex: =8
 

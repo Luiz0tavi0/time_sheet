@@ -6,8 +6,7 @@ Buscar_por_colaboradores_empresa As screen:
         Height: =519
         Items: |-
             =//If (App.ActiveScreen.Name = Buscar_por_colaborador_empresa.Name; tb_filter_users)
-            //Filter(tbl_collaborators;StartsWith(name; SearchBox_1.Text))
-            // filtrar primeiro pelo contrato
+            // Ajustar para filtrar primeiro pelo contrato
             With(
                     {
                         tb_filtered_by_id: Filter(tbl_users,ID=CONST_CURRENT_USER.ID)
@@ -198,9 +197,11 @@ Buscar_por_colaboradores_empresa As screen:
         ZIndex: =6
 
     FooterCompany_13 As FooterCompany:
-        Y: =1016
+        Y: =1036
         ZIndex: =7
 
-    HeaderCompany_12 As HeaderCompany:
+    HeaderWorker_5 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        Visible: =true
         ZIndex: =8
 

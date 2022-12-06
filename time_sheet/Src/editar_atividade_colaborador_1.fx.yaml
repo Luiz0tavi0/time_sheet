@@ -750,3 +750,8 @@ editar_atividade_colaborador_1 As screen:
         Y: =1016
         ZIndex: =10
 
+    HeaderWorker_9 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        Visible: =true
+        ZIndex: =11
+

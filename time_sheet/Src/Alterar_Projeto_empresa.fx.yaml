@@ -23,30 +23,6 @@ Alterar_Projeto_empresa As screen:
         Y: =164
         ZIndex: =22
 
-    ButtonBack_3 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =21
-        Text: ="Voltar"
-        X: =52
-        Y: =890
-        ZIndex: =23
-
     ButtonSave_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -65,31 +41,9 @@ Alterar_Projeto_empresa As screen:
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =21
         Text: ="Salvar"
-        X: =429
-        Y: =890
+        X: =240
+        Y: =911
         ZIndex: =24
-
-    ButtonDisable_2 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(110, 164, 191, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =21
-        Text: ="Desativar"
-        X: =239
-        Y: =890
-        ZIndex: =25
 
     FormProjectEdit As form:
         BorderColor: =RGBA(166, 166, 166, 1)

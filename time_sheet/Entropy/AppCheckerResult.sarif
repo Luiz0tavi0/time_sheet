@@ -2480,128 +2480,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".manager"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "criar_Projeto_empresa",
-                "type": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text",
-              "Record"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 58,
-                  "snippet": {
-                    "text": "\"manager\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "criar_Projeto_empresa",
-                "type": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo.MaxLength",
-              "\"manager\""
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrArgNotApplicableToColumnArg2-Arg1-Arg2",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 68,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_projects]; DataSourceInfo.MaxLength; \"manager\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "criar_Projeto_empresa",
-                "type": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "editar_atividade_colaborador_1.FormActivity_1.status_DataCard1_1.MaxLength"
                 }
               ],
@@ -3615,96 +3493,6 @@
                 "member": "TabIndex",
                 "module": "FooterWorker",
                 "type": "FooterWorker.Group_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "HeaderCompany.BackgroundHeaderDark.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "HeaderCompany.BackgroundHeaderDark.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "HeaderCompany",
-                "type": "HeaderCompany.BackgroundHeaderDark"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "HeaderCompany.BackgroundHeaderDark.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "HeaderCompany.BackgroundHeaderDark.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "HeaderCompany",
-                "type": "HeaderCompany.BackgroundHeaderDark"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "HeaderCompany.NameLogin_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "HeaderCompany.NameLogin_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "HeaderCompany",
-                "type": "HeaderCompany.NameLogin_2"
               }
             }
           ],
@@ -6842,19 +6630,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.DataCardValue16_1.AccessibleLabel"
+                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.start_DataCard2.DataCardValue3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.DataCardValue16_1.AccessibleLabel",
+                  "fullyQualifiedName": "criar_Projeto_empresa.FormProjectCreate_1.start_DataCard2.DataCardValue3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "criar_Projeto_empresa",
-                "type": "criar_Projeto_empresa.FormProjectCreate_1.manager_DataCard1_1.DataCardValue16_1"
+                "type": "criar_Projeto_empresa.FormProjectCreate_1.start_DataCard2.DataCardValue3"
               }
             }
           ],

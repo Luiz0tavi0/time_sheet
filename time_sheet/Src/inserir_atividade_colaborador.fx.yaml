@@ -27,8 +27,8 @@ inserir_atividade_colaborador As screen:
         Size: =21
         Text: ="Salvar"
         Width: =230
-        X: =330
-        Y: =908
+        X: =205
+        Y: =929
         ZIndex: =1
 
     TitleCreateActivity As label:
@@ -52,52 +52,6 @@ inserir_atividade_colaborador As screen:
         X: =52
         Y: =137
         ZIndex: =2
-
-    ButtonHomeWorker_3 As button:
-        Align: =Align.Left
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(user_home,ScreenTransition.Fade);
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
-        Size: =24
-        Text: ="          Início"
-        Width: =230
-        X: =76
-        Y: =908
-        ZIndex: =3
-
-    Icon19_2 As icon.Home:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Home
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =104
-        Y: =918
-        ZIndex: =4
 
     ddProject As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -752,10 +706,11 @@ inserir_atividade_colaborador As screen:
                 Y: =DataCardKey9.Y
                 ZIndex: =4
 
-    HeaderWorker_13 As HeaderWorker:
+    HeaderWorker_29 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
-        OnClickLeftIcon: =Back()
+        left_icon: =Icon.Home
+        OnClickLeftIcon: =Navigate(user_home,ScreenTransition.Fade);
         OnClickRightIcon: |-
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);

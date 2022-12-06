@@ -23,30 +23,6 @@ editar_cadastro_colaborador As screen:
         Y: =137
         ZIndex: =1
 
-    ButtonBack_5 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =21
-        Text: ="Voltar"
-        X: =48
-        Y: =915
-        ZIndex: =2
-
     ButtonSave_6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -948,10 +924,11 @@ editar_cadastro_colaborador As screen:
                     Y: =DataCardValuePasswordConfirm_2.Y
                     ZIndex: =7
 
-    HeaderWorker_15 As HeaderWorker:
+    HeaderWorker_28 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
-        OnClickLeftIcon: =Back()
+        left_icon: =Icon.Home
+        OnClickLeftIcon: =Navigate(user_home,ScreenTransition.Fade);
         OnClickRightIcon: |-
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);

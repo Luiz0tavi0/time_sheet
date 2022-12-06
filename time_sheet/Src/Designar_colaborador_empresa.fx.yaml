@@ -342,10 +342,11 @@ Designar_colaborador_empresa As screen:
         Y: =811
         ZIndex: =40
 
-    HeaderWorker_17 As HeaderWorker:
+    HeaderWorker_27 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
-        OnClickLeftIcon: =Back()
+        left_icon: =Icon.Home
+        OnClickLeftIcon: =Navigate(user_home,ScreenTransition.Fade);
         OnClickRightIcon: |-
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);

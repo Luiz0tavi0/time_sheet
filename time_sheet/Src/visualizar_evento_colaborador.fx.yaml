@@ -23,51 +23,6 @@ visualizar_evento_colaborador As screen:
         Y: =164
         ZIndex: =1
 
-    ButtonHomeWorker_6 As button:
-        Align: =Align.Left
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
-        Size: =24
-        Text: ="          Início"
-        Width: =230
-        X: =101
-        Y: =916
-        ZIndex: =2
-
-    Icon19_13 As icon.Home:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Home
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =131
-        Y: =926
-        ZIndex: =3
-
     ButtonEditActivity As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -94,8 +49,8 @@ visualizar_evento_colaborador As screen:
         Size: =24
         Text: =If(FormViewerTasks.Mode=FormMode.View,"Editar","Visualizar")
         Width: =232
-        X: =348
-        Y: =916
+        X: =204
+        Y: =931
         ZIndex: =4
 
     FooterWorker_10 As FooterWorker:
@@ -704,10 +659,11 @@ visualizar_evento_colaborador As screen:
                 Y: =DataCardKey38.Y
                 ZIndex: =4
 
-    HeaderWorker_23 As HeaderWorker:
+    HeaderWorker_31 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
-        OnClickLeftIcon: =Back()
+        left_icon: =Icon.Home
+        OnClickLeftIcon: =Navigate(user_home,ScreenTransition.Fade);
         OnClickRightIcon: |-
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);

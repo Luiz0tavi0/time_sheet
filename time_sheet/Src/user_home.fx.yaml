@@ -411,6 +411,7 @@ user_home As screen:
 
     HeaderWorker_12 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        has_left_icon: =false
         header_title: =CONST_CURRENT_USER.name
         OnClickLeftIcon: =Back()
         OnClickRightIcon: |-

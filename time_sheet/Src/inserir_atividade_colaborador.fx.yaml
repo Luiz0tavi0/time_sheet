@@ -71,7 +71,11 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Filter(tbl_projects,ID=Value(ddContract.Selected.project_id.Value))
+        Items: |-
+            =With(
+                {tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
+                ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id),name))
+            )
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -724,7 +728,7 @@ inserir_atividade_colaborador As screen:
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
-                Size: =21
+                Size: =20
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
@@ -975,22 +979,6 @@ inserir_atividade_colaborador As screen:
             Y: =0
             ZIndex: =0
 
-        "'user_id:name_Column2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: |-
-                ="user_id:name"
-            FieldName: ="user_id_x003a_name"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: |-
-                =ThisItem.'user_id:name'.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =0
-
         "'user_id:email_Column2' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: |-
@@ -1023,22 +1011,6 @@ inserir_atividade_colaborador As screen:
             Y: =0
             ZIndex: =0
 
-        "'user_id:cnpj_Column2' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: |-
-                ="user_id:cnpj"
-            FieldName: ="user_id_x003a_cnpj"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: |-
-                =ThisItem.'user_id:cnpj'.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =0
-
         active_Column4 As dataTableColumn.booleanColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="active"
@@ -1062,20 +1034,6 @@ inserir_atividade_colaborador As screen:
             LayoutHeight: =Parent.Height
             Order: =9
             Text: =ThisItem.project_id.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =0
-
-        Anexos_Column4 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Anexos"
-            FieldName: ="{Attachments}"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =10
-            Text: =ThisItem.Anexos
             Width: =100
             X: =0
             Y: =0

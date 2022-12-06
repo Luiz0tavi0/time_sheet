@@ -60,6 +60,7 @@ editar_cadastro_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =If(FormActivity_1.Valid,SubmitForm(FormActivity_1))
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -68,28 +69,6 @@ editar_cadastro_colaborador As screen:
         X: =425
         Y: =915
         ZIndex: =3
-
-    ButtonDisable_4 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(2, 4, 48, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =21
-        Text: ="Desativar"
-        X: =235
-        Y: =915
-        ZIndex: =4
 
     FooterWorker_12 As FooterWorker:
         Y: =1016
@@ -111,8 +90,8 @@ editar_cadastro_colaborador As screen:
             BorderColor: =RGBA(255, 255, 255, 1)
             BorderStyle: =BorderStyle.None
             DataSource: =tbl_users
-            DefaultMode: =FormMode.New
             Height: =638
+            Item: =LookUp(tbl_users,ID=CONST_CURRENT_USER.ID)
             LayoutMinHeight: =250
             LayoutMinWidth: =320
             Width: =526
@@ -201,7 +180,7 @@ editar_cadastro_colaborador As screen:
                 Height: =50
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cnpj")
                 Required: =false
-                Update: =DataCardValue6_1.Text
+                Update: =CONST_CURRENT_USER.email
                 Width: =526
                 X: =0
                 Y: =6
@@ -272,6 +251,112 @@ editar_cadastro_colaborador As screen:
                     Width: =30
                     Wrap: =false
                     Y: =DataCardKey3_2.Y
+                    ZIndex: =4
+
+            active_DataCard1 As typedDataCard.toggleEditCard:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.Solid
+                DataField: ="active"
+                Default: =ThisItem.active
+                DisplayMode: =Parent.DisplayMode
+                DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"active")
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =50
+                Required: =false
+                Update: =DataCardValue1.Value
+                Width: =526
+                X: =0
+                Y: =7
+                ZIndex: =1
+
+                DataCardKey1 As label:
+                    AutoHeight: =true
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =48
+                    PaddingLeft: =0
+                    Size: =21
+                    Text: =Parent.DisplayName
+                    Width: =Parent.Width - 60
+                    Wrap: =false
+                    X: =30
+                    Y: =10
+                    ZIndex: =1
+
+                DataCardValue1 As toggleSwitch:
+                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                    BorderStyle: =BorderStyle.None
+                    Color: =RGBA(51, 51, 51, 1)
+                    Default: =Parent.Default
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =Parent.DisplayMode
+                    FalseFill: =RGBA(102, 102, 102, 1)
+                    FalseHoverFill: =RGBA(33, 33, 33, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HandleFill: =RGBA(255, 255, 255, 1)
+                    Height: =49
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    Size: =21
+                    Tooltip: =Parent.DisplayName
+                    TrueFill: =RGBA(0, 120, 212, 1)
+                    TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    Width: =154
+                    X: =32
+                    ZIndex: =2
+
+                ErrorMessage1 As label:
+                    AutoHeight: =true
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(168, 0, 0, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(168, 0, 0, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =10
+                    Live: =Live.Assertive
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =21
+                    Text: =Parent.Error
+                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                    Width: =Parent.Width - 60
+                    X: =30
+                    Y: =DataCardValue1.Y + DataCardValue1.Height
+                    ZIndex: =3
+
+                StarVisible3 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =DataCardKey1.Height
+                    PaddingLeft: =0
+                    Size: =21
+                    Text: ="*"
+                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                    Width: =30
+                    Wrap: =false
+                    Y: =DataCardKey1.Y
                     ZIndex: =4
 
             name_DataCard6_2 As typedDataCard.textualEditCard:
@@ -737,6 +822,9 @@ editar_cadastro_colaborador As screen:
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
+                    Mode: |-
+                        =//If(varShowSenha;TextMode.SingleLine;TextMode.Password)
+                        TextMode.Password
                     PaddingLeft: =5
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
@@ -821,6 +909,7 @@ editar_cadastro_colaborador As screen:
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
+                    Mode: =TextMode.Password
                     OnChange: |-
                         =UpdateContext({passwordIsEqual: DataCardValuePassword_2.Text =DataCardValuePasswordConfirm_2.Text});
                     PaddingLeft: =5

@@ -115,9 +115,9 @@ visualizar_evento_colaborador As screen:
         Height: =58
         Size: =21
         Text: |-
-            ="Projeto: " & itemSelecionado.'projects_id: name'.Value
+            =Concatenate("Projeto: ", ddTaskByUser.Selected.name)
         Width: =568
-        X: =52
+        X: =43
         Y: =208
         ZIndex: =10
 
@@ -131,7 +131,7 @@ visualizar_evento_colaborador As screen:
         DataSource: =tbl_tasks
         DefaultMode: =FormMode.View
         Height: =630
-        Item: =LookUp(tbl_tasks,ID=itemSelecionado.ID)
+        Item: =LookUp(tbl_tasks,ID=galVizuAtiv.Selected.ID)
         Width: =626
         X: =12
         Y: =266
@@ -168,9 +168,10 @@ visualizar_evento_colaborador As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
+                Y: =10 + (DataCardValue42.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue42 As text:
@@ -200,9 +201,9 @@ visualizar_evento_colaborador As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey42.Y + DataCardKey42.Height + 6
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey42.X + DataCardKey42.Width
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage33 As label:
@@ -282,11 +283,11 @@ visualizar_evento_colaborador As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Text: ="Nome"
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =10 + (DataCardValue35.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue35 As text:
@@ -316,9 +317,9 @@ visualizar_evento_colaborador As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =45
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey35.X + DataCardKey35.Width
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage26 As label:
@@ -399,10 +400,10 @@ visualizar_evento_colaborador As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =10 + (DataCardValue36.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue36 As text:
@@ -432,9 +433,9 @@ visualizar_evento_colaborador As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =58
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey36.X + DataCardKey36.Width
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage27 As label:
@@ -515,9 +516,10 @@ visualizar_evento_colaborador As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =28
+                Y: =10 + (DataCardValue37.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue37 As text:
@@ -547,9 +549,9 @@ visualizar_evento_colaborador As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey37.Y + DataCardKey37.Height + 5
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey37.X + DataCardKey37.Width
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage28 As label:
@@ -629,10 +631,10 @@ visualizar_evento_colaborador As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =10 + (DataCardValue38.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue38 As datepicker:
@@ -656,9 +658,9 @@ visualizar_evento_colaborador As screen:
                 Size: =21
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey38.Y + DataCardKey38.Height + 5
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey38.X + DataCardKey38.Width
+                Y: =10
                 ZIndex: =2
 
             ErrorMessage29 As label:

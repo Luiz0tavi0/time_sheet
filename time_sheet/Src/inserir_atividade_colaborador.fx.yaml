@@ -252,6 +252,9 @@ inserir_atividade_colaborador As screen:
                 ChevronHoverBackground: =RGBA(212, 212, 212, 1)
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
+                Default: |
+                    =//If(IsBlank(Parent.Default);First([@tbl_tasks].status))
+                    {Value: "Em andamento"}
                 DefaultSelectedItems: =Parent.Default
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -264,13 +267,14 @@ inserir_atividade_colaborador As screen:
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
                 InputTextPlaceholder: ="Status da atividade"
+                IsSearchable: =false
                 Items: =Choices([@tbl_tasks].status)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 SearchFields: =["Value"]
-                SearchItems: =Choices(tbl_tasks.status,DataCardValueStatus.SearchText)
+                SearchItems: =[]
                 SelectionFill: =RGBA(0, 120, 212, 1)
                 SelectMultiple: =false
                 Size: =18
@@ -279,31 +283,6 @@ inserir_atividade_colaborador As screen:
                 X: =30
                 Y: =DataCardKey7.Y + DataCardKey7.Height + 5
                 ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =32
-                Y: =56
-                ZIndex: =3
 
             StarVisible9 As label:
                 Align: =Align.Center
@@ -696,7 +675,7 @@ inserir_atividade_colaborador As screen:
                 Height: =30
                 PaddingLeft: =0
                 Size: =20
-                Text: ="Hora"
+                Text: ="Horas"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30

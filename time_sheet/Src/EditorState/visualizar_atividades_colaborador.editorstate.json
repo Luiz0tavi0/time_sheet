@@ -1722,7 +1722,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "HeaderWorker_4": {
+    "HeaderWorker_22": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1762,25 +1762,32 @@
           "NameMapSourceSchema": "?"
         },
         "is_logged_screen",
-        "has_left_icon",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Visible",
+          "InvariantPropertyName": "has_left_icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        "Visible",
+        "has_right_icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Texto\"",
+          "InvariantPropertyName": "OnClickLeftIcon",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "has_right_icon",
+          "AutoRuleBindingString": "\"Texto\"",
+          "InvariantPropertyName": "OnClickRightIcon",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "OnClickLeftIcon",
-        "OnClickRightIcon",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -1812,19 +1819,19 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "HeaderWorker_4",
+      "Name": "HeaderWorker_22",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Data",
           "PropertyName": "has_right_icon",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",
           "PropertyName": "has_left_icon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -1834,7 +1841,7 @@
         {
           "Category": "Data",
           "PropertyName": "background_color",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -1889,12 +1896,12 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnClickLeftIcon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Behavior",
           "PropertyName": "OnClickRightIcon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",

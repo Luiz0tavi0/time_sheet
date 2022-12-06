@@ -200,8 +200,13 @@ Buscar_por_colaboradores_empresa As screen:
         Y: =1036
         ZIndex: =7
 
-    HeaderWorker_5 As HeaderWorker:
+    HeaderWorker_20 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        header_title: =CONST_CURRENT_USER.name
+        OnClickLeftIcon: =Back()
+        OnClickRightIcon: |-
+            =Set(CONST_CURRENT_USER, Blank());
+            Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =8
 

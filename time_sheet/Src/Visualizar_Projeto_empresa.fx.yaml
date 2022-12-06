@@ -128,31 +128,6 @@ Visualizar_Projeto_empresa As screen:
         Y: =813
         ZIndex: =4
 
-    ButtonBack_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderThickness: =0
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(244, 244, 244, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =24
-        Text: ="Voltar"
-        Width: =230
-        X: =81
-        Y: =905
-        ZIndex: =7
-
     ButtonDownload_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -455,10 +430,17 @@ Visualizar_Projeto_empresa As screen:
                 ZIndex: =2
 
     FooterCompany_3 As FooterCompany:
-        Y: =1016
+        Y: =1036
         ZIndex: =15
 
-    HeaderCompany_3 As HeaderCompany:
+    HeaderWorker_24 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        header_title: =CONST_CURRENT_USER.name
+        OnClickLeftIcon: =Back()
+        OnClickRightIcon: |-
+            =Set(CONST_CURRENT_USER, Blank());
+            Navigate(login,ScreenTransition.Fade);
+        Visible: =true
         ZIndex: =16
 
     HoursProjectCard As group:
@@ -503,51 +485,4 @@ Visualizar_Projeto_empresa As screen:
             X: =409
             Y: =816
             ZIndex: =3
-
-    IconBack_1 As group:
-        Height: =5
-        Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =80
-
-        Icon7_2 As icon.ChevronLeft:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(39, 39, 39, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =24
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronLeft
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =24
-            X: =110
-            Y: =928
-            ZIndex: =10
-
-        Icon7_3 As icon.ChevronLeft:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(39, 39, 39, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =24
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.ChevronLeft
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =24
-            X: =100
-            Y: =928
-            ZIndex: =11
 

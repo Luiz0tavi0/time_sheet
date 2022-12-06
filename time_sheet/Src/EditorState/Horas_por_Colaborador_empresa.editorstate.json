@@ -1473,7 +1473,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "HeaderWorker_11": {
+    "HeaderWorker_14": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -1513,7 +1513,14 @@
           "NameMapSourceSchema": "?"
         },
         "is_logged_screen",
-        "has_left_icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "has_left_icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Visible",
         "has_right_icon",
         {
@@ -1563,7 +1570,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "HeaderWorker_11",
+      "Name": "HeaderWorker_14",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1575,7 +1582,7 @@
         {
           "Category": "Data",
           "PropertyName": "has_left_icon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -1600,7 +1607,7 @@
         {
           "Category": "Data",
           "PropertyName": "right_icon",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",

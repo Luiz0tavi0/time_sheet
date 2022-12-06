@@ -222,7 +222,7 @@ visualizar_atividades_colaborador As screen:
         ZIndex: =27
 
     FooterWorker_9 As FooterWorker:
-        Y: =1016
+        Y: =1036
         ZIndex: =28
 
     MonthLabel_1 As label:
@@ -380,12 +380,6 @@ visualizar_atividades_colaborador As screen:
             Y: =859
             ZIndex: =34
 
-    HeaderWorker_4 As HeaderWorker:
-        has_right_icon: =false
-        header_title: =If(IsBlank(CONST_CURRENT_USER.name),"Atividades")
-        Visible: =true
-        ZIndex: =37
-
     Label1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -402,4 +396,14 @@ visualizar_atividades_colaborador As screen:
         X: =24
         Y: =368
         ZIndex: =38
+
+    HeaderWorker_22 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        header_title: =CONST_CURRENT_USER.name
+        OnClickLeftIcon: =Back()
+        OnClickRightIcon: |-
+            =Set(CONST_CURRENT_USER, Blank());
+            Navigate(login,ScreenTransition.Fade);
+        Visible: =true
+        ZIndex: =39
 

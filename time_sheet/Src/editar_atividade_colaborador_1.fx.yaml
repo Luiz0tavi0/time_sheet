@@ -747,11 +747,16 @@ editar_atividade_colaborador_1 As screen:
         ZIndex: =9
 
     FooterWorker_11 As FooterWorker:
-        Y: =1016
+        Y: =1036
         ZIndex: =10
 
-    HeaderWorker_9 As HeaderWorker:
+    HeaderWorker_16 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        header_title: =CONST_CURRENT_USER.name
+        OnClickLeftIcon: =Back()
+        OnClickRightIcon: |-
+            =Set(CONST_CURRENT_USER, Blank());
+            Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =11
 

@@ -279,7 +279,7 @@ Horas_por_Colaborador_empresa As screen:
         ZIndex: =14
 
     FooterCompany_2 As FooterCompany:
-        Y: =1034
+        Y: =1036
         ZIndex: =20
 
     Label20480_1 As label:
@@ -303,7 +303,7 @@ Horas_por_Colaborador_empresa As screen:
         Y: =189
         ZIndex: =22
 
-    HeaderWorker_11 As HeaderWorker:
+    HeaderWorker_14 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
         OnClickLeftIcon: =Back()

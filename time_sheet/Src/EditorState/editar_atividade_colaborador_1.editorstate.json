@@ -6356,7 +6356,7 @@
       "StyleName": "defaultFormStyle",
       "Type": "ControlInfo"
     },
-    "HeaderWorker_9": {
+    "HeaderWorker_16": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -6396,11 +6396,32 @@
           "NameMapSourceSchema": "?"
         },
         "is_logged_screen",
-        "has_left_icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "has_left_icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Visible",
         "has_right_icon",
-        "OnClickLeftIcon",
-        "OnClickRightIcon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Texto\"",
+          "InvariantPropertyName": "OnClickLeftIcon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"Texto\"",
+          "InvariantPropertyName": "OnClickRightIcon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -6432,7 +6453,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "HeaderWorker_9",
+      "Name": "HeaderWorker_16",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -6444,7 +6465,7 @@
         {
           "Category": "Data",
           "PropertyName": "has_left_icon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -6459,7 +6480,7 @@
         {
           "Category": "Data",
           "PropertyName": "header_title",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -6509,12 +6530,12 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnClickLeftIcon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Behavior",
           "PropertyName": "OnClickRightIcon",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",

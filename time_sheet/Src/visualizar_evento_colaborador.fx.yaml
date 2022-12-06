@@ -99,7 +99,7 @@ visualizar_evento_colaborador As screen:
         ZIndex: =4
 
     FooterWorker_10 As FooterWorker:
-        Y: =1016
+        Y: =1036
         ZIndex: =5
 
     LabelProjectName_2 As label:
@@ -120,11 +120,6 @@ visualizar_evento_colaborador As screen:
         X: =43
         Y: =208
         ZIndex: =10
-
-    HeaderWorker_1 As HeaderWorker:
-        header_title: =CONST_CURRENT_USER.name
-        Visible: =true
-        ZIndex: =13
 
     FormViewerTasks As form:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -708,4 +703,14 @@ visualizar_evento_colaborador As screen:
                 Wrap: =false
                 Y: =DataCardKey38.Y
                 ZIndex: =4
+
+    HeaderWorker_23 As HeaderWorker:
+        background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        header_title: =CONST_CURRENT_USER.name
+        OnClickLeftIcon: =Back()
+        OnClickRightIcon: |-
+            =Set(CONST_CURRENT_USER, Blank());
+            Navigate(login,ScreenTransition.Fade);
+        Visible: =true
+        ZIndex: =15
 

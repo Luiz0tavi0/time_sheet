@@ -147,7 +147,7 @@ inserir_atividade_colaborador As screen:
             Update: =DataCardValueStatus.Selected
             Width: =516
             X: =0
-            Y: =4
+            Y: =
             ZIndex: =1
 
             DataCardKey7 As label:
@@ -168,6 +168,7 @@ inserir_atividade_colaborador As screen:
                 Width: =Parent.Width - 430
                 Wrap: =false
                 X: =30
+                Y: =Parent.Height/3-Self.Height/2
                 ZIndex: =1
 
             DataCardValueStatus As combobox:
@@ -186,7 +187,7 @@ inserir_atividade_colaborador As screen:
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =50
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(212, 212, 212, 1)
@@ -203,6 +204,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 280
                 X: =250
+                Y: =Parent.Height/2-Self.Height/2
                 ZIndex: =2
 
             ErrorMessage8 As label:
@@ -248,6 +250,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
+                Y: =Parent.Height/3-Self.Height/2
                 ZIndex: =4
 
         name_DataCard2 As typedDataCard.textualEditCard:
@@ -261,13 +264,13 @@ inserir_atividade_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
             Required: =true
-            Update: =DataCardValue5.Text
+            Update: =DataCardValueName.Text
             Width: =516
             X: =0
             Y: =0
             ZIndex: =13
 
-            DataCardKey5 As label:
+            DataCardKeyName As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -281,14 +284,14 @@ inserir_atividade_colaborador As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Nom"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue5 As text:
+            DataCardValueName As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -300,7 +303,7 @@ inserir_atividade_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =50
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -317,7 +320,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                Y: =DataCardKeyName.Y + DataCardKeyName.Height + 5
                 ZIndex: =2
 
             ErrorMessage3 As label:
@@ -342,7 +345,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
+                Y: =DataCardValueName.Y + DataCardValueName.Height
                 ZIndex: =3
 
             StarVisible5 As label:
@@ -356,14 +359,14 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey5.Height
+                Height: =DataCardKeyName.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey5.Y
+                Y: =DataCardKeyName.Y
                 ZIndex: =4
 
         description_DataCard1 As typedDataCard.textualEditCard:
@@ -377,13 +380,13 @@ inserir_atividade_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "description")
             Required: =false
-            Update: =DataCardValue7.Text
+            Update: =DataCardValueDescription.Text
             Width: =516
             X: =0
             Y: =1
             ZIndex: =13
 
-            DataCardKey6 As label:
+            DataCardKeyDescription As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -397,14 +400,14 @@ inserir_atividade_colaborador As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Descrição"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7 As text:
+            DataCardValueDescription As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -416,7 +419,7 @@ inserir_atividade_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =50
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -433,7 +436,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
+                Y: =DataCardKeyDescription.Y + DataCardKeyDescription.Height + 5
                 ZIndex: =2
 
             ErrorMessage5 As label:
@@ -458,7 +461,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
+                Y: =DataCardValueDescription.Y + DataCardValueDescription.Height
                 ZIndex: =3
 
             StarVisible8 As label:
@@ -472,14 +475,14 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey6.Height
+                Height: =DataCardKeyDescription.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey6.Y
+                Y: =DataCardKeyDescription.Y
                 ZIndex: =4
 
         date_DataCard1 As typedDataCard.dateEditCard:
@@ -492,13 +495,13 @@ inserir_atividade_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
-            Update: =DataCardValue12.SelectedDate
+            Update: =DataCardValueDate.SelectedDate
             Width: =516
             X: =0
             Y: =2
             ZIndex: =13
 
-            DataCardKey8 As label:
+            DataCardKeyDate As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -512,14 +515,14 @@ inserir_atividade_colaborador As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Data"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue12 As datepicker:
+            DataCardValueDate As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
@@ -530,7 +533,7 @@ inserir_atividade_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =50
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(0, 120, 212, 1)
                 IsEditable: =true
@@ -542,7 +545,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
+                Y: =DataCardKeyDate.Y + DataCardKeyDate.Height + 5
                 ZIndex: =2
 
             ErrorMessage9 As label:
@@ -567,7 +570,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue12.Y + DataCardValue12.Height
+                Y: =DataCardValueDate.Y + DataCardValueDate.Height
                 ZIndex: =3
 
             StarVisible10 As label:
@@ -581,14 +584,14 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey8.Height
+                Height: =DataCardKeyDate.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey8.Y
+                Y: =DataCardKeyDate.Y
                 ZIndex: =4
 
         hours_DataCard1 As typedDataCard.numberEditCard:
@@ -601,13 +604,13 @@ inserir_atividade_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
-            Update: =Value(DataCardValue13.Text)
+            Update: =Value(DataCardValueHours.Text)
             Width: =516
             X: =0
             Y: =3
             ZIndex: =13
 
-            DataCardKey9 As label:
+            DataCardKeyHours As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -621,14 +624,14 @@ inserir_atividade_colaborador As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: ="Hora"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue13 As text:
+            DataCardValueHours As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
@@ -641,7 +644,7 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
-                Height: =70
+                Height: =50
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -657,7 +660,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                Y: =DataCardKeyHours.Y + DataCardKeyHours.Height + 5
                 ZIndex: =2
 
             ErrorMessage10 As label:
@@ -682,7 +685,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue13.Y + DataCardValue13.Height
+                Y: =DataCardValueHours.Y + DataCardValueHours.Height
                 ZIndex: =3
 
             StarVisible11 As label:
@@ -696,14 +699,14 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey9.Height
+                Height: =DataCardKeyHours.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey9.Y
+                Y: =DataCardKeyHours.Y
                 ZIndex: =4
 
     HeaderWorker_29 As HeaderWorker:

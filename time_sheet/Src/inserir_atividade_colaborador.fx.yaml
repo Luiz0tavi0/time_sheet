@@ -1,5 +1,12 @@
 inserir_atividade_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =ClearCollect(colProjectsForUserByContracts,
+            With(
+                {tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
+                ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
+            )
+        )
 
     ButtonSaveWorker_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -15,11 +22,35 @@ inserir_atividade_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =If(
-                And(FormActivity.Valid,Not(IsBlank(ddContract)),Not(IsBlank(ddProject))),
+            =/*If(
+                And(FormActivity.Valid;Not(IsBlank(ddProject)));
                 SubmitForm(FormActivity)
-                ,
+                ;
                 ""
+            );;*/
+            UpdateContext({lastTaskSubmited:Blank()});
+            If(FormActivity.Valid,
+                UpdateContext({lastTaskSubmited:
+                    Patch(
+                            tbl_tasks, 
+                            Defaults(tbl_tasks), 
+                            {name: DataCardValueName.Text, description:DataCardValueDescription.Text ,
+                                status:DataCardValueStatus.Selected, 
+                                date: DataCardValueDate.SelectedDate, 
+                                hours: Value(DataCardValueHours.Text),
+                                billable_hours: DataCardValueBillableHours.Value,
+                                user_id:{
+                                    Id:CONST_CURRENT_USER.ID,
+                                    Value:Blank()
+                                    },
+                                project_id:{
+                                    Id:ddProject.Selected.ID,
+                                    Value:Blank()
+                                }
+            
+                            } 
+                        ).ID
+                })
             );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -52,43 +83,6 @@ inserir_atividade_colaborador As screen:
         X: =52
         Y: =137
         ZIndex: =2
-
-    ddProject As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =50
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |-
-            =With(
-                {tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
-                ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id),name))
-            )
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        Size: =21
-        Width: =Parent.Width*0.8
-        X: =Parent.Width/2-Self.Width/2
-        Y: =233
-        ZIndex: =7
 
     LabelProjectName As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -149,13 +143,13 @@ inserir_atividade_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =true
-            Update: =DataCardValueBillable.Value
+            Update: =DataCardValueBillableHours.Value
             Width: =Parent.Width/2
             X: =0   
             Y: =3
             ZIndex: =1
 
-            DataCardValueBillable As toggleSwitch:
+            DataCardValueBillableHours As toggleSwitch:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderStyle: =BorderStyle.None
                 Color: =RGBA(51, 51, 51, 1)
@@ -364,8 +358,9 @@ inserir_atividade_colaborador As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =18
-                Text: =If(Parent.Error,"A atividade precisa de um nome.")
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Text: |
+                    =If(IsBlank(Parent.Error),"", "A atividade precisa de um nome.")
+                Visible: =If(IsBlank(Parent.Error), true,true)
                 Width: =Parent.Width - 60
                 X: =30
                 Y: =DataCardValueName.Y + DataCardValueName.Height
@@ -589,7 +584,7 @@ inserir_atividade_colaborador As screen:
                 Y: =Parent.Height/3-Self.Height/2
                 ZIndex: =4
 
-        hours_DataCard1 As typedDataCard.numberEditCard:
+        hours_DataCard As typedDataCard.numberEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="hours"
@@ -629,7 +624,7 @@ inserir_atividade_colaborador As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
+                Default: =1
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -658,7 +653,7 @@ inserir_atividade_colaborador As screen:
                 ZIndex: =2
 
             ErrorMessage10 As label:
-                AutoHeight: =true
+                Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
@@ -668,17 +663,16 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =10
+                Height: =55
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
+                Size: =18
+                Text: =If(IsBlank(Parent.Error),"","Informe o tempo de atividade")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =258
                 Y: =DataCardValueHours.Y + DataCardValueHours.Height
                 ZIndex: =3
 
@@ -885,7 +879,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =20
 
         user_id_Column2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -899,7 +893,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =21
 
         "'user_id:email_Column2' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -915,7 +909,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =22
 
         "'user_id:cpf_Column2' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -931,7 +925,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =23
 
         active_Column4 As dataTableColumn.booleanColumn:
             DisplayMode: =DisplayMode.Edit
@@ -945,7 +939,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =24
 
         project_id_Column2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -959,5 +953,59 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =25
+
+    ddProject As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["name"]
+        Font: =Font.'Segoe UI'
+        Height: =50
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        InputTextPlaceholder: ="Buscar projeto"
+        Items: |-
+            =With(
+                {tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
+                ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
+            )
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["status"]
+        SearchItems: =Search(tbl_projects,ddProject.SearchText,"status")
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
+        Size: =21
+        Width: =Parent.Width*.8
+        X: =Parent.Width/2-Self.Width/2
+        Y: =231
+        ZIndex: =17
+
+    Label7 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =IsError(lastTaskSubmited)
+        Width: =560
+        X: =40
+        Y: =832
+        ZIndex: =18
 

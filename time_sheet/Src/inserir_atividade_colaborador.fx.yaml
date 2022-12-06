@@ -148,7 +148,9 @@ inserir_atividade_colaborador As screen:
             Update: =DataCardValueBillable.Value
             Width: =Parent.Width/2
             X: =0
-            Y: =3
+            Y: |-
+                =
+                3
             ZIndex: =1
 
             DataCardValueBillable As toggleSwitch:
@@ -563,7 +565,7 @@ inserir_atividade_colaborador As screen:
             Height: =50
             Required: =true
             Update: =DataCardValueDate.SelectedDate
-            Width: =Parent.Width/2
+            Width: =516
             X: =0
             Y: =2
             ZIndex: =13
@@ -785,4 +787,125 @@ inserir_atividade_colaborador As screen:
             Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =13
+
+    DataTable2 As dataTable.datatable:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(0, 120, 212, 1)
+        HeadingFont: =Font.'Segoe UI'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =21
+        Height: =500
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 120, 212, 1)
+        InputFill: =RGBA(255, 255, 255, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: =tbl_projects
+        LinkColor: =RGBA(0, 134, 208, 1)
+        PrimaryColor1: =RGBA(0, 120, 212, 1)
+        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        SelectedColor: =RGBA(51, 51, 51, 1)
+        SelectedFill: =RGBA(0, 120, 212, .2)
+        Size: =21
+        Width: =640
+        X: =Parent.Width+Self.Width-500
+        Y: =40
+        ZIndex: =14
+
+        name_Column2 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="name"
+            FieldName: ="name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.name
+            Width: =334
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        start_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="start"
+            FieldName: ="start"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.start
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        status_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="status"
+            FieldName: ="status"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.status
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        manager_Column2 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="manager"
+            FieldName: ="manager"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.manager.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        "'manager:name_Column2' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: |-
+                ="manager:name"
+            FieldName: ="manager_x003a_name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: |-
+                =ThisItem.'manager:name'.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        active_Column2 As dataTableColumn.booleanColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="active"
+            FieldName: ="active"
+            FieldVariantName: ="booleanColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.active
+            Width: =70
+            X: =1024
+            Y: =0
+            ZIndex: =0
 

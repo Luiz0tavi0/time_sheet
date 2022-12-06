@@ -21,34 +21,26 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =
-            UpdateContext({lastTaskSubmited:Blank()});
-            If(FormActivity.Valid,
-                IfError(
-                        Patch(
-                            tbl_tasks, 
-                            Defaults(tbl_tasks), 
-                            {
-                                name: DataCardValueName.Text, description:DataCardValueDescription.Text ,
-                                status:DataCardValueStatus.Selected, 
-                                date: DataCardValueDate.SelectedDate, 
-                                hours: Value(DataCardValueHours.Text),
-                                billable_hours: DataCardValueBillableHours.Value,
-                                user_id:{
-                                    Id:CONST_CURRENT_USER.ID,
-                                    Value:Blank()
-                                    },
-                                project_id:{
-                                    Id:9999,//ddProject.Selected.ID;
-                                    Value:Blank()
-                                }
-            
-                            }
-                        ),
-                        Notify($"Erro: {FirstError.Message}",NotificationType.Error)
+        OnSelect: |
+            =IfError(
+                Patch(
+                    tbl_tasks,
+                    Defaults(tbl_tasks),
+                    {
+                        name: DataCardValueName.Text,
+                        description: DataCardValueDescription.Text,
+                        status: DataCardValueStatus.Selected,
+                        date: DataCardValueDate.SelectedDate,
+                        hours: Value(DataCardValueHours.Text),
+                        billable_hours: DataCardValueBillableHours.Value
+                    }
+                ),
+                Notify(
+                    $"Erro personalizado: {FirstError.Message}| {FirstError.Source }",// | {FirstError.Observed} | {FirstError.Kind}";
+                    NotificationType.Success
                 )
-            )
+            );
+            UpdateContext({lastTaskSubmited: Blank()});
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -607,7 +599,7 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =30
+                Height: =35
                 PaddingLeft: =0
                 Size: =20
                 Text: ="Horas"
@@ -646,7 +638,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKeyHours.Y + DataCardKeyHours.Height + 5
+                Y: =45
                 ZIndex: =2
 
             ErrorMessage10 As label:
@@ -660,13 +652,12 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =55
+                Height: =30
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =18
                 Text: =If(IsBlank(Parent.Error),"","Informe o tempo de atividade")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =258

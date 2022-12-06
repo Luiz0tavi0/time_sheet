@@ -788,7 +788,7 @@ inserir_atividade_colaborador As screen:
         Visible: =true
         ZIndex: =13
 
-    DataTable2 As dataTable.datatable:
+    DataTableProjects As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.Solid
         Color: =RGBA(51, 51, 51, 1)
@@ -833,7 +833,7 @@ inserir_atividade_colaborador As screen:
             Width: =334
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =14
 
         start_Column2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -847,7 +847,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =15
 
         status_Column2 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -861,7 +861,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =16
 
         manager_Column2 As dataTableColumn.textualColumn:
             AutoWidth: =false
@@ -876,7 +876,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =17
 
         "'manager:name_Column2' As dataTableColumn.textualColumn":
             DisplayMode: =DisplayMode.Edit
@@ -892,7 +892,7 @@ inserir_atividade_colaborador As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =0
+            ZIndex: =18
 
         active_Column2 As dataTableColumn.booleanColumn:
             AutoWidth: =false
@@ -906,6 +906,178 @@ inserir_atividade_colaborador As screen:
             Text: =ThisItem.active
             Width: =70
             X: =1024
+            Y: =0
+            ZIndex: =19
+
+    DataTableRelationByUserContract As dataTable.datatable:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.Solid
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Normal
+        HeadingColor: =RGBA(255, 255, 255, 1)
+        HeadingFill: =RGBA(0, 120, 212, 1)
+        HeadingFont: =Font.'Segoe UI'
+        HeadingFontWeight: =FontWeight.Normal
+        HeadingSize: =21
+        Height: =500
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 120, 212, 1)
+        InputFill: =RGBA(255, 255, 255, 1)
+        InvertedColor: =RGBA(255, 255, 255, 1)
+        Items: |
+            =//First(Filter(tbl_contracts;user_id.Id=CONST_CURRENT_USER.ID).project_id)
+            //With(
+            Filter(tbl_contracts,user_id.Id=CONST_CURRENT_USER.ID)
+                //ForAll(tbl_contracts_by_user;LookUp(tbl_projects;ID=project_id.Id))
+              //  tbl_contracts_by_user
+            //)
+        LinkColor: =RGBA(0, 134, 208, 1)
+        PrimaryColor1: =RGBA(0, 120, 212, 1)
+        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        SelectedColor: =RGBA(51, 51, 51, 1)
+        SelectedFill: =RGBA(0, 120, 212, .2)
+        Size: =21
+        Width: =640
+        X: =Parent.Width+Self.Width-500
+        Y: =636
+        ZIndex: =15
+
+        description_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="description"
+            FieldName: ="description"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.description
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        user_id_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="user_id"
+            FieldName: ="user_id"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.user_id.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        "'user_id:name_Column2' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: |-
+                ="user_id:name"
+            FieldName: ="user_id_x003a_name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: |-
+                =ThisItem.'user_id:name'.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        "'user_id:email_Column2' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: |-
+                ="user_id:email"
+            FieldName: ="user_id_x003a_email"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: |-
+                =ThisItem.'user_id:email'.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        "'user_id:cpf_Column2' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: |-
+                ="user_id:cpf"
+            FieldName: ="user_id_x003a_cpf"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: |-
+                =ThisItem.'user_id:cpf'.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        "'user_id:cnpj_Column2' As dataTableColumn.textualColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: |-
+                ="user_id:cnpj"
+            FieldName: ="user_id_x003a_cnpj"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: |-
+                =ThisItem.'user_id:cnpj'.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        active_Column4 As dataTableColumn.booleanColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="active"
+            FieldName: ="active"
+            FieldVariantName: ="booleanColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.active
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        project_id_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="project_id"
+            FieldName: ="project_id"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.project_id.Value
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =0
+
+        Anexos_Column4 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Anexos"
+            FieldName: ="{Attachments}"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =10
+            Text: =ThisItem.Anexos
+            Width: =100
+            X: =0
             Y: =0
             ZIndex: =0
 

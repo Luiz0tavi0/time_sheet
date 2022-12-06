@@ -21,36 +21,34 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
-            =/*If(
-                And(FormActivity.Valid;Not(IsBlank(ddProject)));
-                SubmitForm(FormActivity)
-                ;
-                ""
-            );;*/
+        OnSelect: |-
+            =
             UpdateContext({lastTaskSubmited:Blank()});
-            If(FormActivity.Valid,
-                UpdateContext({lastTaskSubmited:
-                    Patch(
-                            tbl_tasks, 
-                            Defaults(tbl_tasks), 
-                            {name: DataCardValueName.Text, description:DataCardValueDescription.Text ,
-                                status:DataCardValueStatus.Selected, 
-                                date: DataCardValueDate.SelectedDate, 
-                                hours: Value(DataCardValueHours.Text),
-                                billable_hours: DataCardValueBillableHours.Value,
-                                user_id:{
-                                    Id:CONST_CURRENT_USER.ID,
-                                    Value:Blank()
-                                    },
-                                project_id:{
-                                    Id:ddProject.Selected.ID,
-                                    Value:Blank()
-                                }
+            If(FormActivity.Valid || true,
+                IfError(
+                    UpdateContext({lastTaskSubmited:
+                        Patch(
+                                tbl_tasks, 
+                                Defaults(tbl_tasks), 
+                                {name: DataCardValueName.Text, description:DataCardValueDescription.Text ,
+                                    status:DataCardValueStatus.Selected, 
+                                    date: DataCardValueDate.SelectedDate, 
+                                    hours: Value(DataCardValueHours.Text),
+                                    billable_hours: DataCardValueBillableHours.Value,
+                                    user_id:{
+                                        Id:CONST_CURRENT_USER.ID,
+                                        Value:Blank()
+                                        },
+                                    project_id:{
+                                        Id:0,//ddProject.Selected.ID;
+                                        Value:Blank()
+                                    }
             
-                            } 
-                        ).ID
-                })
+                                } 
+                            ).ID
+                    })
+                    ,Notify($"Erro: {FirstError.Message}",NotificationType.Error)
+                )
             );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -1003,7 +1001,8 @@ inserir_atividade_colaborador As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: =$"{IsError(lastTaskSubmited) } |{FirstError.Message}"
+        Text: |
+            =IfError(lastTaskSubmited,FirstError.Message)
         Width: =560
         X: =40
         Y: =851

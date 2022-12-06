@@ -125,7 +125,7 @@ inserir_atividade_colaborador As screen:
         Y: =735
         ZIndex: =11
 
-    Form1 As form:
+    FormActivity As form:
         BorderColor: =RGBA(166, 166, 166, 1)
         DataSource: =tbl_tasks
         Height: =588
@@ -133,6 +133,122 @@ inserir_atividade_colaborador As screen:
         X: =68
         Y: =283
         ZIndex: =12
+
+        status_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="status"
+            Default: =ThisItem.status
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"status")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValueStatus.Selected
+            Width: =516
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 430
+                Wrap: =false
+                X: =30
+                ZIndex: =1
+
+            DataCardValueStatus As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                DefaultSelectedItems: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                Items: =Choices([@tbl_tasks].status)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                SearchFields: =["Value"]
+                SearchItems: =Choices(tbl_tasks.status,DataCardValueStatus.SearchText)
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectMultiple: =false
+                Size: =18
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 280
+                X: =250
+                ZIndex: =2
+
+            ErrorMessage8 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValueStatus.Y + DataCardValueStatus.Height
+                ZIndex: =3
+
+            StarVisible9 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey7.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                ZIndex: =4
 
         name_DataCard2 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -366,122 +482,6 @@ inserir_atividade_colaborador As screen:
                 Y: =DataCardKey6.Y
                 ZIndex: =4
 
-        status_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="status"
-            Default: =ThisItem.status
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"status")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "status")
-            Required: =true
-            Update: =DataCardValue8.Text
-            Width: =516
-            X: =0
-            Y: =2
-            ZIndex: =13
-
-            DataCardKey7 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue8 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =70
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey7.Y + DataCardKey7.Height + 5
-                ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
-                ZIndex: =3
-
-            StarVisible9 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey7.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey7.Y
-                ZIndex: =4
-
         date_DataCard1 As typedDataCard.dateEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
@@ -495,7 +495,7 @@ inserir_atividade_colaborador As screen:
             Update: =DataCardValue12.SelectedDate
             Width: =516
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =13
 
             DataCardKey8 As label:
@@ -604,7 +604,7 @@ inserir_atividade_colaborador As screen:
             Update: =Value(DataCardValue13.Text)
             Width: =516
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =13
 
             DataCardKey9 As label:

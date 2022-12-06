@@ -4,13 +4,13 @@ visualizar_atividades_colaborador As screen:
     "galVizuAtiv As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =463
-        Items: =Filter(tbl_tasks,CONST_CURRENT_USER.ID And )
+        Items: =Filter(tbl_tasks,project_id.Id= ComboBox1.Selected.ID And Month=DropdownMonth_1.Selected.Result)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Width: =532
-        X: =52
-        Y: =379
+        X: =44
+        Y: =467
         ZIndex: =1
 
         Title12 As label:
@@ -25,7 +25,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.
+            Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -43,7 +43,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.Title
+            Text: =ThisItem.description
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -64,7 +64,7 @@ visualizar_atividades_colaborador As screen:
             Size: =16
             Text: |-
                 =//Round(Substitute(ThisItem.'tasks_id: hours'.Value;".";",");0)
-                ThisItem.tasks_id_x003a__x0020_hours.Value
+                Concatenate(ThisItem.hours, "h")
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -372,7 +372,9 @@ visualizar_atividades_colaborador As screen:
             PaddingTop: =0
             Size: =18
             Text: |-
-                =Sum(galVizuAtiv.AllItems,'tasks_id:hours')
+                =Sum(
+                    Filter(tbl_tasks,project_id.Id= ComboBox1.Selected.ID And Month=DropdownMonth_1.Selected.Result),hours
+                    )
             Width: =129
             X: =417
             Y: =859
@@ -393,7 +395,7 @@ visualizar_atividades_colaborador As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =70
+        Height: =27
         Size: =21
         Text: =ddTaskByUser.Selected.ID
         Width: =560

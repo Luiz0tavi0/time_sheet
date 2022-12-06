@@ -25,8 +25,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: |-
-                =ThisItem.'projects_id: name'.Value
+            Text: =ThisItem.projects_id_x003a__x0020_name.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -44,8 +43,7 @@ visualizar_atividades_colaborador As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: |-
-                =ThisItem.'tasks_id: name'.Value
+            Text: =ThisItem.tasks_id_x003a__x0020_name.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -66,7 +64,7 @@ visualizar_atividades_colaborador As screen:
             Size: =16
             Text: |-
                 =//Round(Substitute(ThisItem.'tasks_id: hours'.Value;".";",");0)
-                ThisItem.'tasks_id: hours'.Value
+                ThisItem.tasks_id_x003a__x0020_hours.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

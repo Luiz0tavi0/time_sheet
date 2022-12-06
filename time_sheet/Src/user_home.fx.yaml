@@ -1,8 +1,8 @@
 user_home As screen:
-    Fill: |-
+    Fill: |
         =RGBA(255, 255, 255, 1)
-        // ajustar botoes para aparecer de acordo com usuário
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: =
 
     Image2_1 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -39,7 +39,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(Designar_colaborador_empresa,ScreenTransition.Fade)
+        OnSelect: =Navigate(Designar_colaborador_empresa,ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -93,7 +93,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(criar_Projeto_empresa, ScreenTransition.Fade)
+        OnSelect: =Navigate(criar_Projeto_empresa, ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -147,7 +147,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(editar_cadastro_colaborador);
+        OnSelect: =Navigate(editar_cadastro_colaborador, ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -201,7 +201,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(Buscar_por_colaboradores_empresa);
+        OnSelect: =Navigate(Buscar_por_colaboradores_empresa, ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -252,7 +252,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(Buscar_por_projeto_empresa);
+        OnSelect: =Navigate(Buscar_por_projeto_empresa,ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
@@ -309,7 +309,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(inserir_atividade_colaborador);
+        OnSelect: =Navigate(inserir_atividade_colaborador,ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -363,7 +363,7 @@ user_home As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
-        OnSelect: =Navigate(visualizar_atividades_colaborador);
+        OnSelect: =Navigate(visualizar_atividades_colaborador,ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)

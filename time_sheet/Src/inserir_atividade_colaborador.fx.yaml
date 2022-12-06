@@ -68,6 +68,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(user_home,ScreenTransition.Fade);
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(110, 164, 191, 1), -30%)
@@ -103,7 +104,7 @@ inserir_atividade_colaborador As screen:
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_tasks
         DefaultMode: =FormMode.New
-        Height: =529
+        Height: =573
         OnSuccess: |-
             =//Patch(tbl_projects_tasks; {tasks_id:FormActivity.LastSubmit.ID;projects_id:2})
             ClearCollect( lastTask, {last_task:LookUp( tbl_tasks, ID = FormActivity.LastSubmit.ID)});
@@ -111,8 +112,8 @@ inserir_atividade_colaborador As screen:
             //Patch(tbl_projects_tasks;Defaults(tbl_projects_tasks);{ tasks_id: last_task.ID} );;
             Patch(tbl_projects_tasks, {tasks_id:1})
         Width: =570
-        X: =32
-        Y: =373
+        X: =33
+        Y: =314
         ZIndex: =5
 
         name_DataCard5 As typedDataCard.textualEditCard:
@@ -468,7 +469,7 @@ inserir_atividade_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"date")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =70
+            Height: =105
             Required: =true
             Update: =DataCardValue39.SelectedDate
             Width: =570
@@ -489,11 +490,13 @@ inserir_atividade_colaborador As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =50
                 PaddingLeft: =0
+                PaddingRight: =0
                 Size: =21
                 Text: ="Data"
                 Width: =81
                 Wrap: =false
-                X: =240
+                X: =30
+                Y: =5
                 ZIndex: =1
 
             DataCardValue39 As datepicker:
@@ -511,14 +514,16 @@ inserir_atividade_colaborador As screen:
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(0, 120, 212, 1)
                 IsEditable: =true
-                PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =0
+                PaddingTop: =5
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =20
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 350
-                X: =321
+                X: =30
+                Y: =50
                 ZIndex: =2
 
             StarVisible44 As label:
@@ -539,7 +544,6 @@ inserir_atividade_colaborador As screen:
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                X: =210
                 ZIndex: =4
 
         hours_DataCard4 As typedDataCard.numberEditCard:
@@ -550,7 +554,7 @@ inserir_atividade_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"hours")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =128
             Required: =true
             Update: =Value(DataCardValue40.Text)
             Width: =570
@@ -575,6 +579,7 @@ inserir_atividade_colaborador As screen:
                 Width: =101
                 Wrap: =false
                 X: =30
+                Y: =10
                 ZIndex: =1
 
             DataCardValue40 As text:
@@ -590,7 +595,7 @@ inserir_atividade_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
-                Height: =60
+                Height: =50
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -606,7 +611,7 @@ inserir_atividade_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =101
                 X: =30
-                Y: =40
+                Y: =44
                 ZIndex: =2
 
             ErrorMessage43 As label:
@@ -685,7 +690,7 @@ inserir_atividade_colaborador As screen:
         Size: =21
         Width: =512
         X: =66
-        Y: =323
+        Y: =233
         ZIndex: =7
 
     LabelProjectName As label:
@@ -703,7 +708,7 @@ inserir_atividade_colaborador As screen:
         Text: ="Nome do Projeto"
         Width: =515
         X: =63
-        Y: =286
+        Y: =196
         ZIndex: =9
 
     FooterWorker_8 As FooterWorker:

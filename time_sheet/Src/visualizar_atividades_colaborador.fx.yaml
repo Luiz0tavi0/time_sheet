@@ -3,14 +3,14 @@ visualizar_atividades_colaborador As screen:
 
     "galVizuAtiv As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
-        Height: =463
+        Height: =325
         Items: =Filter(tbl_tasks,project_id.Id= ComboBox1.Selected.ID And Month=DropdownMonth_1.Selected.Result)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Width: =532
-        X: =44
-        Y: =467
+        X: =51
+        Y: =484
         ZIndex: =1
 
         Title12 As label:

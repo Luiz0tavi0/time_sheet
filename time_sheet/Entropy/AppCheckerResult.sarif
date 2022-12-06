@@ -2628,6 +2628,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 276,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Buscar_por_projeto_empresa",
+                "type": "Buscar_por_projeto_empresa.GalleryProject"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "manager.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Buscar_por_projeto_empresa.GalleryProject.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 279,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Buscar_por_projeto_empresa",
+                "type": "Buscar_por_projeto_empresa.GalleryProject"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "cadastro_users.HeaderWorker_2.OnClickRightIcon"
                 }
               ],

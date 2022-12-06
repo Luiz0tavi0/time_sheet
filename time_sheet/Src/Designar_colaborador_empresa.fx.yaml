@@ -246,7 +246,6 @@ Designar_colaborador_empresa As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         InputTextPlaceholder: ="cpf do colaborador"
-        IsSearchable: =false
         Items: =Search(colUsers,ComboBox1.SearchText,"email")
         MultiValueDelimiter: =
         NoSelectionText: =
@@ -255,7 +254,7 @@ Designar_colaborador_empresa As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["ComplianceAssetId"]
-        SearchItems: =[]
+        SearchItems: =Search(Search(colUsers,ComboBox1.SearchText,"email"),ComboBox1.SearchText,"ComplianceAssetId")
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =21

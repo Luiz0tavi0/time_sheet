@@ -2908,10 +2908,24 @@
         "Y",
         "ZIndex",
         "header_title",
-        "background_color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "RGBA(2, 4, 48, 1)",
+          "InvariantPropertyName": "background_color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "is_logged_screen",
         "has_left_icon",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "has_right_icon"
       ],
       "HasDynamicProperties": false,
@@ -2940,7 +2954,7 @@
         {
           "Category": "Data",
           "PropertyName": "background_color",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
@@ -2990,7 +3004,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",

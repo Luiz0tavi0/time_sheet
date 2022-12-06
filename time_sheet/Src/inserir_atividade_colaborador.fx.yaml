@@ -1003,9 +1003,9 @@ inserir_atividade_colaborador As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: =IsError(lastTaskSubmited)
+        Text: =$"{IsError(lastTaskSubmited) } |{FirstError.Message}"
         Width: =560
         X: =40
-        Y: =832
+        Y: =851
         ZIndex: =18
 

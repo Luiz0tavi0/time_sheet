@@ -4,15 +4,19 @@ cadastro_users As screen:
         =UpdateContext({varShowCpfError: false});
         UpdateContext({varShowEmailError: false});
         UpdateContext({fromLoginValidEmail: Blank()});
+        UpdateContext({ShowPasswordConfirm:false});
+        UpdateContext({ShowPassword:false});
     OnVisible: |+
-        =UpdateContext({varShowCpfError: false});
+        =
+        UpdateContext({varShowCpfError: false});
         UpdateContext({varShowEmailError: false});
         UpdateContext({userHasBeenCreated: Blank()});
-        //If(IsBlank(fromLoginValidEmail);
-        //    UpdateContext({varEmailIsValid:true})
-         //   ;
-            UpdateContext({varEmailIsValid:false})
-        //);;
+        
+        
+        UpdateContext({varEmailIsValid:false});
+        
+        UpdateContext({ShowPasswordConfirm:false});
+        UpdateContext({ShowPassword:false});
         
 
     ButtonCreateUserWorker As button:
@@ -825,6 +829,11 @@ cadastro_users As screen:
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
+                    Mode: |-
+                        =If(ShowPassword,
+                            TextMode.SingleLine,
+                            TextMode.Password
+                            )
                     PaddingLeft: =5
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(51, 51, 51, 1)
@@ -909,6 +918,11 @@ cadastro_users As screen:
                     HoverColor: =RGBA(51, 51, 51, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     MaxLength: =Parent.MaxLength
+                    Mode: |-
+                        =If(ShowPasswordConfirm,
+                            TextMode.SingleLine,
+                            TextMode.Password
+                            )
                     OnChange: |-
                         =UpdateContext({passwordIsEqual: DataCardValuePassword.Text =DataCardValuePasswordConfirm.Text});
                     PaddingLeft: =5
@@ -946,4 +960,48 @@ cadastro_users As screen:
                     Wrap: =false
                     Y: =DataCardValuePasswordConfirm.Y
                     ZIndex: =7
+
+                iconShowPassword_2 As icon.View:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =45
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.View
+                    OnSelect: |-
+                        =UpdateContext({ShowPassword:!ShowPassword})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =25
+                    X: =466
+                    Y: =29
+                    ZIndex: =8
+
+                iconShowPassword_3 As icon.View:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(220, 220, 220, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =45
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.View
+                    OnSelect: |-
+                        =UpdateContext({ShowPasswordConfirm:!ShowPasswordConfirm})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =25
+                    X: =466
+                    Y: =98
+                    ZIndex: =9
 

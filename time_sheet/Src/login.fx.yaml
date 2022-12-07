@@ -8,7 +8,8 @@ login As screen:
             UpdateContext({varShowErrors:false}),
             UpdateContext({lenInputPasword:0}),
             UpdateContext({varEmailIsOk:false}),
-            UpdateContext({userFromCadastroHasCreated:Blank()})
+            UpdateContext({userFromCadastroHasCreated:Blank()}),
+            UpdateContext({ShowPassword:false})
         )
     OnVisible: |-
         =Concurrent(
@@ -20,7 +21,8 @@ login As screen:
                 UpdateContext({varEmailIsOk:false});Reset(TxtInputLogin);Reset(TxtInputLoginSenha)
                 ,
                 UpdateContext({varEmailIsOk:true});
-            )
+            ),
+            UpdateContext({ShowPassword:false})
         );
 
     tempScreenTransitionFase1 As timer:
@@ -324,11 +326,6 @@ login As screen:
         Y: =47
         ZIndex: =18
 
-    cmpTransitionLoadLogin As cmpTransitionLoad:
-        Visible: =visibleTransitionFase1
-        X: =-varPositionXScrenLoading
-        ZIndex: =19
-
     cmpScreenSuccess_1 As cmpScreenSuccess:
         exito_texto: |-
             =If(
@@ -340,7 +337,12 @@ login As screen:
             =UpdateContext({visibleTransitionFase1:false})
         Visible: =visibleTransitionFase1
         X: =varPositionXScrenSuccess
-        ZIndex: =20
+        ZIndex: =22
+
+    cmpTransitionLoadLogin As cmpTransitionLoad:
+        Visible: =visibleTransitionFase1
+        X: =-varPositionXScrenLoading
+        ZIndex: =23
 
     grpIconsStatus As group:
         Height: =5
@@ -496,12 +498,52 @@ login As screen:
             Y: =818
             ZIndex: =8
 
-    grpInputTxt As group:
+    grpLoginFail As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =23
+
+        cmpLoginFail_1 As cmpLoginFail:
+            Height: = Max(App.Height, App.DesignHeight)
+            texto_falha: |-
+                ="Credenciais inválidas.
+                Tente novamente"
+            Visible: =visibleTransitionFailFase1
+            Width: = Max(App.Width, App.DesignWidth)
+            ZIndex: =19
+
+        rect As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            DisplayMode: |-
+                =If(
+                    visibleTransitionFailFase1,
+                    DisplayMode.Edit,
+                    DisplayMode.Disabled
+                )
+            Fill: =RGBA(102, 182, 227, 1)
+            FocusedBorderThickness: =4
+            Height: = Max(App.Height, App.DesignHeight)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: |-
+                =UpdateContext({visibleTransitionFailFase1:false});
+                UpdateContext({TimerGoFailFase1:false});
+                Reset(tempScreenTransitionErrorFase);
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =visibleTransitionFailFase1
+            Width: = Max(App.Width, App.DesignWidth)
+            ZIndex: =20
+
+    grpInputTxt As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =24
 
         TxtInputLoginSenha As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -521,7 +563,11 @@ login As screen:
             HoverFill: =RGBA(255, 255, 255, 1)
             Italic: =true
             MaxLength: =12
-            Mode: =TextMode.Password
+            Mode: |-
+                =If(ShowPassword,
+                    TextMode.SingleLine,
+                    TextMode.Password
+                    )
             OnChange: |-
                 =UpdateContext({lenInputPasword:Len(TxtInputLoginSenha.Text)});
                 If(lenInputPasword > 7,
@@ -592,43 +638,25 @@ login As screen:
             Y: =644
             ZIndex: =5
 
-    grpLoginFail As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =23
-
-        cmpLoginFail_1 As cmpLoginFail:
-            Height: = Max(App.Height, App.DesignHeight)
-            texto_falha: |-
-                ="Credenciais inválidas.
-                Tente novamente"
-            Visible: =visibleTransitionFailFase1
-            Width: = Max(App.Width, App.DesignWidth)
-            ZIndex: =21
-
-        rect As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
+        iconShowPassword_4 As icon.View:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
-            DisplayMode: |-
-                =If(
-                    visibleTransitionFailFase1,
-                    DisplayMode.Edit,
-                    DisplayMode.Disabled
-                )
-            Fill: =RGBA(102, 182, 227, 1)
             FocusedBorderThickness: =4
-            Height: = Max(App.Height, App.DesignHeight)
+            Height: =45
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.View
             OnSelect: |-
-                =UpdateContext({visibleTransitionFailFase1:false});
-                UpdateContext({TimerGoFailFase1:false});
-                Reset(tempScreenTransitionErrorFase);
+                =UpdateContext({ShowPassword:!ShowPassword})
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =visibleTransitionFailFase1
-            Width: = Max(App.Width, App.DesignWidth)
-            ZIndex: =22
+            Width: =25
+            X: =525
+            Y: =764
+            ZIndex: =21
 

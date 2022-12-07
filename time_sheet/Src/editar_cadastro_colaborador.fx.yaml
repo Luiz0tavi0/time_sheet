@@ -48,12 +48,37 @@ editar_cadastro_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =If(FormActivity_1.Valid,SubmitForm(FormActivity_1))
+        OnSelect: |-
+            =/*
+            If(
+                FormUsersCreate_2.Mode=FormMode.View;
+                EditForm(FormUsersCreate_2);
+                ViewForm(FormUsersCreate_2)
+            );;*/
+            If(FormUsersCreate_2.Mode=FormMode.Edit And FormUsersCreate_2.Unsaved,
+                Select(btnBackUpBeforeUpdate_1); // Guarda o registro antes de ser modificado
+                SubmitForm(FormUsersCreate_2);UpdateContext({itemBeforeUpdate:FormUsersCreate_2.LastSubmit});
+                ResetForm(FormUsersCreate_2);Select(btnCheckChanges_1);
+                // If(FormUsersCreate_2.Unsaved=false;UpdateContext({ShowUndoIcon:false}));;
+                ,
+                Select(btnCheckChanges_1);
+            );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =21
-        Text: ="Salvar"
+        Text: |-
+            =Switch(
+                FormActivity_2.Mode,
+                FormMode.View,
+                "Editar",
+                FormMode.Edit,
+                If(
+                    FormActivity_2.Unsaved,
+                    "Salvar",
+                    "Visualizar"
+                )
+            )
         X: =425
         Y: =915
         ZIndex: =2
@@ -1140,7 +1165,6 @@ editar_cadastro_colaborador As screen:
                 Tooltip: =Parent.DisplayName
                 Width: =525
                 X: =58
-                Y: =3
                 ZIndex: =5
 
         active_DataCard1 As typedDataCard.toggleEditCard:
@@ -1512,7 +1536,7 @@ editar_cadastro_colaborador As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
-                Default: =If(IsBlank(fromLoginValidEmail),"",fromLoginValidEmail)
+                Default: =Parent.Default
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1868,4 +1892,189 @@ editar_cadastro_colaborador As screen:
                 X: =550
                 Y: =81
                 ZIndex: =9
+
+    ButtonEditActivity_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(110,164,191, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =/*
+            If(
+                FormActivity_2.Mode=FormMode.View;
+                EditForm(FormActivity_2);
+                ViewForm(FormActivity_2)
+            );;*/
+            If(FormActivity_2.Mode=FormMode.Edit And FormActivity_2.Unsaved,
+                Select(btnBackUpBeforeUpdate_1); // Guarda o registro antes de ser modificado
+                SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});
+                ResetForm(FormActivity_2);Select(btnCheckChanges_1);
+                // If(FormActivity_2.Unsaved=false;UpdateContext({ShowUndoIcon:false}));;
+                ,
+                Select(btnCheckChanges_1);
+            );
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =24
+        Text: |-
+            =Switch(
+                FormActivity_2.Mode,
+                FormMode.View,
+                "Editar",
+                FormMode.Edit,
+                If(
+                    FormActivity_2.Unsaved,
+                    "Salvar",
+                    "Visualizar"
+                )
+            )
+        Width: =232
+        X: =186
+        Y: =915
+        ZIndex: =7
+
+    btnCheckChanges_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(110,164,191, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =175
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =
+            
+            If(
+                FormActivity_2.Mode=FormMode.View,
+                EditForm(FormActivity_2),
+                ViewForm(FormActivity_2)
+            );
+            
+            /*ClearCollect(register;LookUp(tbl_tasks;ID=itemActivity.ID));;
+            
+            UpdateContext(
+                    {isDifferente:
+                        Or(
+                           (Upper(Trim(First(register).name)))<>(Upper(Trim(FormActivity_2.Updates.name)));
+                           (Upper(Trim(First(register).description))<>(Upper(Trim(FormActivity_2.Updates.description))));
+                           First(register).date <> FormActivity_2.Updates.date;
+                           First(register).hours <> FormActivity_2.Updates.hours;
+                           (First(register).billable_hours) <> FormActivity_2.Updates.billable_hours;
+                           (Upper(First(register).status.Value)) <> (Upper(FormActivity_2.Updates.status.Value))
+                                          
+                        )
+                    }
+                )
+            
+            /*
+            With(
+                LookUp(tbl_tasks;ID=itemActivity.ID) As register;
+                UpdateContext(
+                    {isDifferente:
+                        Or(
+                           (Upper(Trim(First(register.name)))<>(Upper(Trim(FormActivity_2.Updates.name)));
+                           ((Upper(Trim(First(register.description)))<>(Upper(Trim(FormActivity_2.Updates.description))));
+                           First(register.date <> FormActivity_2.Updates.date;
+                           First(register.hours <> FormActivity_2.Updates.hours;
+                           First(register.billable_hours <> FormActivity_2.Updates.billable_hours;
+                           (Upper(First(register.status.Value)) <> (Upper(FormActivity_2.Updates.status.Value))
+                        )
+                    }
+                )
+                
+            );;*/
+            //(Upper(Trim(First(register.name)))<>(Upper(Trim(FormActivity_2.Updates.name)));
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =24
+        Text: ="Não apagar esse botão, cumpre função"
+        Width: =232
+        X: =-500
+        Y: =961
+        ZIndex: =8
+
+    btnBackUpBeforeUpdate_1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =150
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =//ClearCollect(colSafeFormData; FormActivity_2.Updates);;
+            UpdateContext({safeFormBackup: itemActivity});
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="guarda registro atual"
+        Width: =188
+        X: =-500
+        Y: =791
+        ZIndex: =9
+
+    IconUndo_1 As icon.Undo:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Undo
+        OnSelect: |+
+            =
+            
+            If(FormActivity_2.Mode=FormMode.Edit,
+                UpdateContext({itemActivity:safeFormBackup}); // Monta o registro de backup no formulário atual
+                SubmitForm(FormActivity_2);
+                UpdateContext({itemActivity:FormActivity_2.LastSubmit});
+                UpdateContext({safeFormBackup: itemActivity});
+                
+                ResetForm(FormActivity_2);
+                UpdateContext({ShowUndoIcon:false});
+            )
+            
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Desfazer"
+        Visible: |-
+            =If(IsBlank(safeFormBackup),
+                false
+                ,
+                ShowUndoIcon
+            )
+            
+            
+                
+        X: =122
+        Y: =900
+        ZIndex: =10
 

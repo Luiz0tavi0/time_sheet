@@ -15,7 +15,7 @@ criar_Projeto_empresa As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
+        OnSelect: |
             =Select(btnValidateAllParameter);
             UpdateContext({lastProjectSubmited:Blank()});
             
@@ -26,7 +26,7 @@ criar_Projeto_empresa As screen:
                             tbl_projects,
                             Defaults(tbl_projects),
                             {
-                                name: DataCardValue5.Text,
+                                name: Upper(DataCardValue5.Text),
                                 start: DataCardValue7.SelectedDate,
                                 manager: {
                                     Id: CONST_CURRENT_USER.ID,
@@ -38,7 +38,11 @@ criar_Projeto_empresa As screen:
                         )
                     }
                 );
-            )
+            );
+            If(Not(IsBlankOrError(lastProjectSubmited))),
+                "",
+                ""
+            );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

@@ -1656,6 +1656,7 @@ editar_cadastro_users As screen:
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "password")
             Required: =true
             Update: =DataCardValuePassword_2.Text
+            Visible: =FormUsersUpdate.Mode<>FormMode.View
             Width: =640
             X: =0
             Y: =4
@@ -1856,42 +1857,6 @@ editar_cadastro_users As screen:
                 Y: =81
                 ZIndex: =9
 
-    ButtonEditActivity_1 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(110,164,191, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
-            =UpdateContext({userInActivity:LookUp(tbl_users,ID = CONST_CURRENT_USER.ID)});
-            UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        Size: =24
-        Text: |-
-            =Switch(
-                FormActivity_2.Mode,
-                FormMode.View,
-                "Editar",
-                FormMode.Edit,
-                If(
-                    FormActivity_2.Unsaved,
-                    "Salvar",
-                    "Visualizar"
-                )
-            )
-        Width: =232
-        X: =52
-        Y: =915
-        ZIndex: =7
-
     btnChangesFormMode As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1973,7 +1938,7 @@ editar_cadastro_users As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =//ClearCollect(colSafeFormData; FormActivity_2.Updates);;
-            UpdateContext({safeFormBackup: itemActivity});
+            //UpdateContext({safeFormBackup: itemActivity});;
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

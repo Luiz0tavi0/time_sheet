@@ -21,26 +21,37 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
-            =IfError(
-                Patch(
-                    tbl_tasks,
-                    Defaults(tbl_tasks),
-                    {
-                        name: DataCardValueName.Text,
-                        description: DataCardValueDescription.Text,
-                        status: DataCardValueStatus.Selected,
-                        date: DataCardValueDate.SelectedDate,
-                        hours: Value(DataCardValueHours.Text),
-                        billable_hours: DataCardValueBillableHours.Value
-                    }
+        OnSelect: |+
+            =
+            IfError(
+                UpdateContext({lastTaskSubmited:
+                    Patch(
+                        tbl_tasks,
+                        Defaults(tbl_tasks),
+                        {
+                            name: DataCardValueName.Text,
+                            description: DataCardValueDescription.Text,
+                            status: DataCardValueStatus.Selected,
+                            date: DataCardValueDate.SelectedDate,
+                            hours: Value(DataCardValueHours.Text),
+                            billable_hours: DataCardValueBillableHours.Value,
+                            user_id:{
+                                Id:CONST_CURRENT_USER.ID,
+                                Value:Blank()
+                            },
+                            project_id:{
+                                Id:ddProject.Selected.ID,
+                                Value:Blank()
+                            }
+                        }
+                    )}
                 ),
                 Notify(
-                    $"Erro personalizado: {FirstError.Message}| {FirstError.Source }",// | {FirstError.Observed} | {FirstError.Kind}";
-                    NotificationType.Success
+                    $"Erro: {FirstError.Message}",//| {FirstError.Source }";// | {FirstError.Observed} | {FirstError.Kind}";
+                    NotificationType.Error
                 )
             );
-            UpdateContext({lastTaskSubmited: Blank()});
+            
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -991,10 +1002,9 @@ inserir_atividade_colaborador As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: |
-            =IfError(lastTaskSubmited,FirstError.Message)
-        Width: =560
-        X: =40
-        Y: =851
+        Text: =$"Last ID for Task Submited = {lastTaskSubmited.ID}"
+        Width: =536
+        X: =-600
+        Y: =450
         ZIndex: =18
 

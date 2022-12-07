@@ -1,12 +1,14 @@
 visualizar_atividades_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |
-        =UpdateContext({startScreenFail:false});
-        UpdateContext({startScreenSuccess:false});
-        UpdateContext({startTimerSuccess:false});
-        UpdateContext({startTimerFail:false});
-        
-        Select(btnUpdateComboProjects_1);
+    OnHidden: |-
+        =UpdateContext({startScreenLoading:false});
+        UpdateContext({startTimerLoading:false});
+    OnVisible: |-
+        =//UpdateContext({startScreenLoading:false});;
+        Concurrent(
+            UpdateContext({startTimerLoading:true}),
+            Select(btnUpdateComboProjects_1);
+        )
 
     DataTableProjects_1 As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -560,8 +562,9 @@ visualizar_atividades_colaborador As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
-            OnSelect: |-
-                =Select(Parent);
+            OnSelect: |
+                =UpdateContext({startTimerLoading:true});
+                Select(Parent);
                 
                 Navigate(visualizar_evento_colaborador,Fade,{projectId:ddProjectsByUser.Selected.ID,itemActivity:galFilteredActivities.Selected});
                 ViewForm(FormActivity_2);
@@ -641,6 +644,68 @@ visualizar_atividades_colaborador As screen:
         X: =-600
         Y: =400
         ZIndex: =17
+
+    timerScreenLoading As timer:
+        AutoPause: =false
+        BorderColor: =RGBA(99, 139, 44, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =1450
+        Fill: =RGBA(99, 139, 44, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerEnd: |-
+            =UpdateContext({startTimerLoading:false}); //precaução
+            UpdateContext({startScreenLoading: false});
+            // UpdateContext({varPositionXScrenLoading: cmpScreenSuccess_1.Width- varPositionXScrenLoading});;
+            /*
+            
+            If(IsBlank(CONST_CURRENT_USER);
+                UpdateContext({TimerGoFailFase1:true});;
+                ;
+                UpdateContext({TimerGoFase2:true});;Navigate(user_home; Fade);;
+            );;
+            
+            // UpdateContext({visibleTransitionFase1: true});;
+            */
+        OnTimerStart: |-
+            =UpdateContext({startScreenLoading: true});
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =21
+        Start: =startTimerLoading
+        Text: |-
+            =$"Timer loading {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
+        Width: =234
+        Y: =1175
+        ZIndex: =18
+
+    rectFundo As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =1286
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =startTimerLoading
+        Width: =670
+        X: =-15
+        Y: =-150
+        ZIndex: =19
+
+    cmpScreenLoading As cmpTransitionLoad:
+        Visible: =startScreenLoading
+        X: =-varPositionXScrenLoading
+        ZIndex: =20
 
     grpSumHours As group:
         Height: =5

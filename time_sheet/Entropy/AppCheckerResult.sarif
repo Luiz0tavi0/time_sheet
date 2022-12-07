@@ -4450,6 +4450,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.cmpScreenLoading.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.cmpScreenLoading.X",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 1,
+                  "snippet": {
+                    "text": "varPositionXScrenLoading"
+                  }
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.cmpScreenLoading"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "varPositionXScrenLoading"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "FooterWorker.BackgroundFooterDark.AccessibleLabel"
                 }
               ],
@@ -13570,126 +13610,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenFail"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenFail",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "startScreenFail",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenSuccess"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenSuccess",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "startScreenSuccess",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerFail"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerFail",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "startTimerFail",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerSuccess"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerSuccess",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "startTimerSuccess",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Visualizar_Projeto_empresa.itemSelecionado"
                 }
               ],
@@ -13703,36 +13623,6 @@
                 "member": "itemSelecionado",
                 "module": "Visualizar_Projeto_empresa",
                 "type": "Visualizar_Projeto_empresa"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.ShowUndoIcon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.ShowUndoIcon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "ShowUndoIcon",
-                "module": "visualizar_evento_colaborador",
-                "type": "visualizar_evento_colaborador"
               }
             }
           ],

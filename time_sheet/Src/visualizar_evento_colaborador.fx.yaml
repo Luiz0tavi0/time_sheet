@@ -2,7 +2,8 @@ visualizar_evento_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =UpdateContext({itemActivity:LookUp(tbl_tasks,ID = itemActivity.ID)});
-        UpdateContext({ShowUndoIcon:false});
+        UpdateContext({safeFormBackup:Blank()});
+        UpdateContext({ShowUndoIcon:(itemActivity.Modificado<>safeFormBackup.Modificado)});
 
     TitleActivity As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -49,7 +50,7 @@ visualizar_evento_colaborador As screen:
                 Select(btnBackUpBeforeUpdate); // Guarda o registro antes de ser modificado
                 SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});
                 ResetForm(FormActivity_2);Select(btnCheckChanges);
-                If(FormActivity_2.Unsaved=false,UpdateContext({ShowUndoIcon:false}));
+                // If(FormActivity_2.Unsaved=false;UpdateContext({ShowUndoIcon:false}));;
                 ,
                 Select(btnCheckChanges);
             );
@@ -117,9 +118,10 @@ visualizar_evento_colaborador As screen:
         Height: =588
         Item: =itemActivity
         NumberOfColumns: =1
-        OnSuccess: |-
+        OnSuccess: |
             =Notify($"Status foi alterado para ={FormActivity_2.LastSubmit.status.Value}",NotificationType.Success);
             //UpdateContext({ShowUndoIcon:!ShowUndoIcon});;
+            UpdateContext({ShowUndoIcon:(itemActivity.Modificado<>safeFormBackup.Modificado)});
         Width: =516
         X: =Parent.Width/2-Self.Width/2
         Y: =283
@@ -763,7 +765,7 @@ visualizar_evento_colaborador As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
-        Height: =70
+        Height: =150
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -780,7 +782,7 @@ visualizar_evento_colaborador As screen:
         Size: =24
         Text: ="guarda registro atual"
         Width: =188
-        X: =452
+        X: =-250
         Y: =847
         ZIndex: =25
 
@@ -1527,15 +1529,31 @@ visualizar_evento_colaborador As screen:
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Undo
         OnSelect: |+
-            =// UpdateContext({itemActivity:safeFormBackup});;
-            SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});
-            ResetForm(FormActivity_2);Select(btnCheckChanges);
+            =
+            
+            If(FormActivity_2.Mode=FormMode.Edit,
+                UpdateContext({itemActivity:safeFormBackup}); // Monta o registro de backup no formulário atual
+                SubmitForm(FormActivity_2);
+                UpdateContext({itemActivity:FormActivity_2.LastSubmit});
+                UpdateContext({safeFormBackup: itemActivity});
+                
+                ResetForm(FormActivity_2);
+                UpdateContext({ShowUndoIcon:false});
+            )
             
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="Desfazer"
-        Visible: =(itemActivity.Modificado<>safeFormBackup.Modificado)
+        Visible: |-
+            =If(IsBlank(safeFormBackup),
+                false
+                ,
+                ShowUndoIcon
+            )
+            
+            
+                
         X: =122
         Y: =937
         ZIndex: =27

@@ -407,12 +407,12 @@ criar_Projeto_empresa As screen:
         Size: =21
         Text: |-
             =If(IsBlankOrError(lastProjectSubmited),
-                "Projeto não foi criado"
+                "Projeto não foi criado."
                 ,
                 $"Projeto ID = {lastProjectSubmited.ID} Nome= {lastProjectSubmited.name} foi criado.")
         Width: =560
-        X: =30
-        Y: =594
+        X: =650
+        Y: =537
         ZIndex: =35
 
     Label9_1 As label:
@@ -432,7 +432,7 @@ criar_Projeto_empresa As screen:
                 ,
                 $"Contrato P{lastProjectSubmited.ID} {CONST_CURRENT_USER.ID} criado.")
         Width: =560
-        X: =40
-        Y: =688
+        X: =650
+        Y: =631
         ZIndex: =36
 

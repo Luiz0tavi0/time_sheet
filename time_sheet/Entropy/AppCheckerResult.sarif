@@ -3739,7 +3739,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 199,
+                  "charOffset": 141,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -3779,7 +3779,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 202,
+                  "charOffset": 144,
                   "snippet": {
                     "text": "="
                   }
@@ -3819,7 +3819,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 330,
+                  "charOffset": 272,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -3859,7 +3859,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 319,
+                  "charOffset": 261,
                   "snippet": {
                     "text": "="
                   }
@@ -3899,7 +3899,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 314,
+                  "charOffset": 256,
                   "snippet": {
                     "text": "&&"
                   }
@@ -13798,36 +13798,6 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 16
         },
         {
           "locations": [

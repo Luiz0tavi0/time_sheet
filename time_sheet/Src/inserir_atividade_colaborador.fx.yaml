@@ -1108,7 +1108,7 @@ inserir_atividade_colaborador As screen:
         IsSearchable: =false
         Items: |-
             =//ForAll(colProjectsFilteredByUserAndContractsDistinct;Result
-            If (App.ActiveScreen.Name = visualizar_atividades_colaborador.Name,
+            If (true,
                 ForAll(colProjectsFilteredByUserAndContractsDistinct,LookUp(tbl_projects,ID=unique_id))
             )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1147,7 +1147,7 @@ inserir_atividade_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =If (App.ActiveScreen.Name = visualizar_atividades_colaborador.Name,
+            =If (true,
                 ClearCollect(
                 colProjectsFilteredByUserAndContracts,
                 With({tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},

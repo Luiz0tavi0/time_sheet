@@ -155,7 +155,7 @@ user_home As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(110, 164, 191,1), -10%)
         OnSelect: |
-            =ViewForm(FormUsersUpdate);
+            =EditForm(FormUsersUpdate);
             Navigate(editar_cadastro_users, ScreenTransition.Fade,{user_id:CONST_CURRENT_USER.ID});
         PressedBorderColor: =ColorFade(RGBA(110, 164, 191, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)

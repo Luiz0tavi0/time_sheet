@@ -42,12 +42,7 @@ visualizar_evento_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =/*
-            If(
-                FormActivity_2.Mode=FormMode.View;
-                EditForm(FormActivity_2);
-                ViewForm(FormActivity_2)
-            );;*/
+            =UpdateContext({ShowUndoIcon:false});
             If(FormActivity_2.Mode=FormMode.Edit And FormActivity_2.Unsaved,
                 Select(btnBackUpBeforeUpdate); // Guarda o registro antes de ser modificado
                 SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});

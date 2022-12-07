@@ -2594,6 +2594,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 128,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "user_id.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 131,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 118,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.DataTableRelationByUserContract_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "inserir_atividade_colaborador.DataTableRelationByUserContract.Items"
                 }
               ],
@@ -3004,7 +3124,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 125,
+                  "charOffset": 130,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -3044,7 +3164,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 128,
+                  "charOffset": 133,
                   "snippet": {
                     "text": "="
                   }
@@ -3084,7 +3204,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 255,
+                  "charOffset": 260,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -3124,7 +3244,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 244,
+                  "charOffset": 249,
                   "snippet": {
                     "text": "="
                   }
@@ -3164,7 +3284,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 239,
+                  "charOffset": 244,
                   "snippet": {
                     "text": "&&"
                   }

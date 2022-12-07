@@ -685,10 +685,10 @@ visualizar_evento_colaborador As screen:
         Height: =60
         PaddingLeft: =0
         Size: =20
-        Text: =FormActivity_2.Unsaved
-        Width: =88
+        Text: =If(FormActivity_2.Unsaved, "Formulário alterado","Formulário igual a base.")
+        Width: =550
         Wrap: =false
-        X: =43
+        X: =-650
         Y: =871
         ZIndex: =17
 

@@ -582,11 +582,12 @@ visualizar_atividades_colaborador As screen:
         Items: |-
             =//Filter(tbl_tasks;project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
             //Search(Filter(tbl_tasks;project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result);txtFilterGallery.Text;"name";"description")
-            
-            If(IsBlank(txtFilterGallery),
-               Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
-               ,
-               Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
+            If (App.ActiveScreen.Name = visualizar_atividades_colaborador.Name,
+                If(IsBlank(txtFilterGallery),
+                Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
+                ,
+                Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
+                )
             )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Controls

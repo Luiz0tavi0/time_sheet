@@ -42,7 +42,26 @@ criar_Projeto_empresa As screen:
             If(Not(IsBlankOrError(lastProjectSubmited)),
                 Notify("Nome do projeto já existe.", NotificationType.Error )
                 ,    
-                ""
+                Notify("Nome do projeto está disponível.", NotificationType.Error );
+                UpdateContext(
+                    {
+                        lastContractSubmited:  Patch(
+                            tbl_contracts,
+                            Defaults(tbl_contracts),
+                            {
+                                description:$"Contrato P{lastProjectSubmited.ID} {CONST_CURRENT_USER.ID}",
+                                user_id: {
+                                    Id: CONST_CURRENT_USER.ID,
+                                    Value: Blank()
+                                },
+                                project_id: {
+                                    Id: lastProjectSubmited.ID,
+                                    Value: Blank()
+                                }
+                            }
+                        )
+                    }
+                );
             );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)

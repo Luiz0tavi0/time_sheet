@@ -299,8 +299,7 @@ visualizar_atividades_colaborador As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =5
-            Text: |-
-                =ThisItem.'user_id:email'.Value
+            Text: =ThisItem.user_id_x003a_email.Value
             Width: =100
             X: =0
             Y: =0
@@ -315,8 +314,7 @@ visualizar_atividades_colaborador As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =6
-            Text: |-
-                =ThisItem.'user_id:cpf'.Value
+            Text: =ThisItem.user_id_x003a_cpf.Value
             Width: =100
             X: =0
             Y: =0

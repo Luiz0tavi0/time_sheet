@@ -74,9 +74,10 @@ editar_cadastro_users As screen:
                 //UpdateContext({safeUserFormBackup:userInActivity});;
                 //UpdateContext({last:SubmitForm(FormUsersUpdate)});; 
                 SubmitForm(FormUsersUpdate);
-                //UpdateContext({userInActivity:FormUsersUpdate.LastSubmit});;
-                //NewForm(FormUsersUpdate);;EditForm(FormUsersUpdate);;
+                
                 Select(btnCheckUnsaved);
+                NewForm(FormUsersUpdate);EditForm(FormUsersUpdate);
+                Back();
             );
                 // If(FormUsersCreate_2.Unsaved=false; UpdateContext({ShowUndoIcon:false}));;
                 
@@ -122,161 +123,11 @@ editar_cadastro_users As screen:
         Height: =740
         Item: =userInActivity
         OnSuccess: |-
-            =//UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});;
+            =UpdateContext({userInActivity:FormUsersUpdate.LastSubmit});
             Notify("Usuário atualizado.",NotificationType.Success);
         Width: =640
         Y: =175
         ZIndex: =6
-
-        cnpj_DataCard3_1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="cnpj"
-            Default: =ThisItem.cnpj
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"cnpj")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =84
-            MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cnpj")
-            Required: =false
-            Update: =CONST_CURRENT_USER.email
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =1
-
-            ErrorMessage7_2 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =31
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =17
-                Text: |-
-                    =If(Not(varCnpjIsValid),"CNPJ inválido.",
-                        If(Not(varShowCnpjError),"")
-                    )
-                Visible: =varShowCnpjError
-                Width: =525
-                X: =58
-                Y: =53
-                ZIndex: =3
-
-            StarVisible7_2 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =DataCardValueEmail_2.Height
-                PaddingLeft: =0
-                Size: =21
-                Text: ="*"
-                Width: =30
-                Wrap: =false
-                X: =DataCardValue1cnpj_1.X - Self.Width
-                ZIndex: =4
-
-            DataCardValue1cnpj_1 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =50
-                HintText: ="CNPJ"
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                OnChange: |
-                    =Select(btnCheckUnsaved);
-                    UpdateContext({varCnpjIsValid:false});
-                    UpdateContext({varShowCnpjError:true});
-                    
-                    If((Len(Self.Text)=14),
-                        UpdateContext({varDig1:Int(Left(Self.Text,1))});
-                        UpdateContext({varDig2:Int(Mid(Self.Text,2,1))});
-                        UpdateContext({varDig3:Int(Mid(Self.Text,3,1))});
-                        UpdateContext({varDig4:Int(Mid(Self.Text,4,1))});
-                        UpdateContext({varDig5:Int(Mid(Self.Text,5,1))});
-                        UpdateContext({varDig6:Int(Mid(Self.Text,6,1))});
-                        UpdateContext({varDig7:Int(Mid(Self.Text,7,1))});
-                        UpdateContext({varDig8:Int(Mid(Self.Text,8,1))});
-                        UpdateContext({varDig9:Int(Mid(Self.Text,9,1))});
-                        UpdateContext({varDig10:Int(Mid(Self.Text,10,1))});
-                        UpdateContext({varDig11:Int(Mid(Self.Text,11,1))});
-                        UpdateContext({varDig12:Int(Mid(Self.Text,12,1))});
-                        UpdateContext({varFirstDV:Int(Mid(Self.Text,13,1))});
-                        UpdateContext({varSecondDV:Int(Right(Self.Text,1))});
-                        // Calculando o Primeiro Dígito Verificador
-                    
-                        UpdateContext(
-                            {varSum1To12Dig: 
-                                (varDig1*5+varDig2*4+varDig3*3+varDig4*2+varDig5*9+varDig6*8+varDig7*7+varDig8*6+varDig9*5+varDig10*4+varDig11*3+varDig12*2)
-                            }
-                        );
-                        UpdateContext({varFirstDVCalculated:Mod(varSum1To12Dig,11)});
-                        If(varFirstDVCalculated<2,
-                            UpdateContext({varFirstDVCalculated:0}),UpdateContext({varFirstDVCalculated:11-varFirstDVCalculated})
-                        );
-                        If(varFirstDV=varFirstDVCalculated,
-                            // Calculando o Segundo Dígito Verificador
-                            UpdateContext(
-                                {varSum1To13Dig: 
-                                    (
-                                        varDig1*6+varDig2*5+varDig3*4+varDig4*3+varDig5*2+varDig6*9+varDig7*8+
-                                        varDig8*7+varDig9*6+varDig10*5+varDig11*4+varDig12*3 + varFirstDV*2
-                                    )
-                                }
-                            );
-                            UpdateContext({varSecondDVCalculated:Mod(varSum1To13Dig,11)});
-                            If(varSecondDVCalculated<2,
-                                UpdateContext({varSecondDVCalculated:0}),UpdateContext({varSecondDVCalculated:11-varSecondDVCalculated})
-                            );
-                            If(varSecondDV=varSecondDVCalculated,
-                                UpdateContext({varCnpjIsValid: true});)
-                                ;
-                            ,
-                            UpdateContext({varCnpjIsValid:false});
-                        );
-                    );
-                    If(IsBlank(Self.Text), UpdateContext({varCnpjIsValid:true}));
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: ="CNPJ"
-                Width: =525
-                X: =58
-                Y: =10
-                ZIndex: =5
 
         occupation_DataCard3_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -292,7 +143,7 @@ editar_cadastro_users As screen:
             Update: =DataCardValueOccupation.Text
             Width: =640
             X: =0
-            Y: =6
+            Y: =5
             ZIndex: =1
 
             DataCardKey2_2 As label:
@@ -362,7 +213,7 @@ editar_cadastro_users As screen:
             Update: =DataCardValue1.Value
             Width: =Parent.Width
             X: =0
-            Y: =7
+            Y: =6
             ZIndex: =1
 
             DataCardValue1 As toggleSwitch:
@@ -410,6 +261,122 @@ editar_cadastro_users As screen:
                 Width: =30
                 Wrap: =false
                 Y: =
+                ZIndex: =4
+
+        cnpj_DataCard2 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="cnpj"
+            Default: =ThisItem.cnpj
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"cnpj")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cnpj")
+            Required: =false
+            Update: =DataCardValue3.Text
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey1 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =48
+                PaddingLeft: =0
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =70
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1 As label:
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(168, 0, 0, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =DataCardKey1.Height
+                PaddingLeft: =0
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1.Y
                 ZIndex: =4
 
         name_DataCard6_2 As typedDataCard.textualEditCard:
@@ -1055,7 +1022,7 @@ editar_cadastro_users As screen:
                     And Trim(Upper(DataCardValueEmail_2.Text)) = Trim(Upper(email_DataCard_2.Default))
                     And Trim(Upper(DataCardValueFone_2.Text)) = Trim(Upper(fone_DataCard_2.Default))
                     And Trim(Upper(password_DataCard_2.Default)) = Trim(Upper(DataCardValuePassword_2.Text))
-                    And Trim(Upper(cnpj_DataCard3_1.Default)) = Trim(Upper(DataCardValue1cnpj_1.Text))
+                    And Value(DataCardValue3.Text) = Value(cnpj_DataCard2.Default)
                     And Trim(Upper(occupation_DataCard3_1.Default)) = Trim(Upper(DataCardValueOccupation.Text))
                     And active_DataCard1.Default = DataCardValue1.Value
                     )
@@ -1168,6 +1135,7 @@ editar_cadastro_users As screen:
                 occupation_DataCard3_1.Default =DataCardValueOccupation.Text And
                 active_DataCard1.Default = DataCardValue1.Value*/
         Width: =356
-        Y: =900
+        X: =-550
+        Y: =450
         ZIndex: =11
 

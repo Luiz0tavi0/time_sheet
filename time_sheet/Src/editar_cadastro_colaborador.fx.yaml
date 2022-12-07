@@ -1070,7 +1070,7 @@ editar_cadastro_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =55
+                Height: =50
                 HintText: ="CNPJ"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
@@ -1299,7 +1299,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =525
                 X: =Parent.Width/2-(Self.Width/2)
                 Y: =(Parent.Height/3)-Self.Height/3
                 ZIndex: =2
@@ -1464,8 +1464,8 @@ editar_cadastro_colaborador As screen:
                         )
                     )
                 Visible: =varShowCpfError
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =525
+                X: =58
                 Y: =DataCardValueCpf_2.Y + DataCardValueCpf_2.Height
                 ZIndex: =3
 
@@ -1520,7 +1520,7 @@ editar_cadastro_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =55
+                Height: =50
                 HintText: ="Email"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
@@ -1579,8 +1579,8 @@ editar_cadastro_colaborador As screen:
                             )
                         )
                 Visible: =varShowEmailError
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =525
+                X: =58
                 Y: =DataCardValueEmail_2.Y + DataCardValueEmail_2.Height
                 ZIndex: =3
 
@@ -1636,7 +1636,7 @@ editar_cadastro_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Format: =TextFormat.Number
-                Height: =54
+                Height: =50
                 HintText: ="Telefone"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
@@ -1665,7 +1665,7 @@ editar_cadastro_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"password")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =195
+            Height: =159
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "password")
             Required: =true
             Update: =DataCardValuePassword_2.Text
@@ -1686,7 +1686,7 @@ editar_cadastro_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =55
+                Height: =50
                 HintText: ="Senha"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
@@ -1736,9 +1736,9 @@ editar_cadastro_colaborador As screen:
                         If(Not(passwordIsEqual),"A confirmação da senha não corresponde.")
                     )
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =158
+                Width: =525
+                X: =58
+                Y: =131
                 ZIndex: =3
 
             StarVisible32_4 As label:
@@ -1775,7 +1775,7 @@ editar_cadastro_colaborador As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =55
+                Height: =50
                 HintText: ="Confirme sua senha"
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
@@ -1799,8 +1799,8 @@ editar_cadastro_colaborador As screen:
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =525
-                X: =Parent.Width/2-(Self.Width/2)
-                Y: =92
+                X: =58
+                Y: =76
                 ZIndex: =5
 
             StarVisible32_5 As label:
@@ -1822,7 +1822,7 @@ editar_cadastro_colaborador As screen:
                 Width: =30
                 Wrap: =false
                 X: =DataCardValuePasswordConfirm_2.X - Self.Width
-                Y: =DataCardValuePasswordConfirm_2.Y
+                Y: =76
                 ZIndex: =7
 
             iconShowPassword_1 As icon.View:
@@ -1866,6 +1866,6 @@ editar_cadastro_colaborador As screen:
                 PressedFill: =RGBA(0, 0, 0, 0)
                 Width: =25
                 X: =550
-                Y: =97
+                Y: =81
                 ZIndex: =9
 

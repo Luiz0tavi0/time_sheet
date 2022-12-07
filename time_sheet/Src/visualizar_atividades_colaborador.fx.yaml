@@ -5,11 +5,11 @@ visualizar_atividades_colaborador As screen:
         UpdateContext({startTimerLoading:false});
         UpdateContext({LoadingScreen:true});
     OnVisible: |-
-        =If(LoadingScreen,
-            UpdateContext({startTimerLoading:true});
-            ,
-            UpdateContext({startTimerLoading:false});
-        );
+        =/*If(LoadingScreen;
+            UpdateContext({startTimerLoading:true});;
+            ;
+            UpdateContext({startTimerLoading:false});;
+        );;*/
         Select(btnUpdateComboProjects_1)
 
     Label1_1 As label:
@@ -31,6 +31,7 @@ visualizar_atividades_colaborador As screen:
 
     timerScreenLoading As timer:
         AutoPause: =false
+        AutoStart: =true
         BorderColor: =RGBA(99, 139, 44, 1)
         BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(244, 244, 244, 1)

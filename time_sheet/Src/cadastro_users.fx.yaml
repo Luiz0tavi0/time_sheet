@@ -121,7 +121,7 @@ cadastro_users As screen:
         ZIndex: =8
 
     contFormUsers As groupContainer.verticalAutoLayoutContainer:
-        Height: =770
+        Height: =766
         LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutJustifyContent: =LayoutJustifyContent.Center
@@ -137,7 +137,7 @@ cadastro_users As screen:
             DataSource: =tbl_users
             DefaultMode: =FormMode.New
             Height: =638
-            LayoutMinHeight: =250
+            LayoutMinHeight: =500
             LayoutMinWidth: =320
             Width: =526
             X: =57
@@ -152,7 +152,7 @@ cadastro_users As screen:
                 DisplayMode: =Parent.DisplayMode
                 DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"cnpj")
                 Fill: =RGBA(0, 0, 0, 0)
-                Height: =DataCardValueCnpj.Height+ErrorMessageCnpj.Height+20
+                Height: =93
                 MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cnpj")
                 Required: =false
                 Update: =DataCardValue1cnpj.Text
@@ -308,7 +308,7 @@ cadastro_users As screen:
                 Update: =DataCardValue2.Text
                 Width: =526
                 X: =0
-                Y: =700
+                Y: =6
                 ZIndex: =1
 
                 DataCardValue2 As text:

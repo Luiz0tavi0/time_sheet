@@ -1,17 +1,23 @@
-editar_cadastro_colaborador As screen:
+editar_cadastro_users As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =UpdateContext({ShowPassword:false});
         UpdateContext({ShowConfirmPassword:false});
         UpdateContext({varEmailIsValid:false});
         UpdateContext({varCpfIsValid:false});
-        UpdateContext({passwordIsEqual:false});
-    OnVisible: |-
-        =UpdateContext({ShowPassword:false});
+        UpdateContext({passwordIsEqual:false});UpdateContext({ShowUndoIcon:false});
+    OnVisible: |
+        =
+        UpdateContext({ShowPassword:false});
         UpdateContext({ShowConfirmPassword:false});
         UpdateContext({varEmailIsValid:true});
         UpdateContext({varCpfIsValid:true});
         UpdateContext({passwordIsEqual:true});
+        
+        UpdateContext({userInActivity:LookUp(tbl_users,ID = CONST_CURRENT_USER.ID)});
+        UpdateContext({safeUserFormBackup:Blank()});
+        UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});
+        //UpdateContext({ShowUndoIcon:false});;
 
     TitleEditAccount As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -49,17 +55,11 @@ editar_cadastro_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =/*
-            If(
-                FormUsersCreate_2.Mode=FormMode.View;
-                EditForm(FormUsersCreate_2);
-                ViewForm(FormUsersCreate_2)
-            );;*/
-            If(FormUsersCreate_2.Mode=FormMode.Edit And FormUsersCreate_2.Unsaved,
+            =If(FormUsersCreate_2.Mode=FormMode.Edit And FormUsersCreate_2.Unsaved,
                 Select(btnBackUpBeforeUpdate_1); // Guarda o registro antes de ser modificado
-                SubmitForm(FormUsersCreate_2);UpdateContext({itemBeforeUpdate:FormUsersCreate_2.LastSubmit});
-                ResetForm(FormUsersCreate_2);Select(btnCheckChanges_1);
-                // If(FormUsersCreate_2.Unsaved=false;UpdateContext({ShowUndoIcon:false}));;
+                SubmitForm(FormUsersCreate_2); UpdateContext({itemBeforeUpdate:FormUsersCreate_2.LastSubmit});
+                ResetForm(FormUsersCreate_2); Select(btnCheckChanges_1);
+                // If(FormUsersCreate_2.Unsaved=false; UpdateContext({ShowUndoIcon:false}));;
                 ,
                 Select(btnCheckChanges_1);
             );
@@ -946,80 +946,12 @@ editar_cadastro_colaborador As screen:
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_users
         Height: =740
-        Item: =CONST_CURRENT_USER
+        Item: =userInActivity
+        OnSuccess: |-
+            =UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});
         Width: =640
         Y: =175
         ZIndex: =6
-
-        occupation_DataCard3_1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="occupation"
-            Default: =ThisItem.occupation
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"occupation")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "occupation")
-            Required: =false
-            Update: =DataCardValue4_2.Text
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =1
-
-            DataCardKey2_2 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                ZIndex: =1
-
-            DataCardValue4_2 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =50
-                HintText: ="Cargo"
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: ="Cargo"
-                Width: =525
-                X: =57
-                Y: =Parent.Height/2-(Self.Height/2)
-                ZIndex: =2
 
         cnpj_DataCard3_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -1035,7 +967,7 @@ editar_cadastro_colaborador As screen:
             Update: =CONST_CURRENT_USER.email
             Width: =640
             X: =0
-            Y: =6
+            Y: =5
             ZIndex: =1
 
             ErrorMessage7_2 As label:
@@ -1055,11 +987,14 @@ editar_cadastro_colaborador As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Text: |-
+                    =If(Not(varCnpjIsValid),"CNPJ inválido.",
+                        If(Not(varShowCnpjError),"")
+                    )
+                Visible: =varShowCnpjError
                 Width: =525
                 X: =58
-                Y: =58
+                Y: =53
                 ZIndex: =3
 
             StarVisible7_2 As label:
@@ -1164,25 +1099,27 @@ editar_cadastro_colaborador As screen:
                 Tooltip: ="CNPJ"
                 Width: =525
                 X: =58
+                Y: =10
                 ZIndex: =5
 
-        active_DataCard1 As typedDataCard.toggleEditCard:
+        occupation_DataCard3_1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="active"
-            Default: =ThisItem.active
+            DataField: ="occupation"
+            Default: =ThisItem.occupation
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"active")
+            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"occupation")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =54
+            Height: =50
+            MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "occupation")
             Required: =false
-            Update: =DataCardValue1.Value
+            Update: =DataCardValue4_2.Text
             Width: =640
             X: =0
-            Y: =7
+            Y: =6
             ZIndex: =1
 
-            DataCardKey1 As label:
+            DataCardKey2_2 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -1196,12 +1133,60 @@ editar_cadastro_colaborador As screen:
                 Height: =48
                 PaddingLeft: =0
                 Size: =21
-                Text: =Parent.DisplayName
+                Text: =
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
                 ZIndex: =1
+
+            DataCardValue4_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =50
+                HintText: ="Cargo"
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: ="Cargo"
+                Width: =525
+                X: =57
+                Y: =Parent.Height/2-(Self.Height/2)
+                ZIndex: =2
+
+        active_DataCard1 As typedDataCard.toggleEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="active"
+            Default: =ThisItem.active
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"active")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =33
+            Required: =false
+            Update: =DataCardValue1.Value
+            Width: =Parent.Width
+            X: =0
+            Y: =7
+            ZIndex: =1
 
             DataCardValue1 As toggleSwitch:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
@@ -1215,42 +1200,18 @@ editar_cadastro_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 HandleFill: =RGBA(255, 255, 255, 1)
-                Height: =49
+                Height: =20
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 TrueFill: =RGBA(0, 120, 212, 1)
                 TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                Width: =154
-                X: =138
-                Y: =10
+                TrueText: ="Ativado"
+                Width: =240
+                X: =338
+                Y: =8
                 ZIndex: =2
-
-            ErrorMessage1 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(168, 0, 0, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue1.Y + DataCardValue1.Height
-                ZIndex: =3
 
             StarVisible3 As label:
                 Align: =Align.Center
@@ -1263,14 +1224,14 @@ editar_cadastro_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey1.Height
+                Height: =21
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey1.Y
+                Y: =
                 ZIndex: =4
 
         name_DataCard6_2 As typedDataCard.textualEditCard:
@@ -1905,20 +1866,8 @@ editar_cadastro_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =/*
-            If(
-                FormActivity_2.Mode=FormMode.View;
-                EditForm(FormActivity_2);
-                ViewForm(FormActivity_2)
-            );;*/
-            If(FormActivity_2.Mode=FormMode.Edit And FormActivity_2.Unsaved,
-                Select(btnBackUpBeforeUpdate_1); // Guarda o registro antes de ser modificado
-                SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});
-                ResetForm(FormActivity_2);Select(btnCheckChanges_1);
-                // If(FormActivity_2.Unsaved=false;UpdateContext({ShowUndoIcon:false}));;
-                ,
-                Select(btnCheckChanges_1);
-            );
+            =UpdateContext({userInActivity:LookUp(tbl_users,ID = CONST_CURRENT_USER.ID)});
+            UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1936,7 +1885,7 @@ editar_cadastro_colaborador As screen:
                 )
             )
         Width: =232
-        X: =186
+        X: =52
         Y: =915
         ZIndex: =7
 
@@ -2050,13 +1999,13 @@ editar_cadastro_colaborador As screen:
         OnSelect: |+
             =
             
-            If(FormActivity_2.Mode=FormMode.Edit,
+            If(FormUsersCreate_2.Mode=FormMode.Edit,
                 UpdateContext({itemActivity:safeFormBackup}); // Monta o registro de backup no formulário atual
-                SubmitForm(FormActivity_2);
-                UpdateContext({itemActivity:FormActivity_2.LastSubmit});
+                SubmitForm(FormUsersCreate_2);
+                UpdateContext({itemActivity:FormUsersCreate_2.LastSubmit});
                 UpdateContext({safeFormBackup: itemActivity});
                 
-                ResetForm(FormActivity_2);
+                ResetForm(FormUsersCreate_2);
                 UpdateContext({ShowUndoIcon:false});
             )
             

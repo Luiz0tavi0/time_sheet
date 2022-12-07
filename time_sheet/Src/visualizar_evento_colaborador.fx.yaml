@@ -1532,9 +1532,7 @@ visualizar_evento_colaborador As screen:
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Undo
         OnSelect: |+
-            =
-            
-            If(FormActivity_2.Mode=FormMode.Edit,
+            =If(FormActivity_2.Mode=FormMode.Edit,
                 UpdateContext({itemActivity:safeFormBackup}); // Monta o registro de backup no formulário atual
                 SubmitForm(FormActivity_2);
                 UpdateContext({itemActivity:FormActivity_2.LastSubmit});

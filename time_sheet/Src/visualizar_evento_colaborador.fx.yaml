@@ -256,7 +256,7 @@ visualizar_evento_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
             Required: =true
-            Update: =DataCardValueName_1.Text
+            Update: =Trim(DataCardValueName_1.Text)
             Width: =516
             X: =0
             Y: =0
@@ -370,7 +370,7 @@ visualizar_evento_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "description")
             Required: =false
-            Update: =DataCardValueDescription_1.Text
+            Update: =Trim(DataCardValueDescription_1.Text)
             Width: =516
             X: =0
             Y: =1
@@ -566,7 +566,7 @@ visualizar_evento_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =100
             Required: =true
-            Update: =DataCardValueHours_1.Text
+            Update: =Trim(DataCardValueHours_1.Text)
             Width: =Parent.Width/2
             X: =0
             Y: =3
@@ -681,7 +681,7 @@ visualizar_evento_colaborador As screen:
         Height: =60
         PaddingLeft: =0
         Size: =20
-        Text: =isDifferente
+        Text: =FormActivity_2.Unsaved
         Width: =88
         Wrap: =false
         X: =43
@@ -747,6 +747,7 @@ visualizar_evento_colaborador As screen:
                 "Visualizar"
             )
         Width: =232
+        X: =-500
         Y: =951
         ZIndex: =18
 

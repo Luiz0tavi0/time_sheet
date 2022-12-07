@@ -12224,6 +12224,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.isDifferente"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.isDifferente",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "isDifferente",
+                "module": "visualizar_evento_colaborador",
+                "type": "visualizar_evento_colaborador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "visualizar_evento_colaborador.itemSelecionado"
                 }
               ],

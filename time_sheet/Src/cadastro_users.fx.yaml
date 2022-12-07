@@ -6,6 +6,7 @@ cadastro_users As screen:
         UpdateContext({fromLoginValidEmail: Blank()});
         UpdateContext({ShowPasswordConfirm:false});
         UpdateContext({ShowPassword:false});
+        UpdateContext({userHasBeenCreated: Blank()});
     OnVisible: |+
         =
         UpdateContext({varShowCpfError: false});
@@ -24,7 +25,7 @@ cadastro_users As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(FormUsersCreate.Valid,DisplayMode.Edit,DisplayMode.Disabled)
+        DisplayMode: =If(FormUsersCreate.Valid And varEmailIsValid And passwordIsEqual,DisplayMode.Edit,DisplayMode.Disabled)
         Fill: =RGBA(110, 164, 191, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
@@ -34,7 +35,7 @@ cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =If(FormUsersCreate.Valid,SubmitForm(FormUsersCreate),Notify("Erro",NotificationType));
+            =If(FormUsersCreate.Valid And varEmailIsValid And passwordIsEqual,SubmitForm(FormUsersCreate),Notify("Erro",NotificationType));
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
@@ -139,6 +140,18 @@ cadastro_users As screen:
             Height: =638
             LayoutMinHeight: =500
             LayoutMinWidth: =320
+            OnSuccess: |-
+                =ResetForm(FormUsersCreate);Navigate(login);
+                
+                UpdateContext({varShowCpfError: false});
+                UpdateContext({varShowEmailError: false});
+                UpdateContext({userHasBeenCreated: Blank()});
+                
+                
+                UpdateContext({varEmailIsValid:false});
+                
+                UpdateContext({ShowPasswordConfirm:false});
+                UpdateContext({ShowPassword:false});
             Width: =526
             X: =57
             Y: =165

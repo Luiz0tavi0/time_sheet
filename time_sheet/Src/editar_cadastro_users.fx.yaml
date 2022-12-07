@@ -1348,7 +1348,7 @@ editar_cadastro_users As screen:
             Height: =100 
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "cpf")
             Required: =true
-            Update: =Lower(Trim(DataCardValueCpf_2.Text))
+            Update: =Trim(DataCardValueCpf_2.Text)
             Width: =640
             X: =0
             Y: =1

@@ -26,16 +26,15 @@ criar_Projeto_empresa As screen:
         Y: =921
         ZIndex: =22
 
-    FormProjectCreate_1 As form:
+    FormProjectCreate As form:
         BorderColor: =RGBA(166, 166, 166, 1)
         DataSource: =tbl_projects
         Height: =341
-        Width: =537
-        X: =42
+        Width: =Parent.Width
         Y: =216
         ZIndex: =25
 
-        start_DataCard2 As typedDataCard.dateEditCard:
+        start_DataCard As typedDataCard.dateEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="start"
@@ -46,7 +45,7 @@ criar_Projeto_empresa As screen:
             Height: =50
             Required: =true
             Update: =DataCardValue3.SelectedDate
-            Width: =537
+            Width: =Parent.Width
             X: =0
             Y: =1
             ZIndex: =1
@@ -64,11 +63,11 @@ criar_Projeto_empresa As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =48
                 PaddingLeft: =0
-                Size: =21
+                Size: =18
                 Text: ="Data de Início"
-                Width: =Parent.Width - 60
+                Width: =171
                 Wrap: =false
-                X: =30
+                X: =66
                 Y: =10
                 ZIndex: =1
 
@@ -83,7 +82,7 @@ criar_Projeto_empresa As screen:
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =50
                 HoverDateFill: =RGBA(200, 200, 200, 1)
                 IconBackground: =RGBA(0, 120, 212, 1)
                 IsEditable: =true
@@ -93,8 +92,8 @@ criar_Projeto_empresa As screen:
                 Size: =21
                 StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
+                Width: =507
+                X: =66
                 Y: =DataCardKey4.Y + DataCardKey4.Height + 5
                 ZIndex: =2
 
@@ -141,7 +140,8 @@ criar_Projeto_empresa As screen:
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey4.Y
+                X: =36
+                Y: =54
                 ZIndex: =4
 
         name_DataCard4_1 As typedDataCard.textualEditCard:
@@ -156,7 +156,7 @@ criar_Projeto_empresa As screen:
             MaxLength: =DataSourceInfo([@tbl_projects], DataSourceInfo.MaxLength, "name")
             Required: =true
             Update: =DataCardValue14_1.Text
-            Width: =537
+            Width: =Parent.Width
             X: =0
             Y: =0
             ZIndex: =42
@@ -174,12 +174,12 @@ criar_Projeto_empresa As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =48
                 PaddingLeft: =0
-                Size: =21
+                Size: =18
                 Text: ="Nome do Projeto"
-                Width: =Parent.Width - 60
+                Width: =208
                 Wrap: =false
-                X: =30
-                Y: =10
+                X: =57
+                Y: =12
                 ZIndex: =1
 
             DataCardValue14_1 As text:
@@ -194,7 +194,7 @@ criar_Projeto_empresa As screen:
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =70
+                Height: =50
                 HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 HoverColor: =RGBA(51, 51, 51, 1)
                 HoverFill: =RGBA(255, 255, 255, 1)
@@ -209,9 +209,9 @@ criar_Projeto_empresa As screen:
                 RadiusTopRight: =0
                 Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey13_1.Y + DataCardKey13_1.Height + 5
+                Width: =525 
+                X: =57
+                Y: =59
                 ZIndex: =2
 
             ErrorMessage13_1 As label:
@@ -257,7 +257,7 @@ criar_Projeto_empresa As screen:
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =10
+                Y: =59
                 ZIndex: =4
 
     TitlePage_4 As label:

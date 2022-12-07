@@ -254,994 +254,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.DataSource"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.DataSource",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DataSource",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 66,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"cnpj\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".cnpj"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 66,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"cnpj\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 66,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"name\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".name"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 66,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"name\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 67,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"email\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".email"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 67,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"email\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 70,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"password\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "DisplayName",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "ThisItem"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ThisItem"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".password"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 17,
-                  "snippet": {
-                    "text": "tbl_companies"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "tbl_companies"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 70,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"password\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "_bck_cadastro_users.HeaderWorker_3.OnClickRightIcon"
                 }
               ],
@@ -1315,7 +327,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1355,7 +367,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1472,7 +484,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1512,7 +524,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1552,7 +564,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1592,7 +604,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1632,7 +644,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -1709,7 +721,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1750,7 +762,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1791,7 +803,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1832,7 +844,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrArgNotApplicableToColumnArg2-Arg1-Arg2",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1872,7 +884,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1920,12 +932,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1939,7 +951,7 @@
               "properties": {
                 "member": "Y",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
               }
             }
           ],
@@ -1960,12 +972,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1979,7 +991,7 @@
               "properties": {
                 "member": "Y",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
               }
             }
           ],
@@ -1990,19 +1002,19 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2016,7 +1028,7 @@
               "properties": {
                 "member": "Y",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
               }
             }
           ],
@@ -2037,12 +1049,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2.Y",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2056,7 +1068,7 @@
               "properties": {
                 "member": "Y",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.cnpj_DataCard3_1.ErrorMessage7_2"
               }
             }
           ],
@@ -2067,7 +1079,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -2147,7 +1159,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2187,7 +1199,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2227,7 +1239,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2267,7 +1279,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2307,7 +1319,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2347,7 +1359,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2387,7 +1399,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2427,7 +1439,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2467,7 +1479,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2507,7 +1519,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2547,7 +1559,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2587,7 +1599,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2627,7 +1639,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2667,7 +1679,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2707,7 +1719,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2747,7 +1759,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2787,7 +1799,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2827,7 +1839,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2867,7 +1879,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2907,7 +1919,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2947,7 +1959,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -2987,7 +1999,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -3027,7 +2039,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3067,7 +2079,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3107,7 +2119,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -3147,7 +2159,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3187,7 +2199,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 3
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -3227,7 +2239,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3267,7 +2279,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 4
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -3385,7 +2397,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3465,7 +2477,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3502,7 +2514,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3542,7 +2554,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3622,7 +2634,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3659,7 +2671,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3699,7 +2711,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3779,7 +2791,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3816,7 +2828,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -3857,7 +2869,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -3937,7 +2949,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3974,7 +2986,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4091,7 +3103,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4128,7 +3140,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4169,7 +3181,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4249,7 +3261,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4286,7 +3298,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4327,7 +3339,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -4407,7 +3419,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4444,7 +3456,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4481,7 +3493,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4521,7 +3533,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4562,7 +3574,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrArgNotApplicableToColumnArg2-Arg1-Arg2",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -4602,7 +3614,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4644,6 +3656,1148 @@
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
           "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.DataSource"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.DataSource",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DataSource",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 66,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"cnpj\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".cnpj"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 66,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"cnpj\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 66,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"name\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".name"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 66,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"name\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 67,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"email\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".email"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 67,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"email\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DisplayName",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 70,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies];DataSourceInfo.DisplayName;\"password\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayName",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.Default",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".password"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Default",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 17,
+                  "snippet": {
+                    "text": "tbl_companies"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "tbl_companies"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.MaxLength",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 70,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataSourceInfo([@tbl_companies]; DataSourceInfo.MaxLength; \"password\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "MaxLength",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataSourceInfo"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "DataCardValue6_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue6_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 16,
+                  "snippet": {
+                    "text": ".Y"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "DataCardValue6_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "DataCardValue6_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 37,
+                  "snippet": {
+                    "text": ".Height"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.cnpj_DataCard3_2.ErrorMessage7_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -5184,606 +5338,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "__Conta_criada_colaborador",
-                "type": "__Conta_criada_colaborador.Rectangle20308_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "__Conta_criada_colaborador",
-                "type": "__Conta_criada_colaborador.Rectangle20308_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "__Conta_criada_colaborador",
-                "type": "__Conta_criada_colaborador.Image381685_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "__Conta_criada_colaborador",
-                "type": "__Conta_criada_colaborador.Image381685_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Label381684_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_colaborador.Label381684_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "__Conta_criada_colaborador",
-                "type": "__Conta_criada_colaborador.Label381684_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "__Conta_criada_empresa",
-                "type": "__Conta_criada_empresa.Image381685"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "__Conta_criada_empresa",
-                "type": "__Conta_criada_empresa.Image381685"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__Conta_criada_empresa.Label381684.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__Conta_criada_empresa.Label381684.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "__Conta_criada_empresa",
-                "type": "__Conta_criada_empresa.Label381684"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonProjects.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonProjects.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.ButtonProjects"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonWorkers.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonWorkers.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.ButtonWorkers"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonEditUserCompany.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonEditUserCompany.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.ButtonEditUserCompany"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonCreateProjectCompany.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonCreateProjectCompany.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.ButtonCreateProjectCompany"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonDirectWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.ButtonDirectWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.ButtonDirectWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.Image381796.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.Image381796.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.Image381796"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "__inicial_empresa.Image381796.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "__inicial_empresa.Image381796.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "__inicial_empresa",
-                "type": "__inicial_empresa.Image381796"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.TitlePage_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.TitlePage_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.TitlePage_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DataCardValue2_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DataCardValue2_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DataCardValue2_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DataCardValue3_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DataCardValue3_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DataCardValue3_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DataCardValue4_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DataCardValue4_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DataCardValue4_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DataCardValue7_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DataCardValue7_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "_atualizar_dados_empresa",
-                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DataCardValue7_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7050,19 +6604,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.active_DataCard1_1.DataCardValue1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.active_DataCard1_1.DataCardValue1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.active_DataCard1_1.DataCardValue1_1"
               }
             }
           ],
@@ -7080,19 +6634,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.occupation_DataCard3_2.DataCardValue4_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.occupation_DataCard3_2.DataCardValue4_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.occupation_DataCard3_2.DataCardValue4_3"
               }
             }
           ],
@@ -7110,19 +6664,139 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2.TabIndex"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.password_DataCard_3.DataCardValuePasswordConfirm_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2.TabIndex",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.password_DataCard_3.DataCardValuePasswordConfirm_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.password_DataCard_3.DataCardValuePasswordConfirm_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.password_DataCard_3.DataCardValuePassword_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.password_DataCard_3.DataCardValuePassword_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.password_DataCard_3.DataCardValuePassword_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.fone_DataCard_3.DataCardValueFone_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.fone_DataCard_3.DataCardValueFone_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.fone_DataCard_3.DataCardValueFone_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.email_DataCard_3.DataCardValueEmail_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.email_DataCard_3.DataCardValueEmail_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.email_DataCard_3.DataCardValueEmail_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cpf_DataCard_3.ErrorMessageCpf_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cpf_DataCard_3.ErrorMessageCpf_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.cpf_DataCard_3.ErrorMessageCpf_3"
               }
             }
           ],
@@ -7140,19 +6814,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cpf_DataCard_3.DataCardValueCpf_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.cpf_DataCard_3.DataCardValueCpf_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.cpf_DataCard_3.DataCardValueCpf_3"
               }
             }
           ],
@@ -7170,139 +6844,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.name_DataCard6_3.DataCardValueNome_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_3.name_DataCard6_3.DataCardValueNome_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.active_DataCard1.DataCardValue1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.active_DataCard1.DataCardValue1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.contFormUsers_2.FormUsersCreate_2.active_DataCard1.DataCardValue1"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_3.name_DataCard6_3.DataCardValueNome_3"
               }
             }
           ],
@@ -8520,6 +8074,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.txtFilterGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.txtFilterGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.txtFilterGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.AccessibleLabel"
                 }
               ],
@@ -8580,66 +8164,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.rectSumHours"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.rectSumHours"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "visualizar_atividades_colaborador.lblTotalHours.TabIndex"
                 }
               ],
@@ -8683,6 +8207,66 @@
                 "member": "TabIndex",
                 "module": "visualizar_atividades_colaborador",
                 "type": "visualizar_atividades_colaborador.lblSumHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.rectSumHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.rectSumHours"
               }
             }
           ],
@@ -9090,216 +8674,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonCreateActivityWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonActivitiesWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonEditUserWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "_inicial_colaborador",
-                "type": "_inicial_colaborador.ButtonCreateProjectWorker"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Alterar_Projeto_empresa.TitlePage_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Alterar_Projeto_empresa.TitlePage_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Alterar_Projeto_empresa",
-                "type": "Alterar_Projeto_empresa.TitlePage_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.name_DataCard4.DataCardValue14.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.name_DataCard4.DataCardValue14.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Alterar_Projeto_empresa",
-                "type": "Alterar_Projeto_empresa.FormProjectEdit.name_DataCard4.DataCardValue14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.manager_DataCard1.DataCardValue16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.manager_DataCard1.DataCardValue16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Alterar_Projeto_empresa",
-                "type": "Alterar_Projeto_empresa.FormProjectEdit.manager_DataCard1.DataCardValue16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "visualizar_evento_colaborador.FormActivity_3.name_DataCard_1.DataCardValueName_2.AccessibleLabel"
                 }
               ],
@@ -9540,19 +8914,1189 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.txtFilterGallery.AccessibleLabel"
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.txtFilterGallery.AccessibleLabel",
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.txtFilterGallery"
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Rectangle20308_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Rectangle20308_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Rectangle20308_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Image381685_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Image381685_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Image381685_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Label381684_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_colaborador.Label381684_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "__Conta_criada_colaborador",
+                "type": "__Conta_criada_colaborador.Label381684_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateActivityWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonCreateActivityWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonActivitiesWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonActivitiesWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonEditUserWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonEditUserWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_inicial_colaborador.ButtonCreateProjectWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "_inicial_colaborador",
+                "type": "_inicial_colaborador.ButtonCreateProjectWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Alterar_Projeto_empresa.TitlePage_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Alterar_Projeto_empresa.TitlePage_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Alterar_Projeto_empresa",
+                "type": "Alterar_Projeto_empresa.TitlePage_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.name_DataCard4.DataCardValue14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.name_DataCard4.DataCardValue14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Alterar_Projeto_empresa",
+                "type": "Alterar_Projeto_empresa.FormProjectEdit.name_DataCard4.DataCardValue14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.manager_DataCard1.DataCardValue16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Alterar_Projeto_empresa.FormProjectEdit.manager_DataCard1.DataCardValue16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Alterar_Projeto_empresa",
+                "type": "Alterar_Projeto_empresa.FormProjectEdit.manager_DataCard1.DataCardValue16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "__Conta_criada_empresa",
+                "type": "__Conta_criada_empresa.Image381685"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_empresa.Image381685.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "__Conta_criada_empresa",
+                "type": "__Conta_criada_empresa.Image381685"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__Conta_criada_empresa.Label381684.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__Conta_criada_empresa.Label381684.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "__Conta_criada_empresa",
+                "type": "__Conta_criada_empresa.Label381684"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonProjects.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonProjects.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.ButtonProjects"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonWorkers.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonWorkers.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.ButtonWorkers"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonEditUserCompany.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonEditUserCompany.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.ButtonEditUserCompany"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonCreateProjectCompany.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonCreateProjectCompany.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.ButtonCreateProjectCompany"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonDirectWorker.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.ButtonDirectWorker.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.ButtonDirectWorker"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.Image381796.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.Image381796.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.Image381796"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "__inicial_empresa.Image381796.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "__inicial_empresa.Image381796.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "__inicial_empresa",
+                "type": "__inicial_empresa.Image381796"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.TitlePage_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.TitlePage_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.TitlePage_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DataCardValue2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DataCardValue2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.cnpj_DataCard1_1.DataCardValue2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DataCardValue3_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DataCardValue3_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.name_DataCard2_1.DataCardValue3_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DataCardValue4_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DataCardValue4_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.email_DataCard2_1.DataCardValue4_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DataCardValue7_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DataCardValue7_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "_atualizar_dados_empresa",
+                "type": "_atualizar_dados_empresa.FormCompanyReg_1.password_DataCard1_1.DataCardValue7_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.Icon2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.Icon2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.Icon2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.Icon2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.name_DataCard6_2.DataCardValueNome_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.cpf_DataCard_2.DataCardValueCpf_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.cpf_DataCard_2.ErrorMessageCpf_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.email_DataCard_2.DataCardValueEmail_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.fone_DataCard_2.DataCardValueFone_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.DataCardValuePassword_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.DataCardValuePasswordConfirm_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.occupation_DataCard3_1.DataCardValue4_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.active_DataCard1.DataCardValue1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.active_DataCard1.DataCardValue1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.active_DataCard1.DataCardValue1"
               }
             }
           ],
@@ -13879,34 +14423,6 @@
               }
             },
             {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidDot",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid use of '.'"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
               "messageStrings": {
                 "issue": {
@@ -13945,6 +14461,20 @@
               }
             },
             {
+              "id": "app-ErrInvalidDot",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid use of '.'"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
               "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
               "messageStrings": {
                 "issue": {
@@ -13967,6 +14497,20 @@
               "messageStrings": {
                 "issue": {
                   "text": "The information requested {0} is not applicable for the given column {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {

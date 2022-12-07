@@ -94,25 +94,11 @@ visualizar_atividades_colaborador As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =21
+        Visible: =!startTimerLoading
         Width: =galFilteredActivities.Width
         X: =galFilteredActivities.X
         Y: =galFilteredActivities.Y-Self.Height
         ZIndex: =3
-
-    rectFundo As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderThickness: =4
-        Height: =916
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        Visible: =startTimerLoading
-        Width: =524
-        X: =116
-        Y: =120
-        ZIndex: =4
 
     DataTableProjects_1 As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -421,6 +407,7 @@ visualizar_atividades_colaborador As screen:
         Size: =24
         Text: ="Visualizar Atividades "
         VerticalAlign: =VerticalAlign.Top
+        Visible: =!startTimerLoading
         Width: =346
         X: =52
         Y: =137
@@ -448,6 +435,7 @@ visualizar_atividades_colaborador As screen:
         Size: =20
         Text: |-
             ="Mês: "
+        Visible: =!startTimerLoading
         Width: =84
         X: =67
         Y: =281
@@ -480,6 +468,7 @@ visualizar_atividades_colaborador As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =21
+        Visible: =!startTimerLoading
         Width: =393
         X: =190
         Y: =291
@@ -512,6 +501,7 @@ visualizar_atividades_colaborador As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =21
+        Visible: =!startTimerLoading
         Width: =512
         X: =71
         Y: =205
@@ -536,8 +526,8 @@ visualizar_atividades_colaborador As screen:
 
     HeaderWorker_30 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
-        has_left_icon: =!startScreenLoading
-        has_right_icon: =!startScreenLoading
+        has_left_icon: =!startTimerLoading
+        has_right_icon: =!startTimerLoading
         header_title: =CONST_CURRENT_USER.name
         left_icon: =Icon.Home
         OnClickLeftIcon: =Navigate(user_home,ScreenTransition.Fade);
@@ -596,6 +586,7 @@ visualizar_atividades_colaborador As screen:
                Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
             )
         Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
         ShowNavigation: =true
         ShowScrollbar: =false
         TemplateFill: |
@@ -606,6 +597,7 @@ visualizar_atividades_colaborador As screen:
             )
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
+        Visible: =!startTimerLoading
         Width: =Parent.Width*.85
         X: =39
         Y: =439
@@ -749,6 +741,7 @@ visualizar_atividades_colaborador As screen:
             Height: =30
             HoverFill: =RGBA(0, 0, 0, 0)
             PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =!startTimerLoading
             Width: =555
             X: =28
             Y: =842
@@ -776,6 +769,7 @@ visualizar_atividades_colaborador As screen:
                         Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
                         ),hours
                     )
+            Visible: =!startTimerLoading
             Width: =62
             X: =lblTotalHours.X+lblTotalHours.Width
             Y: =lblTotalHours.Y
@@ -797,6 +791,7 @@ visualizar_atividades_colaborador As screen:
             PaddingTop: =0
             Size: =15
             Text: ="Total de horas"
+            Visible: =!startTimerLoading
             Width: =180
             X: =39
             Y: =837

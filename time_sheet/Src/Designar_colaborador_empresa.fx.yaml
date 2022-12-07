@@ -48,52 +48,6 @@ Designar_colaborador_empresa As screen:
         Y: =908
         ZIndex: =24
 
-    ButtonHome_7 As button:
-        Align: =Align.Left
-        BorderColor: =RGBA(0, 0, 0, 0)
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(230, 230, 230, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =70
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(user_home,ScreenTransition.Fade);
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(2, 4, 48, 1), -30%)
-        Size: =24
-        Text: ="          Início"
-        Width: =230
-        X: =77
-        Y: =908
-        ZIndex: =25
-
-    Icon19_10 As icon.Home:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(39, 39, 39, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =50
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Home
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =107
-        Y: =918
-        ZIndex: =26
-
     FooterCompany_9 As FooterCompany:
         Y: =1036
         ZIndex: =27

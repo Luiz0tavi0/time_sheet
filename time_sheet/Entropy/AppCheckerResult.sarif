@@ -9724,49 +9724,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPasswordConfirm_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.Icon2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2.TabIndex",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPasswordConfirm_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.Icon2"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPasswordConfirm_1"
               }
             }
           ],
@@ -9784,19 +9754,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.AccessibleLabel"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPasswordConfirm_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.AccessibleLabel",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPasswordConfirm_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.Icon2_1"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPasswordConfirm_1"
               }
             }
           ],
@@ -9814,19 +9784,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.TabIndex"
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPassword_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "editar_cadastro_colaborador.Icon2_1.TabIndex",
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPassword_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "editar_cadastro_colaborador",
-                "type": "editar_cadastro_colaborador.Icon2_1"
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPassword_1"
               }
             }
           ],
@@ -9838,6 +9808,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPassword_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPassword_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "editar_cadastro_colaborador",
+                "type": "editar_cadastro_colaborador.FormUsersCreate_2.password_DataCard_2.iconShowPassword_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [

@@ -12,6 +12,34 @@ visualizar_atividades_colaborador As screen:
         );
         Select(btnUpdateComboProjects_1)
 
+    txtFilterGallery As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =50
+        HintText: ="Procure sua atividade pelo nome."
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =galFilteredActivities.Width
+        X: =galFilteredActivities.X
+        Y: =galFilteredActivities.Y-Self.Height
+        ZIndex: =1
+
     rectFundo As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -25,7 +53,7 @@ visualizar_atividades_colaborador As screen:
         Width: =524
         X: =116
         Y: =120
-        ZIndex: =1
+        ZIndex: =2
 
     DataTableProjects_1 As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -57,7 +85,7 @@ visualizar_atividades_colaborador As screen:
         Width: =640
         X: =650
         Y: =40
-        ZIndex: =2
+        ZIndex: =3
 
         name_Column2_1 As dataTableColumn.textualColumn:
             AutoWidth: =false
@@ -184,7 +212,7 @@ visualizar_atividades_colaborador As screen:
         Width: =640
         X: =650
         Y: =636
-        ZIndex: =3
+        ZIndex: =4
 
         description_Column2_1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -295,7 +323,7 @@ visualizar_atividades_colaborador As screen:
         Width: =232
         X: =325
         Y: =924
-        ZIndex: =4
+        ZIndex: =5
 
     IconDownload_2 As icon.Download:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -315,7 +343,7 @@ visualizar_atividades_colaborador As screen:
         Width: =40
         X: =418
         Y: =939
-        ZIndex: =5
+        ZIndex: =6
 
     TitleViewActivity As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -337,11 +365,11 @@ visualizar_atividades_colaborador As screen:
         Width: =346
         X: =52
         Y: =137
-        ZIndex: =6
+        ZIndex: =7
 
     FooterWorker_9 As FooterWorker:
         Y: =1036
-        ZIndex: =7
+        ZIndex: =8
 
     MonthLabel_1 As label:
         Align: =Align.Justify
@@ -362,9 +390,9 @@ visualizar_atividades_colaborador As screen:
         Text: |-
             ="Mês: "
         Width: =84
-        X: =78
-        Y: =295
-        ZIndex: =8
+        X: =67
+        Y: =281
+        ZIndex: =9
 
     ddMonth As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -380,7 +408,6 @@ visualizar_atividades_colaborador As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Font: =Font.'Segoe UI'
-        Height: =60
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
@@ -396,29 +423,8 @@ visualizar_atividades_colaborador As screen:
         Size: =21
         Width: =393
         X: =190
-        Y: =295
-        ZIndex: =9
-
-    Label20324_1 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(39.3125, 39.3125, 39.3125, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =31
-        LineHeight: =1.171875
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =18
-        Text: ="Total de horas"
-        Width: =195
-        X: =39
-        Y: =858
-        ZIndex: =12
+        Y: =291
+        ZIndex: =10
 
     ddProjectsByUser As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -450,7 +456,7 @@ visualizar_atividades_colaborador As screen:
         Width: =512
         X: =71
         Y: =205
-        ZIndex: =13
+        ZIndex: =14
 
     Label1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -467,7 +473,7 @@ visualizar_atividades_colaborador As screen:
         Width: =559
         X: =-600
         Y: =366
-        ZIndex: =14
+        ZIndex: =15
 
     HeaderWorker_30 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
@@ -480,7 +486,7 @@ visualizar_atividades_colaborador As screen:
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);
         Visible: =true
-        ZIndex: =15
+        ZIndex: =16
 
     btnUpdateComboProjects_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -516,10 +522,10 @@ visualizar_atividades_colaborador As screen:
         Width: =230
         X: =-550
         Y: =980
-        ZIndex: =16
+        ZIndex: =17
 
     "galFilteredActivities As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
         Height: =367
         Items: |-
             =//Filter(tbl_tasks;project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
@@ -531,12 +537,20 @@ visualizar_atividades_colaborador As screen:
                Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
             )
         Layout: =Layout.Vertical
+        ShowNavigation: =true
+        ShowScrollbar: =false
+        TemplateFill: |
+            =Switch(ThisItem.status.Value,
+                "Concluído", RGBA(0, 0, 125, 0.4),
+                "Em andamento", RGBA(0, 127, 127, 0.4),
+                "Pausado", RGBA(255, 125, 20, 0.4)
+            )
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
         Width: =Parent.Width*.85
         X: =39
         Y: =439
-        ZIndex: =17
+        ZIndex: =18
 
         Title6 As label:
             Color: =RGBA(51, 51, 51, 1)
@@ -669,7 +683,7 @@ visualizar_atividades_colaborador As screen:
         Width: =559
         X: =-600
         Y: =400
-        ZIndex: =18
+        ZIndex: =19
 
     timerScreenLoading As timer:
         AutoPause: =false
@@ -711,7 +725,7 @@ visualizar_atividades_colaborador As screen:
             =$"Timer loading {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
         Width: =234
         Y: =1175
-        ZIndex: =19
+        ZIndex: =20
 
     Label8 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -728,48 +742,20 @@ visualizar_atividades_colaborador As screen:
         Width: =560
         X: =78
         Y: =25
-        ZIndex: =20
+        ZIndex: =21
 
     cmpScreenLoading As cmpTransitionLoad:
         Height: =916
         Visible: =startScreenLoading
         Y: =120
-        ZIndex: =21
-
-    txtFilterGallery As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =50
-        HintText: ="Procure sua atividade pelo nome."
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =21
-        Width: =galFilteredActivities.Width
-        X: =galFilteredActivities.X
-        Y: =galFilteredActivities.Y-Self.Height
         ZIndex: =22
 
-    grpSumHours As group:
+    Group6 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
-        ZIndex: =36
+        ZIndex: =23
 
         rectSumHours As rectangle:
             BorderColor: =RGBA(226.5648, 226.5648, 226.5648, 1)
@@ -777,13 +763,13 @@ visualizar_atividades_colaborador As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =45
+            Height: =30
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =222
+            Width: =555
             X: =28
-            Y: =856
-            ZIndex: =10
+            Y: =842
+            ZIndex: =11
 
         lblSumHours As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -792,14 +778,13 @@ visualizar_atividades_colaborador As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =38
+            Height: =28
             LineHeight: =1.171875
             PaddingBottom: =0
             PaddingLeft: =10
             PaddingRight: =0
             PaddingTop: =0
-            Size: =18
+            Size: =15
             Text: |-
                 =Sum(
                     If(IsBlank(txtFilterGallery),
@@ -808,8 +793,29 @@ visualizar_atividades_colaborador As screen:
                         Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
                         ),hours
                     )
-            Width: =222
-            X: =28
-            Y: =901
-            ZIndex: =11
+            Width: =62
+            X: =lblTotalHours.X+lblTotalHours.Width
+            Y: =lblTotalHours.Y
+            ZIndex: =12
+
+        lblTotalHours As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(39.3125, 39.3125, 39.3125, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =29
+            LineHeight: =1.171875
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =15
+            Text: ="Total de horas"
+            Width: =180
+            X: =39
+            Y: =837
+            ZIndex: =13
 

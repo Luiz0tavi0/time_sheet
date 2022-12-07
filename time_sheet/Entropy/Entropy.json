@@ -365,12 +365,12 @@
     "Group2": 49,
     "Group3": 222,
     "Group4": 583,
+    "Group6": 620,
     "grpErrorLabels": 417,
     "grpIconsStatus": 416,
     "grpInputTxt": 418,
     "grpLoginFail": 419,
     "grpScreenFail": 392,
-    "grpSumHours": 477,
     "HeaderWorker": 35,
     "HeaderWorker_12": 424,
     "HeaderWorker_14": 316,
@@ -443,7 +443,6 @@
     "Label2": 385,
     "Label20323": 331,
     "Label20324": 330,
-    "Label20324_1": 471,
     "Label20480": 319,
     "Label20480_1": 318,
     "Label281087_6": 26,
@@ -471,6 +470,7 @@
     "LblSuccessMsg1_4": 48,
     "lblSuccessMsgMiddleScreen": 21,
     "lblSumHours": 472,
+    "lblTotalHours": 471,
     "login": 393,
     "mainContainer": 17,
     "manager:name_Column2": 346,
@@ -645,7 +645,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "12/07/2022 09:56:39",
+  "HeaderLastSavedDateTimeUTC": "12/07/2022 10:30:22",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0231a2ce-81a0-4ca3-abe3-d1a85fafc381": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/910cbb6c8d084f46b68f5356cd61e53f\"",
@@ -995,6 +995,11 @@
       "DataCardKeyHours_7": 5,
       "DataCardKeyHours_8": 0
     },
+    "Group6": {
+      "lblSumHours": 1,
+      "lblTotalHours": 0,
+      "rectSumHours": 2
+    },
     "grpErrorLabels": {
       "LabelLoginError": 0,
       "LabelPasswordError": 1
@@ -1016,10 +1021,6 @@
     "grpScreenFail": {
       "cmpScreenFail": 0,
       "rect_1": 1
-    },
-    "grpSumHours": {
-      "lblSumHours": 1,
-      "rectSumHours": 0
     },
     "HoursProjectCard": {
       "Rectangle20322_1": 0,
@@ -1386,12 +1387,12 @@
     "Group2": 543,
     "Group3": 88,
     "Group4": 397,
+    "Group6": 333,
     "grpErrorLabels": 269,
     "grpIconsStatus": 265,
     "grpInputTxt": 264,
     "grpLoginFail": 259,
     "grpScreenFail": 203,
-    "grpSumHours": 334,
     "HeaderWorker": 30,
     "HeaderWorker_12": 283,
     "HeaderWorker_14": 179,
@@ -1464,7 +1465,6 @@
     "Label2": 248,
     "Label20323": 195,
     "Label20324": 194,
-    "Label20324_1": 335,
     "Label20480": 183,
     "Label20480_1": 182,
     "Label281087_6": 565,
@@ -1491,7 +1491,8 @@
     "lblOutput_login": 277,
     "LblSuccessMsg1_4": 546,
     "lblSuccessMsgMiddleScreen": 540,
-    "lblSumHours": 336,
+    "lblSumHours": 335,
+    "lblTotalHours": 334,
     "login": 380,
     "mainContainer": 536,
     "manager:name_Column2": 209,
@@ -1546,7 +1547,7 @@
     "rectContainer_1": 547,
     "rectFundo": 310,
     "rectMaskSemiTransLucid": 541,
-    "rectSumHours": 333,
+    "rectSumHours": 336,
     "SearchBox": 27,
     "SearchBox_1": 17,
     "Separator1": 34,

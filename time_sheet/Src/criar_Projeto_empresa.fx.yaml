@@ -15,23 +15,28 @@ criar_Projeto_empresa As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
+        OnSelect: |-
             =Select(btnValidateAllParameter);
-            UpdateContext(
-                {
-                    lastProjectSubmited: Patch(
-                        tbl_projects,            Defaults(tbl_projects),
-                        {
-                            name: DataCardValue5.Text,
-                            start: DataCardValue7.SelectedDate,
-                            manager: {
-                                Id: CONST_CURRENT_USER.ID,
-                                Value: Blank()
+            If(varAllIsFine,
+                UpdateContext(
+                    {
+                        lastProjectSubmited: Patch(
+                            tbl_projects,
+                            Defaults(tbl_projects),
+                            {
+                                name: DataCardValue5.Text,
+                                start: DataCardValue7.SelectedDate,
+                                manager: {
+                                    Id: CONST_CURRENT_USER.ID,
+                                    Value: Blank()
+                                },
+                                status: {Id: -1, Value:"Em andamento"}
+                                
                             }
-                        }
-                    )
-                }
-            );
+                        )
+                    }
+                );
+            )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -360,4 +365,21 @@ criar_Projeto_empresa As screen:
         X: =-275
         Y: =575
         ZIndex: =34
+
+    Label9 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =lastProjectSubmited.ID
+        Width: =560
+        X: =30
+        Y: =594
+        ZIndex: =35
 

@@ -103,7 +103,7 @@ Designar_colaborador_empresa As screen:
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =18
-                Text: =ThisItem.status
+                Text: =ThisItem.status.Value
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth - 104
                 X: =40
@@ -239,28 +239,11 @@ Designar_colaborador_empresa As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: =Gallery3.Selected.ID
+        Text: ="ID Projeto " & Gallery3.Selected.ID
         Width: =560
-        X: =23
+        X: =-600
         Y: =521
         ZIndex: =37
-
-    Label4_1 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =70
-        Size: =21
-        Text: =LookUp(tbl_contracts,collaborators_id.Value=ComboBox1.Selected.ID And tbl_contracts[@ID]=Label4.Text).ID
-        Width: =560
-        X: =23
-        Y: =625
-        ZIndex: =38
 
     Label6 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -273,28 +256,11 @@ Designar_colaborador_empresa As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: =ComboBox1.Selected.ID
+        Text: ="ID Colaborador " & ComboBox1.Selected.ID
         Width: =560
-        X: =52
+        X: =-600
         Y: =345
         ZIndex: =39
-
-    Label6_1 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =70
-        Size: =21
-        Text: =Gallery3.Selected.ID
-        Width: =560
-        X: =38
-        Y: =811
-        ZIndex: =40
 
     HeaderWorker_27 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))

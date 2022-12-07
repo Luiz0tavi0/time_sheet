@@ -1322,7 +1322,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="Nome de usuário"
                 Width: =525
                 X: =Parent.Width/2-(Self.Width/2)
                 Y: =(Parent.Height/3)-Self.Height/3
@@ -1456,7 +1456,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="CPF"//Parent.DisplayName
                 VirtualKeyboardMode: =VirtualKeyboardMode.Numeric
                 Width: =526
                 X: =Parent.Width/2-(Self.Width/2)
@@ -1568,7 +1568,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="Email"
                 Width: =526 
                 X: =Parent.Width/2-(Self.Width/2)
                 Y: =Parent.Height/3-(Self.Height/2)
@@ -1675,7 +1675,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="Telefone"
                 Width: =526
                 X: =Parent.Width/2-(Self.Width/2)   
                 Y: =Parent.Height/2-(Self.Height/2)

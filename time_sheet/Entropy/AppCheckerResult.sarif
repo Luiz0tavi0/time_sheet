@@ -9280,6 +9280,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.IconUndo.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.IconUndo.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "visualizar_evento_colaborador",
+                "type": "visualizar_evento_colaborador.IconUndo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.IconUndo.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.IconUndo.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "visualizar_evento_colaborador",
+                "type": "visualizar_evento_colaborador.IconUndo"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.business-people-rush-hour-walking-commuting-city-concept"
                 }
               ],
@@ -13643,6 +13703,36 @@
                 "member": "itemSelecionado",
                 "module": "Visualizar_Projeto_empresa",
                 "type": "Visualizar_Projeto_empresa"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.ShowUndoIcon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_evento_colaborador.ShowUndoIcon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ShowUndoIcon",
+                "module": "visualizar_evento_colaborador",
+                "type": "visualizar_evento_colaborador"
               }
             }
           ],

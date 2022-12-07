@@ -38,7 +38,7 @@ visualizar_evento_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
+        OnSelect: |
             =/*
             If(
                 FormActivity_2.Mode=FormMode.View;
@@ -46,12 +46,13 @@ visualizar_evento_colaborador As screen:
                 ViewForm(FormActivity_2)
             );;*/
             If(FormActivity_2.Mode=FormMode.Edit And FormActivity_2.Unsaved,
-                Select(btnBackUpBeforeUpdate);
+                Select(btnBackUpBeforeUpdate); // Guarda o registro antes de ser modificado
                 SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});
                 ResetForm(FormActivity_2);Select(btnCheckChanges);
+                If(FormActivity_2.Unsaved=false,UpdateContext({ShowUndoIcon:false}));
                 ,
                 Select(btnCheckChanges);
-            )
+            );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -99,7 +100,10 @@ visualizar_evento_colaborador As screen:
     HeaderWorker_31 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
-        OnClickLeftIcon: =Back(ScreenTransition.Fade);
+        OnClickLeftIcon: |-
+            =UpdateContext({ShowUndoIcon:false});
+            
+            Back(ScreenTransition.Fade);
         OnClickRightIcon: |-
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);
@@ -111,13 +115,11 @@ visualizar_evento_colaborador As screen:
         DataSource: =tbl_tasks
         DefaultMode: =FormMode.View
         Height: =588
-        Item: |+
-            =itemActivity
-            
+        Item: =itemActivity
         NumberOfColumns: =1
         OnSuccess: |-
             =Notify($"Status foi alterado para ={FormActivity_2.LastSubmit.status.Value}",NotificationType.Success);
-            UpdateContext({ShowUndoIcon:true});
+            //UpdateContext({ShowUndoIcon:!ShowUndoIcon});;
         Width: =516
         X: =Parent.Width/2-Self.Width/2
         Y: =283
@@ -1524,12 +1526,16 @@ visualizar_evento_colaborador As screen:
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Undo
-        OnSelect: =
+        OnSelect: |+
+            =// UpdateContext({itemActivity:safeFormBackup});;
+            SubmitForm(FormActivity_2);UpdateContext({itemActivity:FormActivity_2.LastSubmit});
+            ResetForm(FormActivity_2);Select(btnCheckChanges);
+            
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="Desfazer"
-        Visible: =ShowUndoIcon
+        Visible: =(itemActivity.Modificado<>safeFormBackup.Modificado)
         X: =122
         Y: =937
         ZIndex: =27

@@ -1106,7 +1106,9 @@ inserir_atividade_colaborador As screen:
         IsSearchable: =false
         Items: |-
             =//ForAll(colProjectsFilteredByUserAndContractsDistinct;Result
-            ForAll(colProjectsFilteredByUserAndContractsDistinct,LookUp(tbl_projects,ID=unique_id))
+            If (App.ActiveScreen.Name = visualizar_atividades_colaborador.Name,
+                ForAll(colProjectsFilteredByUserAndContractsDistinct,LookUp(tbl_projects,ID=unique_id))
+            )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
@@ -1143,18 +1145,18 @@ inserir_atividade_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =
-            ClearCollect(
+            =If (App.ActiveScreen.Name = visualizar_atividades_colaborador.Name,
+                ClearCollect(
                 colProjectsFilteredByUserAndContracts,
                 With({tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
                         ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
                     )
-            );
-            ClearCollect(
+                );
+                ClearCollect(
                 colProjectsFilteredByUserAndContractsDistinct,
                 RenameColumns(Distinct(colProjectsFilteredByUserAndContracts,ID),"Result","unique_id")
-            );
-            //ForAll(colProjectsFilteredByUserAndContractsDistinct;LookUp(tbl_projects;ID=unique_id));;
+                );
+            )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

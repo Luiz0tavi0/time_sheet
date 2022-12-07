@@ -1219,7 +1219,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 128,
+                  "charOffset": 199,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -1259,7 +1259,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 131,
+                  "charOffset": 202,
                   "snippet": {
                     "text": "="
                   }
@@ -1299,7 +1299,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 259,
+                  "charOffset": 330,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -1339,7 +1339,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 248,
+                  "charOffset": 319,
                   "snippet": {
                     "text": "="
                   }
@@ -1379,7 +1379,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 243,
+                  "charOffset": 314,
                   "snippet": {
                     "text": "&&"
                   }
@@ -13484,6 +13484,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.ddProject"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "login.varShowFailTransition"
                 }
               ],
@@ -14022,6 +14052,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Este arquivo de mídia não é referenciado por nenhuma fórmula de controle, portanto não é necessário. Sua remoção melhorará o desempenho."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Carregamento de atraso ineficiente"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Ao invés disso, use variáveis, coleções e contexto de navegação para compartilhar o estado nas telas."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Os controles que referenciam controles em outras telas podem deixar o carregamento do aplicativo e a navegação mais lentos. Isso força o aplicativo a carregar as outras telas imediatamente, em vez de aguardar até que o usuário navegue para elas."
               }
             }
           ],

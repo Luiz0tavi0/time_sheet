@@ -2324,7 +2324,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 126,
+                  "charOffset": 208,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -2364,7 +2364,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 129,
+                  "charOffset": 211,
                   "snippet": {
                     "text": "="
                   }
@@ -2404,7 +2404,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 257,
+                  "charOffset": 339,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -2444,7 +2444,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 246,
+                  "charOffset": 328,
                   "snippet": {
                     "text": "="
                   }
@@ -2484,7 +2484,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 241,
+                  "charOffset": 323,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2508,6 +2508,46 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.cmpScreenSuccess_2.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.cmpScreenSuccess_2.X",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "varPositionXScrenSuccess"
+                  }
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.cmpScreenSuccess_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "varPositionXScrenSuccess"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -6496,6 +6536,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.rect_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "inserir_atividade_colaborador.FormActivity.name_DataCard2.DataCardValueName.AccessibleLabel"
                 }
               ],
@@ -7600,6 +7670,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.rect_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
         },
         {
           "locations": [

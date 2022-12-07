@@ -2324,7 +2324,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 122,
+                  "charOffset": 126,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -2364,7 +2364,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 125,
+                  "charOffset": 129,
                   "snippet": {
                     "text": "="
                   }
@@ -2404,7 +2404,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 249,
+                  "charOffset": 257,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -2444,7 +2444,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 238,
+                  "charOffset": 246,
                   "snippet": {
                     "text": "="
                   }
@@ -2484,7 +2484,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 233,
+                  "charOffset": 241,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2500,246 +2500,6 @@
           "message": {
             "arguments": [
               "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 69,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "user_id.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 72,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 192,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "project_id.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 181,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 176,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.SearchItems"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.ddProject.SearchItems",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 8,
-                  "charOffset": 41,
-                  "snippet": {
-                    "text": "\"status\""
-                  }
-                }
-              },
-              "properties": {
-                "member": "SearchItems",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.ddProject"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Search"
             ],
             "id": "issue"
           },

@@ -1,12 +1,17 @@
 inserir_atividade_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
-        =ClearCollect(colProjectsForUserByContracts,
-            With(
-                {tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
-                ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
-            )
+    OnVisible: |+
+        =ClearCollect(
+            colProjectsFilteredByUserAndContracts,
+            With({tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
+                    ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
+                )
+        );
+        ClearCollect(
+            colProjectsFilteredByUserAndContractsDistinct,
+            RenameColumns(Distinct(colProjectsFilteredByUserAndContracts,ID),"Result","unique_id")
         )
+        
 
     ButtonSaveWorker_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -23,34 +28,37 @@ inserir_atividade_colaborador As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |+
             =
-            IfError(
-                UpdateContext({lastTaskSubmited:
-                    Patch(
-                        tbl_tasks,
-                        Defaults(tbl_tasks),
-                        {
-                            name: DataCardValueName.Text,
-                            description: DataCardValueDescription.Text,
-                            status: DataCardValueStatus.Selected,
-                            date: DataCardValueDate.SelectedDate,
-                            hours: Value(DataCardValueHours.Text),
-                            billable_hours: DataCardValueBillableHours.Value,
-                            user_id:{
-                                Id:CONST_CURRENT_USER.ID,
-                                Value:Blank()
-                            },
-                            project_id:{
-                                Id:ddProject.Selected.ID,
-                                Value:Blank()
+            If(FormActivity.Valid,
+                IfError(
+                    UpdateContext({lastTaskSubmited:
+                        Patch(
+                            tbl_tasks,
+                            Defaults(tbl_tasks),
+                            {
+                                name: DataCardValueName.Text,
+                                description: DataCardValueDescription.Text,
+                                status: DataCardValueStatus.Selected,
+                                date: DataCardValueDate.SelectedDate,
+                                hours: Value(DataCardValueHours.Text),
+                                billable_hours: DataCardValueBillableHours.Value,
+                                user_id:{
+                                    Id:CONST_CURRENT_USER.ID,
+                                    Value:Blank()
+                                },
+                                project_id:{
+                                    Id:ddProject.Selected.ID,
+                                    Value:Blank()
+                                }
                             }
-                        }
-                    )}
-                ),
-                Notify(
-                    $"Erro: {FirstError.Message}",//| {FirstError.Source }";// | {FirstError.Observed} | {FirstError.Kind}";
-                    NotificationType.Error
-                )
+                        )}
+                    ),
+                    Notify(
+                        $"Erro: {FirstError.Message}",//| {FirstError.Source }";// | {FirstError.Observed} | {FirstError.Kind}";
+                        NotificationType.Error
+                    )
+                );
             );
+            If(IsError(lastTaskSubmited),"",NewForm(FormActivity));
             
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -178,7 +186,8 @@ inserir_atividade_colaborador As screen:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="status"
-            Default: =ThisItem.status
+            Default: |-
+                ={Value:"Em andamento"}
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_tasks],DataSourceInfo.DisplayName,"status")
             Fill: =RGBA(0, 0, 0, 0)
@@ -221,8 +230,7 @@ inserir_atividade_colaborador As screen:
                 ChevronHoverFill: =RGBA(33, 33, 33, 1)
                 Color: =RGBA(51, 51, 51, 1)
                 Default: |
-                    =//If(IsBlank(Parent.Default);First([@tbl_tasks].status))
-                    {Value: "Em andamento"}
+                    ={Value: "Em andamento"}
                 DefaultSelectedItems: =Parent.Default
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -302,11 +310,11 @@ inserir_atividade_colaborador As screen:
                 FontWeight: =FontWeight.Semibold
                 PaddingLeft: =0
                 Size: =20
-                Text: ="Nome"
+                Text: ="Nome da atividade"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =3
+                Y: =12
                 ZIndex: =1
 
             DataCardValueName As text:
@@ -384,7 +392,7 @@ inserir_atividade_colaborador As screen:
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =3
+                Y: =12
                 ZIndex: =4
 
         description_DataCard1 As typedDataCard.textualEditCard:
@@ -968,21 +976,21 @@ inserir_atividade_colaborador As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayFields: =["name"]
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Lighter
         Height: =50
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         InputTextPlaceholder: ="Buscar projeto"
+        IsSearchable: =false
         Items: |-
-            =With(
-                {tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
-                ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
-            )
+            =//ForAll(colProjectsFilteredByUserAndContractsDistinct;Result
+            ForAll(colProjectsFilteredByUserAndContractsDistinct,LookUp(tbl_projects,ID=unique_id))
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["status"]
-        SearchItems: =Search(tbl_projects,ddProject.SearchText,"status")
+        SearchFields: =["name"]
+        SearchItems: =[]
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =21
@@ -1007,4 +1015,21 @@ inserir_atividade_colaborador As screen:
         X: =-600
         Y: =450
         ZIndex: =18
+
+    Label7_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =$"ID project selected = {ddProject.Selected.ID}"
+        Width: =536
+        X: =-600
+        Y: =851
+        ZIndex: =19
 

@@ -9,13 +9,14 @@ cmpLoginFail As CanvasComponent:
 
     mainContainer As groupContainer:
         BorderColor: =RGBA(255, 255, 255, 1)
-        BorderThickness: =2
+        BorderStyle: =    
+        BorderThickness: =    
         Height: =Parent.Height
         Width: =Parent.Width
         ZIndex: =5
 
         rectContainer As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderColor: =RGBA(255, 255, 255, 1)  
             BorderThickness: =2
             DisabledFill: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(255, 255, 255, 1)

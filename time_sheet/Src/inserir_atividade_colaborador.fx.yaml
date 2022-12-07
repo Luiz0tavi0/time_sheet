@@ -1,19 +1,30 @@
 inserir_atividade_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |+
-        =UpdateContext({TimerGoFailFase1:false});
-        UpdateContext({TimerGoFase2:false});
+    OnHidden: |
+        =UpdateContext({startScreenFail:false});
+        UpdateContext({startScreenSuccess:false});
+        UpdateContext({startTimerSuccess:false});
+        UpdateContext({startTimerFail:false});
+    OnVisible: |-
+        =UpdateContext({startScreenFail:false});
+        UpdateContext({startScreenSuccess:false});
+        UpdateContext({startTimerSuccess:false});
+        UpdateContext({startTimerFail:false});
+        Select(btnUpdateComboProjects);
+        
+        /*
         ClearCollect(
-            colProjectsFilteredByUserAndContracts,
-            With({tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
-                    ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
+            colProjectsFilteredByUserAndContracts;
+            With({tbl_contracts_by_user:Filter(tbl_contracts;active;user_id.Id=CONST_CURRENT_USER.ID).project_id};
+                    ForAll(tbl_contracts_by_user;LookUp(tbl_projects;(active=true && ID=project_id.Id)))
                 )
-        );
+        );;
         ClearCollect(
-            colProjectsFilteredByUserAndContractsDistinct,
-            RenameColumns(Distinct(colProjectsFilteredByUserAndContracts,ID),"Result","unique_id")
+            colProjectsFilteredByUserAndContractsDistinct;
+            RenameColumns(Distinct(colProjectsFilteredByUserAndContracts;ID);"Result";"unique_id")
         )
         
+        */
 
     FooterWorker_8 As FooterWorker:
         Y: =1036
@@ -305,7 +316,7 @@ inserir_atividade_colaborador As screen:
         DisabledBorderColor: =RGBA(244, 244, 244, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Duration: =5000
+        Duration: =1850
         Fill: =RGBA(187, 221, 140, 1)
         Font: =Font.'Segoe UI'
         Height: =70
@@ -313,17 +324,17 @@ inserir_atividade_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnTimerEnd: |-
-            =UpdateContext({visibleTransitionFase1: false});
-            UpdateContext({TimerGoFase2:false});
+            =UpdateContext({startScreenSuccess: false});
+            UpdateContext({startTimerSuccess:false});
             //UpdateContext({varPositionXScrenSuccess:App.Width});;
         OnTimerStart: |-
-            =UpdateContext({visibleTransitionFase1: true});
+            =UpdateContext({startScreenSuccess: true});
             //UpdateContext({varPositionXScrenSuccess:0});;
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =21
-        Start: =TimerGoFase2
+        Start: =startTimerSuccess
         Text: |-
             =$"Timer success {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
         Width: =215
@@ -347,15 +358,16 @@ inserir_atividade_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnTimerEnd: |
-            =UpdateContext({visibleTransitionFailFase1: false});
+            =UpdateContext({startScreenFail: false});
+            UpdateContext({startTimerFail: false});
             Reset(Self);
         OnTimerStart: |
-            =UpdateContext({visibleTransitionFailFase1: true});
+            =UpdateContext({startScreenFail: true});
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =21
-        Start: =TimerGoFailFase1
+        Start: =startTimerFail
         Text: |-
             =$"Timer fail {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
         Width: =215
@@ -376,7 +388,7 @@ inserir_atividade_colaborador As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |+
+        OnSelect: |-
             =
             If(FormActivity.Valid,
                 IfError(
@@ -408,12 +420,14 @@ inserir_atividade_colaborador As screen:
                     )
                 );
             );
-            If(IsBlankOrError(lastTaskSubmited),
-                UpdateContext({TimerGoFase2:false});
+            If(IsBlankOrError(lastTaskSubmited) Or FormActivity.Valid=false,
+                UpdateContext({startTimerSuccess:false});
+                UpdateContext({startTimerFail:true});
                 ,
-                UpdateContext({TimerGoFase2:true});ResetForm(FormActivity);NewForm(FormActivity)
+                UpdateContext({startTimerFail:false});
+                UpdateContext({startTimerSuccess:true});ResetForm(FormActivity);NewForm(FormActivity)
             );
-            
+            Select(btnUpdateComboProjects);
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -642,7 +656,7 @@ inserir_atividade_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "name")
             Required: =true
-            Update: =DataCardValueName.Text
+            Update: =Trim(DataCardValueName.Text)
             Width: =516
             X: =0
             Y: =0
@@ -756,7 +770,7 @@ inserir_atividade_colaborador As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_tasks], DataSourceInfo.MaxLength, "description")
             Required: =false
-            Update: =DataCardValueDescription.Text
+            Update: =Trim(DataCardValueDescription.Text)
             Width: =516
             X: =0
             Y: =1
@@ -952,7 +966,7 @@ inserir_atividade_colaborador As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =100
             Required: =true
-            Update: =Value(DataCardValueHours.Text)
+            Update: =Value(Trim(DataCardValueHours.Text))
             Width: =Parent.Width/2
             X: =0
             Y: =3
@@ -1104,25 +1118,55 @@ inserir_atividade_colaborador As screen:
 
     cmpScreenSuccess_2 As cmpScreenSuccess:
         exito_texto: ="Nova atividade inserida."
+        Height: =Max(App.Height,App.DesignHeight)
         OnClickAnyLocationScreen: |-
             =UpdateContext({visibleTransitionFase1:false})
-        Visible: =visibleTransitionFase1
-        X: =varPositionXScrenSuccess
-        ZIndex: =17
+        Visible: =startScreenSuccess
+        Width: =Max(App.Width,App.DesignWidth)
+        ZIndex: =15
 
-    grpLoginFail_1 As group:
+    btnUpdateComboProjects As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(110,164,191, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =
+            ClearCollect(
+                colProjectsFilteredByUserAndContracts,
+                With({tbl_contracts_by_user:Filter(tbl_contracts,active,user_id.Id=CONST_CURRENT_USER.ID).project_id},
+                        ForAll(tbl_contracts_by_user,LookUp(tbl_projects,(active=true && ID=project_id.Id)))
+                    )
+            );
+            ClearCollect(
+                colProjectsFilteredByUserAndContractsDistinct,
+                RenameColumns(Distinct(colProjectsFilteredByUserAndContracts,ID),"Result","unique_id")
+            );
+            //ForAll(colProjectsFilteredByUserAndContractsDistinct;LookUp(tbl_projects;ID=unique_id));;
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Size: =21
+        Text: ="update combo projects"
+        Width: =230
+        X: =-500
+        Y: =950
+        ZIndex: =18
+
+    grpScreenFail As group:
         Height: =5
         Width: =5
-        X: =-620
-        Y: =40
-        ZIndex: =23
-
-        cmpLoginFail_2 As cmpLoginFail:
-            Height: = Max(App.Height, App.DesignHeight)
-            texto_falha: ="Revise seu lançamento."
-            Visible: =visibleTransitionFailFase1
-            Width: = Max(App.Width, App.DesignWidth)
-            ZIndex: =15
+        X: =60
+        Y: =60
+        ZIndex: =18
 
         rect_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1135,16 +1179,22 @@ inserir_atividade_colaborador As screen:
                     DisplayMode.Edit,
                     DisplayMode.Disabled
                 )
-            Fill: =RGBA(102, 182, 227, 1)
+            Fill: =RGBA(255, 255, 255, 0.48)
             FocusedBorderThickness: =4
             Height: = Max(App.Height, App.DesignHeight)
             HoverFill: =RGBA(0, 0, 0, 0)
             OnSelect: |-
-                =UpdateContext({visibleTransitionFailFase1:false});
-                UpdateContext({TimerGoFailFase1:false});
-                Reset(tempScreenTransitionErrorFase);
+                =UpdateContext({startScreenFail:false});
+                UpdateContext({startTimerFail:false});
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =visibleTransitionFailFase1
+            Visible: =startScreenFail
             Width: = Max(App.Width, App.DesignWidth)
             ZIndex: =16
+
+        cmpScreenFail As cmpLoginFail:
+            Height: = Max(App.Height, App.DesignHeight)
+            texto_falha: ="Revise seu lançamento."
+            Visible: =startScreenFail
+            Width: = Max(App.Width, App.DesignWidth)
+            ZIndex: =17
 

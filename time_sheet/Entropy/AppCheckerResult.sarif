@@ -2314,106 +2314,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.Items",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 208,
+                  "charOffset": 27,
                   "snippet": {
                     "text": ".Id"
                   }
                 }
               },
               "properties": {
-                "member": "OnVisible",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "user_id.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 211,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 339,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador"
+                "member": "Items",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.galFilteredActivities"
               }
             }
           ],
@@ -2434,172 +2354,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 328,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 323,
-                  "snippet": {
-                    "text": "&&"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LookUp"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.cmpScreenSuccess_2.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "inserir_atividade_colaborador.cmpScreenSuccess_2.X",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "varPositionXScrenSuccess"
-                  }
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "inserir_atividade_colaborador",
-                "type": "inserir_atividade_colaborador.cmpScreenSuccess_2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "varPositionXScrenSuccess"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddTaskByUser.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddTaskByUser.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 27,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.ddTaskByUser"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "manager.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddTaskByUser.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddTaskByUser.Items",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2613,7 +2373,7 @@
               "properties": {
                 "member": "Items",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.ddTaskByUser"
+                "type": "visualizar_atividades_colaborador.galFilteredActivities"
               }
             }
           ],
@@ -2634,97 +2394,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.Items",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 27,
-                  "snippet": {
-                    "text": ".Id"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.galVizuAtiv"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "project_id.Id"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 30,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.galVizuAtiv"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 54,
+                  "charOffset": 60,
                   "snippet": {
                     "text": "And"
                   }
@@ -2733,7 +2413,7 @@
               "properties": {
                 "member": "Items",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.galVizuAtiv"
+                "type": "visualizar_atividades_colaborador.galFilteredActivities"
               }
             }
           ],
@@ -2754,12 +2434,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2773,7 +2453,7 @@
               "properties": {
                 "member": "Text",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Label20323_1"
+                "type": "visualizar_atividades_colaborador.lblSumHours"
               }
             }
           ],
@@ -2794,12 +2474,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -2813,7 +2493,7 @@
               "properties": {
                 "member": "Text",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Label20323_1"
+                "type": "visualizar_atividades_colaborador.lblSumHours"
               }
             }
           ],
@@ -2834,17 +2514,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 64,
+                  "charOffset": 70,
                   "snippet": {
                     "text": "And"
                   }
@@ -2853,7 +2533,7 @@
               "properties": {
                 "member": "Text",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Label20323_1"
+                "type": "visualizar_atividades_colaborador.lblSumHours"
               }
             }
           ],
@@ -2874,122 +2554,40 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5.MaxLength"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5.MaxLength",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.Text",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 8,
-                  "charOffset": 55,
+                  "charLength": 3,
+                  "charOffset": 104,
                   "snippet": {
-                    "text": "\"status\""
+                    "text": "And"
                   }
                 }
               },
               "properties": {
-                "member": "MaxLength",
-                "module": "visualizar_evento_colaborador",
-                "type": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5"
+                "member": "Text",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.lblSumHours"
               }
             }
           ],
           "message": {
             "arguments": [
-              "DataSourceInfo.MaxLength",
-              "\"status\""
+              "Filter"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrArgNotApplicableToColumnArg2-Arg1-Arg2",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5.MaxLength"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5.MaxLength",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 64,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "DataSourceInfo([@tbl_tasks]; DataSourceInfo.MaxLength; \"status\")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "MaxLength",
-                "module": "visualizar_evento_colaborador",
-                "type": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "DataSourceInfo"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5.Default"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5.Default",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".status"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Default",
-                "module": "visualizar_evento_colaborador",
-                "type": "visualizar_evento_colaborador.FormViewerTasks.status_DataCard5"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text",
-              "Record"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 1
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3102,6 +2700,486 @@
           "message": {
             "arguments": [
               "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.DisplayMode",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 26,
+                  "charOffset": 9,
+                  "snippet": {
+                    "text": "visibleTransitionFailFase1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.rect_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "visibleTransitionFailFase1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.rect_1.DisplayMode",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 88,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If(\r\n    visibleTransitionFailFase1;\r\n    DisplayMode.Edit;\r\n    DisplayMode.Disabled\r\n)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.rect_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 125,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.btnUpdateComboProjects"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "user_id.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 128,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.btnUpdateComboProjects"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 255,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.btnUpdateComboProjects"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "project_id.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 244,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.btnUpdateComboProjects"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.btnUpdateComboProjects.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 239,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.btnUpdateComboProjects"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 125,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.btnUpdateComboProjects_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "user_id.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 128,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.btnUpdateComboProjects_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 255,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.btnUpdateComboProjects_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "project_id.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 244,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.btnUpdateComboProjects_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.btnUpdateComboProjects_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 239,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.btnUpdateComboProjects_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
             ],
             "id": "issue"
           },
@@ -7196,19 +7274,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddTaskByUser.AccessibleLabel"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddProjectsByUser.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddTaskByUser.AccessibleLabel",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddProjectsByUser.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.ddTaskByUser"
+                "type": "visualizar_atividades_colaborador.ddProjectsByUser"
               }
             }
           ],
@@ -7256,19 +7334,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.DropdownMonth_1.AccessibleLabel"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddMonth.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.DropdownMonth_1.AccessibleLabel",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.ddMonth.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.DropdownMonth_1"
+                "type": "visualizar_atividades_colaborador.ddMonth"
               }
             }
           ],
@@ -7286,49 +7364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.AccessibleLabel"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.galVizuAtiv"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.TabIndex",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.galVizuAtiv"
+                "type": "visualizar_atividades_colaborador.galFilteredActivities"
               }
             }
           ],
@@ -7346,19 +7394,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Rectangle20322_2.AccessibleLabel"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Rectangle20322_2.AccessibleLabel",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.galFilteredActivities.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Rectangle20322_2"
+                "type": "visualizar_atividades_colaborador.galFilteredActivities"
               }
             }
           ],
@@ -7376,19 +7424,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Rectangle20322_2.TabIndex"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Rectangle20322_2.TabIndex",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador.rectSumHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.rectSumHours.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Rectangle20322_2"
+                "type": "visualizar_atividades_colaborador.rectSumHours"
               }
             }
           ],
@@ -7436,19 +7514,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.TabIndex"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.TabIndex",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.lblSumHours.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Label20323_1"
+                "type": "visualizar_atividades_colaborador.lblSumHours"
               }
             }
           ],
@@ -11816,6 +11894,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.visibleTransitionFase1"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.visibleTransitionFase1",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "visibleTransitionFase1",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "login.varShowFailTransition"
                 }
               ],
@@ -11966,19 +12074,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenFail"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.galVizuAtiv.Items",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenFail",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Items",
+                "member": "startScreenFail",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.galVizuAtiv"
+                "type": "visualizar_atividades_colaborador"
               }
             }
           ],
@@ -11988,27 +12096,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 13
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text"
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenSuccess"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "visualizar_atividades_colaborador.Label20323_1.Text",
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startScreenSuccess",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "startScreenSuccess",
                 "module": "visualizar_atividades_colaborador",
-                "type": "visualizar_atividades_colaborador.Label20323_1"
+                "type": "visualizar_atividades_colaborador"
               }
             }
           ],
@@ -12018,8 +12126,68 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 13
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerFail"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerFail",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "startTimerFail",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerSuccess"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "visualizar_atividades_colaborador.startTimerSuccess",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "startTimerSuccess",
+                "module": "visualizar_atividades_colaborador",
+                "type": "visualizar_atividades_colaborador"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -12050,66 +12218,6 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.LabelProjectName_2.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.LabelProjectName_2.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "visualizar_evento_colaborador",
-                "type": "visualizar_evento_colaborador.LabelProjectName_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.Item"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "visualizar_evento_colaborador.FormViewerTasks.Item",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Item",
-                "module": "visualizar_evento_colaborador",
-                "type": "visualizar_evento_colaborador.FormViewerTasks"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 13
         }
       ],
       "tool": {
@@ -12332,23 +12440,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Essa variável está declarada, mas não é referenciada por nenhum controle, portanto não é necessária."
-              }
-            },
-            {
-              "id": "app-InefficientDelayLoading",
-              "messageStrings": {
-                "issue": {
-                  "text": "Carregamento de atraso ineficiente"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Ao invés disso, use variáveis, coleções e contexto de navegação para compartilhar o estado nas telas."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "Os controles que referenciam controles em outras telas podem deixar o carregamento do aplicativo e a navegação mais lentos. Isso força o aplicativo a carregar as outras telas imediatamente, em vez de aguardar até que o usuário navegue para elas."
               }
             }
           ],

@@ -43,7 +43,14 @@
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
               },
-              "BorderColor",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+                "InvariantPropertyName": "BorderColor",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               {
                 "AFDDataSourceName": "",
                 "AutoRuleBindingEnabled": false,
@@ -90,7 +97,7 @@
             "Name": "rectContainer",
             "Parent": "mainContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 477,
+            "PublishOrderIndex": 479,
             "Rules": [
               {
                 "Category": "Design",
@@ -154,7 +161,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(0, 0, 0, 0)",
+                "InvariantScript": "RGBA(255, 255, 255, 1)  ",
                 "Property": "BorderColor",
                 "RuleProviderType": "Unknown"
               },
@@ -273,7 +280,7 @@
             "Name": "iconCircleIcon",
             "Parent": "mainContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 478,
+            "PublishOrderIndex": 480,
             "Rules": [
               {
                 "Category": "Design",
@@ -440,7 +447,7 @@
             "Name": "iconMidlleScreen",
             "Parent": "mainContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 479,
+            "PublishOrderIndex": 481,
             "Rules": [
               {
                 "Category": "Design",
@@ -688,7 +695,7 @@
             "Name": "lblSuccessMsgMiddleScreen",
             "Parent": "mainContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 480,
+            "PublishOrderIndex": 482,
             "Rules": [
               {
                 "Category": "Data",
@@ -963,7 +970,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "BorderStyle",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "BorderStyle.Solid",
+            "InvariantPropertyName": "BorderStyle",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Fill",
           "X",
           "Y",
@@ -1014,7 +1028,7 @@
         "Name": "mainContainer",
         "Parent": "cmpLoginFail",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 476,
+        "PublishOrderIndex": 478,
         "Rules": [
           {
             "Category": "Design",
@@ -1096,7 +1110,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "BorderStyle.Solid",
+            "InvariantScript": "    ",
             "Property": "BorderStyle",
             "RuleProviderType": "Unknown"
           },
@@ -1108,7 +1122,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "2",
+            "InvariantScript": "    ",
             "Property": "BorderThickness",
             "RuleProviderType": "Unknown"
           },
@@ -1166,7 +1180,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638059463369457773",
+    "LastModifiedTimestamp": "638059760832439394",
     "Name": "cmpLoginFail",
     "Rules": [
       {
@@ -1242,7 +1256,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638059463369457773",
+  "LastModifiedTimestamp": "638059760832439394",
   "Name": "3b02a9f7681e4ebe8a0ed199a55799c5",
   "OverridableProperties": {},
   "Version": "638046870870374214"

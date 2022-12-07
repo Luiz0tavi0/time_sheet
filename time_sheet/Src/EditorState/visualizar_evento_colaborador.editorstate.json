@@ -4590,7 +4590,14 @@
         },
         "Format",
         "InputTextPlaceholder",
-        "StartYear",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "1899",
+          "InvariantPropertyName": "StartYear",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "EndYear",
         "StartOfWeek",
         "IconFill",

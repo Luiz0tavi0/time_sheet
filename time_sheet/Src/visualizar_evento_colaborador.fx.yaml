@@ -48,10 +48,14 @@ visualizar_evento_colaborador As screen:
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =24
         Text: |-
-            =If(FormActivity_2.Mode=FormMode.View,
-                "Editar"
-                ,
-                "Visualizar"
+            =Switch(FormActivity_2.Mode,
+                FormMode.View,"Editar",
+                FormMode.Edit,If(
+                    FormActivity_2.Unsaved,
+                        "Salvar"
+                        ,
+                        "Visualizar"
+                    )
             )
         Width: =232
         X: =204
@@ -528,7 +532,7 @@ visualizar_evento_colaborador As screen:
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =21
-                StartYear: =1899
+                StartYear: =2000
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width/(3/2)
                 X: =30

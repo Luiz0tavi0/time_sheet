@@ -48,7 +48,9 @@ inserir_atividade_colaborador As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(255, 255, 255, 1)
         InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: =tbl_projects
+        Items: |-
+            =
+            FirstN(tbl_projects,2)
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
         PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -173,7 +175,9 @@ inserir_atividade_colaborador As screen:
         Items: |
             =//First(Filter(tbl_contracts;user_id.Id=CONST_CURRENT_USER.ID).project_id)
             //With(
-            Filter(tbl_contracts,active=true && user_id.Id=CONST_CURRENT_USER.ID)
+            If (App.ActiveScreen.Name = visualizar_atividades_colaborador.Name,
+                Filter(tbl_contracts,active=true && user_id.Id=CONST_CURRENT_USER.ID)
+            )
                 //ForAll(tbl_contracts_by_user;LookUp(tbl_projects;ID=project_id.Id))
               //  tbl_contracts_by_user
             //)

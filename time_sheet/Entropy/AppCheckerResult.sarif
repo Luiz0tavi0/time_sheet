@@ -1059,7 +1059,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 128,
+                  "charOffset": 201,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -1099,7 +1099,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 131,
+                  "charOffset": 204,
                   "snippet": {
                     "text": "="
                   }
@@ -1139,7 +1139,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 118,
+                  "charOffset": 191,
                   "snippet": {
                     "text": "&&"
                   }
@@ -13497,6 +13497,36 @@
                 "member": "Items",
                 "module": "inserir_atividade_colaborador",
                 "type": "inserir_atividade_colaborador.ddProject"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.DataTableRelationByUserContract.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.DataTableRelationByUserContract.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.DataTableRelationByUserContract"
               }
             }
           ],

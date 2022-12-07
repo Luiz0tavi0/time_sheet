@@ -72,7 +72,8 @@ editar_cadastro_users As screen:
             If(FormUsersUpdate.Mode=FormMode.Edit And varUnsaved,
                 //UpdateContext({userInActivity:LookUp(tbl_users;ID = CONST_CURRENT_USER.ID)});;// Guarda o registro antes de ser modificado
                 //UpdateContext({safeUserFormBackup:userInActivity});;
-                UpdateContext({last:SubmitForm(FormUsersUpdate)}); 
+                //UpdateContext({last:SubmitForm(FormUsersUpdate)});; 
+                SubmitForm(FormUsersUpdate);
                 //UpdateContext({userInActivity:FormUsersUpdate.LastSubmit});;
                 //NewForm(FormUsersUpdate);;EditForm(FormUsersUpdate);;
                 Select(btnCheckUnsaved);
@@ -1150,11 +1151,12 @@ editar_cadastro_users As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =85
+        Height: =111
         Size: =21
         Text: |-
             =FormUsersUpdate.Valid
-            
+            & $"{FormUsersUpdate.LastSubmit.cnpj}
+            {FormUsersUpdate.LastSubmit.name}"
             
             /*
             DataCardValueNome_2.Text = name_DataCard6_2.Default  And
@@ -1165,7 +1167,7 @@ editar_cadastro_users As screen:
                 cnpj_DataCard3_1.Default = DataCardValue1cnpj_1.Text And 
                 occupation_DataCard3_1.Default =DataCardValueOccupation.Text And
                 active_DataCard1.Default = DataCardValue1.Value*/
-        Width: =276
+        Width: =356
         Y: =900
         ZIndex: =11
 

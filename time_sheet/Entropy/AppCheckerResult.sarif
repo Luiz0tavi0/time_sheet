@@ -14008,36 +14008,6 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "criar_Projeto_empresa.lastContractSubmited"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "criar_Projeto_empresa.lastContractSubmited",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "lastContractSubmited",
-                "module": "criar_Projeto_empresa",
-                "type": "criar_Projeto_empresa"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 14
         }
       ],
       "tool": {

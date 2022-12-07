@@ -18,6 +18,7 @@ criar_Projeto_empresa As screen:
         OnSelect: |
             =Select(btnValidateAllParameter);
             UpdateContext({lastProjectSubmited:Blank()});
+            UpdateContext({lastContractSubmited:Blank()});
             
             If(varAllIsFine,
                 UpdateContext(
@@ -39,7 +40,7 @@ criar_Projeto_empresa As screen:
                     }
                 );
             );
-            If(Not(IsBlankOrError(lastProjectSubmited)),
+            If(IsBlankOrError(lastProjectSubmited),
                 Notify("Nome do projeto já existe.", NotificationType.Error )
                 ,    
                 Notify("Nome do projeto está disponível.", NotificationType.Error );
@@ -404,9 +405,34 @@ criar_Projeto_empresa As screen:
         Font: =Font.'Segoe UI'
         Height: =70
         Size: =21
-        Text: =!IsBlankOrError(lastProjectSubmited)
+        Text: |-
+            =If(IsBlankOrError(lastProjectSubmited),
+                "Projeto não foi criado"
+                ,
+                $"Projeto ID = {lastProjectSubmited.ID} Nome= {lastProjectSubmited.name} foi criado.")
         Width: =560
         X: =30
         Y: =594
         ZIndex: =35
+
+    Label9_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: |-
+            =If(IsBlankOrError(lastContractSubmited),
+                "Contrato não foi criado"
+                ,
+                $"Contrato P{lastProjectSubmited.ID} {CONST_CURRENT_USER.ID} criado.")
+        Width: =560
+        X: =40
+        Y: =688
+        ZIndex: =36
 

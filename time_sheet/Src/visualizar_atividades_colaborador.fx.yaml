@@ -314,8 +314,8 @@ visualizar_atividades_colaborador As screen:
             OnSelect: |-
                 =Select(Parent);
                 
-                Navigate(visualizar_evento_colaborador,Fade,{projectId:ddProjectsByUser.Selected.ID,itemActivity:ThisItem});
-                NewForm(FormActivity_2);
+                Navigate(visualizar_evento_colaborador,Fade,{projectId:ddProjectsByUser.Selected.ID,itemActivity:galFilteredActivities.Selected});
+                ViewForm(FormActivity_2);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10

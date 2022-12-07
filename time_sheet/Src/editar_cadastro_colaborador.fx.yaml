@@ -946,7 +946,7 @@ editar_cadastro_colaborador As screen:
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_users
         Height: =740
-        Item: =LookUp(tbl_users,ID=CONST_CURRENT_USER.ID)
+        Item: =CONST_CURRENT_USER
         Width: =640
         Y: =175
         ZIndex: =6
@@ -1015,7 +1015,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="Cargo"
                 Width: =525
                 X: =57
                 Y: =Parent.Height/2-(Self.Height/2)
@@ -1162,7 +1162,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="CNPJ"
                 Width: =525
                 X: =58
                 ZIndex: =5
@@ -1730,7 +1730,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="Senha"
                 Width: =526
                 X: =Parent.Width/2-(Self.Width/2)
                 Y: =Parent.Height/4-(Self.Height/2)
@@ -1821,7 +1821,7 @@ editar_cadastro_colaborador As screen:
                 RadiusTopLeft: =0
                 RadiusTopRight: =0
                 Size: =21
-                Tooltip: =Parent.DisplayName
+                Tooltip: ="Confirme sua senha"
                 Width: =525
                 X: =58
                 Y: =76

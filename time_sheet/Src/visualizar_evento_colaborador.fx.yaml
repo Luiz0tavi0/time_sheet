@@ -31,31 +31,37 @@ visualizar_evento_colaborador As screen:
         Fill: =RGBA(110,164,191, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Bold
         Height: =70
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =
+            =/*
             If(
-                FormActivity_2.Mode=FormMode.View,
-                EditForm(FormActivity_2),
+                FormActivity_2.Mode=FormMode.View;
+                EditForm(FormActivity_2);
                 ViewForm(FormActivity_2)
-            );
+            );;*/
+            If(FormActivity_2.Mode And FormActivity_2.Unsaved,
+                ""
+                ,
+                ""
+            )
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         Size: =24
         Text: |-
-            =Switch(FormActivity_2.Mode,
-                FormMode.View,"Editar",
-                FormMode.Edit,If(
+            =Switch(
+                FormActivity_2.Mode,
+                FormMode.View,
+                "Editar",
+                FormMode.Edit,
+                If(
                     FormActivity_2.Unsaved,
-                        "Salvar"
-                        ,
-                        "Visualizar"
-                    )
+                    "Salvar",
+                    "Visualizar"
+                )
             )
         Width: =232
         X: =204
@@ -708,6 +714,11 @@ visualizar_evento_colaborador As screen:
         OnSelect: |-
             =
             
+            If(
+                FormActivity_2.Mode=FormMode.View,
+                EditForm(FormActivity_2),
+                ViewForm(FormActivity_2)
+            );
             
             /*ClearCollect(register;LookUp(tbl_tasks;ID=itemActivity.ID));;
             

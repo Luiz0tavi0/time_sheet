@@ -1523,7 +1523,7 @@ editar_cadastro_colaborador As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"email")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =105
+            Height: =95
             MaxLength: =DataSourceInfo([@tbl_users], DataSourceInfo.MaxLength, "email")
             Required: =true
             Update: =Lower(Trim(DataCardValueEmail_2.Text))

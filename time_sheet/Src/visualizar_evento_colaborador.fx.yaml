@@ -706,16 +706,19 @@ visualizar_evento_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =ClearCollect(register,LookUp(tbl_tasks,ID=itemActivity.ID));
+            =
+            
+            
+            /*ClearCollect(register;LookUp(tbl_tasks;ID=itemActivity.ID));;
             
             UpdateContext(
                     {isDifferente:
                         Or(
-                           (Upper(Trim(First(register).name)))<>(Upper(Trim(FormActivity_2.Updates.name))),
-                           (Upper(Trim(First(register).description))<>(Upper(Trim(FormActivity_2.Updates.description)))),
-                           First(register).date <> FormActivity_2.Updates.date,
-                           First(register).hours <> FormActivity_2.Updates.hours,
-                           (First(register).billable_hours) <> FormActivity_2.Updates.billable_hours,
+                           (Upper(Trim(First(register).name)))<>(Upper(Trim(FormActivity_2.Updates.name)));
+                           (Upper(Trim(First(register).description))<>(Upper(Trim(FormActivity_2.Updates.description))));
+                           First(register).date <> FormActivity_2.Updates.date;
+                           First(register).hours <> FormActivity_2.Updates.hours;
+                           (First(register).billable_hours) <> FormActivity_2.Updates.billable_hours;
                            (Upper(First(register).status.Value)) <> (Upper(FormActivity_2.Updates.status.Value))
                                           
                         )

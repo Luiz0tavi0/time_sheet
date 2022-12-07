@@ -1073,14 +1073,13 @@ editar_cadastro_colaborador As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey3_2.Height
+                Height: =DataCardValueEmail_2.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3_2.Y
+                X: =DataCardValue1cnpj_1.X - Self.Width
                 ZIndex: =4
 
             DataCardValue1cnpj_1 As text:

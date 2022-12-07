@@ -15,7 +15,23 @@ criar_Projeto_empresa As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Set(varGlobShowPopUp,true)
+        OnSelect: |
+            =Select(btnValidateAllParameter);
+            UpdateContext(
+                {
+                    lastProjectSubmited: Patch(
+                        tbl_projects,            Defaults(tbl_projects),
+                        {
+                            name: DataCardValue5.Text,
+                            start: DataCardValue7.SelectedDate,
+                            manager: {
+                                Id: CONST_CURRENT_USER.ID,
+                                Value: Blank()
+                            }
+                        }
+                    )
+                }
+            );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -29,26 +45,28 @@ criar_Projeto_empresa As screen:
     FormProjectCreate As form:
         BorderColor: =RGBA(166, 166, 166, 1)
         DataSource: =tbl_projects
+        DefaultMode: =FormMode.New
         Height: =341
         Width: =Parent.Width
         Y: =216
         ZIndex: =25
 
-        start_DataCard As typedDataCard.dateEditCard:
+        name_DataCard3 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="start"
-            Default: =ThisItem.start
+            DataField: ="name"
+            Default: =ThisItem.name
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"start")
+            DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"name")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
+            MaxLength: =DataSourceInfo([@tbl_projects], DataSourceInfo.MaxLength, "name")
             Required: =true
-            Update: =DataCardValue3.SelectedDate
-            Width: =Parent.Width
+            Update: =Trim(DataCardValue5.Text)
+            Width: =640
             X: =0
-            Y: =1
-            ZIndex: =1
+            Y: =0
+            ZIndex: =26
 
             DataCardKey4 As label:
                 AutoHeight: =true
@@ -63,38 +81,45 @@ criar_Projeto_empresa As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =48
                 PaddingLeft: =0
-                Size: =18
-                Text: ="Data de Início"
-                Width: =171
+                Size: =21
+                Text: ="Nome"
+                Width: =525
                 Wrap: =false
-                X: =66
-                Y: =10
+                X: =57
+                Y: =12
                 ZIndex: =1
 
-            DataCardValue3 As datepicker:
+            DataCardValue5 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                BorderThickness: =2
                 Color: =RGBA(51, 51, 51, 1)
-                DefaultDate: =Now()
+                Default: =Parent.Default
+                DelayOutput: =true
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
-                EndYear: =Year(Today())+100
+                FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =50
-                HoverDateFill: =RGBA(200, 200, 200, 1)
-                IconBackground: =RGBA(0, 120, 212, 1)
-                IsEditable: =true
-                PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SelectedDateFill: =RGBA(0, 120, 212, 1)
+                Height: =70
+                HintText: ="Nome do projeto"
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(255, 255, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                PressedBorderColor: =RGBA(0, 120, 212, 1)
+                PressedColor: =RGBA(51, 51, 51, 1)
+                PressedFill: =RGBA(255, 255, 255, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
                 Size: =21
-                StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =507
-                X: =66
-                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                Width: =525
+                X: =57
+                Y: =59
                 ZIndex: =2
 
             ErrorMessage2 As label:
@@ -119,10 +144,10 @@ criar_Projeto_empresa As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue3.Y + DataCardValue3.Height
+                Y: =DataCardValue5.Y + DataCardValue5.Height
                 ZIndex: =3
 
-            StarVisible4 As label:
+            StarVisible12 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -140,28 +165,27 @@ criar_Projeto_empresa As screen:
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                X: =36
-                Y: =54
+                X: =24
+                Y: =71
                 ZIndex: =4
 
-        name_DataCard4_1 As typedDataCard.textualEditCard:
+        start_DataCard2 As typedDataCard.dateEditCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="name"
-            Default: =ThisItem.name
+            DataField: ="start"
+            Default: =ThisItem.start
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"name")
+            DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"start")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@tbl_projects], DataSourceInfo.MaxLength, "name")
             Required: =true
-            Update: =DataCardValue14_1.Text
-            Width: =Parent.Width
+            Update: =DataCardValue7.SelectedDate
+            Width: =640
             X: =0
-            Y: =0
-            ZIndex: =42
+            Y: =1
+            ZIndex: =26
 
-            DataCardKey13_1 As label:
+            DataCardKey5 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -174,47 +198,41 @@ criar_Projeto_empresa As screen:
                 FontWeight: =FontWeight.Semibold
                 Height: =48
                 PaddingLeft: =0
-                Size: =18
-                Text: ="Nome do Projeto"
-                Width: =208
+                Size: =21
+                Text: ="Início"
+                Width: =525
                 Wrap: =false
                 X: =57
-                Y: =12
+                Y: =10
                 ZIndex: =1
 
-            DataCardValue14_1 As text:
+            DataCardValue7 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
+                CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
                 Color: =RGBA(51, 51, 51, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
+                DefaultDate: =Now()
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
+                EndYear: =Year(Today())+100
                 Font: =Font.'Segoe UI'
-                Height: =50
-                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                HoverColor: =RGBA(51, 51, 51, 1)
-                HoverFill: =RGBA(255, 255, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                PressedBorderColor: =RGBA(0, 120, 212, 1)
-                PressedColor: =RGBA(51, 51, 51, 1)
-                PressedFill: =RGBA(255, 255, 255, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                Height: =70
+                HoverDateFill: =RGBA(200, 200, 200, 1)
+                IconBackground: =RGBA(0, 120, 212, 1)
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SelectedDateFill: =RGBA(0, 120, 212, 1)
                 Size: =21
+                StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =525 
-                X: =57
-                Y: =59
+                Width: =235
+                X: =60
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
                 ZIndex: =2
 
-            ErrorMessage13_1 As label:
+            ErrorMessage8 As label:
                 AutoHeight: =true
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -236,10 +254,10 @@ criar_Projeto_empresa As screen:
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue14_1.Y + DataCardValue14_1.Height
+                Y: =DataCardValue7.Y + DataCardValue7.Height
                 ZIndex: =3
 
-            StarVisible13_1 As label:
+            StarVisible14 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -250,14 +268,15 @@ criar_Projeto_empresa As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =DataCardKey13_1.Height
+                Height: =DataCardKey5.Height
                 PaddingLeft: =0
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =59
+                X: =24
+                Y: =73
                 ZIndex: =4
 
     TitlePage_4 As label:
@@ -286,10 +305,6 @@ criar_Projeto_empresa As screen:
         Y: =1036
         ZIndex: =27
 
-    SuccessModalOnlyOKButton_1 As SuccessModalOnlyOKButton:
-        Visible: =varGlobShowPopUp
-        ZIndex: =30
-
     HeaderWorker_26 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
         header_title: =CONST_CURRENT_USER.name
@@ -300,4 +315,49 @@ criar_Projeto_empresa As screen:
             Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =31
+
+    btnValidateAllParameter As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =If(FormProjectCreate.Valid,UpdateContext({varAllIsFine:true}),UpdateContext({varAllIsFine:false}));
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="validateAllParameter"
+        Width: =280
+        X: =-300
+        Y: =664
+        ZIndex: =33
+
+    Label8 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =varAllIsFine
+        X: =-275
+        Y: =575
+        ZIndex: =34
 

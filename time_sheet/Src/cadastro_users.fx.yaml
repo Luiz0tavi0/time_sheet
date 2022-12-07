@@ -62,8 +62,7 @@ cadastro_users As screen:
                 ,
                 Navigate(login,Fade,{userFromCadastroHasCreated:userHasBeenCreated});
             );
-        OnClickRightIcon: |-
-            =Navigate(_cadastro_users_details,ScreenTransition.Fade, {varShowCnpjError:false})
+        OnClickRightIcon: =false
         Visible: =true
         ZIndex: =4
 

@@ -175,7 +175,7 @@ Alterar_Projeto_empresa As screen:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="manager"
-            Default: =ThisItem.manager
+            Default: =ThisItem.manager.Id
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"manager")
             Fill: =RGBA(0, 0, 0, 0)

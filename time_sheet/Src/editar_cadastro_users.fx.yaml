@@ -13,11 +13,13 @@ editar_cadastro_users As screen:
         UpdateContext({varEmailIsValid:true});
         UpdateContext({varCpfIsValid:true});
         UpdateContext({passwordIsEqual:true});
+        UpdateContext({varCnpjIsValid:true});
+        UpdateContext({varShowCnpjError:false});
         
         UpdateContext({userInActivity:LookUp(tbl_users,ID = CONST_CURRENT_USER.ID)});
-        UpdateContext({safeUserFormBackup:Blank()});
-        UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});
-        //UpdateContext({ShowUndoIcon:false});;
+        UpdateContext({safeUserFormBackup:userInActivity});
+        //UpdateContext({ShowUndoIcon:(userInActivity.Modificado<>safeUserFormBackup.Modificado)});;
+        UpdateContext({ShowUndoIcon:false});
 
     TitleEditAccount As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -55,13 +57,13 @@ editar_cadastro_users As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =If(FormUsersCreate_2.Mode=FormMode.Edit And FormUsersCreate_2.Unsaved,
+            =If(FormUsersUpdate.Mode=FormMode.Edit And FormUsersUpdate.Unsaved,
                 Select(btnBackUpBeforeUpdate_1); // Guarda o registro antes de ser modificado
-                SubmitForm(FormUsersCreate_2); UpdateContext({itemBeforeUpdate:FormUsersCreate_2.LastSubmit});
-                ResetForm(FormUsersCreate_2); Select(btnCheckChanges_1);
+                SubmitForm(FormUsersUpdate); UpdateContext({itemBeforeUpdate:FormUsersUpdate.LastSubmit});
+                ResetForm(FormUsersUpdate); Select(btnChangesFormMode);
                 // If(FormUsersCreate_2.Unsaved=false; UpdateContext({ShowUndoIcon:false}));;
                 ,
-                Select(btnCheckChanges_1);
+                Select(btnChangesFormMode);
             );
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -69,12 +71,12 @@ editar_cadastro_users As screen:
         Size: =21
         Text: |-
             =Switch(
-                FormActivity_2.Mode,
+                FormUsersUpdate.Mode,
                 FormMode.View,
                 "Editar",
                 FormMode.Edit,
                 If(
-                    FormActivity_2.Unsaved,
+                    FormUsersUpdate.Unsaved,
                     "Salvar",
                     "Visualizar"
                 )
@@ -98,7 +100,7 @@ editar_cadastro_users As screen:
         Visible: =true
         ZIndex: =4
 
-    FormUsersCreate_3 As form:
+    bckFormUserEdit As form:
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_users
@@ -941,10 +943,11 @@ editar_cadastro_users As screen:
                 Y: =DataCardValuePasswordConfirm_3.Y
                 ZIndex: =7
 
-    FormUsersCreate_2 As form:
+    FormUsersUpdate As form:
         BorderColor: =RGBA(255, 255, 255, 1)
         BorderStyle: =BorderStyle.None
         DataSource: =tbl_users
+        DefaultMode: =FormMode.View
         Height: =740
         Item: =userInActivity
         OnSuccess: |-
@@ -980,13 +983,13 @@ editar_cadastro_users As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
-                Height: =25
+                Height: =31
                 Live: =Live.Assertive
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Size: =21
+                Size: =17
                 Text: |-
                     =If(Not(varCnpjIsValid),"CNPJ inválido.",
                         If(Not(varShowCnpjError),"")
@@ -1180,7 +1183,7 @@ editar_cadastro_users As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@tbl_users],DataSourceInfo.DisplayName,"active")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =33
+            Height: =49
             Required: =false
             Update: =DataCardValue1.Value
             Width: =Parent.Width
@@ -1200,7 +1203,7 @@ editar_cadastro_users As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 HandleFill: =RGBA(255, 255, 255, 1)
-                Height: =20
+                Height: =36
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 PressedBorderColor: =RGBA(0, 0, 0, 0)
                 Size: =21
@@ -1889,7 +1892,7 @@ editar_cadastro_users As screen:
         Y: =915
         ZIndex: =7
 
-    btnCheckChanges_1 As button:
+    btnChangesFormMode As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1906,9 +1909,9 @@ editar_cadastro_users As screen:
             =
             
             If(
-                FormActivity_2.Mode=FormMode.View,
-                EditForm(FormActivity_2),
-                ViewForm(FormActivity_2)
+                FormUsersUpdate.Mode=FormMode.View,
+                EditForm(FormUsersUpdate),
+                ViewForm(FormUsersUpdate)
             );
             
             /*ClearCollect(register;LookUp(tbl_tasks;ID=itemActivity.ID));;
@@ -1999,13 +2002,13 @@ editar_cadastro_users As screen:
         OnSelect: |+
             =
             
-            If(FormUsersCreate_2.Mode=FormMode.Edit,
+            If(FormUsersUpdate.Mode=FormMode.Edit,
                 UpdateContext({itemActivity:safeFormBackup}); // Monta o registro de backup no formulário atual
-                SubmitForm(FormUsersCreate_2);
-                UpdateContext({itemActivity:FormUsersCreate_2.LastSubmit});
+                SubmitForm(FormUsersUpdate);
+                UpdateContext({itemActivity:FormUsersUpdate.LastSubmit});
                 UpdateContext({safeFormBackup: itemActivity});
                 
-                ResetForm(FormUsersCreate_2);
+                ResetForm(FormUsersUpdate);
                 UpdateContext({ShowUndoIcon:false});
             )
             

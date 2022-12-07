@@ -858,7 +858,7 @@ inserir_atividade_colaborador As screen:
         Items: |
             =//First(Filter(tbl_contracts;user_id.Id=CONST_CURRENT_USER.ID).project_id)
             //With(
-            Filter(tbl_contracts,user_id.Id=CONST_CURRENT_USER.ID)
+            Filter(tbl_contracts,active=true && user_id.Id=CONST_CURRENT_USER.ID)
                 //ForAll(tbl_contracts_by_user;LookUp(tbl_projects;ID=project_id.Id))
               //  tbl_contracts_by_user
             //)

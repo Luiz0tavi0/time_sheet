@@ -2966,7 +2966,7 @@
                 },
                 "region": {
                   "charLength": 3,
-                  "charOffset": 113,
+                  "charOffset": 128,
                   "snippet": {
                     "text": ".Id"
                   }
@@ -3006,9 +3006,49 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 116,
+                  "charOffset": 131,
                   "snippet": {
                     "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "inserir_atividade_colaborador",
+                "type": "inserir_atividade_colaborador.DataTableRelationByUserContract"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.DataTableRelationByUserContract.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "inserir_atividade_colaborador.DataTableRelationByUserContract.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 118,
+                  "snippet": {
+                    "text": "&&"
                   }
                 }
               },

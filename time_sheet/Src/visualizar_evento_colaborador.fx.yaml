@@ -1,5 +1,7 @@
 visualizar_evento_colaborador As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: |-
+        =UpdateContext({ShowUndoIcon:false});
     OnVisible: |-
         =UpdateContext({itemActivity:LookUp(tbl_tasks,ID = itemActivity.ID)});
         UpdateContext({safeFormBackup:Blank()});
@@ -106,7 +108,8 @@ visualizar_evento_colaborador As screen:
             
             Back(ScreenTransition.Fade);
         OnClickRightIcon: |-
-            =Set(CONST_CURRENT_USER, Blank());
+            =UpdateContext({ShowUndoIcon:false});
+            Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =15

@@ -3,12 +3,29 @@ visualizar_atividades_colaborador As screen:
     OnHidden: |-
         =UpdateContext({startScreenLoading:false});
         UpdateContext({startTimerLoading:false});
+        UpdateContext({LoadingScreen:true});
     OnVisible: |-
-        =//UpdateContext({startScreenLoading:false});;
-        Concurrent(
-            UpdateContext({startTimerLoading:true}),
-            Select(btnUpdateComboProjects_1);
-        )
+        =If(LoadingScreen,
+            UpdateContext({startTimerLoading:true});
+            ,
+            UpdateContext({startTimerLoading:false});
+        );
+        Select(btnUpdateComboProjects_1)
+
+    rectFundo As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =916
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        Visible: =startTimerLoading
+        Width: =524
+        X: =116
+        Y: =120
+        ZIndex: =1
 
     DataTableProjects_1 As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -40,7 +57,7 @@ visualizar_atividades_colaborador As screen:
         Width: =640
         X: =650
         Y: =40
-        ZIndex: =1
+        ZIndex: =2
 
         name_Column2_1 As dataTableColumn.textualColumn:
             AutoWidth: =false
@@ -167,7 +184,7 @@ visualizar_atividades_colaborador As screen:
         Width: =640
         X: =650
         Y: =636
-        ZIndex: =2
+        ZIndex: =3
 
         description_Column2_1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -278,7 +295,7 @@ visualizar_atividades_colaborador As screen:
         Width: =232
         X: =325
         Y: =924
-        ZIndex: =3
+        ZIndex: =4
 
     IconDownload_2 As icon.Download:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -298,7 +315,7 @@ visualizar_atividades_colaborador As screen:
         Width: =40
         X: =418
         Y: =939
-        ZIndex: =4
+        ZIndex: =5
 
     TitleViewActivity As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -320,11 +337,11 @@ visualizar_atividades_colaborador As screen:
         Width: =346
         X: =52
         Y: =137
-        ZIndex: =5
+        ZIndex: =6
 
     FooterWorker_9 As FooterWorker:
         Y: =1036
-        ZIndex: =6
+        ZIndex: =7
 
     MonthLabel_1 As label:
         Align: =Align.Justify
@@ -347,7 +364,7 @@ visualizar_atividades_colaborador As screen:
         Width: =84
         X: =78
         Y: =295
-        ZIndex: =7
+        ZIndex: =8
 
     ddMonth As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -380,7 +397,7 @@ visualizar_atividades_colaborador As screen:
         Width: =376
         X: =208
         Y: =295
-        ZIndex: =8
+        ZIndex: =9
 
     Label20324_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -402,7 +419,7 @@ visualizar_atividades_colaborador As screen:
         Width: =363
         X: =71
         Y: =858
-        ZIndex: =11
+        ZIndex: =12
 
     ddProjectsByUser As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -434,7 +451,7 @@ visualizar_atividades_colaborador As screen:
         Width: =512
         X: =71
         Y: =205
-        ZIndex: =12
+        ZIndex: =13
 
     Label1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -451,10 +468,12 @@ visualizar_atividades_colaborador As screen:
         Width: =559
         X: =-600
         Y: =366
-        ZIndex: =13
+        ZIndex: =14
 
     HeaderWorker_30 As HeaderWorker:
         background_color: =If(IsBlank(CONST_CURRENT_USER.cnpj),RGBA(110, 164, 191, 1), RGBA(2,4,48,1))
+        has_left_icon: =!startScreenLoading
+        has_right_icon: =!startScreenLoading
         header_title: =CONST_CURRENT_USER.name
         left_icon: =Icon.Home
         OnClickLeftIcon: =Navigate(user_home,ScreenTransition.Fade);
@@ -462,7 +481,7 @@ visualizar_atividades_colaborador As screen:
             =Set(CONST_CURRENT_USER, Blank());
             Navigate(login,ScreenTransition.Fade);
         Visible: =true
-        ZIndex: =14
+        ZIndex: =15
 
     btnUpdateComboProjects_1 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -498,19 +517,27 @@ visualizar_atividades_colaborador As screen:
         Width: =230
         X: =-550
         Y: =980
-        ZIndex: =15
+        ZIndex: =16
 
     "galFilteredActivities As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =367
-        Items: =Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
+        Items: |-
+            =//Filter(tbl_tasks;project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
+            //Search(Filter(tbl_tasks;project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result);txtFilterGallery.Text;"name";"description")
+            
+            If(IsBlank(txtFilterGallery),
+               Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
+               ,
+               Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
+            )
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(104, Self.Height - 60)
         Width: =Parent.Width*.85
-        X: =Parent.Width/2-Self.Width/2
+        X: =39
         Y: =445
-        ZIndex: =16
+        ZIndex: =17
 
         Title6 As label:
             Color: =RGBA(51, 51, 51, 1)
@@ -643,7 +670,7 @@ visualizar_atividades_colaborador As screen:
         Width: =559
         X: =-600
         Y: =400
-        ZIndex: =17
+        ZIndex: =18
 
     timerScreenLoading As timer:
         AutoPause: =false
@@ -660,8 +687,9 @@ visualizar_atividades_colaborador As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnTimerEnd: |-
-            =UpdateContext({startTimerLoading:false}); //precaução
-            UpdateContext({startScreenLoading: false});
+            =UpdateContext({startScreenLoading: false});
+            UpdateContext({startTimerLoading:false}); //precaução
+            
             // UpdateContext({varPositionXScrenLoading: cmpScreenSuccess_1.Width- varPositionXScrenLoading});;
             /*
             
@@ -684,28 +712,58 @@ visualizar_atividades_colaborador As screen:
             =$"Timer loading {Text(Time(0, 0, Self.Value/1000), "hh:mm:ss")}"
         Width: =234
         Y: =1175
-        ZIndex: =18
+        ZIndex: =19
 
-    rectFundo As rectangle:
+    Label8 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
-        Height: =1286
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =startTimerLoading
-        Width: =670
-        X: =-15
-        Y: =-150
-        ZIndex: =19
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =startTimerLoading
+        Width: =560
+        X: =78
+        Y: =25
+        ZIndex: =20
 
     cmpScreenLoading As cmpTransitionLoad:
+        Height: =916
         Visible: =startScreenLoading
-        X: =-varPositionXScrenLoading
-        ZIndex: =20
+        Y: =120
+        ZIndex: =21
+
+    txtFilterGallery As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =50
+        HintText: ="Procure sua atividade pelo nome."
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =galFilteredActivities.Width
+        X: =galFilteredActivities.X
+        Y: =galFilteredActivities.Y-Self.Height
+        ZIndex: =22
 
     grpSumHours As group:
         Height: =5
@@ -726,7 +784,7 @@ visualizar_atividades_colaborador As screen:
             Width: =139
             X: =412
             Y: =856
-            ZIndex: =9
+            ZIndex: =10
 
         lblSumHours As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -745,10 +803,14 @@ visualizar_atividades_colaborador As screen:
             Size: =18
             Text: |-
                 =Sum(
-                    Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result And billable_hours),hours
+                    If(IsBlank(txtFilterGallery),
+                        Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result)
+                        ,
+                        Search(Filter(tbl_tasks,project_id.Id=ddProjectsByUser.Selected.ID And Month=ddMonth.Selected.Result),txtFilterGallery.Text,"name","description")
+                        ),hours
                     )
             Width: =129
             X: =417
             Y: =859
-            ZIndex: =10
+            ZIndex: =11
 

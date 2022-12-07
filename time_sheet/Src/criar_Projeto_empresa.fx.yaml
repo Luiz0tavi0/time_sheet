@@ -17,6 +17,8 @@ criar_Projeto_empresa As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =Select(btnValidateAllParameter);
+            UpdateContext({lastProjectSubmited:Blank()});
+            
             If(varAllIsFine,
                 UpdateContext(
                     {
@@ -52,6 +54,7 @@ criar_Projeto_empresa As screen:
         DataSource: =tbl_projects
         DefaultMode: =FormMode.New
         Height: =341
+        OnSuccess: =Notify("Projeto Criado.",NotificationType.Success);
         Width: =Parent.Width
         Y: =216
         ZIndex: =25
@@ -67,7 +70,7 @@ criar_Projeto_empresa As screen:
             Height: =50
             MaxLength: =DataSourceInfo([@tbl_projects], DataSourceInfo.MaxLength, "name")
             Required: =true
-            Update: =Trim(DataCardValue5.Text)
+            Update: =Upper(Trim(DataCardValue5.Text))
             Width: =640
             X: =0
             Y: =0

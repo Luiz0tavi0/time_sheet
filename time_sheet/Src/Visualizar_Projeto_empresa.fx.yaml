@@ -5,12 +5,14 @@ Visualizar_Projeto_empresa As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =314
         Items: |-
-            =
-            With(      
+            =With(      
                 {
-                    tb_filtered_by_id: Filter(tbl_tasks,project_id.Id=itemSelecionado.ID)
+                    tasks_filtered_by_project_id: Filter(tbl_tasks,project_id.Id=itemSelecionado.ID)
                 },
-                ForAll(tb_filtered_by_id, LookUp(tbl_tasks,project_id.Id=ID))
+                AddColumns(
+                    tasks_filtered_by_project_id,
+                    "user_name",
+                    LookUp(tbl_users,ID=tasks_filtered_by_project_id[@user_id].Id,name))
             )
         Layout: =Layout.Vertical
         TemplatePadding: =0
@@ -32,7 +34,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.name
+            Text: =ThisItem.user_name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -50,7 +52,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.description
+            Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -416,186 +418,6 @@ Visualizar_Projeto_empresa As screen:
         X: =38
         Y: =145
         ZIndex: =17
-
-    DataTable1 As dataTable.datatable:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(0, 120, 212, 1)
-        HeadingFont: =Font.'Segoe UI'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =21
-        Height: =500
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
-        InputFill: =RGBA(255, 255, 255, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: |-
-            =
-            With(      
-                {
-                    tb_filtered_by_id: Filter(tbl_tasks,project_id.Id=itemSelecionado.ID)
-                },
-                ForAll(tb_filtered_by_id, LookUp(tbl_tasks,project_id.Id=ID))
-            
-                /*With(      
-                    {
-                        tasksByProjectByUser: ForAll(tb_filtered_by_id; LookUp(tbl_tasks;project_id.Id=ID))
-                    };
-                    ForAll(tbl_users; LookUp(tasksByProjectByUser;user_id.Id=ID))
-                )*/
-            
-                //Filter(tb_filtered_by_id;StartsWith("name";SearchBox.Text))
-                //Search(tb_filtered_by_id; SearchBox.Text; "name"))
-            )
-            /*
-            With({
-                contractsFilteredByProjects: Filter(tbl_contracts;project_id.Id=itemSelecionado.ID;user_id.Id)
-            
-                };
-                ForAll(contractsFilteredByProjects; LookUp(tbl_users;ID=user_id.Id))
-            )
-            */
-        LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
-        Size: =21
-        Width: =640
-        X: =650
-        Y: =196
-        ZIndex: =18
-
-        user_id_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="user_id"
-            FieldName: ="user_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.user_id.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =35
-
-        project_id_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="project_id"
-            FieldName: ="project_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.name
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =37
-
-    DataTable2 As dataTable.datatable:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(0, 120, 212, 1)
-        HeadingFont: =Font.'Segoe UI'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =21
-        Height: =500
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
-        InputFill: =RGBA(255, 255, 255, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: |-
-            =
-            With(      
-                {
-                    tb_filtered_by_id: Filter(tbl_tasks,project_id.Id=itemSelecionado.ID)
-                },
-                ForAll(tb_filtered_by_id, LookUp(tbl_tasks,project_id.Id=ID))
-            )
-        LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
-        Size: =21
-        Width: =750
-        X: =-750
-        Y: =350
-        ZIndex: =19
-
-        name_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="name"
-            FieldName: ="name"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =1
-            Text: =ThisItem.name
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =38
-
-        user_id_Column3 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="user_id"
-            FieldName: ="user_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.user_id.Id
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =40
-
-        description_Column3 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="description"
-            FieldName: ="description"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.description
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =41
-
-        hours_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="hours"
-            FieldName: ="hours"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.hours
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =42
 
     HoursProjectCard As group:
         Height: =5

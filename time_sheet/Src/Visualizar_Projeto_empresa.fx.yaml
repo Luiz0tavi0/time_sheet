@@ -536,9 +536,9 @@ Visualizar_Projeto_empresa As screen:
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(0, 120, 212, .2)
         Size: =21
-        Width: =640
-        X: =-650
-        Y: =40
+        Width: =750
+        X: =-750
+        Y: =350
         ZIndex: =19
 
         name_Column1 As dataTableColumn.textualColumn:
@@ -555,20 +555,6 @@ Visualizar_Projeto_empresa As screen:
             Y: =0
             ZIndex: =38
 
-        project_id_Column3 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="project_id"
-            FieldName: ="project_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =ThisItem.project_id.Id
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =39
-
         user_id_Column3 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="user_id"
@@ -582,6 +568,34 @@ Visualizar_Projeto_empresa As screen:
             X: =0
             Y: =0
             ZIndex: =40
+
+        description_Column3 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="description"
+            FieldName: ="description"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.description
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =41
+
+        hours_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="hours"
+            FieldName: ="hours"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.hours
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =42
 
     HoursProjectCard As group:
         Height: =5

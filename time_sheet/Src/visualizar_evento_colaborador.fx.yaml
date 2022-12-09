@@ -8,6 +8,7 @@ visualizar_evento_colaborador As screen:
         
         
         // UpdateContext({itemActivity:LookUp(tbl_tasks;ID = itemActivity.ID)});;
+        
         UpdateContext({safeFormBackup:Blank()});
         UpdateContext({ShowUndoIcon:(itemActivity.Modificado<>safeFormBackup.Modificado)});
 
@@ -118,7 +119,9 @@ visualizar_evento_colaborador As screen:
         DataSource: =tbl_tasks
         DefaultMode: =FormMode.View
         Height: =588
-        Item: =itemActivity
+        Item: |-
+            =//itemActivity
+            //LookUp(tbl_tasks;ID=task_id)
         NumberOfColumns: =1
         OnSuccess: |
             =Notify($"Status foi alterado para ={FormActivity_2.LastSubmit.status.Value}",NotificationType.Success);
@@ -787,161 +790,6 @@ visualizar_evento_colaborador As screen:
         X: =-250
         Y: =847
         ZIndex: =25
-
-    Group4 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =25
-
-        DataCardKeyHours_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: =If(FormActivity_2.Unsaved, "Formulário alterado","Formulário igual a base.")
-            Width: =550
-            Wrap: =false
-            X: =-650
-            Y: =871
-            ZIndex: =17
-
-        DataCardKeyHours_3 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: |-
-                =(Upper(Trim(First(register).description))<>(Upper(Trim(FormActivity_2.Updates.description))))
-                               
-            Width: =88
-            Wrap: =false
-            X: =-500
-            Y: =578
-            ZIndex: =19
-
-        DataCardKeyHours_4 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: |-
-                =$"{First(register).date <> FormActivity_2.Updates.date} | {First(register).date} <> {FormActivity_2.Updates.date}"
-                               
-            Width: =523
-            Wrap: =false
-            X: =-500
-            Y: =621
-            ZIndex: =20
-
-        DataCardKeyHours_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: =First(register).hours <> FormActivity_2.Updates.hours
-            Width: =88
-            Wrap: =false
-            X: =-500
-            Y: =705
-            ZIndex: =21
-
-        DataCardKeyHours_6 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: |-
-                =
-                               (First(register).billable_hours) <> FormActivity_2.Updates.billable_hours
-            Width: =88
-            Wrap: =false
-            X: =-500
-            Y: =754
-            ZIndex: =22
-
-        DataCardKeyHours_7 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: =(Upper(First(register).status.Value)) <> (Upper(FormActivity_2.Updates.status.Value))
-            Width: =88
-            Wrap: =false
-            X: =-500
-            Y: =794
-            ZIndex: =23
-
-        DataCardKeyHours_8 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =60
-            PaddingLeft: =0
-            Size: =20
-            Text: |-
-                =(Upper(Trim(First(register).name)))<>(Upper(Trim(FormActivity_2.Updates.name)))
-                               
-            Width: =88
-            Wrap: =false
-            X: =-500
-            Y: =538
-            ZIndex: =24
 
     IconUndo As icon.Undo:
         BorderColor: =RGBA(166, 166, 166, 1)

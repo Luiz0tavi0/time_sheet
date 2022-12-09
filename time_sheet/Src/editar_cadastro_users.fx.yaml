@@ -11,14 +11,16 @@ editar_cadastro_users As screen:
         UpdateContext({safeUserFormBackup:Blank()});
         UpdateContext({ShowUndoIcon:false});
     OnVisible: |-
-        =Select(btnCheckUnsaved);
-        UpdateContext({ShowPassword:false});
-        UpdateContext({ShowConfirmPassword:false});
-        UpdateContext({varEmailIsValid:true});
-        UpdateContext({varCpfIsValid:true});
-        UpdateContext({passwordIsEqual:true});
-        UpdateContext({varCnpjIsValid:true});
-        UpdateContext({varShowCnpjError:false});
+        =Concurrent(
+            Select(btnCheckUnsaved),
+            UpdateContext({ShowPassword:false}),
+            UpdateContext({ShowConfirmPassword:false}),
+            UpdateContext({varEmailIsValid:true}),
+            UpdateContext({varCpfIsValid:true}),
+            UpdateContext({passwordIsEqual:true}),
+            UpdateContext({varCnpjIsValid:true}),
+            UpdateContext({varShowCnpjError:false})
+        );
         
         UpdateContext({userInActivity:LookUp(tbl_users,ID = CONST_CURRENT_USER.ID)});
         UpdateContext({safeUserFormBackup:userInActivity});
@@ -1083,10 +1085,10 @@ editar_cadastro_users As screen:
             =
             
             If(FormUsersUpdate.Mode=FormMode.Edit,
-                UpdateContext({itemActivity:safeFormBackup}); // Monta o registro de backup no formulário atual
+                UpdateContext({itemActivity:safeFormUserUpdateBackup}); // Monta o registro de backup no formulário atual
                 SubmitForm(FormUsersUpdate);
                 UpdateContext({itemActivity:FormUsersUpdate.LastSubmit});
-                UpdateContext({safeFormBackup: itemActivity});
+                UpdateContext({safeFormUserUpdateBackup: itemActivity});
                 
                 ResetForm(FormUsersUpdate);
                 UpdateContext({ShowUndoIcon:false});
@@ -1123,7 +1125,8 @@ editar_cadastro_users As screen:
         Text: |-
             =FormUsersUpdate.Valid
             & $"{FormUsersUpdate.LastSubmit.cnpj}
-            {FormUsersUpdate.LastSubmit.name}"
+            {FormUsersUpdate.LastSubmit.name}
+            {FormUsersUpdate.Unsaved}"
             
             /*
             DataCardValueNome_2.Text = name_DataCard6_2.Default  And

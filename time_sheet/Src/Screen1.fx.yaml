@@ -3,6 +3,116 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1123
 
+    "Gallery1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Height: =425
+        Items: |
+            =With(      
+                {
+                    tasks_filtered_by_project_id: Filter(tbl_tasks,project_id.Id=2)
+                },
+                AddColumns(tasks_filtered_by_project_id,"user_name",
+                LookUp(tbl_users,tbl_users[@ID]=First(tasks_filtered_by_project_id).ID,name))
+            )
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(168, Self.Height - 60)
+        Width: =661
+        X: =408
+        Y: =369
+        ZIndex: =1
+
+        Title7 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =31
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =ThisItem.user_name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =393
+            Y: =4
+            ZIndex: =1
+
+        Subtitle6 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =558
+            X: =30
+            Y: =45
+            ZIndex: =2
+
+        Body3 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =41
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =16
+            Text: =ThisItem.hours & "h - " & ThisItem.date
+            VerticalAlign: =VerticalAlign.Top
+            Width: =558
+            X: =30
+            Y: =87
+            ZIndex: =3
+
+        NextArrow7 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =78
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="Exibir detalhes do item"
+            Width: =61
+            X: =594
+            Y: =35
+            ZIndex: =4
+
+        Separator7 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =661
+            Y: =166
+            ZIndex: =5
+
     DataTable2_1 As dataTable.datatable:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.Solid
@@ -114,7 +224,7 @@
         HeadingFont: =Font.'Segoe UI'
         HeadingFontWeight: =FontWeight.Normal
         HeadingSize: =21
-        Height: =276
+        Height: =354
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =RGBA(0, 120, 212, 1)
         InputFill: =RGBA(255, 255, 255, 1)
@@ -122,10 +232,12 @@
         Items: |-
             =With(      
                 {
-                    tasks_filtered_by_project_id: Filter(tbl_tasks,project_id.Id=2)
+                    tasks_filtered_by_project_id: Filter(tbl_tasks,project_id.Id=4)
                 },
-                AddColumns(tasks_filtered_by_project_id,"user_name",
-                LookUp(tbl_users,tbl_users[@ID]=tasks_filtered_by_project_id[@user_id],name))
+                AddColumns(
+                    tasks_filtered_by_project_id,
+                    "user_name",
+                    LookUp(tbl_users,ID=tasks_filtered_by_project_id[@user_id].Id,name))
             )
         LinkColor: =RGBA(0, 134, 208, 1)
         PrimaryColor1: =RGBA(0, 120, 212, 1)
@@ -134,9 +246,9 @@
         SelectedColor: =RGBA(51, 51, 51, 1)
         SelectedFill: =RGBA(0, 120, 212, .2)
         Size: =21
-        Width: =640
-        X: =411
-        Y: =345
+        Width: =931
+        X: =192
+        Y: =0
         ZIndex: =2
 
         name_Column3 As dataTableColumn.textualColumn:
@@ -194,4 +306,18 @@
             X: =0
             Y: =0
             ZIndex: =46
+
+        user_name_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="user_name"
+            FieldName: ="user_name"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.user_name
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =47
 

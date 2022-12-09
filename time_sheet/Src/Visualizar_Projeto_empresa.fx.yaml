@@ -10,13 +10,13 @@ Visualizar_Projeto_empresa As screen:
                 {
                     tb_filtered_by_id: Filter(tbl_projects,manager.Id=CONST_CURRENT_USER.ID)
                 },
-                //ForAll(tb_filtered_by_id; LookUp(tbl_tasks;project_id.Id=ID))
-                With(      
+                ForAll(tb_filtered_by_id, LookUp(tbl_tasks,project_id.Id=ID))
+                /*With(      
                     {
-                        tasksByProjectByUser: ForAll(tb_filtered_by_id, LookUp(tbl_tasks,project_id.Id=ID))
-                    },
-                    ForAll(tbl_users, LookUp(tasksByProjectByUser,user_id.Id=ID))
-                )
+                        tasksByProjectByUser: ForAll(tb_filtered_by_id; LookUp(tbl_tasks;project_id.Id=ID))
+                    };
+                    ForAll(tbl_users; LookUp(tasksByProjectByUser;user_id.Id=ID))
+                )*/
             
                 //Filter(tb_filtered_by_id;StartsWith("name";SearchBox.Text))
                 //Search(tb_filtered_by_id; SearchBox.Text; "name"))
@@ -41,7 +41,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.description
+            Text: =LookUp(tbl_users, ID=ThisItem.user_id.Id).name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -59,7 +59,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.name
+            Text: =ThisItem.description
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

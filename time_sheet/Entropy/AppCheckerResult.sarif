@@ -2434,77 +2434,160 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Subtitle2.Text"
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Subtitle2.Text",
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 27,
-                  "charOffset": 8,
+                  "charLength": 3,
+                  "charOffset": 76,
                   "snippet": {
-                    "text": ".collaborator_id_x003a_name"
+                    "text": ".Id"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "Items",
                 "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.Gallery5.Subtitle2"
+                "type": "Visualizar_Projeto_empresa.Gallery5"
               }
             }
           ],
           "message": {
             "arguments": [
-              "collaborator_id_x003a_name"
+              "manager.Id"
             ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Subtitle2.Text"
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Subtitle2.Text",
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items",
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 6,
-                  "charOffset": 35,
+                  "charLength": 1,
+                  "charOffset": 79,
                   "snippet": {
-                    "text": ".Value"
+                    "text": "="
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "Items",
                 "module": "Visualizar_Projeto_empresa",
-                "type": "Visualizar_Projeto_empresa.Gallery5.Subtitle2"
+                "type": "Visualizar_Projeto_empresa.Gallery5"
               }
             }
           ],
           "message": {
+            "arguments": [
+              "Filter"
+            ],
             "id": "issue"
           },
           "properties": {
-            "level": "High"
+            "level": "Medium"
           },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 296,
+                  "snippet": {
+                    "text": ".Id"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "project_id.Id"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Visualizar_Projeto_empresa.Gallery5.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 299,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Visualizar_Projeto_empresa",
+                "type": "Visualizar_Projeto_empresa.Gallery5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
         },
         {
           "locations": [

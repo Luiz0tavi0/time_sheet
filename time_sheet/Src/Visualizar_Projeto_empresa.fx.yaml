@@ -4,7 +4,23 @@ Visualizar_Projeto_empresa As screen:
     "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         Height: =314
-        Items: =tbl_tasks
+        Items: |-
+            =
+            With(      
+                {
+                    tb_filtered_by_id: Filter(tbl_projects,manager.Id=CONST_CURRENT_USER.ID)
+                },
+                //ForAll(tb_filtered_by_id; LookUp(tbl_tasks;project_id.Id=ID))
+                With(      
+                    {
+                        tasksByProjectByUser: ForAll(tb_filtered_by_id, LookUp(tbl_tasks,project_id.Id=ID))
+                    },
+                    ForAll(tbl_users, LookUp(tasksByProjectByUser,user_id.Id=ID))
+                )
+            
+                //Filter(tb_filtered_by_id;StartsWith("name";SearchBox.Text))
+                //Search(tb_filtered_by_id; SearchBox.Text; "name"))
+            )
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
@@ -25,7 +41,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =ThisItem.name
+            Text: =ThisItem.description
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -43,7 +59,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.collaborator_id_x003a_name.Value
+            Text: =ThisItem.name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32

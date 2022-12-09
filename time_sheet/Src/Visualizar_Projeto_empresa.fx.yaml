@@ -197,81 +197,27 @@ Visualizar_Projeto_empresa As screen:
     FormViewerProject1 As formViewer:
         BorderColor: =RGBA(166, 166, 166, 1)
         DataSource: =tbl_projects
-        Height: =296
-        Width: =602
+        Height: =184
+        Item: =itemSelecionado
+        Width: =528
         X: =38
-        Y: =176
+        Y: =288
         ZIndex: =14
-
-        name_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="name"
-            Default: =ThisItem.name
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"name")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =true
-            Width: =602
-            X: =0
-            Y: =0
-            ZIndex: =32
-
-            DataCardKey10 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(2, 4, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Bold
-                Height: =48
-                PaddingLeft: =0
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                ZIndex: =1
-
-            DataCardValue9 As label:
-                AutoHeight: =true
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
-                ZIndex: =2
 
         manager_DataCard2 As typedDataCard.textualViewCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="manager"
-            Default: =ThisItem.manager
+            Default: |-
+                =ThisItem.'manager:name'.Value
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"manager")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
-            Width: =602
+            Width: =528
             X: =0
-            Y: =1
+            Y: =0
             ZIndex: =32
 
             DataCardKey11 As label:
@@ -288,10 +234,10 @@ Visualizar_Projeto_empresa As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue10 As label:
@@ -310,9 +256,9 @@ Visualizar_Projeto_empresa As screen:
                 PaddingTop: =0
                 Size: =21
                 Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey11.X + DataCardKey11.Width
+                Y: =10
                 ZIndex: =2
 
         start_DataCard1 As typedDataCard.textualViewCard:
@@ -325,9 +271,9 @@ Visualizar_Projeto_empresa As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
-            Width: =602
+            Width: =528
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =32
 
             DataCardKey12 As label:
@@ -345,10 +291,10 @@ Visualizar_Projeto_empresa As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =10 + (DataCardValue11.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue11 As label:
@@ -367,24 +313,24 @@ Visualizar_Projeto_empresa As screen:
                 PaddingTop: =0
                 Size: =21
                 Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey12.X + DataCardKey12.Width
+                Y: =10
                 ZIndex: =2
 
         status_DataCard2 As typedDataCard.textualViewCard:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="status"
-            Default: =ThisItem.status
+            Default: =ThisItem.status.Value
             DisplayMode: =DisplayMode.View
             DisplayName: =DataSourceInfo([@tbl_projects],DataSourceInfo.DisplayName,"status")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
-            Width: =602
+            Width: =528
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =32
 
             DataCardKey23 As label:
@@ -402,10 +348,10 @@ Visualizar_Projeto_empresa As screen:
                 PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) * 0.4
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =10 + (DataCardValue23.Height / 2) - (Self.Height / 2)
                 ZIndex: =1
 
             DataCardValue23 As label:
@@ -424,9 +370,9 @@ Visualizar_Projeto_empresa As screen:
                 PaddingTop: =0
                 Size: =21
                 Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey23.Y + DataCardKey23.Height + 5
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey23.X + DataCardKey23.Width
+                Y: =10
                 ZIndex: =2
 
     FooterCompany_3 As FooterCompany:
@@ -442,6 +388,27 @@ Visualizar_Projeto_empresa As screen:
             Navigate(login,ScreenTransition.Fade);
         Visible: =true
         ZIndex: =16
+
+    DataCardKey11_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(2, 4, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =110
+        PaddingLeft: =0
+        Size: =21
+        Text: |-
+            =$"Projeto: 
+            {itemSelecionado.name}"
+        Width: =371
+        Wrap: =false
+        X: =38
+        Y: =145
+        ZIndex: =17
 
     HoursProjectCard As group:
         Height: =5

@@ -12,8 +12,13 @@ Visualizar_Projeto_empresa As screen:
                 AddColumns(
                     tasks_filtered_by_project_id,
                     "user_name",
-                    LookUp(tbl_users,ID=tasks_filtered_by_project_id[@user_id].Id,name))
+                    LookUp(tbl_users,ID=tasks_filtered_by_project_id[@user_id].Id,name)
+                )
             )
+            /*;
+                    "user_id";
+                    LookUp(tbl_users;ID=tasks_filtered_by_project_id[@user_id].Id;ID)
+                    )*/
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
@@ -70,7 +75,7 @@ Visualizar_Projeto_empresa As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =16
-            Text: =ThisItem.hours & "h - " & ThisItem.date
+            Text: =ThisItem.hours & "h - " & ThisItem.date & $" {ThisItem.user_id.Id}"
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 104
             X: =32
@@ -91,7 +96,17 @@ Visualizar_Projeto_empresa As screen:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronRight
             OnSelect: |-
-                =Navigate(visualizar_evento_colaborador,ScreenTransition.Fade,{itemSelecionado: ThisItem})
+                =//Select(Parent);;
+                
+                Navigate(visualizar_evento_colaborador,Fade,
+                    {
+                        projectId:itemSelecionado.ID,
+                        task_id:Value(ThisItem.user_id.Id)
+                        }
+                    );
+                ViewForm(FormActivity_2);
+                
+                //Navigate(visualizar_evento_colaborador;ScreenTransition.Fade;{projectId:itemSelecionado.ID;itemActivity: ThisItem})
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -418,6 +433,23 @@ Visualizar_Projeto_empresa As screen:
         X: =38
         Y: =145
         ZIndex: =17
+
+    Label12 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: =Gallery5.Selected.user_id.Id
+        Width: =560
+        X: =37
+        Y: =962
+        ZIndex: =18
 
     HoursProjectCard As group:
         Height: =5

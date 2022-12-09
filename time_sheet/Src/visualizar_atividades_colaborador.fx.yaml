@@ -223,131 +223,6 @@ visualizar_atividades_colaborador As screen:
             Y: =0
             ZIndex: =19
 
-    DataTableRelationByUserContract_1 As dataTable.datatable:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.Solid
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisplayMode: =DisplayMode.Edit
-        Fill: =RGBA(0, 0, 0, 0)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Normal
-        HeadingColor: =RGBA(255, 255, 255, 1)
-        HeadingFill: =RGBA(0, 120, 212, 1)
-        HeadingFont: =Font.'Segoe UI'
-        HeadingFontWeight: =FontWeight.Normal
-        HeadingSize: =21
-        Height: =500
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =RGBA(0, 120, 212, 1)
-        InputFill: =RGBA(255, 255, 255, 1)
-        InvertedColor: =RGBA(255, 255, 255, 1)
-        Items: |
-            =//First(Filter(tbl_contracts;user_id.Id=CONST_CURRENT_USER.ID).project_id)
-            //With(
-            Filter(tbl_contracts,active=true && user_id.Id=CONST_CURRENT_USER.ID)
-                //ForAll(tbl_contracts_by_user;LookUp(tbl_projects;ID=project_id.Id))
-              //  tbl_contracts_by_user
-            //)
-        LinkColor: =RGBA(0, 134, 208, 1)
-        PrimaryColor1: =RGBA(0, 120, 212, 1)
-        PrimaryColor2: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PrimaryColor3: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        SelectedColor: =RGBA(51, 51, 51, 1)
-        SelectedFill: =RGBA(0, 120, 212, .2)
-        Size: =21
-        Visible: =false
-        Width: =640
-        X: =650
-        Y: =636
-        ZIndex: =6
-
-        description_Column2_1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="description"
-            FieldName: ="description"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =ThisItem.description
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =20
-
-        user_id_Column2_1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="user_id"
-            FieldName: ="user_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.user_id.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =21
-
-        "'user_id:email_Column2_1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: |-
-                ="user_id:email"
-            FieldName: ="user_id_x003a_email"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.user_id_x003a_email.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =22
-
-        "'user_id:cpf_Column2_1' As dataTableColumn.textualColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: |-
-                ="user_id:cpf"
-            FieldName: ="user_id_x003a_cpf"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.user_id_x003a_cpf.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =23
-
-        active_Column4_1 As dataTableColumn.booleanColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="active"
-            FieldName: ="active"
-            FieldVariantName: ="booleanColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.active
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =24
-
-        project_id_Column2_1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="project_id"
-            FieldName: ="project_id"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =9
-            Text: =ThisItem.project_id.Value
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =25
-
     ButtonDownload_2 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -659,7 +534,14 @@ visualizar_atividades_colaborador As screen:
                 =UpdateContext({startTimerLoading:true});
                 Select(Parent);
                 
-                Navigate(visualizar_evento_colaborador,Fade,{projectId:ddProjectsByUser.Selected.ID,itemActivity:galFilteredActivities.Selected});
+                //Navigate(visualizar_evento_colaborador;Fade;{projectId:ddProjectsByUser.Selected.ID;itemActivity:galFilteredActivities.Selected});;
+                Navigate(visualizar_evento_colaborador,
+                    Fade,
+                    {
+                        projectId:ddProjectsByUser.Selected.ID,
+                        task_id:Value(galFilteredActivities.Selected.ID)
+                    }
+                );
                 ViewForm(FormActivity_2);
             PaddingBottom: =10
             PaddingLeft: =10
